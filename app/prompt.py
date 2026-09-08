@@ -34,7 +34,9 @@ Mode: Normal Explanation
 
 def format_answer(answer: str, sources: list[dict]) -> str:
     source_text = "\n".join(
-        f"- ជំពូក {s.get('chapter', '?')} / មេរៀន {s.get('lesson', '?')} / ទំព័រ {s.get('page', '?')}"
+        f"- ជំពូក {s.get('chapter_id', s.get('chapter', '?'))} / "
+        f"មេរៀន {s.get('lesson_id', s.get('lesson', '?'))} / "
+        f"ទំព័រ {s.get('page', '?')}"
         for s in sources
     )
     return f"""{answer}
