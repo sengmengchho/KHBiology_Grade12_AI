@@ -1,0 +1,6 @@
+RETRIEVAL EVALUATION (n=89)
+Metric      NoRerank  WithRerank  Delta
+Recall@1         0.404       0.506    +0.101
+Recall@3         0.719       0.787    +0.067
+Recall@5         0.899       0.843    -0.056
+MRR              0.573       0.646    +0.073

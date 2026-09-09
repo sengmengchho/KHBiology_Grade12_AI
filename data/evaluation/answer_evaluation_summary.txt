@@ -1,0 +1,32 @@
+Answer evaluation summary (20 questions)
+Generated 2026-09-09 18:14
+
+Concept coverage (expected concepts found in answer):  mean 0.84 over 20
+  high (>=0.67): 16
+  medium (0.34-0.66): 1
+  low (<0.34): 3
+
+Page recall (expected pages among cited sources):  mean 0.89 over 20
+  with page_recall >= 0.5: 20
+
+Per-question (id | concepts_found/concepts | page_recall | seconds):
+  q 1 | 0/2 | 1.0 | 78.9
+  q 2 | 0/3 | 1.0 | 63.6
+  q 3 | 3/3 | 1.0 | 25.3
+  q 4 | 2/2 | 1.0 | 49.3
+  q 5 | 1/3 | 0.5 | 44.0
+  q 6 | 1/2 | 1.0 | 35.4
+  q 8 | 2/2 | 1.0 | 30.4
+  q 9 | 2/2 | 1.0 | 41.1
+  q12 | 2/2 | 1.0 | 30.4
+  q13 | 1/1 | 0.6 | 35.2
+  q16 | 2/2 | 1.0 | 34.0
+  q17 | 2/2 | 1.0 | 54.4
+  q20 | 2/2 | 0.67 | 34.0
+  q21 | 2/2 | 1.0 | 22.9
+  q26 | 2/2 | 1.0 | 22.6
+  q27 | 3/3 | 1.0 | 22.7
+  q30 | 1/1 | 1.0 | 22.2
+  q31 | 2/2 | 0.6 | 20.2
+  q34 | 2/2 | 1.0 | 24.3
+  q35 | 2/2 | 0.5 | 51.2

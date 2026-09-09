@@ -29,6 +29,19 @@ UNWANTED_FRAGMENTS = [
     "English",
 ]
 
+# Scanner (OCR) misreads, mapped to the correct Khmer curriculum term. Order
+# matters: longer keys first so compound tokens are handled before sub-parts.
+# Verified against surrounding context (see data/processed/biology_cleaned.json,
+# page 17, chapter 1 lesson 2 — reproduction in flowering plants).
+OCR_FIXES = [
+    # "embryo sac" / megagametophyte (ជង់ misread for ថង់, កិល for កំណ)
+    ("ជង់កិល", "ថង់កំណ"),
+    # "nucleus / nuclei" (the combining ណ្វៃយ៉ូ was misread as ល៉ែយ៉ូ)
+    ("ល៉ែយ៉ូ", "ណ្វៃយ៉ូ"),
+    # "megagametophyte" (female gametophyte)
+    ("កាតម៉ែគីតញី", "មេហ្គាកាម៉ែតូភីតញី"),
+]
+
 
 def normalize_khmer(text: str) -> str:
     """Normalize Unicode and collapse whitespace without removing Khmer."""
@@ -40,6 +53,17 @@ def normalize_khmer(text: str) -> str:
     # Collapse whitespace runs (it is safe to keep Chinese/other unicode).
     text = re.sub(r"\s+", " ", text)
     return text.strip()
+
+
+def apply_ocr_fixes(text: str) -> str:
+    """Correct known OCR misreads before the text is chunked and indexed.
+
+    These replacements are only applied when the exact misread string is found,
+    so legitimate text is never altered by mistake.
+    """
+    for bad, good in OCR_FIXES:
+        text = text.replace(bad, good)
+    return text
 
 
 def drop_footer_lines(lines, last_chance=3):
@@ -64,6 +88,7 @@ def clean_page(record):
     lines = drop_footer_lines(lines)
     text = "\n".join(lines)
     text = normalize_khmer(text)
+    text = apply_ocr_fixes(text)
     return {
         "page": page,
         "text": text,

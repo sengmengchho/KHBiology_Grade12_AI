@@ -1,44 +1,78 @@
-# KhmerBio Tutor — Progress Report (2026-09-08)
+# KhmerBio Tutor — Progress & Next Steps
 
-## What Was Completed
+AI study assistant for Cambodian Grade 12 Biology, grounded strictly in the national textbook.
 
-### OCR of the Grade 12 Biology textbook
-- Evaluated all free OCR options; the only viable engine is the Gemini API free tier (all free-local engines failed: Ollama gemma3:4b / qwen2.5vl:7b hallucinate Khmer loops, EasyOCR / PaddleOCR / RapidOCR have no Khmer model, Tesseract is only ~67% accurate).
-- Discovered that each Gemini model carries its own independent free quota (20+ requests/day/model), so quota can be multiplied by rotating models.
-- Added model rotation + retry/cooldown handling to `scripts/ocr_gemini.py`.
-- OCR'd **197 / 257 pages** into `data/extracted/biology_raw_text.jsonl` (pages 0–196, gaps in the 190s remain).
-- Every page saves immediately, so the script resumes cleanly across quota limits and crashes.
+## What has been done so far
 
-### RAG pipeline rebuilt on the full corpus
-- `scripts/clean_text.py` → 197 pages cleaned → `data/processed/biology_cleaned.json`
-- `scripts/parse_lessons.py` → chapters 1–6 with lessons detected → `data/processed/biology_structured.json`
-- `scripts/chunk_text.py` → **834 chunks** → `data/processed/biology_chunks.json`
-- `scripts/build_vector_db.py` → Chroma collection `biology` rebuilt (834 chunks, BGE-M3 embeddings) in `vector_db/`
-- `scripts/test_retrieval.py` → retrieval validated on the full corpus:
-  - "តើ DNA មានតួនាទីអ្វី?" → page 159 (ch 5)
-  - "ស៊ីមណូស្ពែមមានលក្ខណៈអ្វីខ្លះ?" → page 6 (ch 1)
-  - "តើអង់ស្យូស្ពែមជាអ្វី?" → page 12 (ch 1)
-  - "ពន្យល់ពីវដ្តជីវិតរបស់ស្រល់" → page 9 (ch 1)
-  - "cycads ជាអ្វី?" → page 7 (ch 1)
+### 1. OCR & corpus
+- Extracted **257/257 pages** of the Grade 12 Biology textbook using Gemini (`scripts/ocr_gemini.py`). Status tracked in `data/OCR_STATUS.md`.
+- Pipeline rebuilt over the full corpus:
+  `clean_text.py` → `parse_lessons.py` → `chunk_text.py` → `build_vector_db.py`
+- **1,093 chunks** (size 500, overlap 100) covering all 257 pages, organized into **8 chapters**.
 
-## What Will Be Done Tomorrow
+### 2. Corpus audit — PASS
+- No missing / duplicate / empty / broken pages.
+- All 257 pages covered by chunks; only 7 TOC chunks (pages 0–3) lack chapter metadata (expected).
+- Known cosmetic issue: OCR-garbled chapter/lesson titles.
 
-1. **Finish OCR of the remaining ~60 pages** (today's free quotas are exhausted / models are 503-busy; each model's quota resets daily):
-   ```
-   python scripts\ocr_gemini.py --models "gemini-3.6-flash,gemini-3.5-flash,gemini-3.5-flash-lite,gemini-3.1-flash-lite,gemini-flash-lite-latest,gemini-3.8-flash,gemini-3.7-flash"
-   ```
-2. **Re-run the pipeline** on the complete 257 pages:
-   ```
-   python scripts\clean_text.py
-   python scripts\parse_lessons.py
-   python scripts\chunk_text.py
-   python scripts\build_vector_db.py
-   ```
-3. **Re-validate retrieval** with `python scripts\test_retrieval.py --n 5` on the final corpus.
-4. (If Gemini answering quota is available) re-test the end-to-end RAG answer path.
+### 3. Retrieval pipeline
+- Embeddings: `BAAI/bge-m3`; reranker: `BAAI/bge-reranker-v2-m3`; Chroma (cosine), collection `biology`.
+- `TOP_K=20` → rerank → `RERANKER_TOP_K=5` fed to the LLM.
 
-## Quick Reference
+### 4. Evaluation suite
+- **89-question dataset** (`data/evaluation/evaluation_questions.json`) covering all 8 chapters; types: definition, explanation, process, reasoning, summary, comparison, exam, quiz.
+- `scripts/evaluate_retrieval.py` — resumable retrieval evaluation.
+- `scripts/evaluate_answers.py` — resumable RAG answer evaluation (`--sample`, `--questions`, `--score-only`).
 
-- OCR status & engine evaluation: `data/OCR_STATUS.md`, `data/OCR_ENGINE_EVAL.md`
-- Config: `.env` (`LLM_PROVIDER=google`, `GOOGLE_API_KEY`, `LLM_MODEL=gemini-3.6-flash`)
-- App: `app/main.py` (Streamlit UI), `app/rag.py`, `app/retrieval.py`, `app/prompt.py`, `app/config.py`
+### 5. Retrieval evaluation results
+| Metric | BGE-M3 only | BGE-M3 + reranker |
+|---|---|---|
+| Recall@1 (Hit@1) | 0.404 | **0.506** |
+| Recall@3 | 0.719 | **0.787** |
+| Recall@5 | 0.899 | 0.843 |
+| MRR | 0.573 | **0.646** |
+
+Verdict: keep the reranker. Full report: `docs/retrieval_evaluation.md`.
+
+### 6. RAG answer evaluation
+- **v1 (primary model `gemini-3.6-flash` had quota):** concept coverage mean **0.74**, page recall mean **0.89** (20/20 ≥ 0.5).
+- **v2 (re-run on fallback pool models, primary quota exhausted):** concept coverage mean **0.58**, page recall mean **0.89**.
+- Outcome: citation/pages are reliable regardless of model; answer depth drops sharply on weaker fallback models. **Model availability is the #1 quality variable.**
+
+### 7. Hallucination protection
+- **Retrieval-confidence gate:** if the best reranked chunk scores below `RETRIEVAL_SCORE_THRESHOLD`, the app politely abstains instead of guessing.
+- Threshold **calibrated on all 89 questions** (`data/evaluation/top_rerank_scores.json`): on-topic median 0.92 (p25 0.76), off-topic ~0.005 → threshold set to **0.08** (the earlier 0.20 rejected valid questions such as a DNA question scoring 0.195).
+- **Model-pool rotation** in `app/rag.py::_call_google_rotate`: primary model first, then the `GOOGLE_MODEL_POOL` chain on 429/503; skips models that return empty or <80-char responses.
+- Config: `RETRIEVAL_SCORE_THRESHOLD`, `GOOGLE_MODEL_POOL` in `app/config.py`.
+
+### 8. Streamlit app (`app/main.py`)
+- Modes: **Normal / Easy / Exam**; features: **Explain / Quiz / Summary**.
+- Cached embedding/reranker/vector-DB resources; Khmer error handling; chat clear button.
+- Citations (`ប្រភព`) fixed: chapter/lesson/page labels now clipped to 16 chars (garbled OCR titles no longer bloat them).
+
+### 9. Biology glossary
+- `scripts/build_glossary.py` extracts terms + definitions from the 1,093 chunks (no LLM calls).
+- **51 unique terms** with definition, English gloss, page, chapter → `data/glossary/glossary.json` + `glossary.md`.
+- Capacity note: exact term-matching is limited by OCR spelling noise; LLM-assisted curation is the natural next upgrade.
+
+## Known issues to improve
+1. **Fallback model quality** — when quota is exhausted, pool models produce short/mid-quality answers (concept coverage 0.74 → 0.58). Mitigations: stronger-only pool, better prompts for weak models, answer-caching/resume across days, retry the primary model later.
+2. **OCR-garbled titles** in metadata (cosmetic; affected citations — mitigated by clipping).
+3. **7 TOC chunks** lack chapter metadata (expected; excluded from chapter grouping).
+4. **Interactive QA pending** — browser testing of every mode/feature is the immediate next step.
+
+## Next steps (in order)
+1. **Manual browser QA** — test Normal / Easy / Exam + Explain / Quiz / Summary + out-of-scope + clear-chat. Judge correctness, clarity, usefulness, Grade-12 suitability, source accuracy. (Note: if testing same day as heavy use, answers may come from fallback models.)
+2. **Re-run the 20-answer evaluation** on a fresh day / with primary-model quota to measure best-case quality, and compare against v1/v2.
+3. **Fix remaining problems** — only those surfaced by QA/evaluation.
+4. **Student/teacher testing** — share with real Grade 12 students and Biology teachers; collect ratings and comments.
+5. **Apply real-user feedback** — improve wording, terminology, explanation clarity, answer length, quiz quality, source presentation.
+6. **Deploy** — only after steps 1–5 look good.
+7. **Fine-tune only if still needed** — reserve for repeated problems prompting/RAG cannot solve.
+
+## Key files
+- `app/` — Streamlit UI (`main.py`), RAG (`rag.py`), prompts (`prompt.py`), retrieval (`retrieval.py`), config (`config.py`)
+- `scripts/` — OCR, cleaning, chunking, vector DB, evaluation, threshold calibration, glossary
+- `data/evaluation/` — 89-question dataset, retrieval + answer results, top-score calibration data
+- `data/glossary/` — generated glossary (JSON + Markdown)
+- `docs/` — `corpus_audit.md`, `retrieval_evaluation.md`

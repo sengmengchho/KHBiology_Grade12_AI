@@ -1,6 +1,6 @@
 import streamlit as st
-from app.config import EMBEDDING_MODEL, VECTOR_DB_DIR
-from app.retrieval import get_embedding_model, get_vector_db, get_reranker, retrieve, rerank
+from app.config import EMBEDDING_MODEL, VECTOR_DB_DIR, RETRIEVAL_SCORE_THRESHOLD, NOT_FOUND_MESSAGE
+from app.retrieval import get_embedding_model, get_vector_db, get_reranker, retrieve, rerank_with_scores
 from app.rag import generate_answer
 from app.prompt import format_answer
 
@@ -8,6 +8,22 @@ st.set_page_config(page_title="KhmerBio Tutor", page_icon="🧬", layout="center
 
 st.title("🧬 KhmerBio Tutor")
 st.caption("AI ជំនួយការសិស្សវិទ្យាល័យទី ១២ មុខវិទ្យាជីវវិទ្យា")
+
+
+@st.cache_resource(show_spinner="កំពុងផ្ទុកម៉ូដែល...")
+def _get_embedding_model():
+    return get_embedding_model()
+
+
+@st.cache_resource(show_spinner="កំពុងផ្ទុកម៉ូដែល...")
+def _get_reranker():
+    return get_reranker()
+
+
+@st.cache_resource
+def _get_vector_db():
+    return get_vector_db()
+
 
 if "messages" not in st.session_state:
     st.session_state.messages = []
@@ -51,24 +67,33 @@ if question := st.chat_input("សួស្តី! សួរសំណួរជី
     with st.chat_message("user"):
         st.markdown(question)
 
-    with st.chat_message("assistant"):
-        with st.spinner("កំពុងស្វែងរកក្នុងមេរៀន..."):
-            embedding_model = get_embedding_model()
-            vector_db = get_vector_db()
-            reranker = get_reranker()
+    try:
+        with st.chat_message("assistant"):
+            with st.spinner("កំពុងស្វែងរកក្នុងមេរៀន..."):
+                embedding_model = _get_embedding_model()
+                vector_db = _get_vector_db()
+                reranker = _get_reranker()
 
-            results = retrieve(question, embedding_model, vector_db)
-            documents = results["documents"][0]
-            metadatas = results["metadatas"][0]
+                results = retrieve(question, embedding_model, vector_db)
+                documents = results["documents"][0]
+                metadatas = results["metadatas"][0]
 
-            reranked_docs = rerank(question, documents, reranker)
-            context = "\n\n".join(reranked_docs)
+                reranked_docs, reranked_sources, reranked_scores = rerank_with_scores(
+                    question, documents, metadatas, reranker
+                )
 
-            sources = [m for m in metadatas[:5]]
+                context = "\n\n".join(reranked_docs)
+                top_score = reranked_scores[0] if reranked_scores else 0.0
+            with st.spinner("កំពុងឆ្លើយតប..."):
+                if not reranked_docs or top_score < RETRIEVAL_SCORE_THRESHOLD:
+                    final_answer = NOT_FOUND_MESSAGE
+                else:
+                    answer = generate_answer(question, context, mode, feature)
+                    final_answer = format_answer(answer, reranked_sources)
+                st.markdown(final_answer)
+    except Exception as err:  # noqa: BLE001
+        st.error(f"⚠️ មានបញ្ហាក្នុងការឆ្លើយតប៖ {err}")
+        final_answer = None
 
-        with st.spinner("កំពុងឆ្លើយតប..."):
-            answer = generate_answer(question, context, mode)
-            final_answer = format_answer(answer, sources)
-            st.markdown(final_answer)
-
-    st.session_state.messages.append({"role": "assistant", "content": final_answer})
+    if final_answer:
+        st.session_state.messages.append({"role": "assistant", "content": final_answer})

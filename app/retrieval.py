@@ -30,3 +30,16 @@ def rerank(query: str, documents: list[str], reranker, top_k=RERANKER_TOP_K):
         scores = [scores]
     ranked = sorted(zip(documents, scores), key=lambda x: x[1], reverse=True)
     return [doc for doc, score in ranked[:top_k]]
+
+
+def rerank_with_scores(query: str, documents: list[str], metadatas: list[dict], reranker, top_k=RERANKER_TOP_K):
+    """Rerank and return (docs, metadatas, scores) aligned and sorted desc."""
+    pairs = [[query, doc] for doc in documents]
+    scores = reranker.compute_score(pairs, normalize=True)
+    if isinstance(scores, float):
+        scores = [scores]
+    indexed = sorted(zip(documents, metadatas, scores), key=lambda x: x[2], reverse=True)
+    ranked_docs = [d for d, m, s in indexed[:top_k]]
+    ranked_metas = [m for d, m, s in indexed[:top_k]]
+    ranked_scores = [s for d, m, s in indexed[:top_k]]
+    return ranked_docs, ranked_metas, ranked_scores
