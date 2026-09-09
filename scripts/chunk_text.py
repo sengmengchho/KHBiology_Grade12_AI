@@ -3,8 +3,13 @@
 Reads the structured pages and splits each page's text into chunks that keep
 related sentences together. Chunks are bounded by Khmer sentence punctuation
 (។ / ។) and grouped toward the configured CHUNK_SIZE (character-based for
-Khmer), with a small overlap. Every chunk keeps its chapter/lesson/page
-metadata. Writes biology_chunks.json.
+Khmer), with a small overlap.
+
+To keep multi-part sections coherent (e.g. ឫស/ដើម/ស្លឹក of the vegetative
+organs section, which spans pages 13–14), consecutive pages that belong to the
+same chapter+lesson are first merged into a single stream and chunked together.
+Each sentence keeps the page it came from, so every chunk is still labelled
+with a real source page. Writes biology_chunks.json.
 
 Usage:
     python scripts/chunk_text.py [--input path] [--output path]
@@ -36,23 +41,43 @@ def split_sentences(text):
     return sentences
 
 
-def assemble_chunks(page, size=CHUNK_SIZE, overlap=CHUNK_OVERLAP):
-    """Split a page's sentences into character-sized chunks with overlap.
+def group_runs(pages):
+    """Group consecutive pages that share the same chapter+lesson."""
+    runs = []
+    cur = []
 
-    A window slides over the sentence list; each window has a character start
-    offset and gathers sentences up to `size` characters. The next window
-    begins at the sentence that contains the (start + size - overlap) position,
-    which yields roughly `overlap` characters of shared content. Always advances
-    at least one sentence to guarantee termination.
+    def key(p):
+        return (p.get("chapter_id"), p.get("chapter_title"),
+                p.get("lesson_id"), p.get("lesson_title"))
+
+    for p in pages:
+        if cur and key(p) != key(cur[-1]):
+            runs.append(cur)
+            cur = []
+        cur.append(p)
+    if cur:
+        runs.append(cur)
+    return runs
+
+
+def assemble_chunks(run, size=CHUNK_SIZE, overlap=CHUNK_OVERLAP):
+    """Chunk a run of same-lesson pages, keeping each sentence's source page.
+
+    `run` is a list of page dicts. Returns records of the same shape as the
+    previous per-page version, except chunks may now span page boundaries; the
+    `page` key is the page of the chunk's first sentence.
     """
-    sentences = split_sentences(page["text"])
+    sentences = []  # list of (text, page)
+    for page in run:
+        for s in split_sentences(page["text"]):
+            sentences.append((s, page["page"]))
     n = len(sentences)
     if n == 0:
         return []
 
     starts = []
     acc = 0
-    for s in sentences:
+    for s, _page in sentences:
         starts.append(acc)
         acc += len(s) + 1
     total = acc  # total joined length
@@ -68,6 +93,9 @@ def assemble_chunks(page, size=CHUNK_SIZE, overlap=CHUNK_OVERLAP):
                 hi = mid
         return lo
 
+    # Metadata shared by all pages in the run (they share chapter+lesson).
+    meta = run[0]
+
     chunks = []
     char_start = 0
     idx = 1
@@ -76,31 +104,37 @@ def assemble_chunks(page, size=CHUNK_SIZE, overlap=CHUNK_OVERLAP):
         if a >= n:
             break
 
-        buf = sentences[a]
+        buf = sentences[a][0]
         b = a + 1
-        while b < n and (starts[b] + len(sentences[b]) - char_start) < size:
-            buf += " " + sentences[b]
+        while b < n and (starts[b] + len(sentences[b][0]) - char_start) < size:
+            buf += " " + sentences[b][0]
             b += 1
 
         if buf.strip():
+            covered_pages = sorted({sentences[i][1] for i in range(a, b)})
+            first_page = covered_pages[0]
             record = {
-                "chunk_id": f"p{page['page']:03d}_{idx:03d}",
-                "page": page["page"],
-                "chapter_id": page["chapter_id"],
-                "chapter_title": page["chapter_title"],
-                "lesson_id": page["lesson_id"],
-                "lesson_title": page["lesson_title"],
+                "chunk_id": f"p{first_page:03d}_{idx:03d}",
+                "page": first_page,
+                "page_start": covered_pages[0],
+                "page_end": covered_pages[-1],
+                "chapter_id": meta["chapter_id"],
+                "chapter_title": meta["chapter_title"],
+                "lesson_id": meta["lesson_id"],
+                "lesson_title": meta["lesson_title"],
                 "text": buf.strip(),
             }
             if len(record["text"]) < MIN_CHUNK_CHARS and chunks:
                 # Merge a tiny artifact chunk into the previous one to cut noise.
                 chunks[-1]["text"] = chunks[-1]["text"] + " " + record["text"]
+                chunks[-1]["page_end"] = max(chunks[-1].get("page_end", chunks[-1]["page"]),
+                                             record["page_end"])
             else:
                 chunks.append(record)
                 idx += 1
 
         # Window end character offset is where sentence b-1 ends.
-        window_end = starts[b - 1] + len(sentences[b - 1])
+        window_end = starts[b - 1] + len(sentences[b - 1][0])
         # Next window should start `overlap` chars before the current window end.
         target = window_end - overlap
         next_pos = first_idx_at(target)
@@ -126,8 +160,8 @@ def main():
         pages = json.load(f)
 
     all_chunks = []
-    for page in pages:
-        all_chunks.extend(assemble_chunks(page))
+    for run in group_runs(pages):
+        all_chunks.extend(assemble_chunks(run))
 
     os.makedirs(os.path.dirname(args.output), exist_ok=True)
     with open(args.output, "w", encoding="utf-8") as f:

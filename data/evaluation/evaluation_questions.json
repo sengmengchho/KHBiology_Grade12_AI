@@ -1,0 +1,1414 @@
+[
+  {
+    "question_id": 1,
+    "question_kh": "តើស៊ីមណូស្ពែមជាអ្វី? សូមពន្យល់ឱ្យបានច្បាស់",
+    "chapter": 1,
+    "question_type": "definition",
+    "difficulty": "easy",
+    "expected_concepts": [
+      "gymnosperm",
+      "គ្រាប់"
+    ],
+    "expected_source_pages": [
+      6
+    ],
+    "expected_answer": ""
+  },
+  {
+    "question_id": 2,
+    "question_kh": "សូមប្រៀបធៀបរុក្ខជាតិស៊ីមណូស្ពែមនិងរុក្ខជាតិអង់ស្យូស្ពែម",
+    "chapter": 1,
+    "question_type": "comparison",
+    "difficulty": "medium",
+    "expected_concepts": [
+      "gymnosperm",
+      "angiosperm",
+      "គ្រាប់"
+    ],
+    "expected_source_pages": [
+      6,
+      12
+    ],
+    "expected_answer": ""
+  },
+  {
+    "question_id": 3,
+    "question_kh": "ពន្យល់ពីវដ្តជីវិតរបស់ស្រល់",
+    "chapter": 1,
+    "question_type": "process",
+    "difficulty": "medium",
+    "expected_concepts": [
+      "កោន",
+      "លំអង",
+      "វដ្តជីវិត"
+    ],
+    "expected_source_pages": [
+      9
+    ],
+    "expected_answer": ""
+  },
+  {
+    "question_id": 4,
+    "question_kh": "តើប្រដ៍ (Cycads) ជាអ្វី ហើយវាមានលក្ខណៈបែបណា?",
+    "chapter": 1,
+    "question_type": "definition",
+    "difficulty": "easy",
+    "expected_concepts": [
+      "cycads",
+      "ប្រដ៍"
+    ],
+    "expected_source_pages": [
+      7
+    ],
+    "expected_answer": ""
+  },
+  {
+    "question_id": 5,
+    "question_kh": "ពន្យល់ពីការបង្កកំណើតទ្វេរបស់រុក្ខជាតិអង់ស្យូស្ពែម",
+    "chapter": 1,
+    "question_type": "process",
+    "difficulty": "hard",
+    "expected_concepts": [
+      "បង្កកំណើតទ្វេ",
+      "អង់ដូស្ពែម",
+      "អាល់ប៊ុយមែន"
+    ],
+    "expected_source_pages": [
+      18,
+      14
+    ],
+    "expected_answer": ""
+  },
+  {
+    "question_id": 6,
+    "question_kh": "តើប្រភេទអ្វីខ្លះជាប្រភេទរុក្ខជាតិមានផ្កា?",
+    "chapter": 1,
+    "question_type": "definition",
+    "difficulty": "easy",
+    "expected_concepts": [
+      "angiosperm",
+      "ផ្កា"
+    ],
+    "expected_source_pages": [
+      12
+    ],
+    "expected_answer": ""
+  },
+  {
+    "question_id": 7,
+    "question_kh": "ពន្យល់ពីផ្កាជាសរីរាង្គបន្តពូជរបស់រុក្ខជាតិអង់ស្យូស្ពែម",
+    "chapter": 1,
+    "question_type": "explanation",
+    "difficulty": "medium",
+    "expected_concepts": [
+      "ផ្កា",
+      "បន្តពូជ",
+      "សរីរាង្គ"
+    ],
+    "expected_source_pages": [
+      14
+    ],
+    "expected_answer": ""
+  },
+  {
+    "question_id": 8,
+    "question_kh": "តើរុក្ខជាតិស្រូបទឹកពីក្នុងដីដោយរបៀបណា?",
+    "chapter": 2,
+    "question_type": "process",
+    "difficulty": "medium",
+    "expected_concepts": [
+      "ស្រូបទឹក",
+      "ឫស"
+    ],
+    "expected_source_pages": [
+      26
+    ],
+    "expected_answer": ""
+  },
+  {
+    "question_id": 9,
+    "question_kh": "ពន្យល់ពីដំណឹកនាំទឹកឡើងទៅលើស្លឹករុក្ខជាតិ",
+    "chapter": 2,
+    "question_type": "process",
+    "difficulty": "medium",
+    "expected_concepts": [
+      "ស៊ីឡែម",
+      "ភាយចំហាយទឹក"
+    ],
+    "expected_source_pages": [
+      26
+    ],
+    "expected_answer": ""
+  },
+  {
+    "question_id": 10,
+    "question_kh": "តើអាហារដែលសំយោគនៅក្នុងស្លឹកត្រូវបានដឹកនាំទៅកាន់ផ្នែកផ្សេងៗនៃរុក្ខជាតិដោយរបៀបណា?",
+    "chapter": 2,
+    "question_type": "process",
+    "difficulty": "hard",
+    "expected_concepts": [
+      "ដូអែម",
+      "ដឹកនាំអាហារ"
+    ],
+    "expected_source_pages": [
+      26
+    ],
+    "expected_answer": ""
+  },
+  {
+    "question_id": 11,
+    "question_kh": "ពន្យល់ពីភាយចំហាយទឹក (transpiration) នៅក្នុងរុក្ខជាតិ",
+    "chapter": 2,
+    "question_type": "explanation",
+    "difficulty": "medium",
+    "expected_concepts": [
+      "ភាយចំហាយទឹក"
+    ],
+    "expected_source_pages": [
+      26
+    ],
+    "expected_answer": ""
+  },
+  {
+    "question_id": 12,
+    "question_kh": "តើប្រព័ន្ធប្រសាទរបស់សត្វឥតឆ្អឹងកងមានលក្ខណៈដូចម្តេច?",
+    "chapter": 3,
+    "question_type": "explanation",
+    "difficulty": "medium",
+    "expected_concepts": [
+      "ប្រព័ន្ធប្រសាទ",
+      "សត្វឥតឆ្អឹងកង"
+    ],
+    "expected_source_pages": [
+      60
+    ],
+    "expected_answer": ""
+  },
+  {
+    "question_id": 13,
+    "question_kh": "តើណឺរ៉ូនមានប្រភេទអ្វីខ្លះ?",
+    "chapter": 3,
+    "question_type": "definition",
+    "difficulty": "easy",
+    "expected_concepts": [
+      "ណឺរ៉ូន"
+    ],
+    "expected_source_pages": [
+      60,
+      66,
+      68,
+      69,
+      70
+    ],
+    "expected_answer": ""
+  },
+  {
+    "question_id": 14,
+    "question_kh": "ពន្យល់ពីរូបផ្គុំនិងនាទីរបស់មជ្ឈមណ្ឌលប្រសាទ",
+    "chapter": 3,
+    "question_type": "explanation",
+    "difficulty": "medium",
+    "expected_concepts": [
+      "មជ្ឈមណ្ឌលប្រសាទ"
+    ],
+    "expected_source_pages": [
+      60
+    ],
+    "expected_answer": ""
+  },
+  {
+    "question_id": 15,
+    "question_kh": "សូមពន្យល់ពីរបៀបដែលសារពាង្គកាយឆ្លើយតបនឹងរំញោច",
+    "chapter": 3,
+    "question_type": "process",
+    "difficulty": "medium",
+    "expected_concepts": [
+      "ឆ្លើយតប",
+      "រំញោច"
+    ],
+    "expected_source_pages": [
+      60,
+      61,
+      62,
+      65
+    ],
+    "expected_answer": ""
+  },
+  {
+    "question_id": 16,
+    "question_kh": "តើធាតុសំខាន់ៗអ្វីខ្លះដែលបង្កើតបានប្រូតេអ៊ីន?",
+    "chapter": 4,
+    "question_type": "definition",
+    "difficulty": "easy",
+    "expected_concepts": [
+      "ប្រូតេអ៊ីន",
+      "ធាតុ"
+    ],
+    "expected_source_pages": [
+      122
+    ],
+    "expected_answer": ""
+  },
+  {
+    "question_id": 17,
+    "question_kh": "សូមសរសេររូបមន្តទូទៅរបស់អាស៊ីតអាមីណេ",
+    "chapter": 4,
+    "question_type": "explanation",
+    "difficulty": "hard",
+    "expected_concepts": [
+      "អាស៊ីតអាមីណេ",
+      "រូបមន្ត"
+    ],
+    "expected_source_pages": [
+      122
+    ],
+    "expected_answer": ""
+  },
+  {
+    "question_id": 18,
+    "question_kh": "តើអាស៊ីតអាមីណេប៉ុន្មានបែបដែលគេស្គាល់?",
+    "chapter": 4,
+    "question_type": "definition",
+    "difficulty": "easy",
+    "expected_concepts": [
+      "អាស៊ីតអាមីណេ",
+      "20"
+    ],
+    "expected_source_pages": [
+      122,
+      123,
+      127,
+      129
+    ],
+    "expected_answer": ""
+  },
+  {
+    "question_id": 19,
+    "question_kh": "ពន្យល់ពីចំណងប៉ុបទីតក្នុងការផ្គុំប្រូតេអ៊ីន",
+    "chapter": 4,
+    "question_type": "explanation",
+    "difficulty": "hard",
+    "expected_concepts": [
+      "ចំណងប៉ុបទីត"
+    ],
+    "expected_source_pages": [
+      122,
+      127,
+      130
+    ],
+    "expected_answer": ""
+  },
+  {
+    "question_id": 20,
+    "question_kh": "តើ ADN មានតួនាទីអ្វី?",
+    "chapter": 5,
+    "question_type": "definition",
+    "difficulty": "easy",
+    "expected_concepts": [
+      "ADN",
+      "ព័ត៌មានសេនេទិច"
+    ],
+    "expected_source_pages": [
+      150,
+      152,
+      159
+    ],
+    "expected_answer": ""
+  },
+  {
+    "question_id": 21,
+    "question_kh": "ពន្យល់ពីគំរូខ្សែរពីររបស់ ADN",
+    "chapter": 5,
+    "question_type": "explanation",
+    "difficulty": "medium",
+    "expected_concepts": [
+      "ខ្សែរពីរ",
+      "ADN"
+    ],
+    "expected_source_pages": [
+      150
+    ],
+    "expected_answer": ""
+  },
+  {
+    "question_id": 22,
+    "question_kh": "តើធាតុអ្វីខ្លះជាធាតុបង្ករបស់ម៉ូលេគុល ADN?",
+    "chapter": 5,
+    "question_type": "definition",
+    "difficulty": "medium",
+    "expected_concepts": [
+      "នុយក្លេអូទីត",
+      "ADN"
+    ],
+    "expected_source_pages": [
+      150,
+      165
+    ],
+    "expected_answer": ""
+  },
+  {
+    "question_id": 23,
+    "question_kh": "ពន្យល់ពីដំណើរទ្វេ (ការស្វ័យដំឡើង) របស់ ADN",
+    "chapter": 5,
+    "question_type": "process",
+    "difficulty": "hard",
+    "expected_concepts": [
+      "ស្វ័យដំឡើង",
+      "ដំណើរទ្វេ"
+    ],
+    "expected_source_pages": [
+      159
+    ],
+    "expected_answer": ""
+  },
+  {
+    "question_id": 24,
+    "question_kh": "សូមប្រៀបធៀប ADN និង ARN",
+    "chapter": 5,
+    "question_type": "comparison",
+    "difficulty": "medium",
+    "expected_concepts": [
+      "ADN",
+      "ARN"
+    ],
+    "expected_source_pages": [
+      150,
+      165
+    ],
+    "expected_answer": ""
+  },
+  {
+    "question_id": 25,
+    "question_kh": "តើ ARN ចែកជាប៉ុន្មានប្រភេទ?",
+    "chapter": 5,
+    "question_type": "definition",
+    "difficulty": "easy",
+    "expected_concepts": [
+      "ARN",
+      "ARNm",
+      "ARNt",
+      "ARNr"
+    ],
+    "expected_source_pages": [
+      165
+    ],
+    "expected_answer": ""
+  },
+  {
+    "question_id": 26,
+    "question_kh": "តើអ្នកណាបានស្នើរទ្រឹស្តីវិវត្តន៍ដ៏ល្បីល្បាញ? ពន្យល់ពីគំនិតសំខាន់",
+    "chapter": 6,
+    "question_type": "definition",
+    "difficulty": "easy",
+    "expected_concepts": [
+      "ដាវីន",
+      "វិវត្តន៍"
+    ],
+    "expected_source_pages": [
+      196
+    ],
+    "expected_answer": ""
+  },
+  {
+    "question_id": 27,
+    "question_kh": "តើលោកដាវីនបានសង្កេតអ្វីខ្លះដែលនាំឱ្យលោកសន្និដ្ឋានថាភាវៈរស់វិវត្ត?",
+    "chapter": 6,
+    "question_type": "reasoning",
+    "difficulty": "medium",
+    "expected_concepts": [
+      "ដាវីន",
+      "ការសង្កេត",
+      "វិវត្តន៍"
+    ],
+    "expected_source_pages": [
+      196
+    ],
+    "expected_answer": ""
+  },
+  {
+    "question_id": 28,
+    "question_kh": "ពន្យល់ពីកត្តាដែលបណ្តាលឱ្យភាវៈរស់វិវត្តន៍លើផែនដី",
+    "chapter": 6,
+    "question_type": "reasoning",
+    "difficulty": "hard",
+    "expected_concepts": [
+      "វិវត្តន៍",
+      "កត្តា"
+    ],
+    "expected_source_pages": [
+      196
+    ],
+    "expected_answer": ""
+  },
+  {
+    "question_id": 29,
+    "question_kh": "តើពាក្យ 'វិវត្តន៍' 'បម្រែបម្រួល' និង 'លំជើង' មានន័យដូចម្តេច?",
+    "chapter": 6,
+    "question_type": "definition",
+    "difficulty": "medium",
+    "expected_concepts": [
+      "វិវត្តន៍",
+      "បម្រែបម្រួល"
+    ],
+    "expected_source_pages": [
+      196
+    ],
+    "expected_answer": ""
+  },
+  {
+    "question_id": 30,
+    "question_kh": "តើពពួក (population) ជាអ្វី?",
+    "chapter": 7,
+    "question_type": "definition",
+    "difficulty": "easy",
+    "expected_concepts": [
+      "ពពួក"
+    ],
+    "expected_source_pages": [
+      228
+    ],
+    "expected_answer": ""
+  },
+  {
+    "question_id": 31,
+    "question_kh": "តើមានមូលហេតុអ្វីខ្លះដែលធ្វើឱ្យទំហំពពួកមានការប្រែប្រួល?",
+    "chapter": 7,
+    "question_type": "reasoning",
+    "difficulty": "medium",
+    "expected_concepts": [
+      "ទំហំពពួក",
+      "ប្រែប្រួល"
+    ],
+    "expected_source_pages": [
+      228,
+      229,
+      231,
+      232,
+      235
+    ],
+    "expected_answer": ""
+  },
+  {
+    "question_id": 32,
+    "question_kh": "ពន្យល់ពីកត្តាកំណត់ដែលធ្វើឱ្យពពួកលូតលាស់",
+    "chapter": 7,
+    "question_type": "explanation",
+    "difficulty": "medium",
+    "expected_concepts": [
+      "កត្តាកំណត់",
+      "លូតលាស់"
+    ],
+    "expected_source_pages": [
+      228
+    ],
+    "expected_answer": ""
+  },
+  {
+    "question_id": 33,
+    "question_kh": "សូមប្រៀបធៀបពពួក សហគមន៍ និងប្រទេស",
+    "chapter": 7,
+    "question_type": "comparison",
+    "difficulty": "medium",
+    "expected_concepts": [
+      "ពពួក",
+      "សហគមន៍"
+    ],
+    "expected_source_pages": [
+      228
+    ],
+    "expected_answer": ""
+  },
+  {
+    "question_id": 34,
+    "question_kh": "តើខ្សែអាហារ និងបណ្តាញអាហារជាអ្វី?",
+    "chapter": 8,
+    "question_type": "definition",
+    "difficulty": "easy",
+    "expected_concepts": [
+      "ខ្សែអាហារ",
+      "បណ្តាញអាហារ"
+    ],
+    "expected_source_pages": [
+      246,
+      247,
+      248
+    ],
+    "expected_answer": ""
+  },
+  {
+    "question_id": 35,
+    "question_kh": "ពន្យល់ពីការផ្ទេរថាមពលក្នុងស្ថានប្រព័ន្ធអេកូឡូស៊ី",
+    "chapter": 8,
+    "question_type": "process",
+    "difficulty": "medium",
+    "expected_concepts": [
+      "ថាមពល",
+      "ស្ថានប្រព័ន្ធ"
+    ],
+    "expected_source_pages": [
+      246,
+      248
+    ],
+    "expected_answer": ""
+  },
+  {
+    "question_id": 36,
+    "question_kh": "តើអ្នកផលិតជាអ្វី ហើយមានតួនាទីអ្វីក្នុងស្ថានប្រព័ន្ធ?",
+    "chapter": 8,
+    "question_type": "definition",
+    "difficulty": "easy",
+    "expected_concepts": [
+      "អ្នកផលិត"
+    ],
+    "expected_source_pages": [
+      247
+    ],
+    "expected_answer": ""
+  },
+  {
+    "question_id": 37,
+    "question_kh": "ពន្យល់ពីទំនាក់ទំនងថាមពលរវាងខ្សែអាហារនិងបណ្តាញអាហារ",
+    "chapter": 8,
+    "question_type": "explanation",
+    "difficulty": "medium",
+    "expected_concepts": [
+      "ថាមពល",
+      "ខ្សែអាហារ",
+      "បណ្តាញអាហារ"
+    ],
+    "expected_source_pages": [
+      246,
+      247
+    ],
+    "expected_answer": ""
+  },
+  {
+    "question_id": 38,
+    "question_kh": "នៅក្នុងការប្រឡង គេសួរថា៖ តើរុក្ខជាតិមានគ្រាប់បែងចែកជាក្រុមធំអ្វីខ្លះ?",
+    "chapter": 1,
+    "question_type": "exam",
+    "difficulty": "medium",
+    "expected_concepts": [
+      "គ្រាប់",
+      "ស៊ីមណូស្ពែម",
+      "អង់ស្យូស្ពែម"
+    ],
+    "expected_source_pages": [
+      6,
+      12
+    ],
+    "expected_answer": ""
+  },
+  {
+    "question_id": 39,
+    "question_kh": "សូមសង្ខេបពីជំពូកព័ត៌មានសេនេទិច (DNA) ក្នុងរបៀបខ្លីៗ",
+    "chapter": 5,
+    "question_type": "summary",
+    "difficulty": "easy",
+    "expected_concepts": [
+      "ADN",
+      "ARN"
+    ],
+    "expected_source_pages": [
+      150,
+      165
+    ],
+    "expected_answer": ""
+  },
+  {
+    "question_id": 40,
+    "question_kh": "សូមសង្ខេបពីការវិវត្តន៍តាមទ្រឹស្តីដាវីន",
+    "chapter": 6,
+    "question_type": "summary",
+    "difficulty": "medium",
+    "expected_concepts": [
+      "ដាវីន",
+      "វិវត្តន៍"
+    ],
+    "expected_source_pages": [
+      196
+    ],
+    "expected_answer": ""
+  },
+  {
+    "question_id": 41,
+    "question_kh": "ចូរបង្កើតសំណួរសាកល្បង 3 ទាក់ទងនឹងរុក្ខជាតិមានគ្រាប់",
+    "chapter": 1,
+    "question_type": "quiz",
+    "difficulty": "easy",
+    "expected_concepts": [
+      "ស៊ីមណូស្ពែម",
+      "អង់ស្យូស្ពែម"
+    ],
+    "expected_source_pages": [
+      6,
+      12,
+      24
+    ],
+    "expected_answer": ""
+  },
+  {
+    "question_id": 42,
+    "question_kh": "ចូរបង្កើតសំណួរសាកល្បងចំនួន 3 អំពីការផ្ទេរថាមពលក្នុងអេកូឡូស៊ី",
+    "chapter": 8,
+    "question_type": "quiz",
+    "difficulty": "medium",
+    "expected_concepts": [
+      "ថាមពល",
+      "ខ្សែអាហារ"
+    ],
+    "expected_source_pages": [
+      246,
+      252,
+      256
+    ],
+    "expected_answer": ""
+  },
+  {
+    "question_id": 43,
+    "question_kh": "សូមសង្ខេបពីសារៈសំខាន់របស់អ្នកផលិតក្នុងស្ថានប្រព័ន្ធអេកូឡូស៊ី",
+    "chapter": 8,
+    "question_type": "summary",
+    "difficulty": "easy",
+    "expected_concepts": [
+      "អ្នកផលិត"
+    ],
+    "expected_source_pages": [
+      246,
+      247,
+      248
+    ],
+    "expected_answer": ""
+  },
+  {
+    "question_id": 44,
+    "question_kh": "ពន្យល់ពីមូលហេតុដែលរុក្ខជាតិត្រូវការទឹកសម្រាប់ការលូតលាស់ និងរបៀបដឹកនាំទឹក",
+    "chapter": 2,
+    "question_type": "reasoning",
+    "difficulty": "medium",
+    "expected_concepts": [
+      "ទឹក",
+      "ស៊ីឡែម"
+    ],
+    "expected_source_pages": [
+      26,
+      28,
+      29,
+      32
+    ],
+    "expected_answer": ""
+  },
+  {
+    "question_id": 45,
+    "question_kh": "ពន្យល់ពីទំនាក់ទំនងរវាងអាស៊ីតអាមីណេ និងប្រូតេអ៊ីន",
+    "chapter": 4,
+    "question_type": "reasoning",
+    "difficulty": "medium",
+    "expected_concepts": [
+      "អាស៊ីតអាមីណេ",
+      "ប្រូតេអ៊ីន"
+    ],
+    "expected_source_pages": [
+      122
+    ],
+    "expected_answer": ""
+  },
+  {
+    "question_id": 46,
+    "question_kh": "សូមសង្ខេបអំពីរចនាសម្ព័ន្ធម៉ូលេគុល ADN",
+    "chapter": 5,
+    "question_type": "summary",
+    "difficulty": "easy",
+    "expected_concepts": [
+      "ADN",
+      "ខ្សែរពីរ"
+    ],
+    "expected_source_pages": [
+      150,
+      155,
+      160,
+      165
+    ],
+    "expected_answer": ""
+  },
+  {
+    "question_id": 47,
+    "question_kh": "អ្នកផលិត អ្នកស៊ីលំដាប់ទី១ និងអ្នកស៊ីលំដាប់ទី២ ខុសគ្នាដូចម្តេច?",
+    "chapter": 8,
+    "question_type": "comparison",
+    "difficulty": "medium",
+    "expected_concepts": [
+      "អ្នកផលិត",
+      "អ្នកស៊ី"
+    ],
+    "expected_source_pages": [
+      246,
+      247,
+      248
+    ],
+    "expected_answer": ""
+  },
+  {
+    "question_id": 48,
+    "question_kh": "តើរុក្ខជាតិម៉ូណូកូទីលេដូននិងឌីកូទីលេដូនប្រែប្រួលគ្នាដូចម្តេច?",
+    "chapter": 1,
+    "question_type": "comparison",
+    "difficulty": "medium",
+    "expected_concepts": [
+      "ម៉ូណូកូទីលេដូន",
+      "ឌីកូទីលេដូន"
+    ],
+    "expected_source_pages": [
+      12
+    ],
+    "expected_answer": ""
+  },
+  {
+    "question_id": 49,
+    "question_kh": "ចូរពន្យល់ពីលក្ខណៈពិសេសរបស់រុក្ខជាតិមានផ្កា",
+    "chapter": 1,
+    "question_type": "explanation",
+    "difficulty": "medium",
+    "expected_concepts": [
+      "ផ្កា",
+      "បន្តពូជ"
+    ],
+    "expected_source_pages": [
+      12
+    ],
+    "expected_answer": ""
+  },
+  {
+    "question_id": 50,
+    "question_kh": "សូមសង្ខេបអំពីមូលហេតុដែលការស្រូបទឹករបស់រុក្ខជាតិមានសារៈសំខាន់",
+    "chapter": 2,
+    "question_type": "summary",
+    "difficulty": "easy",
+    "expected_concepts": [
+      "ស្រូបទឹក"
+    ],
+    "expected_source_pages": [
+      26,
+      28,
+      32
+    ],
+    "expected_answer": ""
+  },
+  {
+    "question_id": 51,
+    "question_kh": "ពន្យល់ពីមូលហេតុដែលទំហំពពួកអាចផ្លាស់ប្តូរតាមពេលវេលា",
+    "chapter": 7,
+    "question_type": "reasoning",
+    "difficulty": "hard",
+    "expected_concepts": [
+      "ពពួក",
+      "ទំហំ"
+    ],
+    "expected_source_pages": [
+      228
+    ],
+    "expected_answer": ""
+  },
+  {
+    "question_kh": "តើស្រល់ជារុក្ខជាតិស៊ីមណូស្ពែមឬអង់ស្យូស្ពែម? ហេតុអ្វី?",
+    "chapter": 1,
+    "question_type": "reasoning",
+    "difficulty": "easy",
+    "expected_concepts": [
+      "ស្រល់",
+      "ស៊ីមណូស្ពែម"
+    ],
+    "expected_source_pages": [
+      6
+    ],
+    "question_id": 52,
+    "expected_answer": ""
+  },
+  {
+    "question_kh": "ពន្យល់ពីភាពខុសគ្នារវាងគ្រាប់របស់ស៊ីមណូស្ពែមនិងអង់ស្យូស្ពែម",
+    "chapter": 1,
+    "question_type": "comparison",
+    "difficulty": "medium",
+    "expected_concepts": [
+      "គ្រាប់",
+      "សំបក"
+    ],
+    "expected_source_pages": [
+      196,
+      197,
+      209
+    ],
+    "question_id": 53,
+    "expected_answer": ""
+  },
+  {
+    "question_kh": "តើកោនជាអ្វីក្នុងរុក្ខជាតិស៊ីមណូស្ពែម?",
+    "chapter": 1,
+    "question_type": "definition",
+    "difficulty": "easy",
+    "expected_concepts": [
+      "កោន"
+    ],
+    "expected_source_pages": [
+      7,
+      9
+    ],
+    "question_id": 54,
+    "expected_answer": ""
+  },
+  {
+    "question_kh": "ចូរពន្យល់ពីដំណើរការលំអងរបស់ស្រល់",
+    "chapter": 1,
+    "question_type": "process",
+    "difficulty": "medium",
+    "expected_concepts": [
+      "លំអង",
+      "លំអងផ្កា"
+    ],
+    "expected_source_pages": [
+      9
+    ],
+    "question_id": 55,
+    "expected_answer": ""
+  },
+  {
+    "question_kh": "តើអង្ករសំរូបដែលយើងបរិភោគជាផ្នែកណារបស់រុក្ខជាតិ?",
+    "chapter": 1,
+    "question_type": "reasoning",
+    "difficulty": "hard",
+    "expected_concepts": [
+      "គ្រាប់"
+    ],
+    "expected_source_pages": [
+      12,
+      18
+    ],
+    "question_id": 56,
+    "expected_answer": ""
+  },
+  {
+    "question_kh": "ពន្យល់ពីរូបផ្គុំ និងនាទីរបស់ផ្កា",
+    "chapter": 1,
+    "question_type": "explanation",
+    "difficulty": "medium",
+    "expected_concepts": [
+      "ផ្កា"
+    ],
+    "expected_source_pages": [
+      14
+    ],
+    "question_id": 57,
+    "expected_answer": ""
+  },
+  {
+    "question_kh": "តើស៊ីឡែមនិងដូអែមខុសគ្នាដូចម្តេច?",
+    "chapter": 2,
+    "question_type": "comparison",
+    "difficulty": "medium",
+    "expected_concepts": [
+      "ស៊ីឡែម",
+      "ដូអែម"
+    ],
+    "expected_source_pages": [
+      13,
+      23,
+      28,
+      29,
+      32,
+      40
+    ],
+    "question_id": 58,
+    "expected_answer": ""
+  },
+  {
+    "question_kh": "តើរន្ធខ្យល់នៅលើស្លឹកមាននាទីអ្វី?",
+    "chapter": 2,
+    "question_type": "definition",
+    "difficulty": "easy",
+    "expected_concepts": [
+      "រន្ធខ្យល់",
+      "ស្លឹក"
+    ],
+    "expected_source_pages": [
+      14,
+      28,
+      29,
+      31,
+      32
+    ],
+    "question_id": 59,
+    "expected_answer": ""
+  },
+  {
+    "question_kh": "ពន្យល់ពីរបៀបដែលសារធាតុរ៉ែត្រូវបានដឹកនាំក្នុងរុក្ខជាតិ",
+    "chapter": 2,
+    "question_type": "process",
+    "difficulty": "hard",
+    "expected_concepts": [
+      "សារធាតុរ៉ែ",
+      "ដឹកនាំ"
+    ],
+    "expected_source_pages": [
+      26
+    ],
+    "question_id": 60,
+    "expected_answer": ""
+  },
+  {
+    "question_kh": "តើណឺរ៉ូនមាននាទីសំខាន់អ្វីខ្លះ?",
+    "chapter": 3,
+    "question_type": "definition",
+    "difficulty": "easy",
+    "expected_concepts": [
+      "ណឺរ៉ូន"
+    ],
+    "expected_source_pages": [
+      60,
+      66,
+      68,
+      69,
+      70
+    ],
+    "question_id": 61,
+    "expected_answer": ""
+  },
+  {
+    "question_kh": "ពន្យល់ពីរបៀបដែលសារប្រសាទត្រូវបានបញ្ជូន",
+    "chapter": 3,
+    "question_type": "process",
+    "difficulty": "hard",
+    "expected_concepts": [
+      "សារប្រសាទ"
+    ],
+    "expected_source_pages": [
+      60
+    ],
+    "question_id": 62,
+    "expected_answer": ""
+  },
+  {
+    "question_kh": "សូមប្រៀបធៀបប្រព័ន្ធប្រសាទរបស់សត្វឆ្អឹងកងផ្សេងៗ",
+    "chapter": 3,
+    "question_type": "comparison",
+    "difficulty": "hard",
+    "expected_concepts": [
+      "ប្រព័ន្ធប្រសាទ",
+      "សត្វឆ្អឹងកង"
+    ],
+    "expected_source_pages": [
+      60
+    ],
+    "question_id": 63,
+    "expected_answer": ""
+  },
+  {
+    "question_kh": "តើអ្នកណាកំណត់ទម្រង់រូបផ្គុំរបស់ប្រូតេអ៊ីន?",
+    "chapter": 4,
+    "question_type": "reasoning",
+    "difficulty": "hard",
+    "expected_concepts": [
+      "ប្រូតេអ៊ីន",
+      "ទម្រង់"
+    ],
+    "expected_source_pages": [
+      122
+    ],
+    "question_id": 64,
+    "expected_answer": ""
+  },
+  {
+    "question_kh": "ពន្យល់ពីតួនាទីរបស់ប្រូតេអ៊ីនក្នុងសារពាង្គកាយ",
+    "chapter": 4,
+    "question_type": "explanation",
+    "difficulty": "medium",
+    "expected_concepts": [
+      "ប្រូតេអ៊ីន",
+      "តួនាទី"
+    ],
+    "expected_source_pages": [
+      122,
+      127,
+      128,
+      130,
+      134
+    ],
+    "question_id": 65,
+    "expected_answer": ""
+  },
+  {
+    "question_kh": "សរុបសង្ខេបពីរបៀបដែលប្រូតេអ៊ីនត្រូវបានផ្គុំពីអាស៊ីតអាមីណេ",
+    "chapter": 4,
+    "question_type": "summary",
+    "difficulty": "medium",
+    "expected_concepts": [
+      "ចំណងប៉ុបទីត",
+      "អាស៊ីតអាមីណេ"
+    ],
+    "expected_source_pages": [
+      122
+    ],
+    "question_id": 66,
+    "expected_answer": ""
+  },
+  {
+    "question_kh": "តើការពិសោធន៍របស់ហឺស៊ីនិងឆាសបានបង្ហាញអ្វីខ្លះ?",
+    "chapter": 5,
+    "question_type": "reasoning",
+    "difficulty": "hard",
+    "expected_concepts": [
+      "ហឺស៊ី",
+      "ឆាស",
+      "ADN"
+    ],
+    "expected_source_pages": [
+      152
+    ],
+    "question_id": 67,
+    "expected_answer": ""
+  },
+  {
+    "question_kh": "ពន្យល់ពីរបៀបដែលព័ត៌មានសេនេទិចត្រូវបានបញ្ជូនពីមេទៅកូន",
+    "chapter": 5,
+    "question_type": "process",
+    "difficulty": "medium",
+    "expected_concepts": [
+      "សេនេទិច",
+      "ADN"
+    ],
+    "expected_source_pages": [
+      150
+    ],
+    "question_id": 68,
+    "expected_answer": ""
+  },
+  {
+    "question_kh": "តើនុយក្លេអូទីតជាអ្វី ហើយស្ថិតនៅក្នុងរចនាសម្ព័ន្ធ ADN យ៉ាងដូចម្តេច?",
+    "chapter": 5,
+    "question_type": "definition",
+    "difficulty": "medium",
+    "expected_concepts": [
+      "នុយក្លេអូទីត"
+    ],
+    "expected_source_pages": [
+      165
+    ],
+    "question_id": 69,
+    "expected_answer": ""
+  },
+  {
+    "question_kh": "សូមសង្ខេបពីតួនាទីរបស់ ARN បីប្រភេទ",
+    "chapter": 5,
+    "question_type": "summary",
+    "difficulty": "medium",
+    "expected_concepts": [
+      "ARNm",
+      "ARNt",
+      "ARNr"
+    ],
+    "expected_source_pages": [
+      165
+    ],
+    "question_id": 70,
+    "expected_answer": ""
+  },
+  {
+    "question_kh": "តើសំណល់ (fossil) បានជួយឱ្យយើងយល់ពីការវិវត្តន៍យ៉ាងដូចម្តេច?",
+    "chapter": 6,
+    "question_type": "reasoning",
+    "difficulty": "medium",
+    "expected_concepts": [
+      "សំណល់",
+      "វិវត្តន៍"
+    ],
+    "expected_source_pages": [
+      195,
+      196,
+      198
+    ],
+    "question_id": 71,
+    "expected_answer": ""
+  },
+  {
+    "question_kh": "ពន្យល់ពីភស្តុតាងដែលគាំទ្រទ្រឹស្តីវិវត្តន៍",
+    "chapter": 6,
+    "question_type": "explanation",
+    "difficulty": "medium",
+    "expected_concepts": [
+      "ភស្តុតាង",
+      "វិវត្តន៍"
+    ],
+    "expected_source_pages": [
+      196
+    ],
+    "question_id": 72,
+    "expected_answer": ""
+  },
+  {
+    "question_kh": "តើកត្តាអ្វីខ្លះដែលកំណត់ទំហំពពួក?",
+    "chapter": 7,
+    "question_type": "reasoning",
+    "difficulty": "medium",
+    "expected_concepts": [
+      "ពពួក",
+      "កត្តាកំណត់"
+    ],
+    "expected_source_pages": [
+      228
+    ],
+    "question_id": 73,
+    "expected_answer": ""
+  },
+  {
+    "question_kh": "ចូរសង្ខេបពីទំនាក់ទំនងរវាងពពួកនិងសហគមន៍",
+    "chapter": 7,
+    "question_type": "summary",
+    "difficulty": "easy",
+    "expected_concepts": [
+      "ពពួក",
+      "សហគមន៍"
+    ],
+    "expected_source_pages": [
+      228
+    ],
+    "question_id": 74,
+    "expected_answer": ""
+  },
+  {
+    "question_kh": "ពន្យល់ពីរបៀបដែលថាមពលហូរកាត់ខ្សែអាហារ",
+    "chapter": 8,
+    "question_type": "process",
+    "difficulty": "medium",
+    "expected_concepts": [
+      "ថាមពល",
+      "ខ្សែអាហារ"
+    ],
+    "expected_source_pages": [
+      246,
+      248
+    ],
+    "question_id": 75,
+    "expected_answer": ""
+  },
+  {
+    "question_kh": "តើអ្វីជាភាពខុសគ្នារវាងខ្សែអាហារនិងបណ្តាញអាហារ?",
+    "chapter": 8,
+    "question_type": "comparison",
+    "difficulty": "medium",
+    "expected_concepts": [
+      "ខ្សែអាហារ",
+      "បណ្តាញអាហារ"
+    ],
+    "expected_source_pages": [
+      246,
+      247
+    ],
+    "question_id": 76,
+    "expected_answer": ""
+  },
+  {
+    "question_kh": "សូមពន្យល់ពីតួនាទីរបស់អ្នកបំភែកក្នុងខ្សែអាហារ",
+    "chapter": 8,
+    "question_type": "explanation",
+    "difficulty": "medium",
+    "expected_concepts": [
+      "អ្នកបំភែក"
+    ],
+    "expected_source_pages": [
+      247
+    ],
+    "question_id": 77,
+    "expected_answer": ""
+  },
+  {
+    "question_kh": "ក្នុងប្រឡង៖ តើអ្វីជានិយមន័យរបស់ហ្សែន (gene)?",
+    "chapter": 5,
+    "question_type": "exam",
+    "difficulty": "medium",
+    "expected_concepts": [
+      "ហ្សែន"
+    ],
+    "expected_source_pages": [
+      150,
+      155,
+      160,
+      165,
+      175
+    ],
+    "question_id": 78,
+    "expected_answer": ""
+  },
+  {
+    "question_kh": "ក្នុងប្រឡង៖ តើអ្វីជាលក្ខណៈពិសេសរបស់ស៊ីមណូស្ពែម?",
+    "chapter": 1,
+    "question_type": "exam",
+    "difficulty": "easy",
+    "expected_concepts": [
+      "ស៊ីមណូស្ពែម"
+    ],
+    "expected_source_pages": [
+      6
+    ],
+    "question_id": 79,
+    "expected_answer": ""
+  },
+  {
+    "question_kh": "ក្នុងប្រឡង៖ តើអ្វីជាលក្ខណៈពិសេសរបស់អង់ស្យូស្ពែម?",
+    "chapter": 1,
+    "question_type": "exam",
+    "difficulty": "easy",
+    "expected_concepts": [
+      "អង់ស្យូស្ពែម"
+    ],
+    "expected_source_pages": [
+      12
+    ],
+    "question_id": 80,
+    "expected_answer": ""
+  },
+  {
+    "question_kh": "ក្នុងប្រឡង៖ តើធាតុសំខាន់ៗអ្វីខ្លះដែលបង្កើត ADN?",
+    "chapter": 5,
+    "question_type": "exam",
+    "difficulty": "medium",
+    "expected_concepts": [
+      "ADN",
+      "នុយក្លេអូទីត"
+    ],
+    "expected_source_pages": [
+      150,
+      165
+    ],
+    "question_id": 81,
+    "expected_answer": ""
+  },
+  {
+    "question_kh": "ក្នុងប្រឡង៖ តើអាស៊ីតអាមីណេមានប៉ុន្មានប្រភេទ?",
+    "chapter": 4,
+    "question_type": "exam",
+    "difficulty": "easy",
+    "expected_concepts": [
+      "អាស៊ីតអាមីណេ"
+    ],
+    "expected_source_pages": [
+      122,
+      123,
+      127,
+      134
+    ],
+    "question_id": 82,
+    "expected_answer": ""
+  },
+  {
+    "question_kh": "ក្នុងប្រឡង៖ តើអ្វីជាខ្សែអាហារ?",
+    "chapter": 8,
+    "question_type": "exam",
+    "difficulty": "easy",
+    "expected_concepts": [
+      "ខ្សែអាហារ"
+    ],
+    "expected_source_pages": [
+      246
+    ],
+    "question_id": 83,
+    "expected_answer": ""
+  },
+  {
+    "question_kh": "ចូរបង្កើតសំណួរសាកល្បង 3 អំពី ADN និង ARN",
+    "chapter": 5,
+    "question_type": "quiz",
+    "difficulty": "medium",
+    "expected_concepts": [
+      "ADN",
+      "ARN"
+    ],
+    "expected_source_pages": [
+      150,
+      165
+    ],
+    "question_id": 84,
+    "expected_answer": ""
+  },
+  {
+    "question_kh": "ចូរបង្កើតសំណួរសាកល្បង 3 អំពីប្រូតេអ៊ីន",
+    "chapter": 4,
+    "question_type": "quiz",
+    "difficulty": "easy",
+    "expected_concepts": [
+      "ប្រូតេអ៊ីន"
+    ],
+    "expected_source_pages": [
+      122,
+      128,
+      129,
+      134
+    ],
+    "question_id": 85,
+    "expected_answer": ""
+  },
+  {
+    "question_kh": "ចូរបង្កើតសំណួរសាកល្បង 3 អំពីការស្រូបទឹករបស់រុក្ខជាតិ",
+    "chapter": 2,
+    "question_type": "quiz",
+    "difficulty": "medium",
+    "expected_concepts": [
+      "ស្រូបទឹក"
+    ],
+    "expected_source_pages": [
+      26
+    ],
+    "question_id": 86,
+    "expected_answer": ""
+  },
+  {
+    "question_kh": "ចូរបង្កើតសំណួរសាកល្បង 3 អំពីពពួក និងសហគមន៍",
+    "chapter": 7,
+    "question_type": "quiz",
+    "difficulty": "medium",
+    "expected_concepts": [
+      "ពពួក",
+      "សហគមន៍"
+    ],
+    "expected_source_pages": [
+      227,
+      228,
+      229,
+      235,
+      243
+    ],
+    "question_id": 87,
+    "expected_answer": ""
+  },
+  {
+    "question_kh": "សូមសង្ខេបពីភាពខុសគ្នាសំខាន់ៗរវាងកោសិកាស៊ីមណូស្ពែមនិងអង់ស្យូស្ពែម",
+    "chapter": 1,
+    "question_type": "summary",
+    "difficulty": "medium",
+    "expected_concepts": [
+      "ស៊ីមណូស្ពែម",
+      "អង់ស្យូស្ពែម"
+    ],
+    "expected_source_pages": [
+      6,
+      12
+    ],
+    "question_id": 88,
+    "expected_answer": ""
+  },
+  {
+    "question_kh": "សូមសង្ខេបពីរបៀបដែលប្រព័ន្ធប្រសាទជួយសារពាង្គកាយឆ្លើយតប",
+    "chapter": 3,
+    "question_type": "summary",
+    "difficulty": "easy",
+    "expected_concepts": [
+      "ប្រព័ន្ធប្រសាទ"
+    ],
+    "expected_source_pages": [
+      246,
+      247,
+      248,
+      256
+    ],
+    "question_id": 89,
+    "expected_answer": ""
+  }
+]
