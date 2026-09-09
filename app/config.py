@@ -33,12 +33,18 @@ GOOGLE_MODEL_POOL = os.getenv(
 
 # --- Embeddings ---
 EMBEDDING_MODEL = "BAAI/bge-m3"
-CHUNK_SIZE = 500
-CHUNK_OVERLAP = 100
+# Larger chunks keep multi-part sections (e.g. ឫស/ដើម/ស្លឹក) coherent so a
+# whole-section question still matches enough context. 800 chars ≈ 1/2 page.
+CHUNK_SIZE = 800
+CHUNK_OVERLAP = 150
 
 # --- Retrieval ---
-TOP_K = 20
-RERANKER_TOP_K = 5
+# Fetch more initial candidates so topic-specific chunks on different pages
+# are not crowded out of the reranker by repeated/boilerplate chunks.
+TOP_K = 30
+# Keep more reranked chunks so the LLM sees the full section (roots+stem+leaf)
+# instead of only the single best-match fragment.
+RERANKER_TOP_K = 8
 
 # --- Hallucination protection ---
 # If the best reranked chunk scores below this threshold, the app abstains

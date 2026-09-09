@@ -56,6 +56,7 @@ def phase1_retrieve():
             'expected_pages': q.get('expected_source_pages', []),
             'documents': documents,
             'pages': [m.get('page') for m in metadatas],
+            'page_ranges': [[m.get('page_start', m.get('page')), m.get('page_end', m.get('page'))] for m in metadatas],
         }
         with open(TMP, 'w', encoding='utf-8') as f:
             json.dump(prev, f, ensure_ascii=False)
@@ -81,26 +82,36 @@ def phase2_rerank(records):
     for q in pending:
         documents = q['documents']
         pages = q['pages']
+        ranges = q['page_ranges']
         expected = q['expected_pages']
         reranked_docs = rerank(q['question'], documents, reranker)
         reranked_pages = []
+        reranked_ranges = []
         used = set()
         for doc in reranked_docs:
             for i, d in enumerate(documents):
                 if d == doc and i not in used:
                     reranked_pages.append(pages[i])
+                    reranked_ranges.append(ranges[i])
                     used.add(i)
                     break
 
+        def hits(pranges, k):
+            """True if any page in the first k chunk ranges hits an expected page."""
+            return any(
+                any(p in expected for p in range(lo or 0, (hi or lo) + 1))
+                for lo, hi in pranges[:k]
+            )
+
         def hit5(pg):
-            return any(p in expected for p in pg[:5])
+            return hits(pg, 5)
         def hit3(pg):
-            return any(p in expected for p in pg[:3])
+            return hits(pg, 3)
         def hit1(pg):
-            return any(p in expected for p in pg[:1])
+            return hits(pg, 1)
         def mrr(pg):
-            for i, p in enumerate(pg, 1):
-                if p in expected:
+            for i, pr in enumerate(pg, 1):
+                if any(p in expected for p in range(pr[0] or 0, (pr[1] or pr[0]) + 1)):
                     return 1.0 / i
             return 0.0
 
@@ -109,17 +120,17 @@ def phase2_rerank(records):
             'chapter': q['chapter'],
             'no_rerank': {
                 'top5_pages': pages[:RERANKER_TOP_K],
-                'hit1': hit1(pages),
-                'hit3': hit3(pages),
-                'hit5': hit5(pages),
-                'mrr': mrr(pages[:RERANKER_TOP_K]),
+                'hit1': hit1(ranges),
+                'hit3': hit3(ranges),
+                'hit5': hit5(ranges),
+                'mrr': mrr(ranges[:RERANKER_TOP_K]),
             },
             'rerank': {
                 'top5_pages': reranked_pages,
-                'hit1': hit1(reranked_pages),
-                'hit3': hit3(reranked_pages),
-                'hit5': hit5(reranked_pages),
-                'mrr': mrr(reranked_pages),
+                'hit1': hit1(reranked_ranges),
+                'hit3': hit3(reranked_ranges),
+                'hit5': hit5(reranked_ranges),
+                'mrr': mrr(reranked_ranges),
             },
         }
         with open('data/evaluation/retrieval_results.json', 'w', encoding='utf-8') as f:

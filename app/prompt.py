@@ -14,7 +14,10 @@ Terminology rules (important):
 - The textbook was scanned; if a term looks like an OCR error, use the standard
   Khmer term (e.g. ថង់កំណ/ថង់អំប្រ៊ីយ៉ុង for embryo sac, ណ្វៃយ៉ូ for
   nucleus/nuclei) and answer with the correct biology.
-- Answer the question fully; do not stop at a heading or cut off mid-list."""
+- Answer the question fully; do not stop at a heading or cut off mid-list.
+- Each context block is prefixed with its real page number, e.g. [ទំព័រ 13].
+  When you cite a page, use exactly the number from that prefix. NEVER invent
+  or guess page numbers that are not shown in the context."""
 
     if mode == "easy":
         mode_instruction = """
@@ -82,7 +85,11 @@ def _source_label(s: dict) -> str:
 
     page = s.get("page", s.get("page_start"))
     if page not in (None, 0):
-        parts.append(f"ទំព័រ {page}")
+        page_end = s.get("page_end", page)
+        if page_end not in (None, 0) and page_end != page:
+            parts.append(f"ទំព័រ {page}-{page_end}")
+        else:
+            parts.append(f"ទំព័រ {page}")
 
     return " / ".join(parts) if parts else "ប្រភពមិនស្គាល់"
 
@@ -94,7 +101,8 @@ def format_answer(answer: str, sources: list[dict]) -> str:
     deduped = []
     for s in sources:
         page = s.get("page", s.get("page_start"))
-        key = f"{page}-{s.get('chapter_id', s.get('chapter', 0))}-{s.get('lesson_id', s.get('lesson', 0))}"
+        page_end = s.get("page_end", page)
+        key = f"{page}-{page_end}-{s.get('chapter_id', s.get('chapter', 0))}-{s.get('lesson_id', s.get('lesson', 0))}"
         if key in seen:
             continue
         seen.add(key)
