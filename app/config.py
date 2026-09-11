@@ -1,7 +1,8 @@
 import os
 from dotenv import load_dotenv
 
-load_dotenv()
+BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+load_dotenv(os.path.join(BASE_DIR, ".env"))
 
 # --- Paths ---
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -44,7 +45,7 @@ CHUNK_OVERLAP = 150
 TOP_K = 30
 # Keep more reranked chunks so the LLM sees the full section (roots+stem+leaf)
 # instead of only the single best-match fragment.
-RERANKER_TOP_K = 8
+RERANKER_TOP_K = 12
 
 # --- Hallucination protection ---
 # If the best reranked chunk scores below this threshold, the app abstains
