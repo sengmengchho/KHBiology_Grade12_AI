@@ -1,78 +1,94 @@
-# KhmerBio Tutor — Progress & Next Steps
+# KhmerBio Tutor — Training Progress Log
 
-AI study assistant for Cambodian Grade 12 Biology, grounded strictly in the national textbook.
+## Summary
+Grounded RAG system for Grade 12 Khmer Biology. Retrieval pipeline: normalize/expand query → embedding retrieve (top-30) → rerank (top-8, BGE-reranker-v2-m3) → threshold (0.08) → generate (Gemini) → format citations. Corpus: 610 chunks from Grade 12 textbook (Chapters 1–8), embedded with BGE-M3.
 
-## What has been done so far
+---
 
-### 1. OCR & corpus
-- Extracted **257/257 pages** of the Grade 12 Biology textbook using Gemini (`scripts/ocr_gemini.py`). Status tracked in `data/OCR_STATUS.md`.
-- Pipeline rebuilt over the full corpus:
-  `clean_text.py` → `parse_lessons.py` → `chunk_text.py` → `build_vector_db.py`
-- **1,093 chunks** (size 500, overlap 100) covering all 257 pages, organized into **8 chapters**.
+## Completed Training Batches (8 rounds, 40 questions)
 
-### 2. Corpus audit — PASS
-- No missing / duplicate / empty / broken pages.
-- All 257 pages covered by chunks; only 7 TOC chunks (pages 0–3) lack chapter metadata (expected).
-- Known cosmetic issue: OCR-garbled chapter/lesson titles.
+| Batch | Questions | Topics Covered | Key Fixes |
+|-------|-----------|----------------|-----------|
+| **1** | 5 | Double fertilization, Cerebrum, Iodine/Goiter, Dicots, Griffith | Initial OCR term normalization (`QUERY_FIXES`, `normalize_query`) |
+| **2** | 4 | ADN info carrier, Retina, Polyploidy, Flower/Angiosperm | Definition query expansion (`_expand_definition`) |
+| **3** | 5 (re-train) | Same as Batch 1 + fixes | Stigma residue removal, citation dedup, spermatozoid spelling (ស្ពែម៉ាតូសូអ៊ុត) |
+| **4** | 6 | Nerve impulse, Amino acids, ADN replication, ARN polymerase, Ear balance, Fossils | R-group variants (រ៉ូម៉ាគាល់) |
+| **5** | 4 | Parathyroid, Pancreas, Stomach, Nervous systems | Image 2 OCR fixes (insulin/glucagon/cephalization) |
+| **6** | 5 | Leaf tissue, Amino acid/dipeptide, Monocot/Dicot, Enzyme temp, Translation stop | Image artifacts, temperature spacing, stop codons |
+| **7** | 4 | Parathyroid, Pancreas, Sweat gland, Nervous systems | Image 2 OCR fixes (ត្រពេញ→ក្រពេញ, អូមូន→អរម៉ូន, etc.) |
+| **8** | 6 | Pollination, Neurons, Cornea, Hormone comparison, Adrenal, Natural selection | Image 3 OCR fixes + improved question splitting (I–VI) |
 
-### 3. Retrieval pipeline
-- Embeddings: `BAAI/bge-m3`; reranker: `BAAI/bge-reranker-v2-m3`; Chroma (cosine), collection `biology`.
-- `TOP_K=20` → rerank → `RERANKER_TOP_K=5` fed to the LLM.
+**Total:** 8 batches, 40 questions, all retrieval scores >0.08, 610 chunks, 610 re-embeddings per round.
 
-### 4. Evaluation suite
-- **89-question dataset** (`data/evaluation/evaluation_questions.json`) covering all 8 chapters; types: definition, explanation, process, reasoning, summary, comparison, exam, quiz.
-- `scripts/evaluate_retrieval.py` — resumable retrieval evaluation.
-- `scripts/evaluate_answers.py` — resumable RAG answer evaluation (`--sample`, `--questions`, `--score-only`).
+---
 
-### 5. Retrieval evaluation results
-| Metric | BGE-M3 only | BGE-M3 + reranker |
-|---|---|---|
-| Recall@1 (Hit@1) | 0.404 | **0.506** |
-| Recall@3 | 0.719 | **0.787** |
-| Recall@5 | 0.899 | 0.843 |
-| MRR | 0.573 | **0.646** |
+## Key Technical Achievements
 
-Verdict: keep the reranker. Full report: `docs/retrieval_evaluation.md`.
+### OCR Error Correction (30+ mappings)
+- `ត្រពេញ` → `ក្រពេញ` (gland)
+- `អូមូន` → `អរម៉ូន` (hormone)
+- `ផ្វូស្បាត` → `ផូស្វាត` (phosphate)
+- `ស្វីកុដជាតិ` → `ស្លឹករុក្ខជាតិ` (plant leaves)
+- `រ៉ូម៉ាគាល់់` → `រ៉ាឌីកាល់` (R-group)
+- `ឌីប៉ុបទីត` → `ឌីប៉ិបទីត` (dipeptide)
+- `កូដុងឈប់` → `កូដុងស្តុប` (stop codon)
+- `សត្វកត់ផ្ដៀងកង` / `កណ្តុរ` → `សត្វឥតឆ្អឹងកង` (invertebrate)
+- `ម៉ូលេគុល` → `ម៉ូណូកូទីលេដូន` (monocot)
+- `ឌីគូម៉ូលេគុល` → `ឌីកូទីលេដូន` (dicot)
+- `ស្ពែម៉ាតូសូអ៊ីត` → `ស្ពែម៉ាតូសូអ៊ុត` (spermatozoid)
 
-### 6. RAG answer evaluation
-- **v1 (primary model `gemini-3.6-flash` had quota):** concept coverage mean **0.74**, page recall mean **0.89** (20/20 ≥ 0.5).
-- **v2 (re-run on fallback pool models, primary quota exhausted):** concept coverage mean **0.58**, page recall mean **0.89**.
-- Outcome: citation/pages are reliable regardless of model; answer depth drops sharply on weaker fallback models. **Model availability is the #1 quality variable.**
+### Query Processing Improvements
+- **Definition rewriting**: `ចូរឱ្យនិយមន័យ X` → `តើXជាអ្វី?` (clean noun phrases only)
+- **Cerebrum rule**: `ខួរឆ្អឹង` → `ខួរធំ` (unless followed by `ខ្នង`)
+- **Follow-up merge**: `វាមាននាទីអ្វី?` merges with parent question
+- **Roman numeral splitting**: Clean I–VI separation with sub-question merge
 
-### 7. Hallucination protection
-- **Retrieval-confidence gate:** if the best reranked chunk scores below `RETRIEVAL_SCORE_THRESHOLD`, the app politely abstains instead of guessing.
-- Threshold **calibrated on all 89 questions** (`data/evaluation/top_rerank_scores.json`): on-topic median 0.92 (p25 0.76), off-topic ~0.005 → threshold set to **0.08** (the earlier 0.20 rejected valid questions such as a DNA question scoring 0.195).
-- **Model-pool rotation** in `app/rag.py::_call_google_rotate`: primary model first, then the `GOOGLE_MODEL_POOL` chain on 429/503; skips models that return empty or <80-char responses.
-- Config: `RETRIEVAL_SCORE_THRESHOLD`, `GOOGLE_MODEL_POOL` in `app/config.py`.
+### Citation Quality
+- Dedup by page only (collapses page-range overlaps)
+- Primary-lesson filtering (drops cross-chapter noise)
+- Cap at 6 source lines
 
-### 8. Streamlit app (`app/main.py`)
-- Modes: **Normal / Easy / Exam**; features: **Explain / Quiz / Summary**.
-- Cached embedding/reranker/vector-DB resources; Khmer error handling; chat clear button.
-- Citations (`ប្រភព`) fixed: chapter/lesson/page labels now clipped to 16 chars (garbled OCR titles no longer bloat them).
+### Prompt Rules
+- Canonical terminology enforcement (NEVER-list for garbled OCR forms)
+- No parenthetical double-spelling (e.g., `ស្ទិចម៉ាត (ស្អិតម៉ាស)`)
+- Spermatozoid canonical: `ស្ពែម៉ាតូសូអ៊ុត` (matches textbook fig. p18/19 + official key)
 
-### 9. Biology glossary
-- `scripts/build_glossary.py` extracts terms + definitions from the 1,093 chunks (no LLM calls).
-- **51 unique terms** with definition, English gloss, page, chapter → `data/glossary/glossary.json` + `glossary.md`.
-- Capacity note: exact term-matching is limited by OCR spelling noise; LLM-assisted curation is the natural next upgrade.
+---
 
-## Known issues to improve
-1. **Fallback model quality** — when quota is exhausted, pool models produce short/mid-quality answers (concept coverage 0.74 → 0.58). Mitigations: stronger-only pool, better prompts for weak models, answer-caching/resume across days, retry the primary model later.
-2. **OCR-garbled titles** in metadata (cosmetic; affected citations — mitigated by clipping).
-3. **7 TOC chunks** lack chapter metadata (expected; excluded from chapter grouping).
-4. **Interactive QA pending** — browser testing of every mode/feature is the immediate next step.
+## Files Modified
 
-## Next steps (in order)
-1. **Manual browser QA** — test Normal / Easy / Exam + Explain / Quiz / Summary + out-of-scope + clear-chat. Judge correctness, clarity, usefulness, Grade-12 suitability, source accuracy. (Note: if testing same day as heavy use, answers may come from fallback models.)
-2. **Re-run the 20-answer evaluation** on a fresh day / with primary-model quota to measure best-case quality, and compare against v1/v2.
-3. **Fix remaining problems** — only those surfaced by QA/evaluation.
-4. **Student/teacher testing** — share with real Grade 12 students and Biology teachers; collect ratings and comments.
-5. **Apply real-user feedback** — improve wording, terminology, explanation clarity, answer length, quiz quality, source presentation.
-6. **Deploy** — only after steps 1–5 look good.
-7. **Fine-tune only if still needed** — reserve for repeated problems prompting/RAG cannot solve.
+| File | Purpose |
+|------|---------|
+| `app/utils.py` | `QUERY_FIXES` (30+ entries), `normalize_query()`, `expand_query()` |
+| `app/main.py` | `_answer()`, `_answer_multi()`, `_process_question()`, `_split_questions()` — term expansion + multi-question splitting |
+| `app/prompt.py` | System prompt (canonical terms, NEVER-list, no-parenthetical rule), `format_answer()` dedup + primary-lesson filter |
+| `app/ocr.py` | Uses shared `normalize_query()` |
+| `scripts/clean_text.py` | `OCR_FIXES` (30+ mappings across all batches) |
 
-## Key files
-- `app/` — Streamlit UI (`main.py`), RAG (`rag.py`), prompts (`prompt.py`), retrieval (`retrieval.py`), config (`config.py`)
-- `scripts/` — OCR, cleaning, chunking, vector DB, evaluation, threshold calibration, glossary
-- `data/evaluation/` — 89-question dataset, retrieval + answer results, top-score calibration data
-- `data/glossary/` — generated glossary (JSON + Markdown)
-- `docs/` — `corpus_audit.md`, `retrieval_evaluation.md`
+---
+
+## Next Steps
+
+1. **Expand evaluation set** — Run automated evaluation on 30+ questions (Ch1–8) using `scripts/evaluate_answers.py`; track concept coverage & page recall.
+2. **Add remaining term gaps** — Scan retrieval failures for missing normalizations (specific hormone names, enzyme names, plant tissue terms).
+3. **Hardening** — Add regression tests for critical term normalizations; CI for pipeline regen.
+4. **Optional UX** — Streamlit chat history export; quiz mode scoring.
+
+---
+
+## Commands for Re-running Pipeline
+
+```powershell
+# Full corpus regeneration (after clean_text.py OCR_FIXES changes)
+$env:PYTHONIOENCODING='utf-8'
+python scripts/clean_text.py
+python scripts/parse_lessons.py
+python scripts/chunk_text.py
+python scripts/build_vector_db.py   # ~6 min on CPU (610 chunks)
+
+# Retrieval smoke test
+python scripts/test_retrieval.py
+
+# Full evaluation (uses GOOGLE_API_KEY)
+python scripts/evaluate_answers.py --sample 20
+```

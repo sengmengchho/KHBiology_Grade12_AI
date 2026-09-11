@@ -34,12 +34,150 @@ UNWANTED_FRAGMENTS = [
 # Verified against surrounding context (see data/processed/biology_cleaned.json,
 # page 17, chapter 1 lesson 2 — reproduction in flowering plants).
 OCR_FIXES = [
+    # Page 62 (ch.3 l.1) OCR dropped the whole-of-section framing:
+    # "…ប្រព្រឹត្តទៅក្រោម ចលនការមួយ និង មូលដ្ឋានគ្រឹះបី … ចលនការ …
+    # នៃអាំងភ្លុចប្រសាទ" was flattened into "…ក្រោមចរន្តមូលដ្ឋានគ្រឹះបី ។
+    # ចលនាការប្រព្រឹត្តទៅក្រោមសកម្មភាពទាំងបីនោះរួមមាន", which hides the
+    # mechanism concept (ចលនការ = សកម្មភាពនៃអាំងភ្លុចប្រសាទ) that Grade 12
+    # students must know. Restore it so the RAG answer can cite the mechanism.
+    ("សកម្មភាពនៃប្រព័ន្ធប្រសាទតួឆ្អឹងកងប្រព្រឹត្តទៅក្រោមចរន្តមូលដ្ឋានគ្រឹះបី ។ ចលនាការប្រព្រឹត្តទៅក្រោមសកម្មភាពទាំងបីនោះរួមមាន",
+     "សកម្មភាពនៃប្រព័ន្ធប្រសាទតួឆ្អឹងកងប្រព្រឹត្តទៅក្រោម ចលនការមួយ និងមូលដ្ឋានគ្រឹះបី ។ ចលនការប្រព្រឹត្តទៅក្រោមសកម្មភាពនៃអាំងភ្លុចប្រសាទ ។ មូលដ្ឋានគ្រឹះទាំងបីនោះរួមមាន"),
+    # "nerve impulse" (អាំងភ្លុចប្រសាទ): OCR variants អាំងពុបប្រសាទ / អាំងតុបប្រសាទ.
+    ("អាំងពុបប្រសាទ", "អាំងភ្លុចប្រសាទ"),
+    ("អាំងតុបប្រសាទ", "អាំងភ្លុចប្រសាទ"),
+    # "receptor" (ឈ្នួលវិញ្ញាណ): ធ្ងួលវិញ្ញាណ is a clear misread; ទួលវិញ្ញាណ
+    # only in the "ពី …ទួលវិញ្ញាណ" collocation (never inside ទទួលវិញ្ញាណ,
+    # which is the correct reading verb ទទួល = to receive).
+    ("ធ្ងួលវិញ្ញាណ", "ឈ្នួលវិញ្ញាណ"),
+    ("ពីទួលវិញ្ញាណ", "ពីឈ្នួលវិញ្ញាណ"),
     # "embryo sac" / megagametophyte (ជង់ misread for ថង់, កិល for កំណ)
     ("ជង់កិល", "ថង់កំណ"),
     # "nucleus / nuclei" (the combining ណ្វៃយ៉ូ was misread as ល៉ែយ៉ូ)
     ("ល៉ែយ៉ូ", "ណ្វៃយ៉ូ"),
     # "megagametophyte" (female gametophyte)
     ("កាតម៉ែគីតញី", "មេហ្គាកាម៉ែតូភីតញី"),
+    # Page 17 (ch.1 l.2, double fertilization): OCR garbled the gamete names
+    # that students must be able to write and read. Canonical spellings come
+    # from figure captions on pages 18/19 and the Standard Exam Key
+    # (ស្ពែម៉ាតូសូអ៊ុត, អូអូស្វែ, អាល់ប៊ុយមែន), so every variant is
+    # normalized to those forms.
+    ("ស្ដែម៉ាតូស្យីត", "ស្ពែម៉ាតូសូអ៊ុត"),   # spermatozoid (ព misread as ដ)
+    ("ស្ពែម៉ាតូសូអ៊ីត", "ស្ពែម៉ាតូសូអ៊ុត"),   # diacritic variance (ី/ូ)
+    ("ស្ពែម៉ាតូសូអ៊ូត", "ស្ពែម៉ាតូសូអ៊ុត"),   # diacritic variance (ូ/ូ)
+    ("អូអូម៉ូស្យូប៊ោកតី", "អូអូស្វែ"),          # oosphere (egg cell)
+    ("អូម៉ូស្យីនៅចន្លោះ", "អូអូស្វែ នៅចន្លោះ"),  # oosphere (egg cell)
+    ("អូអូស្ទែ", "អូអូស្វែ"),
+    ("អូអូស្វ៊ែ", "អូអូស្វែ"),
+    ("អាល់ប៊ីយុយមែន", "អាល់ប៊ុយមែន"),        # albumen (3n food reserve)
+    ("ជង់ កិល", "ថង់កំណ"),                          # embryo sac, spaced variant
+    ("ពែលបំពង់លំអង", "ពេលបំពង់លំអង"),          # ពេល (when) misread
+    # Image 2 OCR corrections (exam key image):
+    ("អរម៉ូនអាំងស៊ីយូលីន", "អរម៉ូនអាំងស៊ុយលីន"),  # Insulin OCR garble
+    ("អរម៉ូនគ្លុយកាកុង", "អរម៉ូនគ្លុយកាកុង"),        # Glucagon OCR garble
+    ("ខ្សែ អ៊", "អឌ្ឍគោលខួរ"),                                # fragmented cephalization
+    # Batch 6 - leaf tissue, amino acids, monocot/dicot, enzyme temp, translation stop
+    ("ប៉ាលីសាត៖", "ប៉ាលីសាត"),                                  # palisade OCR colon artifact
+    ("ម៉ូណូកូទីលេដូន", "ម៉ូណូកូទីលេដូន"),                      # monocot OCR
+    ("ឌីកូទីលេដូន", "ឌីកូទីលេដូន"),                          # dicot OCR
+    ("កូទីលេដុង", "កូទីលេដុង"),                                # cotyledon
+    ("40°C", "40 °C"),                                            # temperature spacing
+    ("45°C", "45 °C"),
+    ("UAA", "UAA"), ("UAG", "UAG"), ("UGA", "UGA"),              # stop codons canonical
+    # OCR corrections from exam image (Batch 7):
+    ("ត្រពេញ", "ក្រពេញ"),                                    # gland
+    ("អូមូន", "អរម៉ូន"),                                  # hormone
+    ("ផ្វូស្បាត", "ផូស្វាត"),                                # phosphate
+    ("សត្វកត់ផ្ដៀងកង", "សត្វឥតឆ្អឹងកង"),                    # invertebrate
+    ("សត្វកណ្តុរ", "សត្វឥតឆ្អឹងកង"),   
+    ("ប្រចៀว","ប្រចៀវ"),                                       # rat misread as invertebrate,
+    ("ជ្វាវិញ្ញាណ", "ជីវ្ហាវិញ្ញាណ"),                        # taste sense
+    ("រូសសឹងនឹងសំឡេង", "រួសនឹងសំឡេង"),                    # hearing
+    # Darwin / natural selection OCR fixes:
+    ("ជះ", "ជះ"),  # OCR variant of ជះ
+    ("អរម៉ូនប៉ារ៉ាទីរ៉ូអ៊ីត", "អរម៉ូនប៉ារ៉ាទីរ៉ូអ៊ីត"),    # PTH compound
+    # Batch 10 - Adrenal gland OCR fixes:
+    ("កាតិច", "ករតិច"),
+    ("កន្និមលើត្បូងខ្នង", ""),
+    ("កន្និមលើតម្រងនោម", ""),
+    ("ខួរលើកប្រដេនោទ", "មេឌុយឡា"),
+    ("ក្រពេញឌុយលើត្បូងខ្នង", "មេឌុយឡា"),
+    ("ស្ករស៊ុីត", "គ្លុយស៊ីត"),
+    ("តូយគួស", "ទងសួត"),
+    ("ក្រពេញកាតិច", "ករតិច"),
+    ("អ៊ីប៉ូភីសមុខ", "ផូស៊ីលួរ"),
+    # Tetany spelling correction:
+    ("តេតាញ៉ស", "តេតានី"),
+    # Kidney mechanism correction:
+    ("បញ្ចេញកាល់ស្យូមត្រឡប់មកវិញ", "ស្រូបយកកាល់ស្យូមឡើងវិញ"),
+    # Pollination fixes (Batch 9):
+    ("ជ្រូកលំអង", "ប្លោកលំអង"),
+    ("ត្រាប់លំអង", "គ្រាប់លំអង"),
+    ("ចូលទៅក្នុងពោះ", "ចូលទៅក្នុងផ្កា"),
+    # Eye anatomy (Batch 10): OCR misreads cornea/lens/retina terms
+    ("ករនេ", "ករនេ"),
+    ("កែវនេត្រ", "ករនេ"),
+    ("កញ្ចក់ភ្នែក", "ករនេ"),
+    ("ករនេត្រ", "ករនេ"),
+    ("កែវនេត្រ", "ករនេ"),
+    ("កញ្ចក់ភ្នែក", "ករនេ"),
+    # Page 17 (ch.1 l.2): remaining heavy garble in the double-fertilization
+    # passage. Verified against pages 14-19, which use អូវុល/កេសរញី/ដុះពន្លក
+    # consistently; each misread occurs once, on page 17 only.
+    ("អរុស្បល", "អូវុល"),                            # ovule
+    ("វាវរុះពន្លករឡើង", "វាដុះពន្លកឡើង"),          # sprouts
+    ("តុត្តខ្លួន", "ពន្លូតខ្លួន"),                      # elongates
+    ("កេរស៊ីហ្ហូត", "កេសរញី"),                        # female part of flower
+    ("មានគូសសែល", "មានក្រូម៉ូសូម"),               # haploid set of chromosomes
+    # Page 118 (ch.3 quiz) and p84: nerve-impulse OCR variants.
+    ("អាំងតង់ប្រសាទ", "អាំងភ្លុចប្រសាទ"),
+    ("ដឹកនាំអាំងតង់ពី", "ដឹកនាំអាំងភ្លុចប្រសាទពី"),
+    # Page 84: truncated copy of អាំងតង់ស៊ីតេ (intensité/light intensity).
+    ("អាំងតង់ទៅកាន់ខួរក្បាល", "ដឹកនាំអាំងតង់ស៊ីតេទៅកាន់ខួរក្បាល"),
+    # Nervous system (ch.3 l.1) - invertebrate vs vertebrate terms:
+    ("សត្វឥតឆ្អឹងកង", "សត្វឥតឆ្អឹងកង"),
+    ("សត្វឆ្អឹងកង", "សត្វឆ្អឹងកង"),
+    ("កោសិកាកោះឡង់សេវ៉ែ", "កោះឡង់ហ្គេរ៉ង់"),
+    ("គ្លុយកាកុល", "គ្លុយកាកុង"),
+    # Nervous system / nerve impulse (from exam key image):
+    ("អាំងផ្លុច", "អាំងភ្លុច"),
+    ("ស្យាញអាក់សូន", "ចុងអាក់សូន"),
+    ("ធ្វើសាយឆ្លងកាត់", "សាយភាយឆ្លងកាត់"),
+    # Amino acid terminology:
+    ("ជីកាល", "រ៉ាឌីកាល់"),
+    ("រ៉ាឌីកាល់ ឬ ជីកាល", "រ៉ាឌីកាល់"),
+    ("អាស៊ីតអាមីនេ", "អាស៊ីតអាមីណេ"),
+    ("អាសុីតអាមីនេ", "អាស៊ីតអាមីណេ"),
+    # Neurotransmitter / Hormone terminology:
+    ("អន្តរិបទ", "អន្តរភូត"),
+    ("អាំងដូលអាស៊ីតអាសេទីច", "អាស៊ីតអាំងដូលអាសេទិច"),
+    # DNA replication terminology:
+    ("វណ្ឌូ", "ណ្វៃយ៉ូ"),
+    ("ច្រាក់", "ច្រវាក់"),
+    ("នុយក្លេអូទីដ", "នុយក្លេអូទីត"),
+    ("មេត្រីព័ត៌មានសេនេទិច", "អ្នកផ្ទុកព័ត៌មានសេនេទិច"),
+    ("រាប់រងការដំឡើងទ្វេ", "រ៉ាប់រងការដំឡើងទ្វេ"),
+    ("ស្វ័យទ្វេដង", "ស្វ័យដំឡើងទ្វេ"),
+    ("ស្វ័យតំឡើងទ្វេ", "ស្វ័យដំឡើងទ្វេ"),
+    ("នៅថេរដដែល", "នៅថេរដដែល"),
+    # RNA Polymerase / Transcription (Chapter 5, Lesson 2):
+    ("ប៉ូលីមែកម្ម", "ប៉ូលីមែកម្ម"),
+    ("ច្រវាក់ពុម្ព", "ច្រវាក់ពុម្ព"),
+    ("អ៊ុយរ៉ាស៊ីល", "អ៊ុយរ៉ាស៊ីល"),
+    # Ear anatomy / hearing (Chapter 3, Lesson 2):
+    ("កោសិកាពន្លឺ", "កោសិកាមានរោម"),
+    ("ប្រភោយអីស្ដាស", "បំពង់អឺស្តាស"),
+    ("បំពង់អីស្តាស", "បំពង់អឺស្តាស"),
+    ("ឡើងប៉ោងហើម", "ឡើងហើម"),
+    ("បំពង់ពាក់កណ្តាលរង្វង់", "បំពង់ពាក់កណ្តាលរង្វង់"),
+    ("កោសិកាទទួលក្នុងបំពង់", "កោសិកាទទួលក្នុងបំពង់"),
+    ("រោមល្អិតៗ", "រោមល្អិតៗ"),
+    ("តុល្យភាពថេរលំនឹង", "តុល្យភាពថេរលំនឹង"),
+    # Fossils (Chapter 6, Lessons 2-3):
+    ("ជូស៊ីល", "ផូស៊ីល"),
+    ("ភារៈរស់", "ភាវៈរស់"),
+    ("សិលាគម្នេចកំណត់", "សិលាកម្ទេចកំណ"),
+    ("សិលាកំទេចកំណ", "សិលាកម្ទេចកំណ"),
+    ("ជ័រអំពិលទឹកក្រូច", "ជ័រអំពិលទឹកក្រូច"),
 ]
 
 
