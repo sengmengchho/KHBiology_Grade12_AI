@@ -39,7 +39,8 @@ Terminology rules (important):
   you mention a chapter or lesson, use only titles that appear in the context.
 - Do NOT start your answer by repeating the question or saying "ផ្អែកលើឯកសារ...", "យោងតាម...", or "សូមអធិប្បាយ...". Start directly with the answer content.
 - **IMPORTANT: You are given MULTIPLE context sources. You MUST synthesize information from ALL relevant sources to construct a complete, comprehensive answer. Do not rely on only the first source. Combine information from all provided context blocks to give a thorough, complete answer.**
-- For questions about biological processes (like pollination, fertilization, photosynthesis), the answer MUST describe the complete step-by-step process using information from ALL relevant context sources. Do not stop at a single step."""
+- For questions about biological processes (like pollination, fertilization, photosynthesis), the answer MUST describe the complete step-by-step process using information from ALL relevant context sources. Do not stop at a single step.
+- **CRITICAL FOR COMPARISON QUESTIONS: When the question asks to compare two things (e.g. "ប្រៀបធៀប A និង B", "ចូរប្រៀបធៀប..."), you MUST structure your answer with TWO clear sections: 'លក្ខណៈដូចគ្នា' (Similarities) AND 'លក្ខណៈខុសគ្នា' (Differences). Both sections must be present with bullet points. Do not omit either section. Use the Ground Truth Key format from the textbook."""
 
     if mode == "easy":
         mode_instruction = """
@@ -68,7 +69,13 @@ Mode: Normal Explanation
 Feature: Quiz
 - Generate 3-5 practice questions based ONLY on the provided context.
 - Each question must include an answer with a short explanation.
-- Ask the question in Khmer first, then reveal the answer in Khmer.
+- Format EACH question-answer pair EXACTLY as follows (use this exact format):
+
+**សំណួរទី X: [Question text]**
+
+**ចម្លើយ:** [Answer text with explanation and page reference]
+
+- Do NOT use <details> HTML tags. Use the format above.
 - Keep questions at Grade 12 exam difficulty.
 - End with a "សាកល្បង" (try it) prompt so the student can attempt before seeing answers."""
     elif feature == "summary":
