@@ -8,6 +8,57 @@ from app.prompt import format_answer
 from app.ocr import ocr_question_image
 from app.utils import expand_query, normalize_query
 
+
+def _render_quiz_answer(answer: str, feature: str) -> None:
+    """Render quiz answers with collapsible expanders for each question."""
+    if feature != "quiz":
+        st.markdown(answer)
+        return
+
+    # Parse the quiz format: **សំណួរទី X: ...** followed by **ចម្លើយ:** ...
+    # Split by question markers
+    question_pattern = re.compile(r'(\*\*សំណួរទី\s*\d+\s*:\s*.+?\*\*)')
+    parts = question_pattern.split(answer)
+
+    # parts[0] might be intro text, then alternating: question, content, question, content...
+    if len(parts) <= 1:
+        st.markdown(answer)
+        return
+
+    # Check if there's intro text before first question
+    intro = parts[0].strip()
+    if intro:
+        st.markdown(intro)
+
+    # Process question-answer pairs
+    for i in range(1, len(parts), 2):
+        if i >= len(parts):
+            break
+        question_header = parts[i].strip()
+        content = parts[i + 1].strip() if i + 1 < len(parts) else ""
+
+        # Extract question number from header
+        q_match = re.search(r'សំណួរទី\s*(\d+)', question_header)
+        q_num = q_match.group(1) if q_match else str((i + 1) // 2)
+
+        # Split content into answer part
+        # The content should start with **ចម្លើយ:**
+        answer_match = re.match(r'\*\*ចម្លើយ:\*\*\s*(.+)', content, re.DOTALL)
+        if answer_match:
+            answer_text = answer_match.group(1).strip()
+            # Render question as expander header, answer inside
+            with st.expander(f"**សំណួរទី {q_num}:** {question_header.replace('**', '').replace(f'សំណួរទី {q_num}:', '').strip()}"):
+                st.markdown(f"**ចម្លើយ:** {answer_text}")
+        else:
+            # Fallback: just render as markdown
+            st.markdown(f"{question_header}\n\n{content}")
+
+    # Check for trailing content after last question
+    if len(parts) % 2 == 0:
+        trailing = parts[-1].strip()
+        if trailing:
+            st.markdown(trailing)
+
 st.set_page_config(page_title="KhmerBio Tutor", page_icon="🧬", layout="centered")
 
 st.title("🧬 KhmerBio Tutor")
@@ -153,7 +204,7 @@ def _process_question(question: str, mode: str, feature: str) -> None:
         with st.chat_message("assistant"):
             with st.spinner("កំពុងស្វែងរកក្នុងមេរៀន..."):
                 final_answer = _answer_multi(question, mode, feature)
-            st.markdown(final_answer)
+            _render_quiz_answer(final_answer, feature)
     except Exception as err:  # noqa: BLE001
         st.error(f"⚠️ មានបញ្ហាក្នុងការឆ្លើយតប៖ {err}")
         final_answer = None
@@ -246,7 +297,7 @@ if reanswer_clicked:
         with st.spinner("កំពុងឆ្លើយតប (សំណួរមុន)..."):
             try:
                 final_answer = _answer_multi(q, mode, feature)
-                st.markdown(final_answer)
+                _render_quiz_answer(final_answer, feature)
             except Exception as err:  # noqa: BLE001
                 st.error(f"⚠️ មានបញ្ហាក្នុងការឆ្លើយតប៖ {err}")
                 final_answer = None
