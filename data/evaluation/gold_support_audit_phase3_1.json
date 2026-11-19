@@ -1,0 +1,329 @@
+{
+  "phase": "3.1",
+  "artifact": "gold_support_audit_phase3_1.json",
+  "purpose": "Evaluator-only audit of gold-concept support in the frozen textbook corpus. This file does not modify the gold dataset.",
+  "frozen_gold_path": "data/evaluation/gold_questions_v2.json",
+  "frozen_gold_edited": false,
+  "corpus_path": "data/processed/biology_chunks.json",
+  "support_levels": {
+    "direct": "The gold concept appears verbatim in the retrieved textbook evidence.",
+    "variant": "The gold concept is an accepted spelling, OCR, or terminology variant of an evidence term.",
+    "inference": "The gold concept is a paraphrase, application, or classification inference supported by the evidence but not stated verbatim.",
+    "external": "The gold concept is not supported by the provided textbook corpus and would require external knowledge.",
+    "uncertain": "The corpus does not contain enough evidence to decide whether the gold wording is supported."
+  },
+  "questions": [
+    {
+      "question_id": 78,
+      "question": "ក្នុងប្រឡង៖ តើអ្វីជានិយមន័យរបស់ហ្សែន (gene)?",
+      "gold_pages": [174],
+      "gold_concepts": ["ហ្សែន"],
+      "concepts": [
+        {
+          "concept": "ហ្សែន",
+          "support_level": "variant",
+          "evidence_pages": [174, 204, 205],
+          "evidence_chunks": ["p174_030", "p204_018", "p205_019"],
+          "evidence_quote": "សែនជាអង្គធាតុមួយរបស់ ADN ដែលផ្ទុកព័ត៌មានសេនេទិចកំណត់សំយោគប្រតេអ៊ីនប្រភេទមួយ ។",
+          "accepted_aliases": ["សែន"],
+          "alias_mode_rule": "សែន requires local gene context (ADN, genetic information, nucleotide, chromosome, trait determination, or protein synthesis).",
+          "strict_match_in_saved_answer": false,
+          "alias_aware_match_in_saved_answer": true,
+          "justification": "The textbook definition on p174 uses សែន for gene; the transliteration ហ្សែន appears on pp.204-205. The saved answer defines សែន with ADN and genetic information, so the alias is a verified spelling variant in gene context."
+        }
+      ],
+      "notes": "Strict coverage is 0.0 only because the gold label uses ហ្សែន while the answer uses the textbook spelling សែន. Alias-aware coverage becomes 1.0. The definition itself is scientifically correct."
+    },
+    {
+      "question_id": 86,
+      "question": "ចូរបង្កើតសំណួរសាកល្បង 3 អំពីការស្រូបទឹករបស់រុក្ខជាតិ",
+      "gold_pages": [26, 27, 40],
+      "gold_concepts": ["ស្រូបទឹក"],
+      "concepts": [
+        {
+          "concept": "ស្រូបទឹក",
+          "support_level": "variant",
+          "evidence_pages": [26, 27],
+          "evidence_chunks": ["p026_001", "p026_002", "p027_003"],
+          "evidence_quote": "រុក្ខជាតិមានសរសៃរស្រូបយកទឹកពីក្នុងដីតាមរយៈរោមជញ្ជក់នៃប្ដូរ ។",
+          "accepted_aliases": ["ស្រូបយកទឹក"],
+          "alias_mode_rule": "ស្រូបយកទឹក requires local plant/root/soil/root-hair/xylem context.",
+          "strict_match_in_saved_answer": false,
+          "alias_aware_match_in_saved_answer": true,
+          "justification": "p026_001 uses ការស្រូបទឹក and p026_002 uses ស្រូបយកទឹក for the same root-absorption process. The saved quiz answer uses the latter in a plant/soil context."
+        }
+      ],
+      "notes": "Alias-aware coverage becomes 1.0. Helpfulness remains 3 because the quiz-format proxy expects the phrase សំណួរទី; that is a separate format heuristic, not a biological error."
+    },
+    {
+      "question_id": 58,
+      "question": "តើស៊ីឡែមនិងដូអែមខុសគ្នាដូចម្តេច?",
+      "gold_pages": [13, 23, 28, 29, 32, 40],
+      "gold_concepts": ["ស៊ីឡែម", "ដូអែម"],
+      "concepts": [
+        {
+          "concept": "ស៊ីឡែម",
+          "support_level": "direct",
+          "evidence_pages": [13, 40],
+          "evidence_chunks": ["p013_003", "p013_004", "p040_029"],
+          "evidence_quote": "ស៊ីឡែមមាននាទីដឹកនាំទឹកនិងអំបិលខនិជពីឫសតាមដើមទៅកាន់ស្លឹករបស់រុក្ខជាតិ ។",
+          "accepted_aliases": [],
+          "alias_mode_rule": "",
+          "strict_match_in_saved_answer": true,
+          "alias_aware_match_in_saved_answer": true,
+          "justification": "ស៊ីឡែម is the standard term and appears directly in the evidence."
+        },
+        {
+          "concept": "ដូអែម",
+          "support_level": "variant",
+          "evidence_pages": [13],
+          "evidence_chunks": ["p013_003", "p013_004", "p013_005"],
+          "evidence_quote": "ផ្លូអែមជាជាលិកានាំ វាដឹកនាំអាហារទៅគ្រប់កោសិកាទាំងអស់ដែលមិនអាចធ្វើរស្មីសំយោគបាន ។",
+          "accepted_aliases": ["ផ្លូអែម"],
+          "alias_mode_rule": "ផ្លូអែម requires local food/organic-transport context (អាហារ, organic substances, photosynthesis, sugar, or carbohydrate).",
+          "strict_match_in_saved_answer": false,
+          "alias_aware_match_in_saved_answer": true,
+          "justification": "ដូអែម occurs once on p13 as an OCR/spelling variant, while the standard and repeatedly defined term is ផ្លូអែម. The saved answer uses ផ្លូអែម and correctly describes food transport."
+        }
+      ],
+      "notes": "Alias-aware coverage becomes 1.0. The guard is important: a statement that phloem transports water but not food must not receive phloem credit merely because ផ្លូអែម appears."
+    },
+    {
+      "question_id": 65,
+      "question": "ពន្យល់ពីតួនាទីរបស់ប្រូតេអ៊ីនក្នុងសារពាង្គកាយ",
+      "gold_pages": [122, 127, 128, 130, 134],
+      "gold_concepts": ["ប្រូតេអ៊ីន", "តួនាទី"],
+      "concepts": [
+        {
+          "concept": "ប្រូតេអ៊ីន",
+          "support_level": "direct",
+          "evidence_pages": [130, 131],
+          "evidence_chunks": ["p130_005", "p131_007", "p131_008"],
+          "evidence_quote": "2. នាទីរបស់ប្រូតេអ៊ីន",
+          "accepted_aliases": [],
+          "alias_mode_rule": "",
+          "strict_match_in_saved_answer": true,
+          "alias_aware_match_in_saved_answer": true,
+          "justification": "The term appears directly throughout the protein lesson."
+        },
+        {
+          "concept": "តួនាទី",
+          "support_level": "variant",
+          "evidence_pages": [130],
+          "evidence_chunks": ["p130_005", "p130_006", "p131_007", "p131_008"],
+          "evidence_quote": "2. នាទីរបស់ប្រូតេអ៊ីន",
+          "accepted_aliases": ["នាទី"],
+          "alias_mode_rule": "នាទី requires local protein context (ប្រូតេអ៊ីន) within the same window.",
+          "strict_match_in_saved_answer": false,
+          "alias_aware_match_in_saved_answer": true,
+          "justification": "The textbook heading uses នាទីរបស់ប្រូតេអ៊ីន; the answer uses the same role word. The guard prevents unrelated role statements (for example, នាទីរបស់ឫស) from matching this gold concept."
+        }
+      ],
+      "notes": "Alias-aware coverage becomes 1.0. The answer's protein roles are substantively correct."
+    },
+    {
+      "question_id": 94,
+      "question": "តើគេអាចបង្ការជំងឺពកកបានដោយរបៀបណា?",
+      "gold_pages": [109],
+      "gold_concepts": ["បង្ការ", "ពកក", "អ៊ីយ៉ូត", "អំបិល", "អាហារសមុទ្រ"],
+      "concepts": [
+        {
+          "concept": "បង្ការ",
+          "support_level": "inference",
+          "evidence_pages": [109],
+          "evidence_chunks": ["p109_020"],
+          "evidence_quote": "ជំងឺពកកអាចបញ្ដារបាន ដោយបរិភោគអាហារមានជាតិអ៊ីយ៉ូត ។",
+          "accepted_aliases": [],
+          "alias_mode_rule": "",
+          "strict_match_in_saved_answer": true,
+          "alias_aware_match_in_saved_answer": true,
+          "justification": "The evidence uses បញ្ដារ (prevent) rather than បង្ការ; the gold concept is a paraphrase of the same preventive recommendation."
+        },
+        {
+          "concept": "ពកក",
+          "support_level": "direct",
+          "evidence_pages": [109],
+          "evidence_chunks": ["p109_020"],
+          "evidence_quote": "ដែលបណ្តាលឱ្យពកក ។",
+          "accepted_aliases": [],
+          "alias_mode_rule": "",
+          "strict_match_in_saved_answer": true,
+          "alias_aware_match_in_saved_answer": true,
+          "justification": "The disease name appears verbatim in the evidence."
+        },
+        {
+          "concept": "អ៊ីយ៉ូត",
+          "support_level": "direct",
+          "evidence_pages": [109],
+          "evidence_chunks": ["p109_020"],
+          "evidence_quote": "ជំងឺពកកអាចបញ្ដារបាន ដោយបរិភោគអាហារមានជាតិអ៊ីយ៉ូត ។",
+          "accepted_aliases": [],
+          "alias_mode_rule": "",
+          "strict_match_in_saved_answer": true,
+          "alias_aware_match_in_saved_answer": true,
+          "justification": "Iodine is stated directly as the preventive nutrient."
+        },
+        {
+          "concept": "អំបិល",
+          "support_level": "external",
+          "evidence_pages": [],
+          "evidence_chunks": [],
+          "evidence_quote": "",
+          "accepted_aliases": [],
+          "alias_mode_rule": "Not aliased. No alias-aware credit is given.",
+          "strict_match_in_saved_answer": false,
+          "alias_aware_match_in_saved_answer": false,
+          "justification": "Although អំបិល occurs in 12 corpus chunks, none co-occurs with អ៊ីយ៉ូត. The page-109 recommendation names iodine-rich food, គ្រឿន, and seafood, not iodized salt. Iodized salt is external to the retrieved evidence. The frozen gold record is retained unchanged."
+        },
+        {
+          "concept": "អាហារសមុទ្រ",
+          "support_level": "direct",
+          "evidence_pages": [109],
+          "evidence_chunks": ["p109_020"],
+          "evidence_quote": "គ្រិនិងអាហារសមុទ្រផ្សេងៗជាប្រភពដ៏ល្អនៃជាតិអ៊ីយ៉ូត ។",
+          "accepted_aliases": [],
+          "alias_mode_rule": "",
+          "strict_match_in_saved_answer": true,
+          "alias_aware_match_in_saved_answer": true,
+          "justification": "Seafood is named directly as an iodine source."
+        }
+      ],
+      "notes": "Saved answer matches 4/5 concepts. The missing អំបិល is a gold/corpus support mismatch, not an answer hallucination. Coverage stays 0.8 in both modes. The answer is evidence-grounded; the frozen label is unchanged."
+    },
+    {
+      "question_id": 96,
+      "question": "តើស្វាយជារុក្ខជាតិឌីកូទីលេដូន ឬ រុក្ខជាតិម៉ូណូកូទីលេដូន?",
+      "gold_pages": [12, 19],
+      "gold_concepts": ["ស្វាយ", "ឌីកូទីលេដូន", "កូទីលេដុង", "ទ្រនុងបែកខ្នែង", "ឫសកែវ"],
+      "concepts": [
+        {
+          "concept": "ស្វាយ",
+          "support_level": "direct",
+          "evidence_pages": [5, 6],
+          "evidence_chunks": ["p005_005", "p006_001"],
+          "evidence_quote": "ឯស្វាយស្ថិតនៅក្នុងក្រុមអង់ស្យូស្ពែម ។",
+          "accepted_aliases": [],
+          "alias_mode_rule": "",
+          "strict_match_in_saved_answer": true,
+          "alias_aware_match_in_saved_answer": true,
+          "justification": "Mango is named as an angiosperm example. The textbook does not explicitly classify mango as monocot or dicot; that classification is an application inference."
+        },
+        {
+          "concept": "ឌីកូទីលេដូន",
+          "support_level": "direct",
+          "evidence_pages": [19],
+          "evidence_chunks": ["p019_017", "p019_018"],
+          "evidence_quote": "ឯរុក្ខជាតិឌីកូទីលេដូនមានច្រើនរាប់មិនអស់ ។",
+          "accepted_aliases": [],
+          "alias_mode_rule": "",
+          "strict_match_in_saved_answer": true,
+          "alias_aware_match_in_saved_answer": true,
+          "justification": "The classification term appears directly in the comparison."
+        },
+        {
+          "concept": "កូទីលេដុង",
+          "support_level": "direct",
+          "evidence_pages": [19],
+          "evidence_chunks": ["p019_018"],
+          "evidence_quote": "| គ្រាប់ | កូទីលេដុងមួយ | កូទីលេដុងពីរ |",
+          "accepted_aliases": [],
+          "alias_mode_rule": "",
+          "strict_match_in_saved_answer": false,
+          "alias_aware_match_in_saved_answer": false,
+          "justification": "The dicot trait is directly tabulated: two cotyledons. The saved answer omits it."
+        },
+        {
+          "concept": "ទ្រនុងបែកខ្នែង",
+          "support_level": "variant",
+          "evidence_pages": [19],
+          "evidence_chunks": ["p019_017", "p019_018"],
+          "evidence_quote": "ស្លឹកមានទ្រនុងបែកមែក ។ ... | ស្លឹក | ទ្រនុងស្រប | ទ្រនុងបែកខ្នែង |",
+          "accepted_aliases": ["ទ្រនុងបែកមែក"],
+          "alias_mode_rule": "ទ្រនុងបែកមែក requires local leaf/dicot/vein context.",
+          "strict_match_in_saved_answer": false,
+          "alias_aware_match_in_saved_answer": true,
+          "justification": "Both forms occur on p19 and describe the same dicot leaf-venation trait. The saved answer uses ទ្រនុងបែកមែក in a leaf context."
+        },
+        {
+          "concept": "ឫសកែវ",
+          "support_level": "direct",
+          "evidence_pages": [19],
+          "evidence_chunks": ["p019_018"],
+          "evidence_quote": "| ឫស | ឫសព្រែក | ឫសកែវ |",
+          "accepted_aliases": [],
+          "alias_mode_rule": "",
+          "strict_match_in_saved_answer": false,
+          "alias_aware_match_in_saved_answer": false,
+          "justification": "The dicot root trait is directly tabulated. The saved answer omits it."
+        }
+      ],
+      "notes": "Alias-aware coverage rises from 0.4 to 0.6, but the answer still omits កូទីលេដុង and ឫសកែវ and never commits to the explicit statement that mango is a dicot. The application/decisiveness failure remains."
+    },
+    {
+      "question_id": 111,
+      "question": "តើលក្ខណៈបន្សំសំដៅលើអ្វី?",
+      "gold_pages": [202, 203],
+      "gold_concepts": ["បន្ស៊ាំ", "ជម្រើសដោយធម្មជាតិ"],
+      "concepts": [
+        {
+          "concept": "បន្ស៊ាំ",
+          "support_level": "variant",
+          "evidence_pages": [200, 201, 202, 236],
+          "evidence_chunks": ["p200_008", "p201_012", "p202_015", "p236_002"],
+          "evidence_quote": "ការសម្របប្រួលរបស់ភាវៈរស់ទៅនឹងមជ្ឈដ្ឋានដើម្បី រស់រាននិងបង្កើតកូនចៅជំនាន់ក្រោយ ហៅថា បន្លំ ។",
+          "accepted_aliases": ["បន្លំ", "បន្លាំ"],
+          "alias_mode_rule": "បន្លំ/បន្លាំ require local adaptation context and are rejected in counterfeiting context.",
+          "strict_match_in_saved_answer": true,
+          "alias_aware_match_in_saved_answer": true,
+          "justification": "The textbook uses បន្លំ and បន្លាំ for adaptation; បន្ស៊ាំ is the standard form used by the answer. The answer's definition is textbook-faithful."
+        },
+        {
+          "concept": "ជម្រើសដោយធម្មជាតិ",
+          "support_level": "direct",
+          "evidence_pages": [201, 202, 204, 236],
+          "evidence_chunks": ["p201_012", "p204_018", "p236_001"],
+          "evidence_quote": "ជម្រើសដោយធម្មជាតិជាដំណើរដែលឯកត្តៈមានបន្ស៊ាំទៅនឹងមជ្ឈដ្ឋានប្រសើរជាងគេ អាចរស់រានមានជីវិតនិងធ្វើការបន្តពូជបានច្រើនជាងភាវៈរស់ដទៃទៀតក្នុងប្រភេទតែមួយ ។",
+          "accepted_aliases": [],
+          "alias_mode_rule": "No alias. The mechanism must be expressed, not inferred from adaptation words.",
+          "strict_match_in_saved_answer": false,
+          "alias_aware_match_in_saved_answer": false,
+          "justification": "The textbook defines natural selection as differential survival and reproduction of better-adapted individuals. The saved answer defines adaptation and inheritance but never mentions natural selection, differential survival, or differential reproduction. The genuine explanatory gap remains."
+        }
+      ],
+      "notes": "Coverage remains 0.5 in both modes. The answer is a correct adaptation definition but an incomplete answer to the natural-selection mechanism. This gap must not be hidden by alias expansion."
+    },
+    {
+      "question_id": 55,
+      "question": "ចូរពន្យល់ពីដំណើរការលំអងរបស់ស្រល់",
+      "gold_pages": [9],
+      "gold_concepts": ["លំអង", "លំអងផ្កា"],
+      "concepts": [
+        {
+          "concept": "លំអង",
+          "support_level": "direct",
+          "evidence_pages": [8, 9, 10],
+          "evidence_chunks": ["p008_006", "p009_007", "p009_008", "p010_009"],
+          "evidence_quote": "មីក្រូស្ព័រ៉ង់ផលិតគ្រាប់លំអងឬមីក្រូស្ព័រ ។",
+          "accepted_aliases": [],
+          "alias_mode_rule": "",
+          "strict_match_in_saved_answer": true,
+          "alias_aware_match_in_saved_answer": true,
+          "justification": "លំអង is a direct substring of the textbook term គ្រាប់លំអង and is present in the saved answer."
+        },
+        {
+          "concept": "លំអងផ្កា",
+          "support_level": "uncertain",
+          "evidence_pages": [],
+          "evidence_chunks": [],
+          "evidence_quote": "",
+          "accepted_aliases": [],
+          "alias_mode_rule": "Not aliased to គ្រាប់លំអង. The two expressions are not treated as universally interchangeable.",
+          "strict_match_in_saved_answer": false,
+          "alias_aware_match_in_saved_answer": false,
+          "justification": "លំអងផ្កា has 0 occurrences in the corpus, while គ្រាប់លំអង occurs 53 times in 17 chunks and is the textbook term for the gymnosperm pollen grain. The gold wording is not evidenced as written; the answer's គ្រាប់លំអង is scientifically appropriate. Group C remains non-equivalent for this evaluated concept."
+        }
+      ],
+      "notes": "Coverage remains 0.5 in both modes. The low strict score reflects a gold-wording limitation, not a missing pollen mechanism. Do not alias លំអងផ្កា to គ្រាប់លំអង without a separate gold-label review."
+    }
+  ]
+}

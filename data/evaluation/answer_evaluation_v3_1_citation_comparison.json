@@ -1,0 +1,5139 @@
+{
+  "phase": "3.1",
+  "evaluator_only": true,
+  "gemini_calls": 0,
+  "source_rows": "data\\evaluation\\answer_evaluations_v3_1_citation.json",
+  "frozen_gold": "data\\evaluation\\gold_questions_v2.json",
+  "corpus": "data\\processed\\biology_chunks.json",
+  "hashes": {
+    "source_rows_sha256": "dff44332198cd2c5285144671d677d8c4acb0b214632d903adddf83b9e4bea2b",
+    "frozen_gold_sha256": "333299547501590c0270f05a4366bd004c456232b0f4e98afc87c61295ce8ff0",
+    "corpus_sha256": "19869f59d0a58510b6e98496946cb3934459c5e5ab9990ea3a65fde654dbd084",
+    "accepted_summary_sha256": "2fcf84a61d19d125222f6d7f97f94d91ca14919ebeb961d1faace1ccbb0c20d6"
+  },
+  "strict_reproduction": {
+    "passed": true,
+    "score_mismatches": [],
+    "baseline_match": {
+      "correctness": true,
+      "completeness": true,
+      "faithfulness": true,
+      "clarity": true,
+      "terminology": true,
+      "citation": true,
+      "helpfulness": true,
+      "overall": true
+    },
+    "saved_baseline": {
+      "correctness": 4.54,
+      "completeness": 4.63,
+      "faithfulness": 4.98,
+      "clarity": 4.34,
+      "terminology": 4.78,
+      "citation": 4.8,
+      "helpfulness": 4.27,
+      "overall": 4.62
+    },
+    "strict_rescored": {
+      "correctness": 4.54,
+      "completeness": 4.63,
+      "faithfulness": 4.98,
+      "clarity": 4.34,
+      "terminology": 4.78,
+      "citation": 4.8,
+      "helpfulness": 4.27,
+      "overall": 4.62
+    }
+  },
+  "gold_labels_unchanged": true,
+  "gold_label_mismatches": [],
+  "counts": {
+    "total": 45,
+    "in_scope": 41,
+    "out_of_scope": 4,
+    "invalid_citation_rows": 0
+  },
+  "strict": {
+    "correctness": 4.54,
+    "completeness": 4.63,
+    "faithfulness": 4.98,
+    "clarity": 4.34,
+    "terminology": 4.78,
+    "citation": 4.8,
+    "helpfulness": 4.27,
+    "overall": 4.62
+  },
+  "alias_aware": {
+    "correctness": 4.83,
+    "completeness": 4.85,
+    "faithfulness": 4.98,
+    "clarity": 4.34,
+    "terminology": 4.93,
+    "citation": 4.8,
+    "helpfulness": 4.27,
+    "overall": 4.71
+  },
+  "difference": {
+    "correctness": 0.29,
+    "completeness": 0.22,
+    "faithfulness": 0.0,
+    "clarity": 0.0,
+    "terminology": 0.15,
+    "citation": 0.0,
+    "helpfulness": 0.0,
+    "overall": 0.09
+  },
+  "changed_question_ids": [
+    58,
+    65,
+    78,
+    86,
+    96
+  ],
+  "target_question_ids": [
+    78,
+    86,
+    58,
+    65,
+    55,
+    94,
+    96,
+    111
+  ],
+  "target_questions": [
+    {
+      "question_id": 55,
+      "chapter": 1,
+      "question_type": "process",
+      "question": "ចូរពន្យល់ពីដំណើរការលំអងរបស់ស្រល់",
+      "changed": false,
+      "strict": {
+        "correctness": 3,
+        "completeness": 4,
+        "faithfulness": 5,
+        "clarity": 5,
+        "terminology": 4,
+        "citation": 5,
+        "helpfulness": 3,
+        "concept_coverage": 0.5,
+        "grounded_number_ratio": 1.0,
+        "banned_terms": [],
+        "cited_pages": [
+          6,
+          8,
+          9,
+          10,
+          11,
+          23,
+          24
+        ],
+        "valid_citations": [
+          6,
+          8,
+          9,
+          10,
+          11,
+          23,
+          24
+        ],
+        "invalid_citations": []
+      },
+      "alias_aware": {
+        "correctness": 3,
+        "completeness": 4,
+        "faithfulness": 5,
+        "clarity": 5,
+        "terminology": 4,
+        "citation": 5,
+        "helpfulness": 3,
+        "concept_coverage": 0.5,
+        "grounded_number_ratio": 1.0,
+        "banned_terms": [],
+        "cited_pages": [
+          6,
+          8,
+          9,
+          10,
+          11,
+          23,
+          24
+        ],
+        "valid_citations": [
+          6,
+          8,
+          9,
+          10,
+          11,
+          23,
+          24
+        ],
+        "invalid_citations": []
+      },
+      "delta": {
+        "correctness": 0,
+        "completeness": 0,
+        "faithfulness": 0,
+        "clarity": 0,
+        "terminology": 0,
+        "citation": 0,
+        "helpfulness": 0
+      },
+      "changed_dimensions": {},
+      "matched_concepts_strict": [
+        "លំអង"
+      ],
+      "matched_concepts_alias_aware": [
+        "លំអង"
+      ],
+      "alias_matches": []
+    },
+    {
+      "question_id": 58,
+      "chapter": 2,
+      "question_type": "comparison",
+      "question": "តើស៊ីឡែមនិងដូអែមខុសគ្នាដូចម្តេច?",
+      "changed": true,
+      "strict": {
+        "correctness": 3,
+        "completeness": 4,
+        "faithfulness": 5,
+        "clarity": 5,
+        "terminology": 4,
+        "citation": 5,
+        "helpfulness": 4,
+        "concept_coverage": 0.5,
+        "grounded_number_ratio": 1.0,
+        "banned_terms": [],
+        "cited_pages": [
+          6,
+          13,
+          27,
+          28,
+          29,
+          32,
+          39,
+          40,
+          41
+        ],
+        "valid_citations": [
+          6,
+          13,
+          27,
+          28,
+          29,
+          32,
+          39,
+          40,
+          41
+        ],
+        "invalid_citations": []
+      },
+      "alias_aware": {
+        "correctness": 5,
+        "completeness": 5,
+        "faithfulness": 5,
+        "clarity": 5,
+        "terminology": 5,
+        "citation": 5,
+        "helpfulness": 4,
+        "concept_coverage": 1.0,
+        "grounded_number_ratio": 1.0,
+        "banned_terms": [],
+        "cited_pages": [
+          6,
+          13,
+          27,
+          28,
+          29,
+          32,
+          39,
+          40,
+          41
+        ],
+        "valid_citations": [
+          6,
+          13,
+          27,
+          28,
+          29,
+          32,
+          39,
+          40,
+          41
+        ],
+        "invalid_citations": []
+      },
+      "delta": {
+        "correctness": 2,
+        "completeness": 1,
+        "faithfulness": 0,
+        "clarity": 0,
+        "terminology": 1,
+        "citation": 0,
+        "helpfulness": 0
+      },
+      "changed_dimensions": {
+        "correctness": {
+          "strict": 3,
+          "alias_aware": 5
+        },
+        "completeness": {
+          "strict": 4,
+          "alias_aware": 5
+        },
+        "terminology": {
+          "strict": 4,
+          "alias_aware": 5
+        }
+      },
+      "matched_concepts_strict": [
+        "ស៊ីឡែម"
+      ],
+      "matched_concepts_alias_aware": [
+        "ស៊ីឡែម",
+        "ដូអែម"
+      ],
+      "alias_matches": [
+        {
+          "concept": "ដូអែម",
+          "alias": "ផ្លូអែម"
+        }
+      ]
+    },
+    {
+      "question_id": 65,
+      "chapter": 4,
+      "question_type": "explanation",
+      "question": "ពន្យល់ពីតួនាទីរបស់ប្រូតេអ៊ីនក្នុងសារពាង្គកាយ",
+      "changed": true,
+      "strict": {
+        "correctness": 3,
+        "completeness": 4,
+        "faithfulness": 5,
+        "clarity": 5,
+        "terminology": 4,
+        "citation": 5,
+        "helpfulness": 5,
+        "concept_coverage": 0.5,
+        "grounded_number_ratio": 1.0,
+        "banned_terms": [],
+        "cited_pages": [
+          122,
+          127,
+          128,
+          130,
+          131,
+          133,
+          134
+        ],
+        "valid_citations": [
+          122,
+          127,
+          128,
+          130,
+          131,
+          133,
+          134
+        ],
+        "invalid_citations": []
+      },
+      "alias_aware": {
+        "correctness": 5,
+        "completeness": 5,
+        "faithfulness": 5,
+        "clarity": 5,
+        "terminology": 5,
+        "citation": 5,
+        "helpfulness": 5,
+        "concept_coverage": 1.0,
+        "grounded_number_ratio": 1.0,
+        "banned_terms": [],
+        "cited_pages": [
+          122,
+          127,
+          128,
+          130,
+          131,
+          133,
+          134
+        ],
+        "valid_citations": [
+          122,
+          127,
+          128,
+          130,
+          131,
+          133,
+          134
+        ],
+        "invalid_citations": []
+      },
+      "delta": {
+        "correctness": 2,
+        "completeness": 1,
+        "faithfulness": 0,
+        "clarity": 0,
+        "terminology": 1,
+        "citation": 0,
+        "helpfulness": 0
+      },
+      "changed_dimensions": {
+        "correctness": {
+          "strict": 3,
+          "alias_aware": 5
+        },
+        "completeness": {
+          "strict": 4,
+          "alias_aware": 5
+        },
+        "terminology": {
+          "strict": 4,
+          "alias_aware": 5
+        }
+      },
+      "matched_concepts_strict": [
+        "ប្រូតេអ៊ីន"
+      ],
+      "matched_concepts_alias_aware": [
+        "ប្រូតេអ៊ីន",
+        "តួនាទី"
+      ],
+      "alias_matches": [
+        {
+          "concept": "តួនាទី",
+          "alias": "នាទី"
+        }
+      ]
+    },
+    {
+      "question_id": 78,
+      "chapter": 5,
+      "question_type": "exam",
+      "question": "ក្នុងប្រឡង៖ តើអ្វីជានិយមន័យរបស់ហ្សែន (gene)?",
+      "changed": true,
+      "strict": {
+        "correctness": 1,
+        "completeness": 2,
+        "faithfulness": 5,
+        "clarity": 4,
+        "terminology": 3,
+        "citation": 5,
+        "helpfulness": 3,
+        "concept_coverage": 0.0,
+        "grounded_number_ratio": 1.0,
+        "banned_terms": [],
+        "cited_pages": [
+          162,
+          163,
+          174,
+          175,
+          189,
+          190,
+          192,
+          193,
+          194
+        ],
+        "valid_citations": [
+          162,
+          163,
+          174,
+          175,
+          189,
+          190,
+          192,
+          193,
+          194
+        ],
+        "invalid_citations": []
+      },
+      "alias_aware": {
+        "correctness": 5,
+        "completeness": 5,
+        "faithfulness": 5,
+        "clarity": 4,
+        "terminology": 5,
+        "citation": 5,
+        "helpfulness": 3,
+        "concept_coverage": 1.0,
+        "grounded_number_ratio": 1.0,
+        "banned_terms": [],
+        "cited_pages": [
+          162,
+          163,
+          174,
+          175,
+          189,
+          190,
+          192,
+          193,
+          194
+        ],
+        "valid_citations": [
+          162,
+          163,
+          174,
+          175,
+          189,
+          190,
+          192,
+          193,
+          194
+        ],
+        "invalid_citations": []
+      },
+      "delta": {
+        "correctness": 4,
+        "completeness": 3,
+        "faithfulness": 0,
+        "clarity": 0,
+        "terminology": 2,
+        "citation": 0,
+        "helpfulness": 0
+      },
+      "changed_dimensions": {
+        "correctness": {
+          "strict": 1,
+          "alias_aware": 5
+        },
+        "completeness": {
+          "strict": 2,
+          "alias_aware": 5
+        },
+        "terminology": {
+          "strict": 3,
+          "alias_aware": 5
+        }
+      },
+      "matched_concepts_strict": [],
+      "matched_concepts_alias_aware": [
+        "ហ្សែន"
+      ],
+      "alias_matches": [
+        {
+          "concept": "ហ្សែន",
+          "alias": "សែន"
+        }
+      ]
+    },
+    {
+      "question_id": 86,
+      "chapter": 2,
+      "question_type": "quiz",
+      "question": "ចូរបង្កើតសំណួរសាកល្បង 3 អំពីការស្រូបទឹករបស់រុក្ខជាតិ",
+      "changed": true,
+      "strict": {
+        "correctness": 1,
+        "completeness": 2,
+        "faithfulness": 5,
+        "clarity": 5,
+        "terminology": 3,
+        "citation": 5,
+        "helpfulness": 3,
+        "concept_coverage": 0.0,
+        "grounded_number_ratio": 1.0,
+        "banned_terms": [],
+        "cited_pages": [
+          26,
+          27,
+          28,
+          40,
+          41,
+          57,
+          58
+        ],
+        "valid_citations": [
+          26,
+          27,
+          28,
+          40,
+          41,
+          57,
+          58
+        ],
+        "invalid_citations": []
+      },
+      "alias_aware": {
+        "correctness": 5,
+        "completeness": 5,
+        "faithfulness": 5,
+        "clarity": 5,
+        "terminology": 5,
+        "citation": 5,
+        "helpfulness": 3,
+        "concept_coverage": 1.0,
+        "grounded_number_ratio": 1.0,
+        "banned_terms": [],
+        "cited_pages": [
+          26,
+          27,
+          28,
+          40,
+          41,
+          57,
+          58
+        ],
+        "valid_citations": [
+          26,
+          27,
+          28,
+          40,
+          41,
+          57,
+          58
+        ],
+        "invalid_citations": []
+      },
+      "delta": {
+        "correctness": 4,
+        "completeness": 3,
+        "faithfulness": 0,
+        "clarity": 0,
+        "terminology": 2,
+        "citation": 0,
+        "helpfulness": 0
+      },
+      "changed_dimensions": {
+        "correctness": {
+          "strict": 1,
+          "alias_aware": 5
+        },
+        "completeness": {
+          "strict": 2,
+          "alias_aware": 5
+        },
+        "terminology": {
+          "strict": 3,
+          "alias_aware": 5
+        }
+      },
+      "matched_concepts_strict": [],
+      "matched_concepts_alias_aware": [
+        "ស្រូបទឹក"
+      ],
+      "alias_matches": [
+        {
+          "concept": "ស្រូបទឹក",
+          "alias": "ស្រូបយកទឹក"
+        }
+      ]
+    },
+    {
+      "question_id": 94,
+      "chapter": 3,
+      "question_type": "prevention",
+      "question": "តើគេអាចបង្ការជំងឺពកកបានដោយរបៀបណា?",
+      "changed": false,
+      "strict": {
+        "correctness": 4,
+        "completeness": 4,
+        "faithfulness": 5,
+        "clarity": 4,
+        "terminology": 5,
+        "citation": 5,
+        "helpfulness": 3,
+        "concept_coverage": 0.8,
+        "grounded_number_ratio": 1.0,
+        "banned_terms": [],
+        "cited_pages": [
+          88,
+          109,
+          150,
+          151,
+          152,
+          177,
+          178,
+          185,
+          186,
+          211
+        ],
+        "valid_citations": [
+          88,
+          109,
+          150,
+          151,
+          152,
+          177,
+          178,
+          185,
+          186,
+          211
+        ],
+        "invalid_citations": []
+      },
+      "alias_aware": {
+        "correctness": 4,
+        "completeness": 4,
+        "faithfulness": 5,
+        "clarity": 4,
+        "terminology": 5,
+        "citation": 5,
+        "helpfulness": 3,
+        "concept_coverage": 0.8,
+        "grounded_number_ratio": 1.0,
+        "banned_terms": [],
+        "cited_pages": [
+          88,
+          109,
+          150,
+          151,
+          152,
+          177,
+          178,
+          185,
+          186,
+          211
+        ],
+        "valid_citations": [
+          88,
+          109,
+          150,
+          151,
+          152,
+          177,
+          178,
+          185,
+          186,
+          211
+        ],
+        "invalid_citations": []
+      },
+      "delta": {
+        "correctness": 0,
+        "completeness": 0,
+        "faithfulness": 0,
+        "clarity": 0,
+        "terminology": 0,
+        "citation": 0,
+        "helpfulness": 0
+      },
+      "changed_dimensions": {},
+      "matched_concepts_strict": [
+        "បង្ការ",
+        "ពកក",
+        "អ៊ីយ៉ូត",
+        "អាហារសមុទ្រ"
+      ],
+      "matched_concepts_alias_aware": [
+        "បង្ការ",
+        "ពកក",
+        "អ៊ីយ៉ូត",
+        "អាហារសមុទ្រ"
+      ],
+      "alias_matches": []
+    },
+    {
+      "question_id": 96,
+      "chapter": 1,
+      "question_type": "application",
+      "question": "តើស្វាយជារុក្ខជាតិឌីកូទីលេដូន ឬ រុក្ខជាតិម៉ូណូកូទីលេដូន?",
+      "changed": true,
+      "strict": {
+        "correctness": 3,
+        "completeness": 3,
+        "faithfulness": 5,
+        "clarity": 3,
+        "terminology": 4,
+        "citation": 5,
+        "helpfulness": 5,
+        "concept_coverage": 0.4,
+        "grounded_number_ratio": 1.0,
+        "banned_terms": [],
+        "cited_pages": [
+          5,
+          6,
+          12,
+          13,
+          19,
+          20,
+          40
+        ],
+        "valid_citations": [
+          5,
+          6,
+          12,
+          13,
+          19,
+          20,
+          40
+        ],
+        "invalid_citations": []
+      },
+      "alias_aware": {
+        "correctness": 3,
+        "completeness": 4,
+        "faithfulness": 5,
+        "clarity": 3,
+        "terminology": 4,
+        "citation": 5,
+        "helpfulness": 5,
+        "concept_coverage": 0.6,
+        "grounded_number_ratio": 1.0,
+        "banned_terms": [],
+        "cited_pages": [
+          5,
+          6,
+          12,
+          13,
+          19,
+          20,
+          40
+        ],
+        "valid_citations": [
+          5,
+          6,
+          12,
+          13,
+          19,
+          20,
+          40
+        ],
+        "invalid_citations": []
+      },
+      "delta": {
+        "correctness": 0,
+        "completeness": 1,
+        "faithfulness": 0,
+        "clarity": 0,
+        "terminology": 0,
+        "citation": 0,
+        "helpfulness": 0
+      },
+      "changed_dimensions": {
+        "completeness": {
+          "strict": 3,
+          "alias_aware": 4
+        }
+      },
+      "matched_concepts_strict": [
+        "ស្វាយ",
+        "ឌីកូទីលេដូន"
+      ],
+      "matched_concepts_alias_aware": [
+        "ស្វាយ",
+        "ឌីកូទីលេដូន",
+        "ទ្រនុងបែកខ្នែង"
+      ],
+      "alias_matches": [
+        {
+          "concept": "ទ្រនុងបែកខ្នែង",
+          "alias": "ទ្រនុងបែកមែក"
+        }
+      ]
+    },
+    {
+      "question_id": 111,
+      "chapter": 6,
+      "question_type": "ocr_garbled",
+      "question": "តើលក្ខណៈបន្សំសំដៅលើអ្វី?",
+      "changed": false,
+      "strict": {
+        "correctness": 3,
+        "completeness": 4,
+        "faithfulness": 5,
+        "clarity": 5,
+        "terminology": 4,
+        "citation": 4,
+        "helpfulness": 5,
+        "concept_coverage": 0.5,
+        "grounded_number_ratio": 1.0,
+        "banned_terms": [],
+        "cited_pages": [
+          93,
+          94,
+          176,
+          177,
+          200,
+          203,
+          204,
+          236,
+          237,
+          239
+        ],
+        "valid_citations": [
+          93,
+          94,
+          176,
+          177,
+          200,
+          203,
+          204,
+          236,
+          237,
+          239
+        ],
+        "invalid_citations": []
+      },
+      "alias_aware": {
+        "correctness": 3,
+        "completeness": 4,
+        "faithfulness": 5,
+        "clarity": 5,
+        "terminology": 4,
+        "citation": 4,
+        "helpfulness": 5,
+        "concept_coverage": 0.5,
+        "grounded_number_ratio": 1.0,
+        "banned_terms": [],
+        "cited_pages": [
+          93,
+          94,
+          176,
+          177,
+          200,
+          203,
+          204,
+          236,
+          237,
+          239
+        ],
+        "valid_citations": [
+          93,
+          94,
+          176,
+          177,
+          200,
+          203,
+          204,
+          236,
+          237,
+          239
+        ],
+        "invalid_citations": []
+      },
+      "delta": {
+        "correctness": 0,
+        "completeness": 0,
+        "faithfulness": 0,
+        "clarity": 0,
+        "terminology": 0,
+        "citation": 0,
+        "helpfulness": 0
+      },
+      "changed_dimensions": {},
+      "matched_concepts_strict": [
+        "បន្ស៊ាំ"
+      ],
+      "matched_concepts_alias_aware": [
+        "បន្ស៊ាំ"
+      ],
+      "alias_matches": []
+    }
+  ],
+  "per_question": [
+    {
+      "question_id": 1,
+      "chapter": 1,
+      "question_type": "definition",
+      "question": "តើស៊ីមណូស្ពែមជាអ្វី? សូមពន្យល់ឱ្យបានច្បាស់",
+      "changed": false,
+      "strict": {
+        "correctness": 5,
+        "completeness": 5,
+        "faithfulness": 5,
+        "clarity": 4,
+        "terminology": 5,
+        "citation": 5,
+        "helpfulness": 5,
+        "concept_coverage": 1.0,
+        "grounded_number_ratio": 1.0,
+        "banned_terms": [],
+        "cited_pages": [
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          24
+        ],
+        "valid_citations": [
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          24
+        ],
+        "invalid_citations": []
+      },
+      "alias_aware": {
+        "correctness": 5,
+        "completeness": 5,
+        "faithfulness": 5,
+        "clarity": 4,
+        "terminology": 5,
+        "citation": 5,
+        "helpfulness": 5,
+        "concept_coverage": 1.0,
+        "grounded_number_ratio": 1.0,
+        "banned_terms": [],
+        "cited_pages": [
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          24
+        ],
+        "valid_citations": [
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          24
+        ],
+        "invalid_citations": []
+      },
+      "delta": {
+        "correctness": 0,
+        "completeness": 0,
+        "faithfulness": 0,
+        "clarity": 0,
+        "terminology": 0,
+        "citation": 0,
+        "helpfulness": 0
+      },
+      "changed_dimensions": {},
+      "matched_concepts_strict": [
+        "gymnosperm",
+        "គ្រាប់"
+      ],
+      "matched_concepts_alias_aware": [
+        "gymnosperm",
+        "គ្រាប់"
+      ],
+      "alias_matches": []
+    },
+    {
+      "question_id": 2,
+      "chapter": 1,
+      "question_type": "comparison",
+      "question": "សូមប្រៀបធៀបរុក្ខជាតិស៊ីមណូស្ពែមនិងរុក្ខជាតិអង់ស្យូស្ពែម",
+      "changed": false,
+      "strict": {
+        "correctness": 5,
+        "completeness": 5,
+        "faithfulness": 5,
+        "clarity": 4,
+        "terminology": 5,
+        "citation": 5,
+        "helpfulness": 5,
+        "concept_coverage": 1.0,
+        "grounded_number_ratio": 1.0,
+        "banned_terms": [],
+        "cited_pages": [
+          5,
+          6,
+          7,
+          8,
+          10,
+          11,
+          12,
+          19,
+          24
+        ],
+        "valid_citations": [
+          5,
+          6,
+          7,
+          8,
+          10,
+          11,
+          12,
+          19,
+          24
+        ],
+        "invalid_citations": []
+      },
+      "alias_aware": {
+        "correctness": 5,
+        "completeness": 5,
+        "faithfulness": 5,
+        "clarity": 4,
+        "terminology": 5,
+        "citation": 5,
+        "helpfulness": 5,
+        "concept_coverage": 1.0,
+        "grounded_number_ratio": 1.0,
+        "banned_terms": [],
+        "cited_pages": [
+          5,
+          6,
+          7,
+          8,
+          10,
+          11,
+          12,
+          19,
+          24
+        ],
+        "valid_citations": [
+          5,
+          6,
+          7,
+          8,
+          10,
+          11,
+          12,
+          19,
+          24
+        ],
+        "invalid_citations": []
+      },
+      "delta": {
+        "correctness": 0,
+        "completeness": 0,
+        "faithfulness": 0,
+        "clarity": 0,
+        "terminology": 0,
+        "citation": 0,
+        "helpfulness": 0
+      },
+      "changed_dimensions": {},
+      "matched_concepts_strict": [
+        "gymnosperm",
+        "angiosperm",
+        "គ្រាប់"
+      ],
+      "matched_concepts_alias_aware": [
+        "gymnosperm",
+        "angiosperm",
+        "គ្រាប់"
+      ],
+      "alias_matches": []
+    },
+    {
+      "question_id": 3,
+      "chapter": 1,
+      "question_type": "process",
+      "question": "ពន្យល់ពីវដ្តជីវិតរបស់ស្រល់",
+      "changed": false,
+      "strict": {
+        "correctness": 5,
+        "completeness": 5,
+        "faithfulness": 5,
+        "clarity": 5,
+        "terminology": 5,
+        "citation": 5,
+        "helpfulness": 3,
+        "concept_coverage": 1.0,
+        "grounded_number_ratio": 1.0,
+        "banned_terms": [],
+        "cited_pages": [
+          6,
+          7,
+          8,
+          9,
+          10,
+          11
+        ],
+        "valid_citations": [
+          6,
+          7,
+          8,
+          9,
+          10,
+          11
+        ],
+        "invalid_citations": []
+      },
+      "alias_aware": {
+        "correctness": 5,
+        "completeness": 5,
+        "faithfulness": 5,
+        "clarity": 5,
+        "terminology": 5,
+        "citation": 5,
+        "helpfulness": 3,
+        "concept_coverage": 1.0,
+        "grounded_number_ratio": 1.0,
+        "banned_terms": [],
+        "cited_pages": [
+          6,
+          7,
+          8,
+          9,
+          10,
+          11
+        ],
+        "valid_citations": [
+          6,
+          7,
+          8,
+          9,
+          10,
+          11
+        ],
+        "invalid_citations": []
+      },
+      "delta": {
+        "correctness": 0,
+        "completeness": 0,
+        "faithfulness": 0,
+        "clarity": 0,
+        "terminology": 0,
+        "citation": 0,
+        "helpfulness": 0
+      },
+      "changed_dimensions": {},
+      "matched_concepts_strict": [
+        "កោន",
+        "លំអង",
+        "វដ្តជីវិត"
+      ],
+      "matched_concepts_alias_aware": [
+        "កោន",
+        "លំអង",
+        "វដ្តជីវិត"
+      ],
+      "alias_matches": []
+    },
+    {
+      "question_id": 8,
+      "chapter": 2,
+      "question_type": "process",
+      "question": "តើរុក្ខជាតិស្រូបទឹកពីក្នុងដីដោយរបៀបណា?",
+      "changed": false,
+      "strict": {
+        "correctness": 5,
+        "completeness": 5,
+        "faithfulness": 5,
+        "clarity": 5,
+        "terminology": 5,
+        "citation": 5,
+        "helpfulness": 5,
+        "concept_coverage": 1.0,
+        "grounded_number_ratio": 1.0,
+        "banned_terms": [],
+        "cited_pages": [
+          26,
+          27,
+          28,
+          31,
+          40,
+          41,
+          252,
+          253
+        ],
+        "valid_citations": [
+          26,
+          27,
+          28,
+          31,
+          40,
+          41,
+          252,
+          253
+        ],
+        "invalid_citations": []
+      },
+      "alias_aware": {
+        "correctness": 5,
+        "completeness": 5,
+        "faithfulness": 5,
+        "clarity": 5,
+        "terminology": 5,
+        "citation": 5,
+        "helpfulness": 5,
+        "concept_coverage": 1.0,
+        "grounded_number_ratio": 1.0,
+        "banned_terms": [],
+        "cited_pages": [
+          26,
+          27,
+          28,
+          31,
+          40,
+          41,
+          252,
+          253
+        ],
+        "valid_citations": [
+          26,
+          27,
+          28,
+          31,
+          40,
+          41,
+          252,
+          253
+        ],
+        "invalid_citations": []
+      },
+      "delta": {
+        "correctness": 0,
+        "completeness": 0,
+        "faithfulness": 0,
+        "clarity": 0,
+        "terminology": 0,
+        "citation": 0,
+        "helpfulness": 0
+      },
+      "changed_dimensions": {},
+      "matched_concepts_strict": [
+        "ស្រូបទឹក",
+        "ឫស"
+      ],
+      "matched_concepts_alias_aware": [
+        "ស្រូបទឹក",
+        "ឫស"
+      ],
+      "alias_matches": []
+    },
+    {
+      "question_id": 9,
+      "chapter": 2,
+      "question_type": "process",
+      "question": "ពន្យល់ពីដំណឹកនាំទឹកឡើងទៅលើស្លឹករុក្ខជាតិ",
+      "changed": false,
+      "strict": {
+        "correctness": 5,
+        "completeness": 5,
+        "faithfulness": 5,
+        "clarity": 5,
+        "terminology": 5,
+        "citation": 5,
+        "helpfulness": 3,
+        "concept_coverage": 1.0,
+        "grounded_number_ratio": 1.0,
+        "banned_terms": [],
+        "cited_pages": [
+          26,
+          27,
+          28,
+          29,
+          31,
+          32,
+          40,
+          57,
+          58
+        ],
+        "valid_citations": [
+          26,
+          27,
+          28,
+          29,
+          31,
+          32,
+          40,
+          57,
+          58
+        ],
+        "invalid_citations": []
+      },
+      "alias_aware": {
+        "correctness": 5,
+        "completeness": 5,
+        "faithfulness": 5,
+        "clarity": 5,
+        "terminology": 5,
+        "citation": 5,
+        "helpfulness": 3,
+        "concept_coverage": 1.0,
+        "grounded_number_ratio": 1.0,
+        "banned_terms": [],
+        "cited_pages": [
+          26,
+          27,
+          28,
+          29,
+          31,
+          32,
+          40,
+          57,
+          58
+        ],
+        "valid_citations": [
+          26,
+          27,
+          28,
+          29,
+          31,
+          32,
+          40,
+          57,
+          58
+        ],
+        "invalid_citations": []
+      },
+      "delta": {
+        "correctness": 0,
+        "completeness": 0,
+        "faithfulness": 0,
+        "clarity": 0,
+        "terminology": 0,
+        "citation": 0,
+        "helpfulness": 0
+      },
+      "changed_dimensions": {},
+      "matched_concepts_strict": [
+        "ស៊ីឡែម",
+        "ភាយចំហាយទឹក"
+      ],
+      "matched_concepts_alias_aware": [
+        "ស៊ីឡែម",
+        "ភាយចំហាយទឹក"
+      ],
+      "alias_matches": []
+    },
+    {
+      "question_id": 13,
+      "chapter": 3,
+      "question_type": "definition",
+      "question": "តើណឺរ៉ូនមានប្រភេទអ្វីខ្លះ?",
+      "changed": false,
+      "strict": {
+        "correctness": 5,
+        "completeness": 5,
+        "faithfulness": 5,
+        "clarity": 4,
+        "terminology": 5,
+        "citation": 5,
+        "helpfulness": 5,
+        "concept_coverage": 1.0,
+        "grounded_number_ratio": 1.0,
+        "banned_terms": [],
+        "cited_pages": [
+          60,
+          66,
+          67,
+          68,
+          69,
+          75,
+          76,
+          78
+        ],
+        "valid_citations": [
+          60,
+          66,
+          67,
+          68,
+          69,
+          75,
+          76,
+          78
+        ],
+        "invalid_citations": []
+      },
+      "alias_aware": {
+        "correctness": 5,
+        "completeness": 5,
+        "faithfulness": 5,
+        "clarity": 4,
+        "terminology": 5,
+        "citation": 5,
+        "helpfulness": 5,
+        "concept_coverage": 1.0,
+        "grounded_number_ratio": 1.0,
+        "banned_terms": [],
+        "cited_pages": [
+          60,
+          66,
+          67,
+          68,
+          69,
+          75,
+          76,
+          78
+        ],
+        "valid_citations": [
+          60,
+          66,
+          67,
+          68,
+          69,
+          75,
+          76,
+          78
+        ],
+        "invalid_citations": []
+      },
+      "delta": {
+        "correctness": 0,
+        "completeness": 0,
+        "faithfulness": 0,
+        "clarity": 0,
+        "terminology": 0,
+        "citation": 0,
+        "helpfulness": 0
+      },
+      "changed_dimensions": {},
+      "matched_concepts_strict": [
+        "ណឺរ៉ូន"
+      ],
+      "matched_concepts_alias_aware": [
+        "ណឺរ៉ូន"
+      ],
+      "alias_matches": []
+    },
+    {
+      "question_id": 15,
+      "chapter": 3,
+      "question_type": "process",
+      "question": "សូមពន្យល់ពីរបៀបដែលសារពាង្គកាយឆ្លើយតបនឹងរំញោច",
+      "changed": false,
+      "strict": {
+        "correctness": 5,
+        "completeness": 5,
+        "faithfulness": 5,
+        "clarity": 4,
+        "terminology": 5,
+        "citation": 5,
+        "helpfulness": 3,
+        "concept_coverage": 1.0,
+        "grounded_number_ratio": 1.0,
+        "banned_terms": [],
+        "cited_pages": [
+          60,
+          61,
+          62,
+          63,
+          65,
+          66,
+          93,
+          96,
+          97,
+          100,
+          101
+        ],
+        "valid_citations": [
+          60,
+          61,
+          62,
+          63,
+          65,
+          66,
+          93,
+          96,
+          97,
+          100,
+          101
+        ],
+        "invalid_citations": []
+      },
+      "alias_aware": {
+        "correctness": 5,
+        "completeness": 5,
+        "faithfulness": 5,
+        "clarity": 4,
+        "terminology": 5,
+        "citation": 5,
+        "helpfulness": 3,
+        "concept_coverage": 1.0,
+        "grounded_number_ratio": 1.0,
+        "banned_terms": [],
+        "cited_pages": [
+          60,
+          61,
+          62,
+          63,
+          65,
+          66,
+          93,
+          96,
+          97,
+          100,
+          101
+        ],
+        "valid_citations": [
+          60,
+          61,
+          62,
+          63,
+          65,
+          66,
+          93,
+          96,
+          97,
+          100,
+          101
+        ],
+        "invalid_citations": []
+      },
+      "delta": {
+        "correctness": 0,
+        "completeness": 0,
+        "faithfulness": 0,
+        "clarity": 0,
+        "terminology": 0,
+        "citation": 0,
+        "helpfulness": 0
+      },
+      "changed_dimensions": {},
+      "matched_concepts_strict": [
+        "ឆ្លើយតប",
+        "រំញោច"
+      ],
+      "matched_concepts_alias_aware": [
+        "ឆ្លើយតប",
+        "រំញោច"
+      ],
+      "alias_matches": []
+    },
+    {
+      "question_id": 16,
+      "chapter": 4,
+      "question_type": "definition",
+      "question": "តើធាតុសំខាន់ៗអ្វីខ្លះដែលបង្កើតបានប្រូតេអ៊ីន?",
+      "changed": false,
+      "strict": {
+        "correctness": 5,
+        "completeness": 5,
+        "faithfulness": 5,
+        "clarity": 4,
+        "terminology": 5,
+        "citation": 5,
+        "helpfulness": 5,
+        "concept_coverage": 1.0,
+        "grounded_number_ratio": 1.0,
+        "banned_terms": [],
+        "cited_pages": [
+          122,
+          123,
+          127,
+          128,
+          130,
+          131,
+          132,
+          133,
+          134
+        ],
+        "valid_citations": [
+          122,
+          123,
+          127,
+          128,
+          130,
+          131,
+          132,
+          133,
+          134
+        ],
+        "invalid_citations": []
+      },
+      "alias_aware": {
+        "correctness": 5,
+        "completeness": 5,
+        "faithfulness": 5,
+        "clarity": 4,
+        "terminology": 5,
+        "citation": 5,
+        "helpfulness": 5,
+        "concept_coverage": 1.0,
+        "grounded_number_ratio": 1.0,
+        "banned_terms": [],
+        "cited_pages": [
+          122,
+          123,
+          127,
+          128,
+          130,
+          131,
+          132,
+          133,
+          134
+        ],
+        "valid_citations": [
+          122,
+          123,
+          127,
+          128,
+          130,
+          131,
+          132,
+          133,
+          134
+        ],
+        "invalid_citations": []
+      },
+      "delta": {
+        "correctness": 0,
+        "completeness": 0,
+        "faithfulness": 0,
+        "clarity": 0,
+        "terminology": 0,
+        "citation": 0,
+        "helpfulness": 0
+      },
+      "changed_dimensions": {},
+      "matched_concepts_strict": [
+        "ប្រូតេអ៊ីន",
+        "ធាតុ"
+      ],
+      "matched_concepts_alias_aware": [
+        "ប្រូតេអ៊ីន",
+        "ធាតុ"
+      ],
+      "alias_matches": []
+    },
+    {
+      "question_id": 19,
+      "chapter": 4,
+      "question_type": "explanation",
+      "question": "ពន្យល់ពីចំណងប៉ុបទីតក្នុងការផ្គុំប្រូតេអ៊ីន",
+      "changed": false,
+      "strict": {
+        "correctness": 5,
+        "completeness": 5,
+        "faithfulness": 5,
+        "clarity": 4,
+        "terminology": 5,
+        "citation": 4,
+        "helpfulness": 5,
+        "concept_coverage": 1.0,
+        "grounded_number_ratio": 1.0,
+        "banned_terms": [],
+        "cited_pages": [
+          122,
+          128,
+          129,
+          133,
+          168,
+          169,
+          170,
+          171,
+          172
+        ],
+        "valid_citations": [
+          122,
+          128,
+          129,
+          133,
+          168,
+          169,
+          170,
+          171,
+          172
+        ],
+        "invalid_citations": []
+      },
+      "alias_aware": {
+        "correctness": 5,
+        "completeness": 5,
+        "faithfulness": 5,
+        "clarity": 4,
+        "terminology": 5,
+        "citation": 4,
+        "helpfulness": 5,
+        "concept_coverage": 1.0,
+        "grounded_number_ratio": 1.0,
+        "banned_terms": [],
+        "cited_pages": [
+          122,
+          128,
+          129,
+          133,
+          168,
+          169,
+          170,
+          171,
+          172
+        ],
+        "valid_citations": [
+          122,
+          128,
+          129,
+          133,
+          168,
+          169,
+          170,
+          171,
+          172
+        ],
+        "invalid_citations": []
+      },
+      "delta": {
+        "correctness": 0,
+        "completeness": 0,
+        "faithfulness": 0,
+        "clarity": 0,
+        "terminology": 0,
+        "citation": 0,
+        "helpfulness": 0
+      },
+      "changed_dimensions": {},
+      "matched_concepts_strict": [
+        "ចំណងប៉ុបទីត"
+      ],
+      "matched_concepts_alias_aware": [
+        "ចំណងប៉ុបទីត"
+      ],
+      "alias_matches": []
+    },
+    {
+      "question_id": 20,
+      "chapter": 5,
+      "question_type": "definition",
+      "question": "តើ ADN មានតួនាទីអ្វី?",
+      "changed": false,
+      "strict": {
+        "correctness": 5,
+        "completeness": 5,
+        "faithfulness": 5,
+        "clarity": 5,
+        "terminology": 5,
+        "citation": 4,
+        "helpfulness": 5,
+        "concept_coverage": 1.0,
+        "grounded_number_ratio": 1.0,
+        "banned_terms": [],
+        "cited_pages": [
+          152,
+          156,
+          157,
+          159,
+          160,
+          162,
+          163,
+          165,
+          174
+        ],
+        "valid_citations": [
+          152,
+          156,
+          157,
+          159,
+          160,
+          162,
+          163,
+          165,
+          174
+        ],
+        "invalid_citations": []
+      },
+      "alias_aware": {
+        "correctness": 5,
+        "completeness": 5,
+        "faithfulness": 5,
+        "clarity": 5,
+        "terminology": 5,
+        "citation": 4,
+        "helpfulness": 5,
+        "concept_coverage": 1.0,
+        "grounded_number_ratio": 1.0,
+        "banned_terms": [],
+        "cited_pages": [
+          152,
+          156,
+          157,
+          159,
+          160,
+          162,
+          163,
+          165,
+          174
+        ],
+        "valid_citations": [
+          152,
+          156,
+          157,
+          159,
+          160,
+          162,
+          163,
+          165,
+          174
+        ],
+        "invalid_citations": []
+      },
+      "delta": {
+        "correctness": 0,
+        "completeness": 0,
+        "faithfulness": 0,
+        "clarity": 0,
+        "terminology": 0,
+        "citation": 0,
+        "helpfulness": 0
+      },
+      "changed_dimensions": {},
+      "matched_concepts_strict": [
+        "ADN",
+        "ព័ត៌មានសេនេទិច"
+      ],
+      "matched_concepts_alias_aware": [
+        "ADN",
+        "ព័ត៌មានសេនេទិច"
+      ],
+      "alias_matches": []
+    },
+    {
+      "question_id": 23,
+      "chapter": 5,
+      "question_type": "process",
+      "question": "ពន្យល់ពីដំណើរទ្វេ (ការស្វ័យដំឡើង) របស់ ADN",
+      "changed": false,
+      "strict": {
+        "correctness": 5,
+        "completeness": 5,
+        "faithfulness": 4,
+        "clarity": 4,
+        "terminology": 5,
+        "citation": 5,
+        "helpfulness": 5,
+        "concept_coverage": 1.0,
+        "grounded_number_ratio": 0.83,
+        "banned_terms": [],
+        "cited_pages": [
+          150,
+          156,
+          157,
+          158,
+          159,
+          160,
+          182
+        ],
+        "valid_citations": [
+          150,
+          156,
+          157,
+          158,
+          159,
+          160,
+          182
+        ],
+        "invalid_citations": []
+      },
+      "alias_aware": {
+        "correctness": 5,
+        "completeness": 5,
+        "faithfulness": 4,
+        "clarity": 4,
+        "terminology": 5,
+        "citation": 5,
+        "helpfulness": 5,
+        "concept_coverage": 1.0,
+        "grounded_number_ratio": 0.83,
+        "banned_terms": [],
+        "cited_pages": [
+          150,
+          156,
+          157,
+          158,
+          159,
+          160,
+          182
+        ],
+        "valid_citations": [
+          150,
+          156,
+          157,
+          158,
+          159,
+          160,
+          182
+        ],
+        "invalid_citations": []
+      },
+      "delta": {
+        "correctness": 0,
+        "completeness": 0,
+        "faithfulness": 0,
+        "clarity": 0,
+        "terminology": 0,
+        "citation": 0,
+        "helpfulness": 0
+      },
+      "changed_dimensions": {},
+      "matched_concepts_strict": [
+        "ស្វ័យដំឡើង",
+        "ដំណើរទ្វេ"
+      ],
+      "matched_concepts_alias_aware": [
+        "ស្វ័យដំឡើង",
+        "ដំណើរទ្វេ"
+      ],
+      "alias_matches": []
+    },
+    {
+      "question_id": 24,
+      "chapter": 5,
+      "question_type": "comparison",
+      "question": "សូមប្រៀបធៀប ADN និង ARN",
+      "changed": false,
+      "strict": {
+        "correctness": 5,
+        "completeness": 5,
+        "faithfulness": 5,
+        "clarity": 4,
+        "terminology": 5,
+        "citation": 4,
+        "helpfulness": 5,
+        "concept_coverage": 1.0,
+        "grounded_number_ratio": 1.0,
+        "banned_terms": [],
+        "cited_pages": [
+          162,
+          164,
+          165,
+          166,
+          167,
+          174,
+          175,
+          191,
+          192,
+          211,
+          212
+        ],
+        "valid_citations": [
+          162,
+          164,
+          165,
+          166,
+          167,
+          174,
+          175,
+          191,
+          192,
+          211,
+          212
+        ],
+        "invalid_citations": []
+      },
+      "alias_aware": {
+        "correctness": 5,
+        "completeness": 5,
+        "faithfulness": 5,
+        "clarity": 4,
+        "terminology": 5,
+        "citation": 4,
+        "helpfulness": 5,
+        "concept_coverage": 1.0,
+        "grounded_number_ratio": 1.0,
+        "banned_terms": [],
+        "cited_pages": [
+          162,
+          164,
+          165,
+          166,
+          167,
+          174,
+          175,
+          191,
+          192,
+          211,
+          212
+        ],
+        "valid_citations": [
+          162,
+          164,
+          165,
+          166,
+          167,
+          174,
+          175,
+          191,
+          192,
+          211,
+          212
+        ],
+        "invalid_citations": []
+      },
+      "delta": {
+        "correctness": 0,
+        "completeness": 0,
+        "faithfulness": 0,
+        "clarity": 0,
+        "terminology": 0,
+        "citation": 0,
+        "helpfulness": 0
+      },
+      "changed_dimensions": {},
+      "matched_concepts_strict": [
+        "ADN",
+        "ARN"
+      ],
+      "matched_concepts_alias_aware": [
+        "ADN",
+        "ARN"
+      ],
+      "alias_matches": []
+    },
+    {
+      "question_id": 28,
+      "chapter": 6,
+      "question_type": "reasoning",
+      "question": "ពន្យល់ពីកត្តាដែលបណ្តាលឱ្យភាវៈរស់វិវត្តន៍លើផែនដី",
+      "changed": false,
+      "strict": {
+        "correctness": 5,
+        "completeness": 5,
+        "faithfulness": 5,
+        "clarity": 4,
+        "terminology": 5,
+        "citation": 5,
+        "helpfulness": 5,
+        "concept_coverage": 1.0,
+        "grounded_number_ratio": 1.0,
+        "banned_terms": [],
+        "cited_pages": [
+          195,
+          196,
+          201,
+          202,
+          206,
+          212,
+          213,
+          214,
+          224,
+          225
+        ],
+        "valid_citations": [
+          195,
+          196,
+          201,
+          202,
+          206,
+          212,
+          213,
+          214,
+          224,
+          225
+        ],
+        "invalid_citations": []
+      },
+      "alias_aware": {
+        "correctness": 5,
+        "completeness": 5,
+        "faithfulness": 5,
+        "clarity": 4,
+        "terminology": 5,
+        "citation": 5,
+        "helpfulness": 5,
+        "concept_coverage": 1.0,
+        "grounded_number_ratio": 1.0,
+        "banned_terms": [],
+        "cited_pages": [
+          195,
+          196,
+          201,
+          202,
+          206,
+          212,
+          213,
+          214,
+          224,
+          225
+        ],
+        "valid_citations": [
+          195,
+          196,
+          201,
+          202,
+          206,
+          212,
+          213,
+          214,
+          224,
+          225
+        ],
+        "invalid_citations": []
+      },
+      "delta": {
+        "correctness": 0,
+        "completeness": 0,
+        "faithfulness": 0,
+        "clarity": 0,
+        "terminology": 0,
+        "citation": 0,
+        "helpfulness": 0
+      },
+      "changed_dimensions": {},
+      "matched_concepts_strict": [
+        "វិវត្តន៍",
+        "កត្តា"
+      ],
+      "matched_concepts_alias_aware": [
+        "វិវត្តន៍",
+        "កត្តា"
+      ],
+      "alias_matches": []
+    },
+    {
+      "question_id": 30,
+      "chapter": 7,
+      "question_type": "definition",
+      "question": "តើពពួក (population) ជាអ្វី?",
+      "changed": false,
+      "strict": {
+        "correctness": 5,
+        "completeness": 5,
+        "faithfulness": 5,
+        "clarity": 4,
+        "terminology": 5,
+        "citation": 5,
+        "helpfulness": 5,
+        "concept_coverage": 1.0,
+        "grounded_number_ratio": 1.0,
+        "banned_terms": [],
+        "cited_pages": [
+          227,
+          228,
+          229,
+          231,
+          233,
+          234,
+          235,
+          243,
+          244
+        ],
+        "valid_citations": [
+          227,
+          228,
+          229,
+          231,
+          233,
+          234,
+          235,
+          243,
+          244
+        ],
+        "invalid_citations": []
+      },
+      "alias_aware": {
+        "correctness": 5,
+        "completeness": 5,
+        "faithfulness": 5,
+        "clarity": 4,
+        "terminology": 5,
+        "citation": 5,
+        "helpfulness": 5,
+        "concept_coverage": 1.0,
+        "grounded_number_ratio": 1.0,
+        "banned_terms": [],
+        "cited_pages": [
+          227,
+          228,
+          229,
+          231,
+          233,
+          234,
+          235,
+          243,
+          244
+        ],
+        "valid_citations": [
+          227,
+          228,
+          229,
+          231,
+          233,
+          234,
+          235,
+          243,
+          244
+        ],
+        "invalid_citations": []
+      },
+      "delta": {
+        "correctness": 0,
+        "completeness": 0,
+        "faithfulness": 0,
+        "clarity": 0,
+        "terminology": 0,
+        "citation": 0,
+        "helpfulness": 0
+      },
+      "changed_dimensions": {},
+      "matched_concepts_strict": [
+        "ពពួក"
+      ],
+      "matched_concepts_alias_aware": [
+        "ពពួក"
+      ],
+      "alias_matches": []
+    },
+    {
+      "question_id": 31,
+      "chapter": 7,
+      "question_type": "reasoning",
+      "question": "តើមានមូលហេតុអ្វីខ្លះដែលធ្វើឱ្យទំហំពពួកមានការប្រែប្រួល?",
+      "changed": false,
+      "strict": {
+        "correctness": 5,
+        "completeness": 5,
+        "faithfulness": 5,
+        "clarity": 4,
+        "terminology": 5,
+        "citation": 5,
+        "helpfulness": 5,
+        "concept_coverage": 1.0,
+        "grounded_number_ratio": 1.0,
+        "banned_terms": [],
+        "cited_pages": [
+          228,
+          229,
+          231,
+          232,
+          233,
+          234,
+          235
+        ],
+        "valid_citations": [
+          228,
+          229,
+          231,
+          232,
+          233,
+          234,
+          235
+        ],
+        "invalid_citations": []
+      },
+      "alias_aware": {
+        "correctness": 5,
+        "completeness": 5,
+        "faithfulness": 5,
+        "clarity": 4,
+        "terminology": 5,
+        "citation": 5,
+        "helpfulness": 5,
+        "concept_coverage": 1.0,
+        "grounded_number_ratio": 1.0,
+        "banned_terms": [],
+        "cited_pages": [
+          228,
+          229,
+          231,
+          232,
+          233,
+          234,
+          235
+        ],
+        "valid_citations": [
+          228,
+          229,
+          231,
+          232,
+          233,
+          234,
+          235
+        ],
+        "invalid_citations": []
+      },
+      "delta": {
+        "correctness": 0,
+        "completeness": 0,
+        "faithfulness": 0,
+        "clarity": 0,
+        "terminology": 0,
+        "citation": 0,
+        "helpfulness": 0
+      },
+      "changed_dimensions": {},
+      "matched_concepts_strict": [
+        "ទំហំពពួក",
+        "ប្រែប្រួល"
+      ],
+      "matched_concepts_alias_aware": [
+        "ទំហំពពួក",
+        "ប្រែប្រួល"
+      ],
+      "alias_matches": []
+    },
+    {
+      "question_id": 34,
+      "chapter": 8,
+      "question_type": "definition",
+      "question": "តើខ្សែអាហារ និងបណ្តាញអាហារជាអ្វី?",
+      "changed": false,
+      "strict": {
+        "correctness": 5,
+        "completeness": 5,
+        "faithfulness": 5,
+        "clarity": 4,
+        "terminology": 5,
+        "citation": 5,
+        "helpfulness": 5,
+        "concept_coverage": 1.0,
+        "grounded_number_ratio": 1.0,
+        "banned_terms": [],
+        "cited_pages": [
+          60,
+          61,
+          246,
+          247,
+          248,
+          249,
+          250,
+          255,
+          256
+        ],
+        "valid_citations": [
+          60,
+          61,
+          246,
+          247,
+          248,
+          249,
+          250,
+          255,
+          256
+        ],
+        "invalid_citations": []
+      },
+      "alias_aware": {
+        "correctness": 5,
+        "completeness": 5,
+        "faithfulness": 5,
+        "clarity": 4,
+        "terminology": 5,
+        "citation": 5,
+        "helpfulness": 5,
+        "concept_coverage": 1.0,
+        "grounded_number_ratio": 1.0,
+        "banned_terms": [],
+        "cited_pages": [
+          60,
+          61,
+          246,
+          247,
+          248,
+          249,
+          250,
+          255,
+          256
+        ],
+        "valid_citations": [
+          60,
+          61,
+          246,
+          247,
+          248,
+          249,
+          250,
+          255,
+          256
+        ],
+        "invalid_citations": []
+      },
+      "delta": {
+        "correctness": 0,
+        "completeness": 0,
+        "faithfulness": 0,
+        "clarity": 0,
+        "terminology": 0,
+        "citation": 0,
+        "helpfulness": 0
+      },
+      "changed_dimensions": {},
+      "matched_concepts_strict": [
+        "ខ្សែអាហារ",
+        "បណ្តាញអាហារ"
+      ],
+      "matched_concepts_alias_aware": [
+        "ខ្សែអាហារ",
+        "បណ្តាញអាហារ"
+      ],
+      "alias_matches": []
+    },
+    {
+      "question_id": 35,
+      "chapter": 8,
+      "question_type": "process",
+      "question": "ពន្យល់ពីការផ្ទេរថាមពលក្នុងស្ថានប្រព័ន្ធអេកូឡូស៊ី",
+      "changed": false,
+      "strict": {
+        "correctness": 5,
+        "completeness": 5,
+        "faithfulness": 5,
+        "clarity": 5,
+        "terminology": 5,
+        "citation": 5,
+        "helpfulness": 3,
+        "concept_coverage": 1.0,
+        "grounded_number_ratio": 1.0,
+        "banned_terms": [],
+        "cited_pages": [
+          235,
+          245,
+          246,
+          247,
+          248,
+          249,
+          250,
+          251,
+          252
+        ],
+        "valid_citations": [
+          235,
+          245,
+          246,
+          247,
+          248,
+          249,
+          250,
+          251,
+          252
+        ],
+        "invalid_citations": []
+      },
+      "alias_aware": {
+        "correctness": 5,
+        "completeness": 5,
+        "faithfulness": 5,
+        "clarity": 5,
+        "terminology": 5,
+        "citation": 5,
+        "helpfulness": 3,
+        "concept_coverage": 1.0,
+        "grounded_number_ratio": 1.0,
+        "banned_terms": [],
+        "cited_pages": [
+          235,
+          245,
+          246,
+          247,
+          248,
+          249,
+          250,
+          251,
+          252
+        ],
+        "valid_citations": [
+          235,
+          245,
+          246,
+          247,
+          248,
+          249,
+          250,
+          251,
+          252
+        ],
+        "invalid_citations": []
+      },
+      "delta": {
+        "correctness": 0,
+        "completeness": 0,
+        "faithfulness": 0,
+        "clarity": 0,
+        "terminology": 0,
+        "citation": 0,
+        "helpfulness": 0
+      },
+      "changed_dimensions": {},
+      "matched_concepts_strict": [
+        "ថាមពល",
+        "ស្ថានប្រព័ន្ធ"
+      ],
+      "matched_concepts_alias_aware": [
+        "ថាមពល",
+        "ស្ថានប្រព័ន្ធ"
+      ],
+      "alias_matches": []
+    },
+    {
+      "question_id": 39,
+      "chapter": 5,
+      "question_type": "summary",
+      "question": "សូមសង្ខេបពីជំពូកព័ត៌មានសេនេទិច (DNA) ក្នុងរបៀបខ្លីៗ",
+      "changed": false,
+      "strict": {
+        "correctness": 5,
+        "completeness": 5,
+        "faithfulness": 5,
+        "clarity": 5,
+        "terminology": 5,
+        "citation": 5,
+        "helpfulness": 5,
+        "concept_coverage": 1.0,
+        "grounded_number_ratio": 0.94,
+        "banned_terms": [],
+        "cited_pages": [
+          150,
+          159,
+          160,
+          161,
+          164,
+          165,
+          174,
+          192,
+          193
+        ],
+        "valid_citations": [
+          150,
+          159,
+          160,
+          161,
+          164,
+          165,
+          174,
+          192,
+          193
+        ],
+        "invalid_citations": []
+      },
+      "alias_aware": {
+        "correctness": 5,
+        "completeness": 5,
+        "faithfulness": 5,
+        "clarity": 5,
+        "terminology": 5,
+        "citation": 5,
+        "helpfulness": 5,
+        "concept_coverage": 1.0,
+        "grounded_number_ratio": 0.94,
+        "banned_terms": [],
+        "cited_pages": [
+          150,
+          159,
+          160,
+          161,
+          164,
+          165,
+          174,
+          192,
+          193
+        ],
+        "valid_citations": [
+          150,
+          159,
+          160,
+          161,
+          164,
+          165,
+          174,
+          192,
+          193
+        ],
+        "invalid_citations": []
+      },
+      "delta": {
+        "correctness": 0,
+        "completeness": 0,
+        "faithfulness": 0,
+        "clarity": 0,
+        "terminology": 0,
+        "citation": 0,
+        "helpfulness": 0
+      },
+      "changed_dimensions": {},
+      "matched_concepts_strict": [
+        "ADN",
+        "ARN"
+      ],
+      "matched_concepts_alias_aware": [
+        "ADN",
+        "ARN"
+      ],
+      "alias_matches": []
+    },
+    {
+      "question_id": 40,
+      "chapter": 6,
+      "question_type": "summary",
+      "question": "សូមសង្ខេបពីការវិវត្តន៍តាមទ្រឹស្តីដាវីន",
+      "changed": false,
+      "strict": {
+        "correctness": 5,
+        "completeness": 5,
+        "faithfulness": 5,
+        "clarity": 5,
+        "terminology": 5,
+        "citation": 5,
+        "helpfulness": 5,
+        "concept_coverage": 1.0,
+        "grounded_number_ratio": 1.0,
+        "banned_terms": [],
+        "cited_pages": [
+          195,
+          196,
+          197,
+          200,
+          201,
+          202,
+          203,
+          225,
+          226
+        ],
+        "valid_citations": [
+          195,
+          196,
+          197,
+          200,
+          201,
+          202,
+          203,
+          225,
+          226
+        ],
+        "invalid_citations": []
+      },
+      "alias_aware": {
+        "correctness": 5,
+        "completeness": 5,
+        "faithfulness": 5,
+        "clarity": 5,
+        "terminology": 5,
+        "citation": 5,
+        "helpfulness": 5,
+        "concept_coverage": 1.0,
+        "grounded_number_ratio": 1.0,
+        "banned_terms": [],
+        "cited_pages": [
+          195,
+          196,
+          197,
+          200,
+          201,
+          202,
+          203,
+          225,
+          226
+        ],
+        "valid_citations": [
+          195,
+          196,
+          197,
+          200,
+          201,
+          202,
+          203,
+          225,
+          226
+        ],
+        "invalid_citations": []
+      },
+      "delta": {
+        "correctness": 0,
+        "completeness": 0,
+        "faithfulness": 0,
+        "clarity": 0,
+        "terminology": 0,
+        "citation": 0,
+        "helpfulness": 0
+      },
+      "changed_dimensions": {},
+      "matched_concepts_strict": [
+        "ដាវីន",
+        "វិវត្តន៍"
+      ],
+      "matched_concepts_alias_aware": [
+        "ដាវីន",
+        "វិវត្តន៍"
+      ],
+      "alias_matches": []
+    },
+    {
+      "question_id": 47,
+      "chapter": 8,
+      "question_type": "comparison",
+      "question": "អ្នកផលិត អ្នកស៊ីលំដាប់ទី១ និងអ្នកស៊ីលំដាប់ទី២ ខុសគ្នាដូចម្តេច?",
+      "changed": false,
+      "strict": {
+        "correctness": 5,
+        "completeness": 5,
+        "faithfulness": 5,
+        "clarity": 4,
+        "terminology": 5,
+        "citation": 5,
+        "helpfulness": 4,
+        "concept_coverage": 1.0,
+        "grounded_number_ratio": 1.0,
+        "banned_terms": [],
+        "cited_pages": [
+          5,
+          38,
+          39,
+          177,
+          178,
+          246,
+          247,
+          248,
+          249
+        ],
+        "valid_citations": [
+          5,
+          38,
+          39,
+          177,
+          178,
+          246,
+          247,
+          248,
+          249
+        ],
+        "invalid_citations": []
+      },
+      "alias_aware": {
+        "correctness": 5,
+        "completeness": 5,
+        "faithfulness": 5,
+        "clarity": 4,
+        "terminology": 5,
+        "citation": 5,
+        "helpfulness": 4,
+        "concept_coverage": 1.0,
+        "grounded_number_ratio": 1.0,
+        "banned_terms": [],
+        "cited_pages": [
+          5,
+          38,
+          39,
+          177,
+          178,
+          246,
+          247,
+          248,
+          249
+        ],
+        "valid_citations": [
+          5,
+          38,
+          39,
+          177,
+          178,
+          246,
+          247,
+          248,
+          249
+        ],
+        "invalid_citations": []
+      },
+      "delta": {
+        "correctness": 0,
+        "completeness": 0,
+        "faithfulness": 0,
+        "clarity": 0,
+        "terminology": 0,
+        "citation": 0,
+        "helpfulness": 0
+      },
+      "changed_dimensions": {},
+      "matched_concepts_strict": [
+        "អ្នកផលិត",
+        "អ្នកស៊ី"
+      ],
+      "matched_concepts_alias_aware": [
+        "អ្នកផលិត",
+        "អ្នកស៊ី"
+      ],
+      "alias_matches": []
+    },
+    {
+      "question_id": 50,
+      "chapter": 2,
+      "question_type": "summary",
+      "question": "សូមសង្ខេបអំពីមូលហេតុដែលការស្រូបទឹករបស់រុក្ខជាតិមានសារៈសំខាន់",
+      "changed": false,
+      "strict": {
+        "correctness": 5,
+        "completeness": 5,
+        "faithfulness": 5,
+        "clarity": 5,
+        "terminology": 5,
+        "citation": 4,
+        "helpfulness": 5,
+        "concept_coverage": 1.0,
+        "grounded_number_ratio": 1.0,
+        "banned_terms": [],
+        "cited_pages": [
+          26,
+          27,
+          28,
+          29,
+          30,
+          31,
+          40,
+          41,
+          57,
+          58,
+          234,
+          235
+        ],
+        "valid_citations": [
+          26,
+          27,
+          28,
+          29,
+          30,
+          31,
+          40,
+          41,
+          57,
+          58,
+          234,
+          235
+        ],
+        "invalid_citations": []
+      },
+      "alias_aware": {
+        "correctness": 5,
+        "completeness": 5,
+        "faithfulness": 5,
+        "clarity": 5,
+        "terminology": 5,
+        "citation": 4,
+        "helpfulness": 5,
+        "concept_coverage": 1.0,
+        "grounded_number_ratio": 1.0,
+        "banned_terms": [],
+        "cited_pages": [
+          26,
+          27,
+          28,
+          29,
+          30,
+          31,
+          40,
+          41,
+          57,
+          58,
+          234,
+          235
+        ],
+        "valid_citations": [
+          26,
+          27,
+          28,
+          29,
+          30,
+          31,
+          40,
+          41,
+          57,
+          58,
+          234,
+          235
+        ],
+        "invalid_citations": []
+      },
+      "delta": {
+        "correctness": 0,
+        "completeness": 0,
+        "faithfulness": 0,
+        "clarity": 0,
+        "terminology": 0,
+        "citation": 0,
+        "helpfulness": 0
+      },
+      "changed_dimensions": {},
+      "matched_concepts_strict": [
+        "ស្រូបទឹក"
+      ],
+      "matched_concepts_alias_aware": [
+        "ស្រូបទឹក"
+      ],
+      "alias_matches": []
+    },
+    {
+      "question_id": 52,
+      "chapter": 1,
+      "question_type": "reasoning",
+      "question": "តើស្រល់ជារុក្ខជាតិស៊ីមណូស្ពែមឬអង់ស្យូស្ពែម? ហេតុអ្វី?",
+      "changed": false,
+      "strict": {
+        "correctness": 5,
+        "completeness": 5,
+        "faithfulness": 5,
+        "clarity": 4,
+        "terminology": 5,
+        "citation": 5,
+        "helpfulness": 3,
+        "concept_coverage": 1.0,
+        "grounded_number_ratio": 1.0,
+        "banned_terms": [],
+        "cited_pages": [
+          5,
+          6,
+          7,
+          9,
+          10,
+          11,
+          20,
+          21
+        ],
+        "valid_citations": [
+          5,
+          6,
+          7,
+          9,
+          10,
+          11,
+          20,
+          21
+        ],
+        "invalid_citations": []
+      },
+      "alias_aware": {
+        "correctness": 5,
+        "completeness": 5,
+        "faithfulness": 5,
+        "clarity": 4,
+        "terminology": 5,
+        "citation": 5,
+        "helpfulness": 3,
+        "concept_coverage": 1.0,
+        "grounded_number_ratio": 1.0,
+        "banned_terms": [],
+        "cited_pages": [
+          5,
+          6,
+          7,
+          9,
+          10,
+          11,
+          20,
+          21
+        ],
+        "valid_citations": [
+          5,
+          6,
+          7,
+          9,
+          10,
+          11,
+          20,
+          21
+        ],
+        "invalid_citations": []
+      },
+      "delta": {
+        "correctness": 0,
+        "completeness": 0,
+        "faithfulness": 0,
+        "clarity": 0,
+        "terminology": 0,
+        "citation": 0,
+        "helpfulness": 0
+      },
+      "changed_dimensions": {},
+      "matched_concepts_strict": [
+        "ស្រល់",
+        "ស៊ីមណូស្ពែម"
+      ],
+      "matched_concepts_alias_aware": [
+        "ស្រល់",
+        "ស៊ីមណូស្ពែម"
+      ],
+      "alias_matches": []
+    },
+    {
+      "question_id": 55,
+      "chapter": 1,
+      "question_type": "process",
+      "question": "ចូរពន្យល់ពីដំណើរការលំអងរបស់ស្រល់",
+      "changed": false,
+      "strict": {
+        "correctness": 3,
+        "completeness": 4,
+        "faithfulness": 5,
+        "clarity": 5,
+        "terminology": 4,
+        "citation": 5,
+        "helpfulness": 3,
+        "concept_coverage": 0.5,
+        "grounded_number_ratio": 1.0,
+        "banned_terms": [],
+        "cited_pages": [
+          6,
+          8,
+          9,
+          10,
+          11,
+          23,
+          24
+        ],
+        "valid_citations": [
+          6,
+          8,
+          9,
+          10,
+          11,
+          23,
+          24
+        ],
+        "invalid_citations": []
+      },
+      "alias_aware": {
+        "correctness": 3,
+        "completeness": 4,
+        "faithfulness": 5,
+        "clarity": 5,
+        "terminology": 4,
+        "citation": 5,
+        "helpfulness": 3,
+        "concept_coverage": 0.5,
+        "grounded_number_ratio": 1.0,
+        "banned_terms": [],
+        "cited_pages": [
+          6,
+          8,
+          9,
+          10,
+          11,
+          23,
+          24
+        ],
+        "valid_citations": [
+          6,
+          8,
+          9,
+          10,
+          11,
+          23,
+          24
+        ],
+        "invalid_citations": []
+      },
+      "delta": {
+        "correctness": 0,
+        "completeness": 0,
+        "faithfulness": 0,
+        "clarity": 0,
+        "terminology": 0,
+        "citation": 0,
+        "helpfulness": 0
+      },
+      "changed_dimensions": {},
+      "matched_concepts_strict": [
+        "លំអង"
+      ],
+      "matched_concepts_alias_aware": [
+        "លំអង"
+      ],
+      "alias_matches": []
+    },
+    {
+      "question_id": 56,
+      "chapter": 1,
+      "question_type": "reasoning",
+      "question": "តើអង្ករសំរូបដែលយើងបរិភោគជាផ្នែកណារបស់រុក្ខជាតិ?",
+      "changed": false,
+      "strict": {
+        "correctness": 5,
+        "completeness": 4,
+        "faithfulness": 5,
+        "clarity": 4,
+        "terminology": 5,
+        "citation": 5,
+        "helpfulness": 3,
+        "concept_coverage": 1.0,
+        "grounded_number_ratio": 1.0,
+        "banned_terms": [],
+        "cited_pages": [
+          5,
+          12,
+          13,
+          17,
+          18,
+          19,
+          20,
+          21,
+          24
+        ],
+        "valid_citations": [
+          5,
+          12,
+          13,
+          17,
+          18,
+          19,
+          20,
+          21,
+          24
+        ],
+        "invalid_citations": []
+      },
+      "alias_aware": {
+        "correctness": 5,
+        "completeness": 4,
+        "faithfulness": 5,
+        "clarity": 4,
+        "terminology": 5,
+        "citation": 5,
+        "helpfulness": 3,
+        "concept_coverage": 1.0,
+        "grounded_number_ratio": 1.0,
+        "banned_terms": [],
+        "cited_pages": [
+          5,
+          12,
+          13,
+          17,
+          18,
+          19,
+          20,
+          21,
+          24
+        ],
+        "valid_citations": [
+          5,
+          12,
+          13,
+          17,
+          18,
+          19,
+          20,
+          21,
+          24
+        ],
+        "invalid_citations": []
+      },
+      "delta": {
+        "correctness": 0,
+        "completeness": 0,
+        "faithfulness": 0,
+        "clarity": 0,
+        "terminology": 0,
+        "citation": 0,
+        "helpfulness": 0
+      },
+      "changed_dimensions": {},
+      "matched_concepts_strict": [
+        "គ្រាប់"
+      ],
+      "matched_concepts_alias_aware": [
+        "គ្រាប់"
+      ],
+      "alias_matches": []
+    },
+    {
+      "question_id": 58,
+      "chapter": 2,
+      "question_type": "comparison",
+      "question": "តើស៊ីឡែមនិងដូអែមខុសគ្នាដូចម្តេច?",
+      "changed": true,
+      "strict": {
+        "correctness": 3,
+        "completeness": 4,
+        "faithfulness": 5,
+        "clarity": 5,
+        "terminology": 4,
+        "citation": 5,
+        "helpfulness": 4,
+        "concept_coverage": 0.5,
+        "grounded_number_ratio": 1.0,
+        "banned_terms": [],
+        "cited_pages": [
+          6,
+          13,
+          27,
+          28,
+          29,
+          32,
+          39,
+          40,
+          41
+        ],
+        "valid_citations": [
+          6,
+          13,
+          27,
+          28,
+          29,
+          32,
+          39,
+          40,
+          41
+        ],
+        "invalid_citations": []
+      },
+      "alias_aware": {
+        "correctness": 5,
+        "completeness": 5,
+        "faithfulness": 5,
+        "clarity": 5,
+        "terminology": 5,
+        "citation": 5,
+        "helpfulness": 4,
+        "concept_coverage": 1.0,
+        "grounded_number_ratio": 1.0,
+        "banned_terms": [],
+        "cited_pages": [
+          6,
+          13,
+          27,
+          28,
+          29,
+          32,
+          39,
+          40,
+          41
+        ],
+        "valid_citations": [
+          6,
+          13,
+          27,
+          28,
+          29,
+          32,
+          39,
+          40,
+          41
+        ],
+        "invalid_citations": []
+      },
+      "delta": {
+        "correctness": 2,
+        "completeness": 1,
+        "faithfulness": 0,
+        "clarity": 0,
+        "terminology": 1,
+        "citation": 0,
+        "helpfulness": 0
+      },
+      "changed_dimensions": {
+        "correctness": {
+          "strict": 3,
+          "alias_aware": 5
+        },
+        "completeness": {
+          "strict": 4,
+          "alias_aware": 5
+        },
+        "terminology": {
+          "strict": 4,
+          "alias_aware": 5
+        }
+      },
+      "matched_concepts_strict": [
+        "ស៊ីឡែម"
+      ],
+      "matched_concepts_alias_aware": [
+        "ស៊ីឡែម",
+        "ដូអែម"
+      ],
+      "alias_matches": [
+        {
+          "concept": "ដូអែម",
+          "alias": "ផ្លូអែម"
+        }
+      ]
+    },
+    {
+      "question_id": 63,
+      "chapter": 3,
+      "question_type": "comparison",
+      "question": "សូមប្រៀបធៀបប្រព័ន្ធប្រសាទរបស់សត្វឆ្អឹងកងផ្សេងៗ",
+      "changed": false,
+      "strict": {
+        "correctness": 5,
+        "completeness": 5,
+        "faithfulness": 5,
+        "clarity": 4,
+        "terminology": 5,
+        "citation": 5,
+        "helpfulness": 5,
+        "concept_coverage": 1.0,
+        "grounded_number_ratio": 1.0,
+        "banned_terms": [],
+        "cited_pages": [
+          60,
+          61,
+          62,
+          63,
+          64,
+          65,
+          77,
+          210,
+          215
+        ],
+        "valid_citations": [
+          60,
+          61,
+          62,
+          63,
+          64,
+          65,
+          77,
+          210,
+          215
+        ],
+        "invalid_citations": []
+      },
+      "alias_aware": {
+        "correctness": 5,
+        "completeness": 5,
+        "faithfulness": 5,
+        "clarity": 4,
+        "terminology": 5,
+        "citation": 5,
+        "helpfulness": 5,
+        "concept_coverage": 1.0,
+        "grounded_number_ratio": 1.0,
+        "banned_terms": [],
+        "cited_pages": [
+          60,
+          61,
+          62,
+          63,
+          64,
+          65,
+          77,
+          210,
+          215
+        ],
+        "valid_citations": [
+          60,
+          61,
+          62,
+          63,
+          64,
+          65,
+          77,
+          210,
+          215
+        ],
+        "invalid_citations": []
+      },
+      "delta": {
+        "correctness": 0,
+        "completeness": 0,
+        "faithfulness": 0,
+        "clarity": 0,
+        "terminology": 0,
+        "citation": 0,
+        "helpfulness": 0
+      },
+      "changed_dimensions": {},
+      "matched_concepts_strict": [
+        "ប្រព័ន្ធប្រសាទ",
+        "សត្វឆ្អឹងកង"
+      ],
+      "matched_concepts_alias_aware": [
+        "ប្រព័ន្ធប្រសាទ",
+        "សត្វឆ្អឹងកង"
+      ],
+      "alias_matches": []
+    },
+    {
+      "question_id": 65,
+      "chapter": 4,
+      "question_type": "explanation",
+      "question": "ពន្យល់ពីតួនាទីរបស់ប្រូតេអ៊ីនក្នុងសារពាង្គកាយ",
+      "changed": true,
+      "strict": {
+        "correctness": 3,
+        "completeness": 4,
+        "faithfulness": 5,
+        "clarity": 5,
+        "terminology": 4,
+        "citation": 5,
+        "helpfulness": 5,
+        "concept_coverage": 0.5,
+        "grounded_number_ratio": 1.0,
+        "banned_terms": [],
+        "cited_pages": [
+          122,
+          127,
+          128,
+          130,
+          131,
+          133,
+          134
+        ],
+        "valid_citations": [
+          122,
+          127,
+          128,
+          130,
+          131,
+          133,
+          134
+        ],
+        "invalid_citations": []
+      },
+      "alias_aware": {
+        "correctness": 5,
+        "completeness": 5,
+        "faithfulness": 5,
+        "clarity": 5,
+        "terminology": 5,
+        "citation": 5,
+        "helpfulness": 5,
+        "concept_coverage": 1.0,
+        "grounded_number_ratio": 1.0,
+        "banned_terms": [],
+        "cited_pages": [
+          122,
+          127,
+          128,
+          130,
+          131,
+          133,
+          134
+        ],
+        "valid_citations": [
+          122,
+          127,
+          128,
+          130,
+          131,
+          133,
+          134
+        ],
+        "invalid_citations": []
+      },
+      "delta": {
+        "correctness": 2,
+        "completeness": 1,
+        "faithfulness": 0,
+        "clarity": 0,
+        "terminology": 1,
+        "citation": 0,
+        "helpfulness": 0
+      },
+      "changed_dimensions": {
+        "correctness": {
+          "strict": 3,
+          "alias_aware": 5
+        },
+        "completeness": {
+          "strict": 4,
+          "alias_aware": 5
+        },
+        "terminology": {
+          "strict": 4,
+          "alias_aware": 5
+        }
+      },
+      "matched_concepts_strict": [
+        "ប្រូតេអ៊ីន"
+      ],
+      "matched_concepts_alias_aware": [
+        "ប្រូតេអ៊ីន",
+        "តួនាទី"
+      ],
+      "alias_matches": [
+        {
+          "concept": "តួនាទី",
+          "alias": "នាទី"
+        }
+      ]
+    },
+    {
+      "question_id": 68,
+      "chapter": 5,
+      "question_type": "process",
+      "question": "ពន្យល់ពីរបៀបដែលព័ត៌មានសេនេទិចត្រូវបានបញ្ជូនពីមេទៅកូន",
+      "changed": false,
+      "strict": {
+        "correctness": 5,
+        "completeness": 5,
+        "faithfulness": 5,
+        "clarity": 5,
+        "terminology": 5,
+        "citation": 4,
+        "helpfulness": 3,
+        "concept_coverage": 1.0,
+        "grounded_number_ratio": 1.0,
+        "banned_terms": [],
+        "cited_pages": [
+          149,
+          160,
+          161,
+          162,
+          164,
+          180,
+          190,
+          193
+        ],
+        "valid_citations": [
+          149,
+          160,
+          161,
+          162,
+          164,
+          180,
+          190,
+          193
+        ],
+        "invalid_citations": []
+      },
+      "alias_aware": {
+        "correctness": 5,
+        "completeness": 5,
+        "faithfulness": 5,
+        "clarity": 5,
+        "terminology": 5,
+        "citation": 4,
+        "helpfulness": 3,
+        "concept_coverage": 1.0,
+        "grounded_number_ratio": 1.0,
+        "banned_terms": [],
+        "cited_pages": [
+          149,
+          160,
+          161,
+          162,
+          164,
+          180,
+          190,
+          193
+        ],
+        "valid_citations": [
+          149,
+          160,
+          161,
+          162,
+          164,
+          180,
+          190,
+          193
+        ],
+        "invalid_citations": []
+      },
+      "delta": {
+        "correctness": 0,
+        "completeness": 0,
+        "faithfulness": 0,
+        "clarity": 0,
+        "terminology": 0,
+        "citation": 0,
+        "helpfulness": 0
+      },
+      "changed_dimensions": {},
+      "matched_concepts_strict": [
+        "សេនេទិច",
+        "ADN"
+      ],
+      "matched_concepts_alias_aware": [
+        "សេនេទិច",
+        "ADN"
+      ],
+      "alias_matches": []
+    },
+    {
+      "question_id": 78,
+      "chapter": 5,
+      "question_type": "exam",
+      "question": "ក្នុងប្រឡង៖ តើអ្វីជានិយមន័យរបស់ហ្សែន (gene)?",
+      "changed": true,
+      "strict": {
+        "correctness": 1,
+        "completeness": 2,
+        "faithfulness": 5,
+        "clarity": 4,
+        "terminology": 3,
+        "citation": 5,
+        "helpfulness": 3,
+        "concept_coverage": 0.0,
+        "grounded_number_ratio": 1.0,
+        "banned_terms": [],
+        "cited_pages": [
+          162,
+          163,
+          174,
+          175,
+          189,
+          190,
+          192,
+          193,
+          194
+        ],
+        "valid_citations": [
+          162,
+          163,
+          174,
+          175,
+          189,
+          190,
+          192,
+          193,
+          194
+        ],
+        "invalid_citations": []
+      },
+      "alias_aware": {
+        "correctness": 5,
+        "completeness": 5,
+        "faithfulness": 5,
+        "clarity": 4,
+        "terminology": 5,
+        "citation": 5,
+        "helpfulness": 3,
+        "concept_coverage": 1.0,
+        "grounded_number_ratio": 1.0,
+        "banned_terms": [],
+        "cited_pages": [
+          162,
+          163,
+          174,
+          175,
+          189,
+          190,
+          192,
+          193,
+          194
+        ],
+        "valid_citations": [
+          162,
+          163,
+          174,
+          175,
+          189,
+          190,
+          192,
+          193,
+          194
+        ],
+        "invalid_citations": []
+      },
+      "delta": {
+        "correctness": 4,
+        "completeness": 3,
+        "faithfulness": 0,
+        "clarity": 0,
+        "terminology": 2,
+        "citation": 0,
+        "helpfulness": 0
+      },
+      "changed_dimensions": {
+        "correctness": {
+          "strict": 1,
+          "alias_aware": 5
+        },
+        "completeness": {
+          "strict": 2,
+          "alias_aware": 5
+        },
+        "terminology": {
+          "strict": 3,
+          "alias_aware": 5
+        }
+      },
+      "matched_concepts_strict": [],
+      "matched_concepts_alias_aware": [
+        "ហ្សែន"
+      ],
+      "alias_matches": [
+        {
+          "concept": "ហ្សែន",
+          "alias": "សែន"
+        }
+      ]
+    },
+    {
+      "question_id": 85,
+      "chapter": 4,
+      "question_type": "quiz",
+      "question": "ចូរបង្កើតសំណួរសាកល្បង 3 អំពីប្រូតេអ៊ីន",
+      "changed": false,
+      "strict": {
+        "correctness": 5,
+        "completeness": 5,
+        "faithfulness": 5,
+        "clarity": 5,
+        "terminology": 5,
+        "citation": 4,
+        "helpfulness": 3,
+        "concept_coverage": 1.0,
+        "grounded_number_ratio": 1.0,
+        "banned_terms": [],
+        "cited_pages": [
+          122,
+          133,
+          134,
+          147,
+          148,
+          174,
+          175,
+          193,
+          194
+        ],
+        "valid_citations": [
+          122,
+          133,
+          134,
+          147,
+          148,
+          174,
+          175,
+          193,
+          194
+        ],
+        "invalid_citations": []
+      },
+      "alias_aware": {
+        "correctness": 5,
+        "completeness": 5,
+        "faithfulness": 5,
+        "clarity": 5,
+        "terminology": 5,
+        "citation": 4,
+        "helpfulness": 3,
+        "concept_coverage": 1.0,
+        "grounded_number_ratio": 1.0,
+        "banned_terms": [],
+        "cited_pages": [
+          122,
+          133,
+          134,
+          147,
+          148,
+          174,
+          175,
+          193,
+          194
+        ],
+        "valid_citations": [
+          122,
+          133,
+          134,
+          147,
+          148,
+          174,
+          175,
+          193,
+          194
+        ],
+        "invalid_citations": []
+      },
+      "delta": {
+        "correctness": 0,
+        "completeness": 0,
+        "faithfulness": 0,
+        "clarity": 0,
+        "terminology": 0,
+        "citation": 0,
+        "helpfulness": 0
+      },
+      "changed_dimensions": {},
+      "matched_concepts_strict": [
+        "ប្រូតេអ៊ីន"
+      ],
+      "matched_concepts_alias_aware": [
+        "ប្រូតេអ៊ីន"
+      ],
+      "alias_matches": []
+    },
+    {
+      "question_id": 86,
+      "chapter": 2,
+      "question_type": "quiz",
+      "question": "ចូរបង្កើតសំណួរសាកល្បង 3 អំពីការស្រូបទឹករបស់រុក្ខជាតិ",
+      "changed": true,
+      "strict": {
+        "correctness": 1,
+        "completeness": 2,
+        "faithfulness": 5,
+        "clarity": 5,
+        "terminology": 3,
+        "citation": 5,
+        "helpfulness": 3,
+        "concept_coverage": 0.0,
+        "grounded_number_ratio": 1.0,
+        "banned_terms": [],
+        "cited_pages": [
+          26,
+          27,
+          28,
+          40,
+          41,
+          57,
+          58
+        ],
+        "valid_citations": [
+          26,
+          27,
+          28,
+          40,
+          41,
+          57,
+          58
+        ],
+        "invalid_citations": []
+      },
+      "alias_aware": {
+        "correctness": 5,
+        "completeness": 5,
+        "faithfulness": 5,
+        "clarity": 5,
+        "terminology": 5,
+        "citation": 5,
+        "helpfulness": 3,
+        "concept_coverage": 1.0,
+        "grounded_number_ratio": 1.0,
+        "banned_terms": [],
+        "cited_pages": [
+          26,
+          27,
+          28,
+          40,
+          41,
+          57,
+          58
+        ],
+        "valid_citations": [
+          26,
+          27,
+          28,
+          40,
+          41,
+          57,
+          58
+        ],
+        "invalid_citations": []
+      },
+      "delta": {
+        "correctness": 4,
+        "completeness": 3,
+        "faithfulness": 0,
+        "clarity": 0,
+        "terminology": 2,
+        "citation": 0,
+        "helpfulness": 0
+      },
+      "changed_dimensions": {
+        "correctness": {
+          "strict": 1,
+          "alias_aware": 5
+        },
+        "completeness": {
+          "strict": 2,
+          "alias_aware": 5
+        },
+        "terminology": {
+          "strict": 3,
+          "alias_aware": 5
+        }
+      },
+      "matched_concepts_strict": [],
+      "matched_concepts_alias_aware": [
+        "ស្រូបទឹក"
+      ],
+      "alias_matches": [
+        {
+          "concept": "ស្រូបទឹក",
+          "alias": "ស្រូបយកទឹក"
+        }
+      ]
+    },
+    {
+      "question_id": 87,
+      "chapter": 7,
+      "question_type": "quiz",
+      "question": "ចូរបង្កើតសំណួរសាកល្បង 3 អំពីពពួក និងសហគមន៍",
+      "changed": false,
+      "strict": {
+        "correctness": 5,
+        "completeness": 5,
+        "faithfulness": 5,
+        "clarity": 4,
+        "terminology": 5,
+        "citation": 5,
+        "helpfulness": 3,
+        "concept_coverage": 1.0,
+        "grounded_number_ratio": 1.0,
+        "banned_terms": [],
+        "cited_pages": [
+          225,
+          227,
+          228,
+          229,
+          235,
+          242,
+          243,
+          244
+        ],
+        "valid_citations": [
+          225,
+          227,
+          228,
+          229,
+          235,
+          242,
+          243,
+          244
+        ],
+        "invalid_citations": []
+      },
+      "alias_aware": {
+        "correctness": 5,
+        "completeness": 5,
+        "faithfulness": 5,
+        "clarity": 4,
+        "terminology": 5,
+        "citation": 5,
+        "helpfulness": 3,
+        "concept_coverage": 1.0,
+        "grounded_number_ratio": 1.0,
+        "banned_terms": [],
+        "cited_pages": [
+          225,
+          227,
+          228,
+          229,
+          235,
+          242,
+          243,
+          244
+        ],
+        "valid_citations": [
+          225,
+          227,
+          228,
+          229,
+          235,
+          242,
+          243,
+          244
+        ],
+        "invalid_citations": []
+      },
+      "delta": {
+        "correctness": 0,
+        "completeness": 0,
+        "faithfulness": 0,
+        "clarity": 0,
+        "terminology": 0,
+        "citation": 0,
+        "helpfulness": 0
+      },
+      "changed_dimensions": {},
+      "matched_concepts_strict": [
+        "ពពួក",
+        "សហគមន៍"
+      ],
+      "matched_concepts_alias_aware": [
+        "ពពួក",
+        "សហគមន៍"
+      ],
+      "alias_matches": []
+    },
+    {
+      "question_id": 93,
+      "chapter": 3,
+      "question_type": "cause_effect",
+      "question": "តើការបរិភោគអាហារដែលខ្វះជាតិអ៊ីយ៉ូត បណ្តាលឱ្យមានផលវិបាកអ្វី?",
+      "changed": false,
+      "strict": {
+        "correctness": 5,
+        "completeness": 5,
+        "faithfulness": 5,
+        "clarity": 2,
+        "terminology": 5,
+        "citation": 5,
+        "helpfulness": 3,
+        "concept_coverage": 1.0,
+        "grounded_number_ratio": 1.0,
+        "banned_terms": [],
+        "cited_pages": [
+          31,
+          32,
+          50,
+          51,
+          105,
+          109,
+          115,
+          137,
+          138,
+          252
+        ],
+        "valid_citations": [
+          31,
+          32,
+          50,
+          51,
+          105,
+          109,
+          115,
+          137,
+          138,
+          252
+        ],
+        "invalid_citations": []
+      },
+      "alias_aware": {
+        "correctness": 5,
+        "completeness": 5,
+        "faithfulness": 5,
+        "clarity": 2,
+        "terminology": 5,
+        "citation": 5,
+        "helpfulness": 3,
+        "concept_coverage": 1.0,
+        "grounded_number_ratio": 1.0,
+        "banned_terms": [],
+        "cited_pages": [
+          31,
+          32,
+          50,
+          51,
+          105,
+          109,
+          115,
+          137,
+          138,
+          252
+        ],
+        "valid_citations": [
+          31,
+          32,
+          50,
+          51,
+          105,
+          109,
+          115,
+          137,
+          138,
+          252
+        ],
+        "invalid_citations": []
+      },
+      "delta": {
+        "correctness": 0,
+        "completeness": 0,
+        "faithfulness": 0,
+        "clarity": 0,
+        "terminology": 0,
+        "citation": 0,
+        "helpfulness": 0
+      },
+      "changed_dimensions": {},
+      "matched_concepts_strict": [
+        "អ៊ីយ៉ូត",
+        "ទីរ៉ូអ៊ីត",
+        "ទីរ៉ុកស៊ីន",
+        "ពកក",
+        "TSH"
+      ],
+      "matched_concepts_alias_aware": [
+        "អ៊ីយ៉ូត",
+        "ទីរ៉ូអ៊ីត",
+        "ទីរ៉ុកស៊ីន",
+        "ពកក",
+        "TSH"
+      ],
+      "alias_matches": []
+    },
+    {
+      "question_id": 94,
+      "chapter": 3,
+      "question_type": "prevention",
+      "question": "តើគេអាចបង្ការជំងឺពកកបានដោយរបៀបណា?",
+      "changed": false,
+      "strict": {
+        "correctness": 4,
+        "completeness": 4,
+        "faithfulness": 5,
+        "clarity": 4,
+        "terminology": 5,
+        "citation": 5,
+        "helpfulness": 3,
+        "concept_coverage": 0.8,
+        "grounded_number_ratio": 1.0,
+        "banned_terms": [],
+        "cited_pages": [
+          88,
+          109,
+          150,
+          151,
+          152,
+          177,
+          178,
+          185,
+          186,
+          211
+        ],
+        "valid_citations": [
+          88,
+          109,
+          150,
+          151,
+          152,
+          177,
+          178,
+          185,
+          186,
+          211
+        ],
+        "invalid_citations": []
+      },
+      "alias_aware": {
+        "correctness": 4,
+        "completeness": 4,
+        "faithfulness": 5,
+        "clarity": 4,
+        "terminology": 5,
+        "citation": 5,
+        "helpfulness": 3,
+        "concept_coverage": 0.8,
+        "grounded_number_ratio": 1.0,
+        "banned_terms": [],
+        "cited_pages": [
+          88,
+          109,
+          150,
+          151,
+          152,
+          177,
+          178,
+          185,
+          186,
+          211
+        ],
+        "valid_citations": [
+          88,
+          109,
+          150,
+          151,
+          152,
+          177,
+          178,
+          185,
+          186,
+          211
+        ],
+        "invalid_citations": []
+      },
+      "delta": {
+        "correctness": 0,
+        "completeness": 0,
+        "faithfulness": 0,
+        "clarity": 0,
+        "terminology": 0,
+        "citation": 0,
+        "helpfulness": 0
+      },
+      "changed_dimensions": {},
+      "matched_concepts_strict": [
+        "បង្ការ",
+        "ពកក",
+        "អ៊ីយ៉ូត",
+        "អាហារសមុទ្រ"
+      ],
+      "matched_concepts_alias_aware": [
+        "បង្ការ",
+        "ពកក",
+        "អ៊ីយ៉ូត",
+        "អាហារសមុទ្រ"
+      ],
+      "alias_matches": []
+    },
+    {
+      "question_id": 96,
+      "chapter": 1,
+      "question_type": "application",
+      "question": "តើស្វាយជារុក្ខជាតិឌីកូទីលេដូន ឬ រុក្ខជាតិម៉ូណូកូទីលេដូន?",
+      "changed": true,
+      "strict": {
+        "correctness": 3,
+        "completeness": 3,
+        "faithfulness": 5,
+        "clarity": 3,
+        "terminology": 4,
+        "citation": 5,
+        "helpfulness": 5,
+        "concept_coverage": 0.4,
+        "grounded_number_ratio": 1.0,
+        "banned_terms": [],
+        "cited_pages": [
+          5,
+          6,
+          12,
+          13,
+          19,
+          20,
+          40
+        ],
+        "valid_citations": [
+          5,
+          6,
+          12,
+          13,
+          19,
+          20,
+          40
+        ],
+        "invalid_citations": []
+      },
+      "alias_aware": {
+        "correctness": 3,
+        "completeness": 4,
+        "faithfulness": 5,
+        "clarity": 3,
+        "terminology": 4,
+        "citation": 5,
+        "helpfulness": 5,
+        "concept_coverage": 0.6,
+        "grounded_number_ratio": 1.0,
+        "banned_terms": [],
+        "cited_pages": [
+          5,
+          6,
+          12,
+          13,
+          19,
+          20,
+          40
+        ],
+        "valid_citations": [
+          5,
+          6,
+          12,
+          13,
+          19,
+          20,
+          40
+        ],
+        "invalid_citations": []
+      },
+      "delta": {
+        "correctness": 0,
+        "completeness": 1,
+        "faithfulness": 0,
+        "clarity": 0,
+        "terminology": 0,
+        "citation": 0,
+        "helpfulness": 0
+      },
+      "changed_dimensions": {
+        "completeness": {
+          "strict": 3,
+          "alias_aware": 4
+        }
+      },
+      "matched_concepts_strict": [
+        "ស្វាយ",
+        "ឌីកូទីលេដូន"
+      ],
+      "matched_concepts_alias_aware": [
+        "ស្វាយ",
+        "ឌីកូទីលេដូន",
+        "ទ្រនុងបែកខ្នែង"
+      ],
+      "alias_matches": [
+        {
+          "concept": "ទ្រនុងបែកខ្នែង",
+          "alias": "ទ្រនុងបែកមែក"
+        }
+      ]
+    },
+    {
+      "question_id": 98,
+      "chapter": 0,
+      "question_type": "out_of_scope",
+      "question": "តើព្រះអាទិត្យមានអាយុប៉ុន្មានឆ្នាំ?",
+      "changed": false,
+      "strict": {
+        "correctness": 5,
+        "completeness": 5,
+        "faithfulness": 5,
+        "clarity": 5,
+        "terminology": 5,
+        "citation": 5,
+        "helpfulness": 5,
+        "concept_coverage": null,
+        "grounded_number_ratio": null
+      },
+      "alias_aware": {
+        "correctness": 5,
+        "completeness": 5,
+        "faithfulness": 5,
+        "clarity": 5,
+        "terminology": 5,
+        "citation": 5,
+        "helpfulness": 5,
+        "concept_coverage": null,
+        "grounded_number_ratio": null
+      },
+      "delta": {
+        "correctness": 0,
+        "completeness": 0,
+        "faithfulness": 0,
+        "clarity": 0,
+        "terminology": 0,
+        "citation": 0,
+        "helpfulness": 0
+      },
+      "changed_dimensions": {},
+      "matched_concepts_strict": [],
+      "matched_concepts_alias_aware": [],
+      "alias_matches": []
+    },
+    {
+      "question_id": 100,
+      "chapter": 0,
+      "question_type": "out_of_scope",
+      "question": "តើរូបមន្តគីមីនៃទឹកគឺជាអ្វី?",
+      "changed": false,
+      "strict": {
+        "correctness": 5,
+        "completeness": 5,
+        "faithfulness": 5,
+        "clarity": 5,
+        "terminology": 5,
+        "citation": 5,
+        "helpfulness": 5,
+        "concept_coverage": null,
+        "grounded_number_ratio": null
+      },
+      "alias_aware": {
+        "correctness": 5,
+        "completeness": 5,
+        "faithfulness": 5,
+        "clarity": 5,
+        "terminology": 5,
+        "citation": 5,
+        "helpfulness": 5,
+        "concept_coverage": null,
+        "grounded_number_ratio": null
+      },
+      "delta": {
+        "correctness": 0,
+        "completeness": 0,
+        "faithfulness": 0,
+        "clarity": 0,
+        "terminology": 0,
+        "citation": 0,
+        "helpfulness": 0
+      },
+      "changed_dimensions": {},
+      "matched_concepts_strict": [],
+      "matched_concepts_alias_aware": [],
+      "alias_matches": []
+    },
+    {
+      "question_id": 102,
+      "chapter": 0,
+      "question_type": "out_of_scope",
+      "question": "តើធ្វើដូចម្តេចដើម្បីដំឡើងកម្មវិធីកុំព្យូទ័រ Windows?",
+      "changed": false,
+      "strict": {
+        "correctness": 5,
+        "completeness": 5,
+        "faithfulness": 5,
+        "clarity": 5,
+        "terminology": 5,
+        "citation": 5,
+        "helpfulness": 5,
+        "concept_coverage": null,
+        "grounded_number_ratio": null
+      },
+      "alias_aware": {
+        "correctness": 5,
+        "completeness": 5,
+        "faithfulness": 5,
+        "clarity": 5,
+        "terminology": 5,
+        "citation": 5,
+        "helpfulness": 5,
+        "concept_coverage": null,
+        "grounded_number_ratio": null
+      },
+      "delta": {
+        "correctness": 0,
+        "completeness": 0,
+        "faithfulness": 0,
+        "clarity": 0,
+        "terminology": 0,
+        "citation": 0,
+        "helpfulness": 0
+      },
+      "changed_dimensions": {},
+      "matched_concepts_strict": [],
+      "matched_concepts_alias_aware": [],
+      "alias_matches": []
+    },
+    {
+      "question_id": 104,
+      "chapter": 0,
+      "question_type": "out_of_scope",
+      "question": "តើប្រទេសកម្ពុជាមានខេត្តប៉ុន្មាន?",
+      "changed": false,
+      "strict": {
+        "correctness": 5,
+        "completeness": 5,
+        "faithfulness": 5,
+        "clarity": 5,
+        "terminology": 5,
+        "citation": 5,
+        "helpfulness": 5,
+        "concept_coverage": null,
+        "grounded_number_ratio": null
+      },
+      "alias_aware": {
+        "correctness": 5,
+        "completeness": 5,
+        "faithfulness": 5,
+        "clarity": 5,
+        "terminology": 5,
+        "citation": 5,
+        "helpfulness": 5,
+        "concept_coverage": null,
+        "grounded_number_ratio": null
+      },
+      "delta": {
+        "correctness": 0,
+        "completeness": 0,
+        "faithfulness": 0,
+        "clarity": 0,
+        "terminology": 0,
+        "citation": 0,
+        "helpfulness": 0
+      },
+      "changed_dimensions": {},
+      "matched_concepts_strict": [],
+      "matched_concepts_alias_aware": [],
+      "alias_matches": []
+    },
+    {
+      "question_id": 108,
+      "chapter": 1,
+      "question_type": "ocr_garbled",
+      "question": "តើស្ទីចម៉ាតជាអ្វី?",
+      "changed": false,
+      "strict": {
+        "correctness": 5,
+        "completeness": 4,
+        "faithfulness": 5,
+        "clarity": 4,
+        "terminology": 5,
+        "citation": 4,
+        "helpfulness": 5,
+        "concept_coverage": 1.0,
+        "grounded_number_ratio": 1.0,
+        "banned_terms": [],
+        "cited_pages": [
+          13,
+          14,
+          15,
+          16,
+          17,
+          29,
+          40
+        ],
+        "valid_citations": [
+          13,
+          14,
+          15,
+          16,
+          17,
+          29,
+          40
+        ],
+        "invalid_citations": []
+      },
+      "alias_aware": {
+        "correctness": 5,
+        "completeness": 4,
+        "faithfulness": 5,
+        "clarity": 4,
+        "terminology": 5,
+        "citation": 4,
+        "helpfulness": 5,
+        "concept_coverage": 1.0,
+        "grounded_number_ratio": 1.0,
+        "banned_terms": [],
+        "cited_pages": [
+          13,
+          14,
+          15,
+          16,
+          17,
+          29,
+          40
+        ],
+        "valid_citations": [
+          13,
+          14,
+          15,
+          16,
+          17,
+          29,
+          40
+        ],
+        "invalid_citations": []
+      },
+      "delta": {
+        "correctness": 0,
+        "completeness": 0,
+        "faithfulness": 0,
+        "clarity": 0,
+        "terminology": 0,
+        "citation": 0,
+        "helpfulness": 0
+      },
+      "changed_dimensions": {},
+      "matched_concepts_strict": [
+        "ស្ទិចម៉ាត",
+        "លំអង"
+      ],
+      "matched_concepts_alias_aware": [
+        "ស្ទិចម៉ាត",
+        "លំអង"
+      ],
+      "alias_matches": []
+    },
+    {
+      "question_id": 110,
+      "chapter": 3,
+      "question_type": "ocr_garbled",
+      "question": "តើរលកសូមាននាទីអ្វី?",
+      "changed": false,
+      "strict": {
+        "correctness": 5,
+        "completeness": 5,
+        "faithfulness": 5,
+        "clarity": 5,
+        "terminology": 5,
+        "citation": 5,
+        "helpfulness": 5,
+        "concept_coverage": 1.0,
+        "grounded_number_ratio": 1.0,
+        "banned_terms": [],
+        "cited_pages": [
+          13,
+          32,
+          66,
+          67,
+          78,
+          83,
+          84,
+          87,
+          88,
+          89,
+          90
+        ],
+        "valid_citations": [
+          13,
+          32,
+          66,
+          67,
+          78,
+          83,
+          84,
+          87,
+          88,
+          89,
+          90
+        ],
+        "invalid_citations": []
+      },
+      "alias_aware": {
+        "correctness": 5,
+        "completeness": 5,
+        "faithfulness": 5,
+        "clarity": 5,
+        "terminology": 5,
+        "citation": 5,
+        "helpfulness": 5,
+        "concept_coverage": 1.0,
+        "grounded_number_ratio": 1.0,
+        "banned_terms": [],
+        "cited_pages": [
+          13,
+          32,
+          66,
+          67,
+          78,
+          83,
+          84,
+          87,
+          88,
+          89,
+          90
+        ],
+        "valid_citations": [
+          13,
+          32,
+          66,
+          67,
+          78,
+          83,
+          84,
+          87,
+          88,
+          89,
+          90
+        ],
+        "invalid_citations": []
+      },
+      "delta": {
+        "correctness": 0,
+        "completeness": 0,
+        "faithfulness": 0,
+        "clarity": 0,
+        "terminology": 0,
+        "citation": 0,
+        "helpfulness": 0
+      },
+      "changed_dimensions": {},
+      "matched_concepts_strict": [
+        "រលកសូរ",
+        "ត្រចៀក"
+      ],
+      "matched_concepts_alias_aware": [
+        "រលកសូរ",
+        "ត្រចៀក"
+      ],
+      "alias_matches": []
+    },
+    {
+      "question_id": 111,
+      "chapter": 6,
+      "question_type": "ocr_garbled",
+      "question": "តើលក្ខណៈបន្សំសំដៅលើអ្វី?",
+      "changed": false,
+      "strict": {
+        "correctness": 3,
+        "completeness": 4,
+        "faithfulness": 5,
+        "clarity": 5,
+        "terminology": 4,
+        "citation": 4,
+        "helpfulness": 5,
+        "concept_coverage": 0.5,
+        "grounded_number_ratio": 1.0,
+        "banned_terms": [],
+        "cited_pages": [
+          93,
+          94,
+          176,
+          177,
+          200,
+          203,
+          204,
+          236,
+          237,
+          239
+        ],
+        "valid_citations": [
+          93,
+          94,
+          176,
+          177,
+          200,
+          203,
+          204,
+          236,
+          237,
+          239
+        ],
+        "invalid_citations": []
+      },
+      "alias_aware": {
+        "correctness": 3,
+        "completeness": 4,
+        "faithfulness": 5,
+        "clarity": 5,
+        "terminology": 4,
+        "citation": 4,
+        "helpfulness": 5,
+        "concept_coverage": 0.5,
+        "grounded_number_ratio": 1.0,
+        "banned_terms": [],
+        "cited_pages": [
+          93,
+          94,
+          176,
+          177,
+          200,
+          203,
+          204,
+          236,
+          237,
+          239
+        ],
+        "valid_citations": [
+          93,
+          94,
+          176,
+          177,
+          200,
+          203,
+          204,
+          236,
+          237,
+          239
+        ],
+        "invalid_citations": []
+      },
+      "delta": {
+        "correctness": 0,
+        "completeness": 0,
+        "faithfulness": 0,
+        "clarity": 0,
+        "terminology": 0,
+        "citation": 0,
+        "helpfulness": 0
+      },
+      "changed_dimensions": {},
+      "matched_concepts_strict": [
+        "បន្ស៊ាំ"
+      ],
+      "matched_concepts_alias_aware": [
+        "បន្ស៊ាំ"
+      ],
+      "alias_matches": []
+    },
+    {
+      "question_id": 115,
+      "chapter": 5,
+      "question_type": "multi_part",
+      "question": "ក. តើ ADN ជាអ្វី? ខ. តើ ARN មានប៉ុន្មានប្រភេទ?",
+      "changed": false,
+      "strict": {
+        "correctness": 5,
+        "completeness": 5,
+        "faithfulness": 5,
+        "clarity": 4,
+        "terminology": 5,
+        "citation": 5,
+        "helpfulness": 5,
+        "concept_coverage": 1.0,
+        "grounded_number_ratio": 1.0,
+        "banned_terms": [],
+        "cited_pages": [
+          150,
+          152,
+          156,
+          159,
+          160,
+          162,
+          163,
+          164,
+          165,
+          167,
+          170,
+          174,
+          175,
+          192,
+          211,
+          212
+        ],
+        "valid_citations": [
+          150,
+          152,
+          156,
+          159,
+          160,
+          162,
+          163,
+          164,
+          165,
+          167,
+          170,
+          174,
+          175,
+          192,
+          211,
+          212
+        ],
+        "invalid_citations": []
+      },
+      "alias_aware": {
+        "correctness": 5,
+        "completeness": 5,
+        "faithfulness": 5,
+        "clarity": 4,
+        "terminology": 5,
+        "citation": 5,
+        "helpfulness": 5,
+        "concept_coverage": 1.0,
+        "grounded_number_ratio": 1.0,
+        "banned_terms": [],
+        "cited_pages": [
+          150,
+          152,
+          156,
+          159,
+          160,
+          162,
+          163,
+          164,
+          165,
+          167,
+          170,
+          174,
+          175,
+          192,
+          211,
+          212
+        ],
+        "valid_citations": [
+          150,
+          152,
+          156,
+          159,
+          160,
+          162,
+          163,
+          164,
+          165,
+          167,
+          170,
+          174,
+          175,
+          192,
+          211,
+          212
+        ],
+        "invalid_citations": []
+      },
+      "delta": {
+        "correctness": 0,
+        "completeness": 0,
+        "faithfulness": 0,
+        "clarity": 0,
+        "terminology": 0,
+        "citation": 0,
+        "helpfulness": 0
+      },
+      "changed_dimensions": {},
+      "matched_concepts_strict": [
+        "ADN",
+        "ARN",
+        "ARNm"
+      ],
+      "matched_concepts_alias_aware": [
+        "ADN",
+        "ARN",
+        "ARNm"
+      ],
+      "alias_matches": []
+    },
+    {
+      "question_id": 117,
+      "chapter": 8,
+      "question_type": "multi_part",
+      "question": "I. តើខ្សែអាហារជាអ្វី? II. តើថាមពលហូរកាត់ខ្សែអាហារយ៉ាងដូចម្តេច?",
+      "changed": false,
+      "strict": {
+        "correctness": 5,
+        "completeness": 5,
+        "faithfulness": 5,
+        "clarity": 5,
+        "terminology": 5,
+        "citation": 5,
+        "helpfulness": 5,
+        "concept_coverage": 1.0,
+        "grounded_number_ratio": 1.0,
+        "banned_terms": [],
+        "cited_pages": [
+          26,
+          27,
+          31,
+          32,
+          60,
+          61,
+          246,
+          247,
+          248,
+          249,
+          250,
+          251,
+          252,
+          255,
+          256
+        ],
+        "valid_citations": [
+          26,
+          27,
+          31,
+          32,
+          60,
+          61,
+          246,
+          247,
+          248,
+          249,
+          250,
+          251,
+          252,
+          255,
+          256
+        ],
+        "invalid_citations": []
+      },
+      "alias_aware": {
+        "correctness": 5,
+        "completeness": 5,
+        "faithfulness": 5,
+        "clarity": 5,
+        "terminology": 5,
+        "citation": 5,
+        "helpfulness": 5,
+        "concept_coverage": 1.0,
+        "grounded_number_ratio": 1.0,
+        "banned_terms": [],
+        "cited_pages": [
+          26,
+          27,
+          31,
+          32,
+          60,
+          61,
+          246,
+          247,
+          248,
+          249,
+          250,
+          251,
+          252,
+          255,
+          256
+        ],
+        "valid_citations": [
+          26,
+          27,
+          31,
+          32,
+          60,
+          61,
+          246,
+          247,
+          248,
+          249,
+          250,
+          251,
+          252,
+          255,
+          256
+        ],
+        "invalid_citations": []
+      },
+      "delta": {
+        "correctness": 0,
+        "completeness": 0,
+        "faithfulness": 0,
+        "clarity": 0,
+        "terminology": 0,
+        "citation": 0,
+        "helpfulness": 0
+      },
+      "changed_dimensions": {},
+      "matched_concepts_strict": [
+        "ខ្សែអាហារ",
+        "ថាមពល",
+        "អ្នកផលិត"
+      ],
+      "matched_concepts_alias_aware": [
+        "ខ្សែអាហារ",
+        "ថាមពល",
+        "អ្នកផលិត"
+      ],
+      "alias_matches": []
+    },
+    {
+      "question_id": 119,
+      "chapter": 4,
+      "question_type": "multi_part",
+      "question": "I. តើប្រូតេអ៊ីនបង្កើតពីអ្វី? II. តើចំណងប៉ុបទីតជាអ្វី?",
+      "changed": false,
+      "strict": {
+        "correctness": 5,
+        "completeness": 5,
+        "faithfulness": 5,
+        "clarity": 4,
+        "terminology": 5,
+        "citation": 5,
+        "helpfulness": 5,
+        "concept_coverage": 1.0,
+        "grounded_number_ratio": 1.0,
+        "banned_terms": [],
+        "cited_pages": [
+          122,
+          123,
+          125,
+          126,
+          127,
+          128,
+          129,
+          131,
+          132,
+          133,
+          134,
+          169,
+          170,
+          171,
+          172
+        ],
+        "valid_citations": [
+          122,
+          123,
+          125,
+          126,
+          127,
+          128,
+          129,
+          131,
+          132,
+          133,
+          134,
+          169,
+          170,
+          171,
+          172
+        ],
+        "invalid_citations": []
+      },
+      "alias_aware": {
+        "correctness": 5,
+        "completeness": 5,
+        "faithfulness": 5,
+        "clarity": 4,
+        "terminology": 5,
+        "citation": 5,
+        "helpfulness": 5,
+        "concept_coverage": 1.0,
+        "grounded_number_ratio": 1.0,
+        "banned_terms": [],
+        "cited_pages": [
+          122,
+          123,
+          125,
+          126,
+          127,
+          128,
+          129,
+          131,
+          132,
+          133,
+          134,
+          169,
+          170,
+          171,
+          172
+        ],
+        "valid_citations": [
+          122,
+          123,
+          125,
+          126,
+          127,
+          128,
+          129,
+          131,
+          132,
+          133,
+          134,
+          169,
+          170,
+          171,
+          172
+        ],
+        "invalid_citations": []
+      },
+      "delta": {
+        "correctness": 0,
+        "completeness": 0,
+        "faithfulness": 0,
+        "clarity": 0,
+        "terminology": 0,
+        "citation": 0,
+        "helpfulness": 0
+      },
+      "changed_dimensions": {},
+      "matched_concepts_strict": [
+        "អាស៊ីតអាមីណេ",
+        "ចំណងប៉ុបទីត"
+      ],
+      "matched_concepts_alias_aware": [
+        "អាស៊ីតអាមីណេ",
+        "ចំណងប៉ុបទីត"
+      ],
+      "alias_matches": []
+    }
+  ]
+}

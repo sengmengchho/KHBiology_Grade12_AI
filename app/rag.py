@@ -8,10 +8,22 @@ from app.config import (
 from app.prompt import get_system_prompt, format_answer
 
 
-def generate_answer(question: str, context: str, mode: str = "normal", feature: str = "explain") -> str:
-    system_prompt = get_system_prompt(mode, feature)
+# Shown only when Gemini refuses the retrieved context (safety block) or
+# returns an empty candidate even after the reduced-context retry. This keeps
+# the app usable instead of surfacing a raw [GEN_FAILED: ...] string.
+GENERATION_FALLBACK_MESSAGE = (
+    "សូមអភ័យទោស! ខ្ញុំមិនអាចបង្កើតចម្លើយពីខ្លឹមសារដែលបានរកឃើញបានទេ។ "
+    "សូមព្យាយាមសួរឡើងវិញដោយប្រើពាក្យផ្សេង ឬសួរសំណួរផ្សេង។"
+)
+_FALLBACK_CONTEXT_BLOCKS = 3
+_TRANSIENT_MARKERS = ("429", "RESOURCE_EXHAUSTED", "503", "UNAVAILABLE")
+_BLOCKED_MARKERS = (
+    "PROHIBITED_CONTENT", "SAFETY", "BLOCKED", "blocked", "finish_reason",
+)
 
-    user_prompt = f"""TEXTBOOK CONTEXT:
+
+def _build_user_prompt(question: str, context: str) -> str:
+    return f"""TEXTBOOK CONTEXT:
 {context}
 
 STUDENT QUESTION:
@@ -19,18 +31,73 @@ STUDENT QUESTION:
 
 Please answer the question using only the provided textbook context. Answer in Khmer."""
 
-    if LLM_PROVIDER == "openai":
-        return _call_openai(system_prompt, user_prompt)
-    elif LLM_PROVIDER == "google":
-        try:
-            return _call_google(system_prompt, user_prompt)
-        except Exception as err:  # noqa: BLE001
-            msg = str(err)
-            if "429" in msg or "RESOURCE_EXHAUSTED" in msg:
-                return _call_google_rotate(system_prompt, user_prompt)
+
+def _is_transient_error(err: Exception) -> bool:
+    msg = str(err)
+    return any(marker in msg for marker in _TRANSIENT_MARKERS)
+
+
+def _is_blocked_error(err: Exception) -> bool:
+    msg = str(err)
+    return any(marker in msg for marker in _BLOCKED_MARKERS)
+
+
+def _reduce_context(context: str, max_blocks: int = _FALLBACK_CONTEXT_BLOCKS) -> str:
+    """Keep only the first few retrieved page blocks.
+
+    app/main.py joins one block per retrieved chunk with a blank line. A long
+    context can trip Gemini's safety filter even when each chunk is harmless;
+    retrying with the top three blocks usually gets a usable answer.
+    """
+    blocks = [b for b in context.split("\n\n") if b.strip()]
+    return "\n\n".join(blocks[:max_blocks])
+
+
+def _generate_google(question: str, context: str, system_prompt: str) -> str:
+    user_prompt = _build_user_prompt(question, context)
+    try:
+        out = _call_google(system_prompt, user_prompt)
+        if out and out.strip():
+            return out
+    except Exception as err:  # noqa: BLE001
+        if _is_transient_error(err):
+            return _call_google_rotate(system_prompt, user_prompt)
+        if not _is_blocked_error(err):
             raise
+
+    # Blocked or empty candidate: retry with progressively smaller contexts.
+    # The top block often still contains the direct definition even when lower
+    # blocks add reproductive/anatomy terms that trip the safety filter.
+    # Do not rotate through the whole model pool on a safety block; every model
+    # sees the same text and would fail the same way.
+    tried = {context}
+    for max_blocks in (_FALLBACK_CONTEXT_BLOCKS, 1):
+        reduced = _reduce_context(context, max_blocks)
+        if not reduced or reduced in tried:
+            continue
+        tried.add(reduced)
+        reduced_prompt = _build_user_prompt(question, reduced)
+        try:
+            out = _call_google(system_prompt, reduced_prompt)
+            if out and out.strip():
+                return out
+        except Exception as err:  # noqa: BLE001
+            if _is_transient_error(err):
+                return _call_google_rotate(system_prompt, reduced_prompt)
+            if not _is_blocked_error(err):
+                raise
+    return GENERATION_FALLBACK_MESSAGE
+
+
+def generate_answer(question: str, context: str, mode: str = "normal", feature: str = "explain") -> str:
+    system_prompt = get_system_prompt(mode, feature)
+
+    if LLM_PROVIDER == "openai":
+        return _call_openai(system_prompt, _build_user_prompt(question, context))
+    elif LLM_PROVIDER == "google":
+        return _generate_google(question, context, system_prompt)
     else:
-        return _call_ollama(system_prompt, user_prompt)
+        return _call_ollama(system_prompt, _build_user_prompt(question, context))
 
 
 def _call_openai(system_prompt: str, user_prompt: str) -> str:

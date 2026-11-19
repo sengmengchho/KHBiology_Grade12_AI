@@ -1,0 +1,30 @@
+Phase 3.1 strict vs alias-aware comparison (45 saved answers, no Gemini)
+
+Strict baseline reproduced: PASS
+Gold labels unchanged: PASS
+In-scope rows: 41
+Invalid-citation rows: 0
+
+Metric | Strict baseline | Alias-aware | Difference
+--- | ---: | ---: | ---:
+correctness | 4.54 | 4.83 | +0.29
+completeness | 4.63 | 4.85 | +0.22
+faithfulness | 4.98 | 4.98 | +0.00
+clarity | 4.34 | 4.34 | +0.00
+terminology | 4.78 | 4.93 | +0.15
+citation | 4.80 | 4.80 | +0.00
+helpfulness | 4.27 | 4.27 | +0.00
+overall | 4.62 | 4.71 | +0.09
+
+Changed questions:
+  q58: coverage 0.5->1.0; correctness 3->5, completeness 4->5, terminology 4->5; alias: ដូអែម via ផ្លូអែម
+  q65: coverage 0.5->1.0; correctness 3->5, completeness 4->5, terminology 4->5; alias: តួនាទី via នាទី
+  q78: coverage 0.0->1.0; correctness 1->5, completeness 2->5, terminology 3->5; alias: ហ្សែន via សែន
+  q86: coverage 0.0->1.0; correctness 1->5, completeness 2->5, terminology 3->5; alias: ស្រូបទឹក via ស្រូបយកទឹក
+  q96: coverage 0.4->0.6; completeness 3->4; alias: ទ្រនុងបែកខ្នែង via ទ្រនុងបែកមែក
+
+Target questions unchanged: q55, q94, q111
+
+Saved -> data\evaluation\answer_evaluations_v3_1_citation_alias_aware.json
+Saved -> data\evaluation\answer_evaluation_v3_1_citation_comparison.json
+Saved -> data\evaluation\answer_evaluation_v3_1_citation_comparison.csv

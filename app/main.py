@@ -4,9 +4,9 @@ import streamlit as st
 from app.config import EMBEDDING_MODEL, VECTOR_DB_DIR, RETRIEVAL_SCORE_THRESHOLD, NOT_FOUND_MESSAGE
 from app.retrieval import get_embedding_model, get_vector_db, get_reranker, retrieve, rerank_with_context
 from app.rag import generate_answer
-from app.prompt import format_answer
+from app.prompt import format_answer, is_context_source, page_range_label
 from app.ocr import ocr_question_image
-from app.utils import expand_query, normalize_query
+from app.utils import expand_query, normalize_query, split_questions
 
 
 def _render_quiz_answer(answer: str, feature: str) -> None:
@@ -104,18 +104,19 @@ def _answer(question: str, mode: str, feature: str) -> str:
     if not reranked_docs or top_score < RETRIEVAL_SCORE_THRESHOLD:
         return NOT_FOUND_MESSAGE
 
-    # Drop front-matter / running-header chunks (no lesson_id, stored as 0) so
-    # TOC pages do not pollute the answer or its citation list.
+    # Drop only the copyright/TOC front matter (p0-p4).  Chapter openers also
+    # carry lesson_id=0 in the corpus, but they contain real textbook content
+    # (e.g. p149 for q68), so they must remain eligible for the answer context.
     kept = [
         (d, m) for d, m in zip(reranked_docs, reranked_sources)
-        if m.get("lesson_id")
+        if is_context_source(m)
     ]
     kept = kept or [(reranked_docs[0], reranked_sources[0])]  # never empty
 
-    # Label each block with its real page so the model can cite accurately
+    # Label each block with its real page range so the model can cite accurately
     # instead of guessing page numbers.
     context = "\n\n".join(
-        f"[ទំព័រ {m.get('page')}] {d}" for d, m in kept
+        f"[ទំព័រ {page_range_label(m)}] {d}" for d, m in kept
     )
     answer = generate_answer(question, context, mode, feature)
     return format_answer(answer, [m for _d, m in kept])
@@ -129,37 +130,8 @@ _GENERIC_PROMPT_RE = re.compile(r"^\s*(ចូរ|ព្រោះ|ពន្យល
 _ROMAN_RE = re.compile(r"^[IVX]{1,6}[.។]\s*")
 
 
-def _split_questions(text: str) -> list[str]:
-    """Split a multi-part exam-style message into individual questions.
-
-    Only splits on TOP-LEVEL question markers (I., II., III., IV., V., VI., etc.).
-    Keeps sub-questions (ក., ខ., គ.) together with their parent question.
-    """
-    # First, normalize the text: ensure spaces around roman numeral markers
-    # e.g., "I.ដូច..." -> "I. ដូច..."
-    text = re.sub(r'([IVX]{1,6})[.។](?=\S)', r'\1. ', text)
-    
-    # Find all TOP-LEVEL question markers (I., II., III., IV., V., VI., etc.)
-    # These are roman numerals followed by . or ។ at the start of text or after whitespace/period
-    top_level_pattern = re.compile(r'(?:^|(?<=[។\s]))([IVX]{1,6})[.។]\s*')
-    
-    markers = list(top_level_pattern.finditer(text))
-    
-    if not markers:
-        # No top-level markers found, treat as single question
-        cleaned = text.strip()
-        return [cleaned] if cleaned else []
-    
-    # Split text by top-level markers
-    questions = []
-    for i, m in enumerate(markers):
-        start = m.start()
-        end = markers[i + 1].start() if i + 1 < len(markers) else len(text)
-        question_text = text[start:end].strip()
-        if question_text:
-            questions.append(question_text)
-    
-    return questions if questions else [text.strip()]
+# Multi-part splitting lives in app/utils.py so the real app and the
+# evaluation harness use exactly the same Roman/Khmer marker logic.
 
 
 def _is_generic_fragment(seg: str) -> bool:
@@ -176,7 +148,7 @@ def _answer_multi(question: str, mode: str, feature: str) -> str:
     common ខួរឆ្អឹង-for-ខួរធំ typo) are rewritten to the canonical textbook
     spellings before retrieval."""
     question = normalize_query(question)
-    parts = _split_questions(question)
+    parts = split_questions(question)
     if len(parts) == 1:
         return _answer(parts[0], mode, feature)
     blocks = []

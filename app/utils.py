@@ -2,7 +2,7 @@
 
 Student questions (typed or read from a photographed exam paper) frequently
 contain the same OCR-style garbled Biology terms that the textbook-fix tables in
-scripts/clean_text.py correct before indexing. Embedding search is tolerant of
+scripts/pipeline/clean_text.py correct before indexing. Embedding search is tolerant of
 small spelling drift, but heavily garbled terms (e.g. អូអូម៉ូស្យូប៊ោកតី for
 អូអូស្វែ) can still miss the relevant chunks. Normalizing the query to the
 canonical corpus spellings made retrieval reliable and the answers clean.
@@ -38,6 +38,8 @@ QUERY_FIXES = [
     ("ជង់កិល", "ថង់កំណ"),                            # embryo sac
     ("ជង់ កិល", "ថង់កំណ"),
     ("ល៉ែយ៉ូ", "ណ្វៃយ៉ូ"),                            # nucleus / nuclei
+    # "gene": exam papers/students write ហ្សែន; the textbook corpus uses សែន.
+    ("ហ្សែន", "សែន"),
     # "stigma" (receptive top of the female carpel) OCR variants.
     ("ស្ទីចម៉ាត", "ស្ទិចម៉ាត"),
     ("ស្អិតម៉ាស", "ស្ទិចម៉ាត"),
@@ -296,16 +298,128 @@ QUERY_FIXES = [
     ("ច្រវាក់ពុម្ព", "ច្រវាក់ពុម្ព"),
     ("ប៉ូលីមែកម្ម", "ប៉ូលីមែកម្ម"),
     ("អ៊ុយរ៉ាស៊ីល", "អ៊ុយរ៉ាស៊ីល"),
-    # Nervous system reflex arc corrections from evaluation feedback:
+# Nervous system reflex arc corrections from evaluation feedback:
     ("វិញ្ញាណទទួល", "ធ្មួលវិញ្ញាណ"),
     ("ផ្ដួល", "ធ្មួល"),
-    ("ណឺរ៉ូនតភ្ជាប់", "ណឺរ៉ូនភ្ជាប់"),
+    ("ណឺរ៉ូនតភ្ជាគ់", "ណឺរ៉ូនភ្ជាគ់"),
     ("អាំងភ្លុច", "អាំងភ្លុច"),
     ("សរីរាង្គប្រតិកម្ម", "សរីរាង្គប្រតិកម្ម"),
     ("ធួលត្រចៀក", "ធ្មួលត្រចៀក"),
     ("សូរសម្លេង", "សូរសំឡេង"),
     ("តាមបណ្ដោយណឺរ៉ូនចលករ", "តាមបណ្តោយណឺរ៉ូនចលករ"),
-    ("ណឺរ៉ូនភ្ជាប់នៅក្នុងខួរក្បាល", "ណឺរ៉ូនភ្ជាប់នៅក្នុងខួរក្បាល"),
+    ("ណឺរ៉ូនភ្ជាគ់នៅក្នុងខួរក្បាល", "ណឺរ៉ូនភ្ជាគ់នៅក្នុងខួរក្បាល"),
+    # Protein comparison (Chapter 4, Lesson 2) - Globular vs Fibrous:
+    ("ប្រូតេអ៊ីនគ្រាប់", "ប្រូតេអ៊ីនគ្រាប់"),
+    ("ប្រូតេអ៊ីនសរសៃ", "ប្រូតេអ៊ីនសរសៃ"),
+    ("អាល់ប៊ុយមីន", "អាល់ប៊ុយមីន"),
+    ("អេម៉ូក្លូប៊ីន", "អេម៉ូក្លូប៊ីន"),
+    ("រាងស៊ែ", "រាងស៊្វែ"),
+    ("កេរ៉ាទីន", "កេរ៉ាទីន"),
+    ("កូឡាជែន", "កូឡាជែន"),
+    ("ប៉ូលីប៉េបទីត", "ប៉ូលីប៉ិបទីត"),
+    ("មិនរលាយក្នុងទឹក ស្វិត", "មិនរលាយក្នុងទឹក ស្វិត"),
+    # Vision / Eye (Chapter 3, Lesson 2) - from evaluation feedback:
+    ("កនេ", "កញ្ចក់ភ្នែក"),
+    ("ក័រនេ", "កញ្ចក់ភ្នែក"),
+    ("អាំងតង់ស៊ីតេប្រសាទ", "អាំងភ្លុចប្រសាទ"),
+    ("សរសៃប្រសាទអុបទិច", "សរសៃប្រសាទអុបទិក"),
+    ("រន្ធប្រស្រីរួតតូច", "រន្ធប្រស្រីរួមតូច"),
+    ("កោសិការ៉ូត", "កោសិការ៉ូដ"),
+    ("កោសិកាទេ្វបូឡា", "កោសិកាទ្វេបូឡា"),
+    ("កោសិកាកង់គ្លីយ៉ុង", "កោសិកាកង់គ្លីយ៉ុង"),
+("ជាតិពណ៌រ៉ូដុបស៊ីន", "ជាតិពណ៌រ៉ូដុបស៊ីន"),
+    ("ស្រឡាយជីវជាតិ A", "ស្រឡាយជីវជាតិ A"),
+    ("សរសៃប្រសាទអុបទិច", "សរសៃប្រសាទអុបទិក"),
+    # Fossil formation (Chapter 6, Lesson 3) - Mold/Cast fossils:
+    ("ការរកើតនៃពុម្ពក្រៅ", "ការកកើតនៃពុម្ពក្រៅ"),
+    ("សិប្បសត្វ", "សិប្បីសត្វ"),
+    ("ពុម្ភក្រៅ", "ពុម្ពក្រៅ"),
+    ("ពុម្ភក្នុង", "ពុម្ពក្នុង"),
+    ("ចំណុចចុចទី៤", "ចំណុចទី ៤"),
+    ("កម្ទេចកំនក", "កម្ទេចកំណក"),
+    ("កំទេចកំណក", "កម្ទេចកំណក"),
+    ("សាកសពរលួយបន្សល់ទុក", "សាកសពរលួយបន្សល់ទុក"),
+    # Pancreas / Insulin / Glucagon (Chapter 3, Lesson 3) - from evaluation feedback:
+    ("កោះអ៊ីឡូឡង់សេវ៉ែ", "អ៊ីឡូឡង់សេរ៉ង់"),
+    ("អ៊ីឡូឡង់សេវ៉ែ", "អ៊ីឡូឡង់សេរ៉ង់"),
+    ("កោសិកាបេតា", "កោសិកាបេតា"),
+    ("កោសិកាអាល់ហ្វា", "កោសិកាអាល់ហ្វា"),
+    ("គ្លីកូសទៅជាគ្លុយកូស", "គ្លីកូសែនទៅជាគ្លុយកូស"),
+    ("កោសិកាពីររបប", "កោសិកាពីរប្រភេទ"),
+    ("អ័រម៉ូនអាំងស៊ុយលីន", "អរម៉ូនអាំងស៊ុយលីន"),
+    ("អ័រម៉ូនគ្លុយកាកុង", "អរម៉ូនគ្លុយកាកុង"),
+    ("ក្រិតកំណត់", "កម្រិតកំណត់"),
+    ("ប្លែងជាខ្លាញ់", "បំប្លែងជាខ្លាញ់"),
+    ("ប្លែងទៅជាគ្លុយកូសវិញ", "បំប្លែងទៅជាគ្លុយកូសវិញ"),
+    # Reflex arc - phone ringing (Chapter 3, Lesson 1) - additional from evaluation:
+    ("សូររោទ៍", "សូរសំឡេងរោទ៍"),
+    # Flower parts (Chapter 1, Lesson 2) - additional from evaluation:
+    ("កញុំកេសញី", "កញ្ចុំកេសរញី"),
+    ("កញុំកេសឈ្មោល", "កញ្ចុំកេសរឈ្មោល"),
+    ("កញ្ចុំកេសញី", "កញ្ចុំកេសរញី"),
+    ("កញ្ចុំកេសឈ្មោល", "កញ្ចុំកេសរឈ្មោល"),
+    ("ផ្នែកផ្សេងៗរបស់ផ្កាមាន", "ផ្នែកផ្សេងៗរបស់ផ្កាមាន"),
+    # Angiosperm classification (Chapter 1, Lesson 2):
+    ("អង់ស្យូស្ពែមក", "អង់ស្យូស្ពែម"),
+    ("កូទីលេដូនមួយនៅក្នុងគ្រាប់", "កូទីលេដុងមួយនៅក្នុងគ្រាប់"),
+    # Dicot root / root tip (Chapter 1, Lesson 2):
+    ("ដើមស្វាយជារុក្ខជាតិឌីកូទីលេដូន", "ដើមស្វាយជារុក្ខជាតិឌីកូទីលេដូន"),
+    ("កូទីលេដុង ២", "កូទីលេដុង ២"),
+    ("ទ្រនុងបែកខ្នែង", "ទ្រនុងបែកខ្នែង"),
+    ("ឬសជាឬសកែវ", "ឬសជាឬសកែវ"),
+    # Neuron classification (Chapter 3, Lesson 1):
+    ("ឯកប្ដួល", "ឯកបូឡា"),
+    ("ឯកប៉ូល", "ឯកបូឡា"),
+    ("ទ្វេប្ដួល", "ទ្វេបូឡា"),
+    ("ទ្វេប៉ូល", "ទ្វេបូឡា"),
+    ("ពហុប្ដួល", "ពហុបូឡា"),
+    ("ពហុប៉ូល", "ពហុបូឡា"),
+    ("ឈ្នួលវិញ្ញាណ", "ធ្មួលវិញ្ញាណ"),
+    ("ភាពពន្លាយស៊ីតូប្លាស", "ភាពពន្លយស៊ីតូប្លាស"),
+    # Pituitary gland (Chapter 3, Lesson 3):
+    ("ផូស៊ីលួរ", "អ៊ីប៉ូភីសមុខ"),
+    ("មេឡាញ៉ូស៊ីត ស៊ីមុយឡង់", "មេឡាណូស៊ីតស្ទីមូយឡង់"),
+    ("ទីរ៉េយ៉ូស្ទីមុយលីន", "ទីរ៉េអូស្ទីមូយលីន"),
+    ("អាដ្រេណូកទីកូត្រូប", "អាដ្រេណូក័រទីកូត្រុប"),
+    ("អង់ទីឌីអុយរេទីច", "អង់ទីឌីអ៊ុយរេទិច"),
+    ("អរម៉ូនកូណាដូស្ទីមុយលីន", "អរម៉ូនកូណាដូស្ទីមូយលីន"),
+    # Ear / Cochlea (Chapter 3, Lesson 2):
+    ("បំពង់រាងគូទខ្យង", "បំពង់រាងកងធ្នូទងខ្យល់"),
+    ("បំពង់រាងគូខ្យង", "បំពង់រាងកងធ្នូទងខ្យល់"),
+    ("អាំងពុលស៊ីប្រសាទ", "អាំងភ្លុចប្រសាទ"),
+    ("អាំងភូប្រសាទ", "អាំងភ្លុចប្រសាទ"),
+    # NB: no ("រលកសូ", "រលកសូរ") pair — plain replace() would corrupt the
+    # already-correct "រលកសូរ" into "រលកសូររ". Guarded below.
+    ("សរីរាង្គលឺ", "សរីរាង្គឮ"),
+    # Tripeptide / Peptide bond (Chapter 4, Lesson 1):
+    ("ទ្រីប៉ិបទិត", "ទ្រីប៉ិបទីត"),
+    ("ទ្រីប៉េបទីត", "ទ្រីប៉ិបទីត"),
+    ("ក្រុមកាបុកស៊ីល", "បណ្តុំកាបុកស៊ីល"),
+    ("ក្រុមអាមីន", "បណ្តុំអាមីន"),
+    ("ក្រុមអុីដ្រុកស៊ីល", "បណ្តុំអ៊ីដ្រុកស៊ីល"),
+    # DNA vs RNA (Chapter 5, Lesson 2):
+    ("ស្ករដេអុកស៊ីរីបូស", "ស្ករដេអុកស៊ីរីបូស"),
+    ("ស្កររីបូស", "ស្កររីបូស"),
+    ("បាសអុយរ៉ាស៊ីល", "បាសអ៊ុយរ៉ាស៊ីល"),
+    ("បាសទីមីន", "បាសទីមីន"),
+    ("អាស៊ីតនុយក្លេអ៊ិច", "អាស៊ីតនុយក្លេអ៊ិច"),
+    # Stigma (Chapter 1, Lesson 2):
+    ("ស្ទិចម៉ាតគឺជាផ្កំពូល", "ស្ទិចម៉ាតគឺជាផ្នែកកំពូល"),
+    ("ស្ទិចម៉ាតជាផ្នែកកំពូល", "ស្ទិចម៉ាត គឺជាផ្នែកកំពូល"),
+    ("ការពារកុំឱ្យគ្រាប់លំអងជ្រុះ", "ការពារកុំឱ្យគ្រាប់លំអងជ្រុះ"),
+    # Adaptation vs Combination (Chapter 6, Lesson 1):
+    ("តើបន្សំជាអ្វី", "តើបន្ស៊ាំជាអ្វី"),
+    ("លក្ខណៈបន្សំ", "លក្ខណៈបន្ស៊ាំ"),
+    ("សត្វរ៉ាព (សត្វស៊ីគេ)", "ប្រេដាទ័រ (សត្វស៊ីគេ)"),
+    ("យំឡេងផ្សេងៗ", "បន្លឺសំឡេងផ្សេងៗ"),
+    # OCR audit v3: remaining corpus variants. These same term pairs are in
+    # OCR_FIXES (scripts/pipeline/clean_text.py) so questions and indexed text share
+    # spellings.
+    ("ស្ទីចម៉ាត", "ស្ទិចម៉ាត"),
+    ("ស្អិតម៉ាស", "ស្ទិចម៉ាត"),
+    ("បន្សុំ", "បន្ស៊ាំ"),
+    ("លក្ខណៈ បន្សំ", "លក្ខណៈបន្ស៊ាំ"),
+    ("ជំងឺហមារីក", "ជំងឺមហារីក"),
 ]
 
 # "ខួរឆ្អឹង" (bone marrow) is NOT a Grade 12 Biology topic; the textbook only
@@ -315,6 +429,11 @@ QUERY_FIXES = [
 # which guards the legitimate term ខួរឆ្អឹងខ្នង.
 _CEREBRUM_RE = re.compile(r"ខួរឆ្អឹង(?!ខ្នង)")
 
+# "រលកសូ" (OK) vs "រលកសូរ" (sound wave, correct). Plain replace() of the
+# shorter form would turn the correct "រលកសូរ" into "រលកសូររ"; guard so we
+# only fix the OCR/typo form that is missing the final "រ".
+_SOUND_WAVE_RE = re.compile(r"រលកសូ(?!រ)")
+
 
 def normalize_query(text: str) -> str:
     """Rewrite garbled/OCR-style spellings in a student question to the
@@ -323,6 +442,7 @@ def normalize_query(text: str) -> str:
     text = (text or "").strip()
     for bad, good in QUERY_FIXES:
         text = text.replace(bad, good)
+    text = _SOUND_WAVE_RE.sub("រលកសូរ", text)
     return _CEREBRUM_RE.sub("ខួរធំ", text)
 
 
@@ -351,8 +471,110 @@ def _expand_definition(text: str) -> str:
     return text[: m.start()] + f"តើ{term}ជាអ្វី?"
 
 
+# Topic synonyms that are true in the textbook but may not appear in the
+# student's wording. Appending them (rather than replacing the question) keeps
+# the sentence grammatical and gives the retriever the corpus vocabulary.
+# Example: pine (ស្រល់) is a gymnosperm whose reproductive structure is a cone;
+# without these terms, "ដំណើរការលំអងរបស់ស្រល់" is outranked by the much more
+# numerous flowering-plant pollination pages.
+_TOPIC_EXPANSIONS = (
+    ("ស្រល់", "ស៊ីមណូស្ពែម កោន"),
+    # Polished rice is the rice grain's albumen/endosperm. The corpus never
+    # uses the student words "អង្ករ"/"សំរូប"; it uses គ្រាប់ស្រូវ (rice grain),
+    # អាល់ប៊ុយមែន and អង់ដូស្ពែម (p18). Append that vocabulary so the
+    # question can reach the seed pages without changing its meaning.
+    ("អង្ករសំរូប", "គ្រាប់ស្រូវ អាល់ប៊ុយមែន អង់ដូស្ពែម"),
+)
+
+
+def _expand_topic_terms(text: str) -> str:
+    suffix = [
+        extra for term, extra in _TOPIC_EXPANSIONS
+        if term in text and extra not in text
+    ]
+    return (text + " " + " ".join(suffix)).strip() if suffix else text
+
+
 def expand_query(text: str) -> str:
     """Term normalization + query reshaping used inside the RAG pipeline so
     retrieval scores stay above the abstain threshold. The student's displayed
     message keeps the term-fixed original (see normalize_query)."""
-    return _expand_definition(normalize_query(text))
+    return _expand_topic_terms(_expand_definition(normalize_query(text)))
+
+
+# --- Multi-part question splitting -----------------------------------------
+# Exam prompts use top-level Roman markers (I., II.) and Khmer sub-markers
+# (ក., ខ., គ., ឃ., ង.) in the same message. Keeping a marker in the text sent
+# to retrieval/reranking lowers scores (e.g. "I. ..." can fall below the
+# abstain threshold), so strip them and retrieve each question separately.
+_LEAD_MARKER_RE = re.compile(
+    r'^(?:[IVX]{1,6}|[កខគឃងចឆជឈញដឋឌឍណតថទធនបផពភមយរលវសហឡអ]|\d+)[.។]\s*'
+)
+_ROMAN_TOP_RE = re.compile(r'(?:^|(?<=[។\s]))([IVX]{1,6})[.។]\s*')
+_KHMER_SEQUENCE = "កខគឃង"
+_KHMER_INLINE_RE = re.compile(r'(?:^|(?<=[\s។?!]))([កខគឃង])[.។]\s*')
+
+
+def strip_lead_markers(text: str) -> str:
+    """Strip leading question-number markers (I., ក., 1., ...) before retrieval."""
+    prev = None
+    while text != prev:
+        prev = text
+        text = _LEAD_MARKER_RE.sub('', text)
+    return text.strip()
+
+
+def _split_khmer_subquestions(text: str) -> list[str] | None:
+    """Split inline Khmer sub-questions, or return None if not a valid series.
+
+    Only split when at least two markers form the expected ordered series
+    ក., ខ., គ., ឃ., ង.; this avoids treating a lone abbreviation or a
+    normal consonant followed by a full stop as a question boundary.
+    """
+    normalized = re.sub(r'(?<=[កខគឃង])[.។](?=\S)', '. ', text)
+    markers = list(_KHMER_INLINE_RE.finditer(normalized))
+    if len(markers) < 2:
+        return None
+    letters = [m.group(1) for m in markers]
+    if letters != list(_KHMER_SEQUENCE[:len(letters)]):
+        return None
+
+    parts = []
+    for i, m in enumerate(markers):
+        end = markers[i + 1].start() if i + 1 < len(markers) else len(normalized)
+        question = strip_lead_markers(normalized[m.end():end])
+        if question:
+            parts.append(question)
+    return parts or None
+
+
+def split_questions(text: str) -> list[str]:
+    """Split an exam-style message into individual retrieval questions.
+
+    Top-level Roman markers (I., II., ...) are split first; Khmer sub-markers
+    (ក., ខ., ...) are then split inside each resulting part. Single questions
+    keep their text minus any leading marker.
+    """
+    text = text or ''
+    text = re.sub(r'([IVX]{1,6})[.។](?=\S)', r'\1. ', text)
+    markers = list(_ROMAN_TOP_RE.finditer(text))
+    if markers:
+        roman_parts = []
+        for i, m in enumerate(markers):
+            end = markers[i + 1].start() if i + 1 < len(markers) else len(text)
+            part = text[m.end():end]
+            if part.strip():
+                roman_parts.append(part)
+    else:
+        roman_parts = [text]
+
+    parts = []
+    for part in roman_parts:
+        khmer_parts = _split_khmer_subquestions(part)
+        if khmer_parts:
+            parts.extend(khmer_parts)
+            continue
+        cleaned = strip_lead_markers(part)
+        if cleaned:
+            parts.append(cleaned)
+    return parts or [strip_lead_markers(text)]
