@@ -8,6 +8,20 @@ The goal is not to train a new LLM from scratch. Instead, the project builds a r
 
 ---
 
+## Repository layout
+
+- `app/` — Streamlit runtime only: UI, config, retrieval, generation, prompt/citation formatting, OCR, text normalization.
+- `scripts/pipeline/` — textbook build pipeline: OCR, cleaning, lesson parsing, chunking, vector DB, glossary.
+- `scripts/evaluation/` — retrieval evaluation, answer evaluation, Phase 3.1 rescoring, corpus validation.
+- `tests/` — active regression suites and `run_all.py`.
+- `data/` — source PDFs, extracted OCR, processed textbook, glossary, vector DB, and current evaluation artifacts.
+- `docs/` — current reports; `docs/history/` holds superseded reports.
+- `scripts/archive/`, `data/evaluation/archive/`, `archive/root/` — historical scripts, runs, and scratch files. Nothing there is required for normal runtime.
+
+See [`docs/PROJECT_STRUCTURE.md`](docs/PROJECT_STRUCTURE.md) for a file-by-file map of what each part does.
+
+---
+
 ## 1. Project Goal
 
 Build an AI tutor that can:
@@ -146,7 +160,7 @@ khmer-biology-ai/
 │   │   └── biology_grade12.pdf
 │   │
 │   ├── extracted/
-│   │   └── biology_raw_text.json
+│   │   └── biology_raw_text.jsonl
 │   │
 │   ├── processed/
 │   │   ├── biology_cleaned.json
@@ -311,7 +325,7 @@ Recommended format:
 ### Output
 
 ```text
-data/extracted/biology_raw_text.json
+data/extracted/biology_raw_text.jsonl
 ```
 
 ### Phase 2 is complete when

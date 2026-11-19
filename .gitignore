@@ -1,14 +1,18 @@
 # Environment variables
 .env
+.env.*
+!.env.example
 
 # Python
 __pycache__/
-*.pyc
-*.pyo
+*.py[cod]
 *.egg-info/
 dist/
 build/
 .eggs/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
 
 # Virtual environment
 venv/
@@ -21,11 +25,12 @@ env/
 *.swp
 *.swo
 
-# Vector database (large files)
+# Streamlit secrets
+.streamlit/secrets.toml
+
+# Vector database and model cache (large local artifacts)
 vector_db/
 chroma_db/
-
-# Model cache
 models/
 .cache/
 
@@ -33,7 +38,20 @@ models/
 .DS_Store
 Thumbs.db
 
-# Data files (keep structure, ignore large files)
-data/extracted/*.json
-data/processed/*.json
+# Large data files (directory structure is kept with .gitkeep files)
 data/raw/*.pdf
+data/processed/*.json
+data/processed/archive_v3/
+# data/extracted/biology_raw_text.jsonl is tracked as corpus provenance.
+
+# Archived runs and logs are kept on disk but not versioned.
+# The two negation entries are replay fixtures used by
+# tests/test_citation_integrity.py.
+data/evaluation/archive/*
+!data/evaluation/archive/answer_evaluations_v3.json
+!data/evaluation/archive/answer_evaluations_v3_q84.json
+archive/root/
+
+# Local logs and scratch output
+*.log
+*.err

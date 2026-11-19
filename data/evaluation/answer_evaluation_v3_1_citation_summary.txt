@@ -1,0 +1,63 @@
+Answer evaluation v3_1_citation (45 questions)
+
+Dimension means (in-scope, 1-5; target >= 4.0):
+  correctness   4.54
+  completeness  4.63
+  faithfulness  4.98
+  clarity       4.34
+  terminology   4.78
+  citation      4.8
+  helpfulness   4.27
+  overall       4.62
+
+Out-of-scope abstention: 4/4 = 1.0
+In-scope false abstain: 0/41
+Generation fallbacks: 0/45
+Rows with invalid citations: 0/41
+
+Per-question: id | ch | type | correctness..helpfulness | coverage | cited/valid
+  q  1 | 1 | definition   | 5 5 5 4 5 5 5 | 1.0 | 8/8
+  q  2 | 1 | comparison   | 5 5 5 4 5 5 5 | 1.0 | 9/9
+  q  3 | 1 | process      | 5 5 5 5 5 5 3 | 1.0 | 6/6
+  q  8 | 2 | process      | 5 5 5 5 5 5 5 | 1.0 | 8/8
+  q  9 | 2 | process      | 5 5 5 5 5 5 3 | 1.0 | 9/9
+  q 13 | 3 | definition   | 5 5 5 4 5 5 5 | 1.0 | 8/8
+  q 15 | 3 | process      | 5 5 5 4 5 5 3 | 1.0 | 11/11
+  q 16 | 4 | definition   | 5 5 5 4 5 5 5 | 1.0 | 9/9
+  q 19 | 4 | explanation  | 5 5 5 4 5 4 5 | 1.0 | 9/9
+  q 20 | 5 | definition   | 5 5 5 5 5 4 5 | 1.0 | 9/9
+  q 23 | 5 | process      | 5 5 4 4 5 5 5 | 1.0 | 7/7
+  q 24 | 5 | comparison   | 5 5 5 4 5 4 5 | 1.0 | 11/11
+  q 28 | 6 | reasoning    | 5 5 5 4 5 5 5 | 1.0 | 10/10
+  q 30 | 7 | definition   | 5 5 5 4 5 5 5 | 1.0 | 9/9
+  q 31 | 7 | reasoning    | 5 5 5 4 5 5 5 | 1.0 | 7/7
+  q 34 | 8 | definition   | 5 5 5 4 5 5 5 | 1.0 | 9/9
+  q 35 | 8 | process      | 5 5 5 5 5 5 3 | 1.0 | 9/9
+  q 39 | 5 | summary      | 5 5 5 5 5 5 5 | 1.0 | 9/9
+  q 40 | 6 | summary      | 5 5 5 5 5 5 5 | 1.0 | 9/9
+  q 47 | 8 | comparison   | 5 5 5 4 5 5 4 | 1.0 | 9/9
+  q 50 | 2 | summary      | 5 5 5 5 5 4 5 | 1.0 | 12/12
+  q 52 | 1 | reasoning    | 5 5 5 4 5 5 3 | 1.0 | 8/8
+  q 55 | 1 | process      | 3 4 5 5 4 5 3 | 0.5 | 7/7
+  q 56 | 1 | reasoning    | 5 4 5 4 5 5 3 | 1.0 | 9/9
+  q 58 | 2 | comparison   | 3 4 5 5 4 5 4 | 0.5 | 9/9
+  q 63 | 3 | comparison   | 5 5 5 4 5 5 5 | 1.0 | 9/9
+  q 65 | 4 | explanation  | 3 4 5 5 4 5 5 | 0.5 | 7/7
+  q 68 | 5 | process      | 5 5 5 5 5 4 3 | 1.0 | 8/8
+  q 78 | 5 | exam         | 1 2 5 4 3 5 3 | 0.0 | 9/9
+  q 85 | 4 | quiz         | 5 5 5 5 5 4 3 | 1.0 | 9/9
+  q 86 | 2 | quiz         | 1 2 5 5 3 5 3 | 0.0 | 7/7
+  q 87 | 7 | quiz         | 5 5 5 4 5 5 3 | 1.0 | 8/8
+  q 93 | 3 | cause_effect | 5 5 5 2 5 5 3 | 1.0 | 10/10
+  q 94 | 3 | prevention   | 4 4 5 4 5 5 3 | 0.8 | 10/10
+  q 96 | 1 | application  | 3 3 5 3 4 5 5 | 0.4 | 7/7
+  q 98 | 0 | out_of_scope | 5 5 5 5 5 5 5 | None | 0/0
+  q100 | 0 | out_of_scope | 5 5 5 5 5 5 5 | None | 0/0
+  q102 | 0 | out_of_scope | 5 5 5 5 5 5 5 | None | 0/0
+  q104 | 0 | out_of_scope | 5 5 5 5 5 5 5 | None | 0/0
+  q108 | 1 | ocr_garbled  | 5 4 5 4 5 4 5 | 1.0 | 7/7
+  q110 | 3 | ocr_garbled  | 5 5 5 5 5 5 5 | 1.0 | 11/11
+  q111 | 6 | ocr_garbled  | 3 4 5 5 4 4 5 | 0.5 | 10/10
+  q115 | 5 | multi_part   | 5 5 5 4 5 5 5 | 1.0 | 16/16
+  q117 | 8 | multi_part   | 5 5 5 5 5 5 5 | 1.0 | 15/15
+  q119 | 4 | multi_part   | 5 5 5 4 5 5 5 | 1.0 | 15/15

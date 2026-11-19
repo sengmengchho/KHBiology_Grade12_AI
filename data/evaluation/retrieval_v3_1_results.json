@@ -1,0 +1,9523 @@
+{
+ "meta": {
+  "generated": "2026-10-25 12:32",
+  "n_rows": 125,
+  "total_rows_saved": 125,
+  "n_in_scope": 116,
+  "n_out_of_scope": 9,
+  "threshold": 0.08,
+  "top_k": 30,
+  "reranker_top_k": 12,
+  "gold_file": "data/evaluation/gold_questions_v2.json",
+  "tag": "v3_1",
+  "sample_v1": null,
+  "selected_ids": null
+ },
+ "rows": {
+  "1:0": {
+   "question_id": 1,
+   "part": 0,
+   "chapter": 1,
+   "question_type": "definition",
+   "question": "តើស៊ីមណូស្ពែមជាអ្វី? សូមពន្យល់ឱ្យបានច្បាស់",
+   "query_used": "តើស៊ីមណូស្ពែមជាអ្វី? សូមពន្យល់ឱ្យបានច្បាស់",
+   "expected_pages": [
+    6
+   ],
+   "expect_abstain": false,
+   "top_score": 0.9481,
+   "abstained": false,
+   "embed": {
+    "top5_pages": [
+     6,
+     6,
+     8,
+     24,
+     10
+    ],
+    "hit1": true,
+    "hit3": true,
+    "hit5": true,
+    "mrr": 1.0
+   },
+   "rerank": {
+    "top5_pages": [
+     6,
+     6,
+     10,
+     10,
+     8
+    ],
+    "hit1": true,
+    "hit3": true,
+    "hit5": true,
+    "mrr": 1.0
+   },
+   "real": {
+    "pages": [
+     6,
+     6,
+     10,
+     10,
+     8,
+     9,
+     5,
+     4,
+     24,
+     24,
+     9,
+     12
+    ],
+    "scores": [
+     0.9481,
+     0.8763,
+     0.7313,
+     0.6997,
+     0.2675,
+     0.2068,
+     0.1041,
+     0.1029,
+     0.0857,
+     0.0417,
+     0.0192,
+     0.0046
+    ],
+    "hit1": true,
+    "hit3": true,
+    "hit5": true,
+    "mrr": 1.0
+   }
+  },
+  "2:0": {
+   "question_id": 2,
+   "part": 0,
+   "chapter": 1,
+   "question_type": "comparison",
+   "question": "សូមប្រៀបធៀបរុក្ខជាតិស៊ីមណូស្ពែមនិងរុក្ខជាតិអង់ស្យូស្ពែម",
+   "query_used": "សូមប្រៀបធៀបរុក្ខជាតិស៊ីមណូស្ពែមនិងរុក្ខជាតិអង់ស្យូស្ពែម",
+   "expected_pages": [
+    6,
+    12
+   ],
+   "expect_abstain": false,
+   "top_score": 0.9426,
+   "abstained": false,
+   "embed": {
+    "top5_pages": [
+     6,
+     12,
+     6,
+     12,
+     19
+    ],
+    "hit1": true,
+    "hit3": true,
+    "hit5": true,
+    "mrr": 1.0
+   },
+   "rerank": {
+    "top5_pages": [
+     6,
+     6,
+     5,
+     12,
+     10
+    ],
+    "hit1": true,
+    "hit3": true,
+    "hit5": true,
+    "mrr": 1.0
+   },
+   "real": {
+    "pages": [
+     6,
+     6,
+     5,
+     12,
+     10,
+     4,
+     24,
+     19,
+     10,
+     24,
+     8,
+     19
+    ],
+    "scores": [
+     0.9426,
+     0.9288,
+     0.906,
+     0.8623,
+     0.6105,
+     0.583,
+     0.5009,
+     0.4257,
+     0.2446,
+     0.1852,
+     0.1834,
+     0.1371
+    ],
+    "hit1": true,
+    "hit3": true,
+    "hit5": true,
+    "mrr": 1.0
+   }
+  },
+  "4:0": {
+   "question_id": 4,
+   "part": 0,
+   "chapter": 1,
+   "question_type": "definition",
+   "question": "តើប្រដ៍ (Cycads) ជាអ្វី ហើយវាមានលក្ខណៈបែបណា?",
+   "query_used": "តើប្រដ៍ (Cycads) ជាអ្វី ហើយវាមានលក្ខណៈបែបណា?",
+   "expected_pages": [
+    7
+   ],
+   "expect_abstain": false,
+   "top_score": 0.8005,
+   "abstained": false,
+   "embed": {
+    "top5_pages": [
+     7,
+     7,
+     82,
+     6,
+     198
+    ],
+    "hit1": true,
+    "hit3": true,
+    "hit5": true,
+    "mrr": 1.0
+   },
+   "rerank": {
+    "top5_pages": [
+     7,
+     6,
+     7,
+     239,
+     236
+    ],
+    "hit1": true,
+    "hit3": true,
+    "hit5": true,
+    "mrr": 1.0
+   },
+   "real": {
+    "pages": [
+     7,
+     6,
+     7,
+     239,
+     236,
+     62,
+     82,
+     200,
+     82,
+     237,
+     96,
+     21
+    ],
+    "scores": [
+     0.8005,
+     0.7695,
+     0.5461,
+     0.0044,
+     0.004,
+     0.0035,
+     0.003,
+     0.003,
+     0.0028,
+     0.0027,
+     0.0021,
+     0.0017
+    ],
+    "hit1": true,
+    "hit3": true,
+    "hit5": true,
+    "mrr": 1.0
+   }
+  },
+  "5:0": {
+   "question_id": 5,
+   "part": 0,
+   "chapter": 1,
+   "question_type": "process",
+   "question": "ពន្យល់ពីការបង្កកំណើតទ្វេរបស់រុក្ខជាតិអង់ស្យូស្ពែម",
+   "query_used": "ពន្យល់ពីការបង្កកំណើតទ្វេរបស់រុក្ខជាតិអង់ស្យូស្ពែម",
+   "expected_pages": [
+    18,
+    14
+   ],
+   "expect_abstain": false,
+   "top_score": 0.9816,
+   "abstained": false,
+   "embed": {
+    "top5_pages": [
+     17,
+     17,
+     15,
+     19,
+     12
+    ],
+    "hit1": true,
+    "hit3": true,
+    "hit5": true,
+    "mrr": 1.0
+   },
+   "rerank": {
+    "top5_pages": [
+     17,
+     15,
+     18,
+     19,
+     13
+    ],
+    "hit1": true,
+    "hit3": true,
+    "hit5": true,
+    "mrr": 1.0
+   },
+   "real": {
+    "pages": [
+     17,
+     15,
+     18,
+     19,
+     13,
+     12,
+     17,
+     18,
+     24,
+     4,
+     12,
+     20
+    ],
+    "scores": [
+     0.9816,
+     0.8739,
+     0.8412,
+     0.8391,
+     0.8158,
+     0.803,
+     0.5489,
+     0.5302,
+     0.2625,
+     0.2493,
+     0.2043,
+     0.079
+    ],
+    "hit1": true,
+    "hit3": true,
+    "hit5": true,
+    "mrr": 1.0
+   }
+  },
+  "6:0": {
+   "question_id": 6,
+   "part": 0,
+   "chapter": 1,
+   "question_type": "definition",
+   "question": "តើប្រភេទអ្វីខ្លះជាប្រភេទរុក្ខជាតិមានផ្កា?",
+   "query_used": "តើប្រភេទអ្វីខ្លះជាប្រភេទរុក្ខជាតិមានផ្កា?",
+   "expected_pages": [
+    12
+   ],
+   "expect_abstain": false,
+   "top_score": 0.9052,
+   "abstained": false,
+   "embed": {
+    "top5_pages": [
+     18,
+     12,
+     21,
+     19,
+     19
+    ],
+    "hit1": false,
+    "hit3": true,
+    "hit5": true,
+    "mrr": 0.5
+   },
+   "rerank": {
+    "top5_pages": [
+     18,
+     18,
+     19,
+     21,
+     12
+    ],
+    "hit1": false,
+    "hit3": false,
+    "hit5": true,
+    "mrr": 0.2
+   },
+   "real": {
+    "pages": [
+     18,
+     18,
+     19,
+     21,
+     12,
+     21,
+     19,
+     12,
+     19,
+     14,
+     22,
+     5
+    ],
+    "scores": [
+     0.9052,
+     0.8765,
+     0.8586,
+     0.7621,
+     0.7235,
+     0.6035,
+     0.5182,
+     0.4926,
+     0.455,
+     0.4378,
+     0.3502,
+     0.3358
+    ],
+    "hit1": false,
+    "hit3": false,
+    "hit5": true,
+    "mrr": 0.2
+   }
+  },
+  "7:0": {
+   "question_id": 7,
+   "part": 0,
+   "chapter": 1,
+   "question_type": "explanation",
+   "question": "ពន្យល់ពីផ្កាជាសរីរាង្គបន្តពូជរបស់រុក្ខជាតិអង់ស្យូស្ពែម",
+   "query_used": "ពន្យល់ពីផ្កាជាសរីរាង្គបន្តពូជរបស់រុក្ខជាតិអង់ស្យូស្ពែម",
+   "expected_pages": [
+    14
+   ],
+   "expect_abstain": false,
+   "top_score": 0.9765,
+   "abstained": false,
+   "embed": {
+    "top5_pages": [
+     14,
+     19,
+     12,
+     22,
+     24
+    ],
+    "hit1": true,
+    "hit3": true,
+    "hit5": true,
+    "mrr": 1.0
+   },
+   "rerank": {
+    "top5_pages": [
+     13,
+     12,
+     14,
+     24,
+     12
+    ],
+    "hit1": true,
+    "hit3": true,
+    "hit5": true,
+    "mrr": 1.0
+   },
+   "real": {
+    "pages": [
+     13,
+     12,
+     14,
+     24,
+     12,
+     19,
+     5,
+     15,
+     18,
+     22,
+     14,
+     24
+    ],
+    "scores": [
+     0.9765,
+     0.9681,
+     0.9585,
+     0.8155,
+     0.7668,
+     0.7279,
+     0.6943,
+     0.6771,
+     0.6762,
+     0.6425,
+     0.4994,
+     0.4232
+    ],
+    "hit1": true,
+    "hit3": true,
+    "hit5": true,
+    "mrr": 1.0
+   }
+  },
+  "8:0": {
+   "question_id": 8,
+   "part": 0,
+   "chapter": 2,
+   "question_type": "process",
+   "question": "តើរុក្ខជាតិស្រូបទឹកពីក្នុងដីដោយរបៀបណា?",
+   "query_used": "តើរុក្ខជាតិស្រូបទឹកពីក្នុងដីដោយរបៀបណា?",
+   "expected_pages": [
+    26
+   ],
+   "expect_abstain": false,
+   "top_score": 0.9868,
+   "abstained": false,
+   "embed": {
+    "top5_pages": [
+     26,
+     40,
+     26,
+     31,
+     57
+    ],
+    "hit1": true,
+    "hit3": true,
+    "hit5": true,
+    "mrr": 1.0
+   },
+   "rerank": {
+    "top5_pages": [
+     40,
+     26,
+     26,
+     40,
+     31
+    ],
+    "hit1": false,
+    "hit3": true,
+    "hit5": true,
+    "mrr": 0.5
+   },
+   "real": {
+    "pages": [
+     40,
+     26,
+     26,
+     40,
+     31,
+     27,
+     252,
+     252,
+     40,
+     27,
+     253,
+     41
+    ],
+    "scores": [
+     0.9868,
+     0.9461,
+     0.9452,
+     0.9358,
+     0.8348,
+     0.6722,
+     0.6552,
+     0.4111,
+     0.2811,
+     0.2771,
+     0.2449,
+     0.1566
+    ],
+    "hit1": false,
+    "hit3": true,
+    "hit5": true,
+    "mrr": 0.5
+   }
+  },
+  "9:0": {
+   "question_id": 9,
+   "part": 0,
+   "chapter": 2,
+   "question_type": "process",
+   "question": "ពន្យល់ពីដំណឹកនាំទឹកឡើងទៅលើស្លឹករុក្ខជាតិ",
+   "query_used": "ពន្យល់ពីដំណឹកនាំទឹកឡើងទៅលើស្លឹករុក្ខជាតិ",
+   "expected_pages": [
+    26
+   ],
+   "expect_abstain": false,
+   "top_score": 0.9445,
+   "abstained": false,
+   "embed": {
+    "top5_pages": [
+     26,
+     40,
+     28,
+     28,
+     58
+    ],
+    "hit1": true,
+    "hit3": true,
+    "hit5": true,
+    "mrr": 1.0
+   },
+   "rerank": {
+    "top5_pages": [
+     26,
+     28,
+     40,
+     28,
+     57
+    ],
+    "hit1": true,
+    "hit3": true,
+    "hit5": true,
+    "mrr": 1.0
+   },
+   "real": {
+    "pages": [
+     26,
+     28,
+     40,
+     28,
+     57,
+     58,
+     31,
+     26,
+     27,
+     13,
+     29,
+     41
+    ],
+    "scores": [
+     0.9445,
+     0.9308,
+     0.9035,
+     0.7944,
+     0.6592,
+     0.6192,
+     0.5084,
+     0.4807,
+     0.4606,
+     0.4345,
+     0.3845,
+     0.2985
+    ],
+    "hit1": true,
+    "hit3": true,
+    "hit5": true,
+    "mrr": 1.0
+   }
+  },
+  "10:0": {
+   "question_id": 10,
+   "part": 0,
+   "chapter": 2,
+   "question_type": "process",
+   "question": "តើអាហារដែលសំយោគនៅក្នុងស្លឹកត្រូវបានដឹកនាំទៅកាន់ផ្នែកផ្សេងៗនៃរុក្ខជាតិដោយរបៀបណា?",
+   "query_used": "តើអាហារដែលសំយោគនៅក្នុងស្លឹកត្រូវបានដឹកនាំទៅកាន់ផ្នែកផ្សេងៗនៃរុក្ខជាតិដោយរបៀបណា?",
+   "expected_pages": [
+    26
+   ],
+   "expect_abstain": false,
+   "top_score": 0.8967,
+   "abstained": false,
+   "embed": {
+    "top5_pages": [
+     26,
+     13,
+     31,
+     25,
+     26
+    ],
+    "hit1": true,
+    "hit3": true,
+    "hit5": true,
+    "mrr": 1.0
+   },
+   "rerank": {
+    "top5_pages": [
+     26,
+     13,
+     25,
+     13,
+     31
+    ],
+    "hit1": true,
+    "hit3": true,
+    "hit5": true,
+    "mrr": 1.0
+   },
+   "real": {
+    "pages": [
+     26,
+     13,
+     25,
+     13,
+     31,
+     26,
+     40,
+     23,
+     32,
+     46,
+     32,
+     34
+    ],
+    "scores": [
+     0.8967,
+     0.8934,
+     0.8695,
+     0.8664,
+     0.8053,
+     0.7612,
+     0.7606,
+     0.2049,
+     0.0827,
+     0.0619,
+     0.0592,
+     0.0418
+    ],
+    "hit1": true,
+    "hit3": true,
+    "hit5": true,
+    "mrr": 1.0
+   }
+  },
+  "11:0": {
+   "question_id": 11,
+   "part": 0,
+   "chapter": 2,
+   "question_type": "explanation",
+   "question": "ពន្យល់ពីភាយចំហាយទឹក (transpiration) នៅក្នុងរុក្ខជាតិ",
+   "query_used": "ពន្យល់ពីភាយចំហាយទឹក (transpiration) នៅក្នុងរុក្ខជាតិ",
+   "expected_pages": [
+    26
+   ],
+   "expect_abstain": false,
+   "top_score": 0.8157,
+   "abstained": false,
+   "embed": {
+    "top5_pages": [
+     57,
+     40,
+     26,
+     31,
+     28
+    ],
+    "hit1": false,
+    "hit3": true,
+    "hit5": true,
+    "mrr": 0.3333333333333333
+   },
+   "rerank": {
+    "top5_pages": [
+     40,
+     28,
+     31,
+     26,
+     41
+    ],
+    "hit1": false,
+    "hit3": false,
+    "hit5": true,
+    "mrr": 0.25
+   },
+   "real": {
+    "pages": [
+     40,
+     28,
+     31,
+     26,
+     41,
+     57,
+     58,
+     57,
+     32,
+     26,
+     29,
+     28
+    ],
+    "scores": [
+     0.8157,
+     0.8099,
+     0.724,
+     0.577,
+     0.3993,
+     0.2857,
+     0.2766,
+     0.2517,
+     0.1517,
+     0.1376,
+     0.1229,
+     0.0802
+    ],
+    "hit1": false,
+    "hit3": false,
+    "hit5": true,
+    "mrr": 0.25
+   }
+  },
+  "12:0": {
+   "question_id": 12,
+   "part": 0,
+   "chapter": 3,
+   "question_type": "explanation",
+   "question": "តើប្រព័ន្ធប្រសាទរបស់សត្វឥតឆ្អឹងកងមានលក្ខណៈដូចម្តេច?",
+   "query_used": "តើប្រព័ន្ធប្រសាទរបស់សត្វឥតឆ្អឹងកងមានលក្ខណៈដូចម្តេច?",
+   "expected_pages": [
+    60
+   ],
+   "expect_abstain": false,
+   "top_score": 0.9908,
+   "abstained": false,
+   "embed": {
+    "top5_pages": [
+     60,
+     60,
+     61,
+     64,
+     77
+    ],
+    "hit1": true,
+    "hit3": true,
+    "hit5": true,
+    "mrr": 1.0
+   },
+   "rerank": {
+    "top5_pages": [
+     60,
+     60,
+     62,
+     64,
+     77
+    ],
+    "hit1": true,
+    "hit3": true,
+    "hit5": true,
+    "mrr": 1.0
+   },
+   "real": {
+    "pages": [
+     60,
+     60,
+     62,
+     64,
+     77,
+     63,
+     210,
+     60,
+     61,
+     63,
+     75,
+     61
+    ],
+    "scores": [
+     0.9908,
+     0.9831,
+     0.8956,
+     0.854,
+     0.7809,
+     0.7364,
+     0.6366,
+     0.5663,
+     0.514,
+     0.4886,
+     0.476,
+     0.4212
+    ],
+    "hit1": true,
+    "hit3": true,
+    "hit5": true,
+    "mrr": 1.0
+   }
+  },
+  "13:0": {
+   "question_id": 13,
+   "part": 0,
+   "chapter": 3,
+   "question_type": "definition",
+   "question": "តើណឺរ៉ូនមានប្រភេទអ្វីខ្លះ?",
+   "query_used": "តើណឺរ៉ូនមានប្រភេទអ្វីខ្លះ?",
+   "expected_pages": [
+    60,
+    66,
+    68,
+    69,
+    70
+   ],
+   "expect_abstain": false,
+   "top_score": 0.9912,
+   "abstained": false,
+   "embed": {
+    "top5_pages": [
+     66,
+     69,
+     67,
+     68,
+     68
+    ],
+    "hit1": true,
+    "hit3": true,
+    "hit5": true,
+    "mrr": 1.0
+   },
+   "rerank": {
+    "top5_pages": [
+     69,
+     67,
+     66,
+     68,
+     68
+    ],
+    "hit1": true,
+    "hit3": true,
+    "hit5": true,
+    "mrr": 1.0
+   },
+   "real": {
+    "pages": [
+     69,
+     67,
+     66,
+     68,
+     68,
+     75,
+     60,
+     78,
+     69,
+     70,
+     66,
+     62
+    ],
+    "scores": [
+     0.9912,
+     0.8899,
+     0.8777,
+     0.7654,
+     0.7466,
+     0.2994,
+     0.1146,
+     0.1136,
+     0.0466,
+     0.0456,
+     0.0366,
+     0.0251
+    ],
+    "hit1": true,
+    "hit3": true,
+    "hit5": true,
+    "mrr": 1.0
+   }
+  },
+  "14:0": {
+   "question_id": 14,
+   "part": 0,
+   "chapter": 3,
+   "question_type": "explanation",
+   "question": "ពន្យល់ពីរូបផ្គុំនិងនាទីរបស់មជ្ឈមណ្ឌលប្រសាទ",
+   "query_used": "ពន្យល់ពីរូបផ្គុំនិងនាទីរបស់មជ្ឈមណ្ឌលប្រសាទ",
+   "expected_pages": [
+    60
+   ],
+   "expect_abstain": false,
+   "top_score": 0.9485,
+   "abstained": false,
+   "embed": {
+    "top5_pages": [
+     60,
+     63,
+     78,
+     61,
+     66
+    ],
+    "hit1": true,
+    "hit3": true,
+    "hit5": true,
+    "mrr": 1.0
+   },
+   "rerank": {
+    "top5_pages": [
+     60,
+     63,
+     61,
+     78,
+     66
+    ],
+    "hit1": true,
+    "hit3": true,
+    "hit5": true,
+    "mrr": 1.0
+   },
+   "real": {
+    "pages": [
+     60,
+     63,
+     61,
+     78,
+     66,
+     68,
+     70,
+     63,
+     119,
+     65,
+     77,
+     66
+    ],
+    "scores": [
+     0.9485,
+     0.839,
+     0.7647,
+     0.6924,
+     0.6781,
+     0.6125,
+     0.5779,
+     0.5657,
+     0.516,
+     0.4922,
+     0.3737,
+     0.3737
+    ],
+    "hit1": true,
+    "hit3": true,
+    "hit5": true,
+    "mrr": 1.0
+   }
+  },
+  "15:0": {
+   "question_id": 15,
+   "part": 0,
+   "chapter": 3,
+   "question_type": "process",
+   "question": "សូមពន្យល់ពីរបៀបដែលសារពាង្គកាយឆ្លើយតបនឹងរំញោច",
+   "query_used": "សូមពន្យល់ពីរបៀបដែលសារពាង្គកាយឆ្លើយតបនឹងរំញោច",
+   "expected_pages": [
+    60,
+    61,
+    62,
+    65
+   ],
+   "expect_abstain": false,
+   "top_score": 0.7298,
+   "abstained": false,
+   "embed": {
+    "top5_pages": [
+     65,
+     96,
+     59,
+     65,
+     66
+    ],
+    "hit1": true,
+    "hit3": true,
+    "hit5": true,
+    "mrr": 1.0
+   },
+   "rerank": {
+    "top5_pages": [
+     65,
+     61,
+     65,
+     62,
+     60
+    ],
+    "hit1": true,
+    "hit3": true,
+    "hit5": true,
+    "mrr": 1.0
+   },
+   "real": {
+    "pages": [
+     65,
+     61,
+     65,
+     62,
+     60,
+     60,
+     93,
+     100,
+     96,
+     66,
+     95,
+     244
+    ],
+    "scores": [
+     0.7298,
+     0.6913,
+     0.6263,
+     0.584,
+     0.5148,
+     0.3579,
+     0.2709,
+     0.2233,
+     0.2005,
+     0.1093,
+     0.1036,
+     0.1032
+    ],
+    "hit1": true,
+    "hit3": true,
+    "hit5": true,
+    "mrr": 1.0
+   }
+  },
+  "16:0": {
+   "question_id": 16,
+   "part": 0,
+   "chapter": 4,
+   "question_type": "definition",
+   "question": "តើធាតុសំខាន់ៗអ្វីខ្លះដែលបង្កើតបានប្រូតេអ៊ីន?",
+   "query_used": "តើធាតុសំខាន់ៗអ្វីខ្លះដែលបង្កើតបានប្រូតេអ៊ីន?",
+   "expected_pages": [
+    122
+   ],
+   "expect_abstain": false,
+   "top_score": 0.976,
+   "abstained": false,
+   "embed": {
+    "top5_pages": [
+     122,
+     134,
+     122,
+     128,
+     133
+    ],
+    "hit1": true,
+    "hit3": true,
+    "hit5": true,
+    "mrr": 1.0
+   },
+   "rerank": {
+    "top5_pages": [
+     122,
+     122,
+     134,
+     127,
+     130
+    ],
+    "hit1": true,
+    "hit3": true,
+    "hit5": true,
+    "mrr": 1.0
+   },
+   "real": {
+    "pages": [
+     122,
+     122,
+     134,
+     127,
+     130,
+     133,
+     131,
+     128,
+     130,
+     133,
+     128,
+     123
+    ],
+    "scores": [
+     0.976,
+     0.9622,
+     0.9605,
+     0.8924,
+     0.8255,
+     0.775,
+     0.6739,
+     0.6203,
+     0.5713,
+     0.5234,
+     0.5144,
+     0.4762
+    ],
+    "hit1": true,
+    "hit3": true,
+    "hit5": true,
+    "mrr": 1.0
+   }
+  },
+  "17:0": {
+   "question_id": 17,
+   "part": 0,
+   "chapter": 4,
+   "question_type": "explanation",
+   "question": "សូមសរសេររូបមន្តទូទៅរបស់អាស៊ីតអាមីណេ",
+   "query_used": "សូមសរសេររូបមន្តទូទៅរបស់អាស៊ីតអាមីណេ",
+   "expected_pages": [
+    122
+   ],
+   "expect_abstain": false,
+   "top_score": 0.9737,
+   "abstained": false,
+   "embed": {
+    "top5_pages": [
+     127,
+     127,
+     122,
+     147,
+     175
+    ],
+    "hit1": false,
+    "hit3": true,
+    "hit5": true,
+    "mrr": 0.3333333333333333
+   },
+   "rerank": {
+    "top5_pages": [
+     147,
+     122,
+     122,
+     127,
+     123
+    ],
+    "hit1": false,
+    "hit3": true,
+    "hit5": true,
+    "mrr": 0.5
+   },
+   "real": {
+    "pages": [
+     147,
+     122,
+     122,
+     127,
+     123,
+     148,
+     123,
+     126,
+     125,
+     127,
+     127,
+     123
+    ],
+    "scores": [
+     0.9737,
+     0.9732,
+     0.962,
+     0.9602,
+     0.9292,
+     0.6053,
+     0.4485,
+     0.37,
+     0.3639,
+     0.2694,
+     0.2032,
+     0.1909
+    ],
+    "hit1": false,
+    "hit3": true,
+    "hit5": true,
+    "mrr": 0.5
+   }
+  },
+  "18:0": {
+   "question_id": 18,
+   "part": 0,
+   "chapter": 4,
+   "question_type": "definition",
+   "question": "តើអាស៊ីតអាមីណេប៉ុន្មានបែបដែលគេស្គាល់?",
+   "query_used": "តើអាស៊ីតអាមីណេប៉ុន្មានបែបដែលគេស្គាល់?",
+   "expected_pages": [
+    122,
+    123,
+    127,
+    129
+   ],
+   "expect_abstain": false,
+   "top_score": 0.9944,
+   "abstained": false,
+   "embed": {
+    "top5_pages": [
+     127,
+     123,
+     166,
+     122,
+     123
+    ],
+    "hit1": true,
+    "hit3": true,
+    "hit5": true,
+    "mrr": 1.0
+   },
+   "rerank": {
+    "top5_pages": [
+     123,
+     127,
+     122,
+     127,
+     123
+    ],
+    "hit1": true,
+    "hit3": true,
+    "hit5": true,
+    "mrr": 1.0
+   },
+   "real": {
+    "pages": [
+     123,
+     127,
+     122,
+     127,
+     123,
+     122,
+     166,
+     166,
+     211,
+     170,
+     125,
+     167
+    ],
+    "scores": [
+     0.9944,
+     0.9767,
+     0.9097,
+     0.9063,
+     0.8999,
+     0.8825,
+     0.8326,
+     0.6527,
+     0.596,
+     0.5955,
+     0.5359,
+     0.4908
+    ],
+    "hit1": true,
+    "hit3": true,
+    "hit5": true,
+    "mrr": 1.0
+   }
+  },
+  "19:0": {
+   "question_id": 19,
+   "part": 0,
+   "chapter": 4,
+   "question_type": "explanation",
+   "question": "ពន្យល់ពីចំណងប៉ុបទីតក្នុងការផ្គុំប្រូតេអ៊ីន",
+   "query_used": "ពន្យល់ពីចំណងប៉ុបទីតក្នុងការផ្គុំប្រូតេអ៊ីន",
+   "expected_pages": [
+    122,
+    127,
+    130
+   ],
+   "expect_abstain": false,
+   "top_score": 0.9066,
+   "abstained": false,
+   "embed": {
+    "top5_pages": [
+     128,
+     130,
+     133,
+     129,
+     170
+    ],
+    "hit1": false,
+    "hit3": true,
+    "hit5": true,
+    "mrr": 0.5
+   },
+   "rerank": {
+    "top5_pages": [
+     128,
+     169,
+     128,
+     122,
+     171
+    ],
+    "hit1": false,
+    "hit3": false,
+    "hit5": true,
+    "mrr": 0.25
+   },
+   "real": {
+    "pages": [
+     128,
+     169,
+     128,
+     122,
+     171,
+     168,
+     170,
+     129,
+     148,
+     130,
+     129,
+     133
+    ],
+    "scores": [
+     0.9066,
+     0.8528,
+     0.8008,
+     0.6895,
+     0.5622,
+     0.5509,
+     0.4901,
+     0.4633,
+     0.4129,
+     0.4001,
+     0.3981,
+     0.3799
+    ],
+    "hit1": false,
+    "hit3": false,
+    "hit5": true,
+    "mrr": 0.25
+   }
+  },
+  "20:0": {
+   "question_id": 20,
+   "part": 0,
+   "chapter": 5,
+   "question_type": "definition",
+   "question": "តើ ADN មានតួនាទីអ្វី?",
+   "query_used": "តើ ADN មានតួនាទីអ្វី?",
+   "expected_pages": [
+    150,
+    152,
+    159
+   ],
+   "expect_abstain": false,
+   "top_score": 0.5157,
+   "abstained": false,
+   "embed": {
+    "top5_pages": [
+     163,
+     194,
+     174,
+     165,
+     156
+    ],
+    "hit1": false,
+    "hit3": false,
+    "hit5": false,
+    "mrr": 0.16666666666666666
+   },
+   "rerank": {
+    "top5_pages": [
+     157,
+     159,
+     165,
+     174,
+     152
+    ],
+    "hit1": false,
+    "hit3": true,
+    "hit5": true,
+    "mrr": 0.5
+   },
+   "real": {
+    "pages": [
+     157,
+     159,
+     165,
+     174,
+     152,
+     163,
+     156,
+     150,
+     162,
+     160,
+     153,
+     162
+    ],
+    "scores": [
+     0.5157,
+     0.3988,
+     0.1557,
+     0.1492,
+     0.1358,
+     0.134,
+     0.1274,
+     0.0825,
+     0.0815,
+     0.0746,
+     0.0619,
+     0.0559
+    ],
+    "hit1": false,
+    "hit3": true,
+    "hit5": true,
+    "mrr": 0.5
+   }
+  },
+  "21:0": {
+   "question_id": 21,
+   "part": 0,
+   "chapter": 5,
+   "question_type": "explanation",
+   "question": "ពន្យល់ពីគំរូខ្សែរពីររបស់ ADN",
+   "query_used": "ពន្យល់ពីគំរូខ្សែរពីររបស់ ADN",
+   "expected_pages": [
+    150
+   ],
+   "expect_abstain": false,
+   "top_score": 0.9014,
+   "abstained": false,
+   "embed": {
+    "top5_pages": [
+     160,
+     154,
+     162,
+     155,
+     181
+    ],
+    "hit1": false,
+    "hit3": false,
+    "hit5": false,
+    "mrr": 0.08333333333333333
+   },
+   "rerank": {
+    "top5_pages": [
+     150,
+     155,
+     154,
+     159,
+     161
+    ],
+    "hit1": true,
+    "hit3": true,
+    "hit5": true,
+    "mrr": 1.0
+   },
+   "real": {
+    "pages": [
+     150,
+     155,
+     154,
+     159,
+     161,
+     174,
+     165,
+     160,
+     162,
+     160,
+     181,
+     157
+    ],
+    "scores": [
+     0.9014,
+     0.7054,
+     0.3846,
+     0.3123,
+     0.2786,
+     0.2284,
+     0.2125,
+     0.1736,
+     0.1369,
+     0.1251,
+     0.1224,
+     0.1102
+    ],
+    "hit1": true,
+    "hit3": true,
+    "hit5": true,
+    "mrr": 1.0
+   }
+  },
+  "22:0": {
+   "question_id": 22,
+   "part": 0,
+   "chapter": 5,
+   "question_type": "definition",
+   "question": "តើធាតុអ្វីខ្លះជាធាតុបង្ករបស់ម៉ូលេគុល ADN?",
+   "query_used": "តើធាតុអ្វីខ្លះជាធាតុបង្ករបស់ម៉ូលេគុល ADN?",
+   "expected_pages": [
+    150,
+    165
+   ],
+   "expect_abstain": false,
+   "top_score": 0.9989,
+   "abstained": false,
+   "embed": {
+    "top5_pages": [
+     153,
+     150,
+     163,
+     156,
+     194
+    ],
+    "hit1": false,
+    "hit3": true,
+    "hit5": true,
+    "mrr": 0.5
+   },
+   "rerank": {
+    "top5_pages": [
+     153,
+     150,
+     153,
+     156,
+     191
+    ],
+    "hit1": false,
+    "hit3": true,
+    "hit5": true,
+    "mrr": 0.5
+   },
+   "real": {
+    "pages": [
+     153,
+     150,
+     153,
+     156,
+     191,
+     157,
+     174,
+     159,
+     157,
+     160,
+     163,
+     156
+    ],
+    "scores": [
+     0.9989,
+     0.9748,
+     0.9338,
+     0.9243,
+     0.835,
+     0.6664,
+     0.5854,
+     0.5481,
+     0.547,
+     0.5175,
+     0.4974,
+     0.489
+    ],
+    "hit1": false,
+    "hit3": true,
+    "hit5": true,
+    "mrr": 0.5
+   }
+  },
+  "23:0": {
+   "question_id": 23,
+   "part": 0,
+   "chapter": 5,
+   "question_type": "process",
+   "question": "ពន្យល់ពីដំណើរទ្វេ (ការស្វ័យដំឡើង) របស់ ADN",
+   "query_used": "ពន្យល់ពីដំណើរទ្វេ (ការស្វ័យដំឡើង) របស់ ADN",
+   "expected_pages": [
+    157,
+    158,
+    159
+   ],
+   "expect_abstain": false,
+   "top_score": 0.9665,
+   "abstained": false,
+   "embed": {
+    "top5_pages": [
+     157,
+     157,
+     158,
+     157,
+     157
+    ],
+    "hit1": true,
+    "hit3": true,
+    "hit5": true,
+    "mrr": 1.0
+   },
+   "rerank": {
+    "top5_pages": [
+     157,
+     158,
+     157,
+     157,
+     157
+    ],
+    "hit1": true,
+    "hit3": true,
+    "hit5": true,
+    "mrr": 1.0
+   },
+   "real": {
+    "pages": [
+     157,
+     158,
+     157,
+     157,
+     157,
+     159,
+     150,
+     156,
+     160,
+     182,
+     182,
+     162
+    ],
+    "scores": [
+     0.9665,
+     0.9266,
+     0.9066,
+     0.7072,
+     0.6174,
+     0.471,
+     0.4465,
+     0.4302,
+     0.3802,
+     0.2322,
+     0.1961,
+     0.1497
+    ],
+    "hit1": true,
+    "hit3": true,
+    "hit5": true,
+    "mrr": 1.0
+   }
+  },
+  "24:0": {
+   "question_id": 24,
+   "part": 0,
+   "chapter": 5,
+   "question_type": "comparison",
+   "question": "សូមប្រៀបធៀប ADN និង ARN",
+   "query_used": "សូមប្រៀបធៀប ADN និង ARN",
+   "expected_pages": [
+    150,
+    165
+   ],
+   "expect_abstain": false,
+   "top_score": 0.895,
+   "abstained": false,
+   "embed": {
+    "top5_pages": [
+     164,
+     154,
+     174,
+     164,
+     191
+    ],
+    "hit1": true,
+    "hit3": true,
+    "hit5": true,
+    "mrr": 1.0
+   },
+   "rerank": {
+    "top5_pages": [
+     174,
+     174,
+     164,
+     174,
+     162
+    ],
+    "hit1": false,
+    "hit3": true,
+    "hit5": true,
+    "mrr": 0.3333333333333333
+   },
+   "real": {
+    "pages": [
+     174,
+     174,
+     164,
+     174,
+     162,
+     164,
+     191,
+     165,
+     167,
+     211,
+     165,
+     211
+    ],
+    "scores": [
+     0.895,
+     0.8839,
+     0.8531,
+     0.773,
+     0.7656,
+     0.7141,
+     0.4999,
+     0.3812,
+     0.3015,
+     0.2398,
+     0.1991,
+     0.1215
+    ],
+    "hit1": false,
+    "hit3": true,
+    "hit5": true,
+    "mrr": 0.3333333333333333
+   }
+  },
+  "25:0": {
+   "question_id": 25,
+   "part": 0,
+   "chapter": 5,
+   "question_type": "definition",
+   "question": "តើ ARN ចែកជាប៉ុន្មានប្រភេទ?",
+   "query_used": "តើ ARN ចែកជាប៉ុន្មានប្រភេទ?",
+   "expected_pages": [
+    165
+   ],
+   "expect_abstain": false,
+   "top_score": 0.995,
+   "abstained": false,
+   "embed": {
+    "top5_pages": [
+     164,
+     164,
+     170,
+     174,
+     167
+    ],
+    "hit1": true,
+    "hit3": true,
+    "hit5": true,
+    "mrr": 1.0
+   },
+   "rerank": {
+    "top5_pages": [
+     164,
+     164,
+     170,
+     167,
+     192
+    ],
+    "hit1": true,
+    "hit3": true,
+    "hit5": true,
+    "mrr": 1.0
+   },
+   "real": {
+    "pages": [
+     164,
+     164,
+     170,
+     167,
+     192,
+     160,
+     211,
+     169,
+     174,
+     164,
+     174,
+     159
+    ],
+    "scores": [
+     0.995,
+     0.9738,
+     0.9209,
+     0.7316,
+     0.3852,
+     0.3417,
+     0.2096,
+     0.2009,
+     0.1841,
+     0.1757,
+     0.1692,
+     0.1229
+    ],
+    "hit1": true,
+    "hit3": true,
+    "hit5": true,
+    "mrr": 1.0
+   }
+  },
+  "26:0": {
+   "question_id": 26,
+   "part": 0,
+   "chapter": 6,
+   "question_type": "definition",
+   "question": "តើអ្នកណាបានស្នើរទ្រឹស្តីវិវត្តន៍ដ៏ល្បីល្បាញ? ពន្យល់ពីគំនិតសំខាន់",
+   "query_used": "តើអ្នកណាបានស្នើរទ្រឹស្តីវិវត្តន៍ដ៏ល្បីល្បាញ? ពន្យល់ពីគំនិតសំខាន់",
+   "expected_pages": [
+    196
+   ],
+   "expect_abstain": false,
+   "top_score": 0.8009,
+   "abstained": false,
+   "embed": {
+    "top5_pages": [
+     195,
+     196,
+     201,
+     195,
+     206
+    ],
+    "hit1": false,
+    "hit3": true,
+    "hit5": true,
+    "mrr": 0.5
+   },
+   "rerank": {
+    "top5_pages": [
+     195,
+     196,
+     195,
+     225,
+     201
+    ],
+    "hit1": false,
+    "hit3": true,
+    "hit5": true,
+    "mrr": 0.5
+   },
+   "real": {
+    "pages": [
+     195,
+     196,
+     195,
+     225,
+     201,
+     200,
+     195,
+     218,
+     196,
+     204,
+     200,
+     206
+    ],
+    "scores": [
+     0.8009,
+     0.6227,
+     0.2593,
+     0.1171,
+     0.0916,
+     0.0128,
+     0.0089,
+     0.0062,
+     0.005,
+     0.0043,
+     0.0032,
+     0.0027
+    ],
+    "hit1": false,
+    "hit3": true,
+    "hit5": true,
+    "mrr": 0.5
+   }
+  },
+  "27:0": {
+   "question_id": 27,
+   "part": 0,
+   "chapter": 6,
+   "question_type": "reasoning",
+   "question": "តើលោកដាវីនបានសង្កេតអ្វីខ្លះដែលនាំឱ្យលោកសន្និដ្ឋានថាភាវៈរស់វិវត្ត?",
+   "query_used": "តើលោកដាវីនបានសង្កេតអ្វីខ្លះដែលនាំឱ្យលោកសន្និដ្ឋានថាភាវៈរស់វិវត្ត?",
+   "expected_pages": [
+    196
+   ],
+   "expect_abstain": false,
+   "top_score": 0.9978,
+   "abstained": false,
+   "embed": {
+    "top5_pages": [
+     196,
+     201,
+     195,
+     196,
+     195
+    ],
+    "hit1": true,
+    "hit3": true,
+    "hit5": true,
+    "mrr": 1.0
+   },
+   "rerank": {
+    "top5_pages": [
+     196,
+     196,
+     201,
+     200,
+     202
+    ],
+    "hit1": true,
+    "hit3": true,
+    "hit5": true,
+    "mrr": 1.0
+   },
+   "real": {
+    "pages": [
+     196,
+     196,
+     201,
+     200,
+     202,
+     202,
+     200,
+     197,
+     212,
+     200,
+     195,
+     195
+    ],
+    "scores": [
+     0.9978,
+     0.9931,
+     0.9896,
+     0.9872,
+     0.98,
+     0.9741,
+     0.9412,
+     0.9253,
+     0.8676,
+     0.8511,
+     0.8131,
+     0.747
+    ],
+    "hit1": true,
+    "hit3": true,
+    "hit5": true,
+    "mrr": 1.0
+   }
+  },
+  "28:0": {
+   "question_id": 28,
+   "part": 0,
+   "chapter": 6,
+   "question_type": "reasoning",
+   "question": "ពន្យល់ពីកត្តាដែលបណ្តាលឱ្យភាវៈរស់វិវត្តន៍លើផែនដី",
+   "query_used": "ពន្យល់ពីកត្តាដែលបណ្តាលឱ្យភាវៈរស់វិវត្តន៍លើផែនដី",
+   "expected_pages": [
+    196
+   ],
+   "expect_abstain": false,
+   "top_score": 0.9716,
+   "abstained": false,
+   "embed": {
+    "top5_pages": [
+     196,
+     212,
+     206,
+     225,
+     201
+    ],
+    "hit1": true,
+    "hit3": true,
+    "hit5": true,
+    "mrr": 1.0
+   },
+   "rerank": {
+    "top5_pages": [
+     196,
+     212,
+     224,
+     201,
+     206
+    ],
+    "hit1": true,
+    "hit3": true,
+    "hit5": true,
+    "mrr": 1.0
+   },
+   "real": {
+    "pages": [
+     196,
+     212,
+     224,
+     201,
+     206,
+     225,
+     213,
+     195,
+     200,
+     218,
+     202,
+     236
+    ],
+    "scores": [
+     0.9716,
+     0.8839,
+     0.7045,
+     0.6313,
+     0.6076,
+     0.5273,
+     0.4264,
+     0.3945,
+     0.248,
+     0.2128,
+     0.1912,
+     0.1864
+    ],
+    "hit1": true,
+    "hit3": true,
+    "hit5": true,
+    "mrr": 1.0
+   }
+  },
+  "29:0": {
+   "question_id": 29,
+   "part": 0,
+   "chapter": 6,
+   "question_type": "definition",
+   "question": "តើពាក្យ 'វិវត្តន៍' 'បម្រែបម្រួល' និង 'លំជើង' មានន័យដូចម្តេច?",
+   "query_used": "តើពាក្យ 'វិវត្តន៍' 'បម្រែបម្រួល' និង 'លំជើង' មានន័យដូចម្តេច?",
+   "expected_pages": [
+    196
+   ],
+   "expect_abstain": false,
+   "top_score": 0.1194,
+   "abstained": false,
+   "embed": {
+    "top5_pages": [
+     206,
+     202,
+     206,
+     212,
+     224
+    ],
+    "hit1": false,
+    "hit3": false,
+    "hit5": false,
+    "mrr": 0.1111111111111111
+   },
+   "rerank": {
+    "top5_pages": [
+     196,
+     206,
+     201,
+     206,
+     224
+    ],
+    "hit1": true,
+    "hit3": true,
+    "hit5": true,
+    "mrr": 1.0
+   },
+   "real": {
+    "pages": [
+     196,
+     206,
+     201,
+     206,
+     224,
+     202,
+     213,
+     204,
+     225,
+     202,
+     214,
+     212
+    ],
+    "scores": [
+     0.1194,
+     0.0996,
+     0.0658,
+     0.0525,
+     0.0404,
+     0.0335,
+     0.0178,
+     0.0154,
+     0.0126,
+     0.0111,
+     0.008,
+     0.0068
+    ],
+    "hit1": true,
+    "hit3": true,
+    "hit5": true,
+    "mrr": 1.0
+   }
+  },
+  "30:0": {
+   "question_id": 30,
+   "part": 0,
+   "chapter": 7,
+   "question_type": "definition",
+   "question": "តើពពួក (population) ជាអ្វី?",
+   "query_used": "តើពពួក (population) ជាអ្វី?",
+   "expected_pages": [
+    228
+   ],
+   "expect_abstain": false,
+   "top_score": 0.6624,
+   "abstained": false,
+   "embed": {
+    "top5_pages": [
+     228,
+     228,
+     244,
+     243,
+     234
+    ],
+    "hit1": true,
+    "hit3": true,
+    "hit5": true,
+    "mrr": 1.0
+   },
+   "rerank": {
+    "top5_pages": [
+     228,
+     234,
+     244,
+     228,
+     227
+    ],
+    "hit1": true,
+    "hit3": true,
+    "hit5": true,
+    "mrr": 1.0
+   },
+   "real": {
+    "pages": [
+     228,
+     234,
+     244,
+     228,
+     227,
+     233,
+     231,
+     243,
+     232,
+     214,
+     231,
+     232
+    ],
+    "scores": [
+     0.6624,
+     0.5167,
+     0.4126,
+     0.2668,
+     0.2487,
+     0.2449,
+     0.2095,
+     0.1409,
+     0.1012,
+     0.0614,
+     0.0596,
+     0.0573
+    ],
+    "hit1": true,
+    "hit3": true,
+    "hit5": true,
+    "mrr": 1.0
+   }
+  },
+  "31:0": {
+   "question_id": 31,
+   "part": 0,
+   "chapter": 7,
+   "question_type": "reasoning",
+   "question": "តើមានមូលហេតុអ្វីខ្លះដែលធ្វើឱ្យទំហំពពួកមានការប្រែប្រួល?",
+   "query_used": "តើមានមូលហេតុអ្វីខ្លះដែលធ្វើឱ្យទំហំពពួកមានការប្រែប្រួល?",
+   "expected_pages": [
+    228,
+    229,
+    231,
+    232,
+    235
+   ],
+   "expect_abstain": false,
+   "top_score": 0.986,
+   "abstained": false,
+   "embed": {
+    "top5_pages": [
+     235,
+     235,
+     229,
+     232,
+     41
+    ],
+    "hit1": true,
+    "hit3": true,
+    "hit5": true,
+    "mrr": 1.0
+   },
+   "rerank": {
+    "top5_pages": [
+     232,
+     235,
+     229,
+     232,
+     228
+    ],
+    "hit1": true,
+    "hit3": true,
+    "hit5": true,
+    "mrr": 1.0
+   },
+   "real": {
+    "pages": [
+     232,
+     235,
+     229,
+     232,
+     228,
+     228,
+     231,
+     235,
+     233,
+     235,
+     234,
+     233
+    ],
+    "scores": [
+     0.986,
+     0.9604,
+     0.8885,
+     0.8821,
+     0.8199,
+     0.6754,
+     0.5507,
+     0.5195,
+     0.3603,
+     0.3138,
+     0.3005,
+     0.2879
+    ],
+    "hit1": true,
+    "hit3": true,
+    "hit5": true,
+    "mrr": 1.0
+   }
+  },
+  "32:0": {
+   "question_id": 32,
+   "part": 0,
+   "chapter": 7,
+   "question_type": "explanation",
+   "question": "ពន្យល់ពីកត្តាកំណត់ដែលធ្វើឱ្យពពួកលូតលាស់",
+   "query_used": "ពន្យល់ពីកត្តាកំណត់ដែលធ្វើឱ្យពពួកលូតលាស់",
+   "expected_pages": [
+    228
+   ],
+   "expect_abstain": false,
+   "top_score": 0.9929,
+   "abstained": false,
+   "embed": {
+    "top5_pages": [
+     232,
+     234,
+     233,
+     234,
+     228
+    ],
+    "hit1": false,
+    "hit3": false,
+    "hit5": true,
+    "mrr": 0.2
+   },
+   "rerank": {
+    "top5_pages": [
+     228,
+     233,
+     234,
+     232,
+     234
+    ],
+    "hit1": true,
+    "hit3": true,
+    "hit5": true,
+    "mrr": 1.0
+   },
+   "real": {
+    "pages": [
+     228,
+     233,
+     234,
+     232,
+     234,
+     235,
+     229,
+     231,
+     225,
+     176,
+     235,
+     25
+    ],
+    "scores": [
+     0.9929,
+     0.9912,
+     0.9859,
+     0.96,
+     0.9524,
+     0.9286,
+     0.6989,
+     0.6436,
+     0.292,
+     0.2504,
+     0.139,
+     0.1382
+    ],
+    "hit1": true,
+    "hit3": true,
+    "hit5": true,
+    "mrr": 1.0
+   }
+  },
+  "33:0": {
+   "question_id": 33,
+   "part": 0,
+   "chapter": 7,
+   "question_type": "comparison",
+   "question": "សូមប្រៀបធៀបពពួក សហគមន៍ និងប្រទេស",
+   "query_used": "សូមប្រៀបធៀបពពួក សហគមន៍ និងប្រទេស",
+   "expected_pages": [
+    228
+   ],
+   "expect_abstain": false,
+   "top_score": 0.4645,
+   "abstained": false,
+   "embed": {
+    "top5_pages": [
+     242,
+     244,
+     226,
+     228,
+     215
+    ],
+    "hit1": false,
+    "hit3": false,
+    "hit5": true,
+    "mrr": 0.25
+   },
+   "rerank": {
+    "top5_pages": [
+     228,
+     242,
+     227,
+     228,
+     244
+    ],
+    "hit1": true,
+    "hit3": true,
+    "hit5": true,
+    "mrr": 1.0
+   },
+   "real": {
+    "pages": [
+     228,
+     242,
+     227,
+     228,
+     244,
+     234,
+     235,
+     237,
+     229,
+     232,
+     244,
+     231
+    ],
+    "scores": [
+     0.4645,
+     0.4321,
+     0.055,
+     0.0409,
+     0.0296,
+     0.028,
+     0.0084,
+     0.0054,
+     0.002,
+     0.0014,
+     0.0012,
+     0.0009
+    ],
+    "hit1": true,
+    "hit3": true,
+    "hit5": true,
+    "mrr": 1.0
+   }
+  },
+  "34:0": {
+   "question_id": 34,
+   "part": 0,
+   "chapter": 8,
+   "question_type": "definition",
+   "question": "តើខ្សែអាហារ និងបណ្តាញអាហារជាអ្វី?",
+   "query_used": "តើខ្សែអាហារ និងបណ្តាញអាហារជាអ្វី?",
+   "expected_pages": [
+    246,
+    247,
+    248
+   ],
+   "expect_abstain": false,
+   "top_score": 0.974,
+   "abstained": false,
+   "embed": {
+    "top5_pages": [
+     249,
+     247,
+     247,
+     246,
+     255
+    ],
+    "hit1": false,
+    "hit3": true,
+    "hit5": true,
+    "mrr": 0.5
+   },
+   "rerank": {
+    "top5_pages": [
+     247,
+     249,
+     247,
+     246,
+     249
+    ],
+    "hit1": true,
+    "hit3": true,
+    "hit5": true,
+    "mrr": 1.0
+   },
+   "real": {
+    "pages": [
+     247,
+     249,
+     247,
+     246,
+     249,
+     255,
+     250,
+     60,
+     61,
+     238,
+     234,
+     26
+    ],
+    "scores": [
+     0.974,
+     0.9638,
+     0.7595,
+     0.4404,
+     0.39,
+     0.3175,
+     0.0151,
+     0.0079,
+     0.0046,
+     0.0008,
+     0.0008,
+     0.0006
+    ],
+    "hit1": true,
+    "hit3": true,
+    "hit5": true,
+    "mrr": 1.0
+   }
+  },
+  "35:0": {
+   "question_id": 35,
+   "part": 0,
+   "chapter": 8,
+   "question_type": "process",
+   "question": "ពន្យល់ពីការផ្ទេរថាមពលក្នុងស្ថានប្រព័ន្ធអេកូឡូស៊ី",
+   "query_used": "ពន្យល់ពីការផ្ទេរថាមពលក្នុងស្ថានប្រព័ន្ធអេកូឡូស៊ី",
+   "expected_pages": [
+    246,
+    248
+   ],
+   "expect_abstain": false,
+   "top_score": 0.905,
+   "abstained": false,
+   "embed": {
+    "top5_pages": [
+     245,
+     246,
+     245,
+     246,
+     77
+    ],
+    "hit1": false,
+    "hit3": true,
+    "hit5": true,
+    "mrr": 0.5
+   },
+   "rerank": {
+    "top5_pages": [
+     246,
+     246,
+     249,
+     247,
+     247
+    ],
+    "hit1": true,
+    "hit3": true,
+    "hit5": true,
+    "mrr": 1.0
+   },
+   "real": {
+    "pages": [
+     246,
+     246,
+     249,
+     247,
+     247,
+     250,
+     245,
+     251,
+     235,
+     245,
+     234,
+     231
+    ],
+    "scores": [
+     0.905,
+     0.6017,
+     0.3189,
+     0.0695,
+     0.063,
+     0.0433,
+     0.0419,
+     0.0258,
+     0.0051,
+     0.0051,
+     0.0036,
+     0.0029
+    ],
+    "hit1": true,
+    "hit3": true,
+    "hit5": true,
+    "mrr": 1.0
+   }
+  },
+  "36:0": {
+   "question_id": 36,
+   "part": 0,
+   "chapter": 8,
+   "question_type": "definition",
+   "question": "តើអ្នកផលិតជាអ្វី ហើយមានតួនាទីអ្វីក្នុងស្ថានប្រព័ន្ធ?",
+   "query_used": "តើអ្នកផលិតជាអ្វី ហើយមានតួនាទីអ្វីក្នុងស្ថានប្រព័ន្ធ?",
+   "expected_pages": [
+    247
+   ],
+   "expect_abstain": false,
+   "top_score": 0.9118,
+   "abstained": false,
+   "embed": {
+    "top5_pages": [
+     246,
+     256,
+     247,
+     249,
+     254
+    ],
+    "hit1": false,
+    "hit3": true,
+    "hit5": true,
+    "mrr": 0.3333333333333333
+   },
+   "rerank": {
+    "top5_pages": [
+     246,
+     247,
+     249,
+     254,
+     256
+    ],
+    "hit1": false,
+    "hit3": true,
+    "hit5": true,
+    "mrr": 0.5
+   },
+   "real": {
+    "pages": [
+     246,
+     247,
+     249,
+     254,
+     256,
+     250,
+     253,
+     247,
+     246,
+     117,
+     249,
+     250
+    ],
+    "scores": [
+     0.9118,
+     0.7685,
+     0.3466,
+     0.3451,
+     0.1599,
+     0.1459,
+     0.1077,
+     0.1023,
+     0.0534,
+     0.0256,
+     0.0159,
+     0.0148
+    ],
+    "hit1": false,
+    "hit3": true,
+    "hit5": true,
+    "mrr": 0.5
+   }
+  },
+  "37:0": {
+   "question_id": 37,
+   "part": 0,
+   "chapter": 8,
+   "question_type": "explanation",
+   "question": "ពន្យល់ពីទំនាក់ទំនងថាមពលរវាងខ្សែអាហារនិងបណ្តាញអាហារ",
+   "query_used": "ពន្យល់ពីទំនាក់ទំនងថាមពលរវាងខ្សែអាហារនិងបណ្តាញអាហារ",
+   "expected_pages": [
+    246,
+    247
+   ],
+   "expect_abstain": false,
+   "top_score": 0.986,
+   "abstained": false,
+   "embed": {
+    "top5_pages": [
+     249,
+     246,
+     247,
+     249,
+     247
+    ],
+    "hit1": false,
+    "hit3": true,
+    "hit5": true,
+    "mrr": 0.5
+   },
+   "rerank": {
+    "top5_pages": [
+     249,
+     246,
+     247,
+     247,
+     249
+    ],
+    "hit1": false,
+    "hit3": true,
+    "hit5": true,
+    "mrr": 0.5
+   },
+   "real": {
+    "pages": [
+     249,
+     246,
+     247,
+     247,
+     249,
+     250,
+     255,
+     246,
+     31,
+     105,
+     245,
+     13
+    ],
+    "scores": [
+     0.986,
+     0.9636,
+     0.9511,
+     0.9061,
+     0.8321,
+     0.6673,
+     0.3132,
+     0.0143,
+     0.0034,
+     0.0018,
+     0.0009,
+     0.0008
+    ],
+    "hit1": false,
+    "hit3": true,
+    "hit5": true,
+    "mrr": 0.5
+   }
+  },
+  "38:0": {
+   "question_id": 38,
+   "part": 0,
+   "chapter": 1,
+   "question_type": "exam",
+   "question": "នៅក្នុងការប្រឡង គេសួរថា៖ តើរុក្ខជាតិមានគ្រាប់បែងចែកជាក្រុមធំអ្វីខ្លះ?",
+   "query_used": "នៅក្នុងការប្រឡង គេសួរថា៖ តើរុក្ខជាតិមានគ្រាប់បែងចែកជាក្រុមធំអ្វីខ្លះ?",
+   "expected_pages": [
+    6,
+    12
+   ],
+   "expect_abstain": false,
+   "top_score": 0.8672,
+   "abstained": false,
+   "embed": {
+    "top5_pages": [
+     41,
+     5,
+     5,
+     12,
+     24
+    ],
+    "hit1": false,
+    "hit3": false,
+    "hit5": true,
+    "mrr": 0.25
+   },
+   "rerank": {
+    "top5_pages": [
+     5,
+     19,
+     21,
+     6,
+     24
+    ],
+    "hit1": false,
+    "hit3": false,
+    "hit5": true,
+    "mrr": 0.25
+   },
+   "real": {
+    "pages": [
+     5,
+     19,
+     21,
+     6,
+     24,
+     12,
+     5,
+     25,
+     10,
+     56,
+     58,
+     41
+    ],
+    "scores": [
+     0.8672,
+     0.6397,
+     0.6044,
+     0.2371,
+     0.1616,
+     0.1592,
+     0.0661,
+     0.0497,
+     0.0425,
+     0.0203,
+     0.019,
+     0.0171
+    ],
+    "hit1": false,
+    "hit3": false,
+    "hit5": true,
+    "mrr": 0.25
+   }
+  },
+  "39:0": {
+   "question_id": 39,
+   "part": 0,
+   "chapter": 5,
+   "question_type": "summary",
+   "question": "សូមសង្ខេបពីជំពូកព័ត៌មានសេនេទិច (DNA) ក្នុងរបៀបខ្លីៗ",
+   "query_used": "សូមសង្ខេបពីជំពូកព័ត៌មានសេនេទិច (DNA) ក្នុងរបៀបខ្លីៗ",
+   "expected_pages": [
+    150,
+    165
+   ],
+   "expect_abstain": false,
+   "top_score": 0.8487,
+   "abstained": false,
+   "embed": {
+    "top5_pages": [
+     150,
+     164,
+     181,
+     159,
+     160
+    ],
+    "hit1": true,
+    "hit3": true,
+    "hit5": true,
+    "mrr": 1.0
+   },
+   "rerank": {
+    "top5_pages": [
+     4,
+     174,
+     159,
+     164,
+     150
+    ],
+    "hit1": false,
+    "hit3": false,
+    "hit5": true,
+    "mrr": 0.25
+   },
+   "real": {
+    "pages": [
+     4,
+     174,
+     159,
+     164,
+     150,
+     160,
+     160,
+     164,
+     193,
+     174,
+     192,
+     192
+    ],
+    "scores": [
+     0.8487,
+     0.6257,
+     0.5833,
+     0.5157,
+     0.5127,
+     0.4077,
+     0.293,
+     0.2866,
+     0.2391,
+     0.2123,
+     0.2072,
+     0.2034
+    ],
+    "hit1": false,
+    "hit3": false,
+    "hit5": true,
+    "mrr": 0.25
+   }
+  },
+  "40:0": {
+   "question_id": 40,
+   "part": 0,
+   "chapter": 6,
+   "question_type": "summary",
+   "question": "សូមសង្ខេបពីការវិវត្តន៍តាមទ្រឹស្តីដាវីន",
+   "query_used": "សូមសង្ខេបពីការវិវត្តន៍តាមទ្រឹស្តីដាវីន",
+   "expected_pages": [
+    196
+   ],
+   "expect_abstain": false,
+   "top_score": 0.9575,
+   "abstained": false,
+   "embed": {
+    "top5_pages": [
+     196,
+     195,
+     201,
+     195,
+     196
+    ],
+    "hit1": true,
+    "hit3": true,
+    "hit5": true,
+    "mrr": 1.0
+   },
+   "rerank": {
+    "top5_pages": [
+     196,
+     225,
+     202,
+     195,
+     195
+    ],
+    "hit1": true,
+    "hit3": true,
+    "hit5": true,
+    "mrr": 1.0
+   },
+   "real": {
+    "pages": [
+     196,
+     225,
+     202,
+     195,
+     195,
+     225,
+     201,
+     196,
+     200,
+     202,
+     200,
+     200
+    ],
+    "scores": [
+     0.9575,
+     0.8365,
+     0.6455,
+     0.5885,
+     0.5522,
+     0.5333,
+     0.5144,
+     0.3826,
+     0.2206,
+     0.1976,
+     0.1939,
+     0.1789
+    ],
+    "hit1": true,
+    "hit3": true,
+    "hit5": true,
+    "mrr": 1.0
+   }
+  },
+  "41:0": {
+   "question_id": 41,
+   "part": 0,
+   "chapter": 1,
+   "question_type": "quiz",
+   "question": "ចូរបង្កើតសំណួរសាកល្បង 3 ទាក់ទងនឹងរុក្ខជាតិមានគ្រាប់",
+   "query_used": "ចូរបង្កើតសំណួរសាកល្បង 3 ទាក់ទងនឹងរុក្ខជាតិមានគ្រាប់",
+   "expected_pages": [
+    6,
+    12,
+    24
+   ],
+   "expect_abstain": false,
+   "top_score": 0.7248,
+   "abstained": false,
+   "embed": {
+    "top5_pages": [
+     5,
+     5,
+     24,
+     19,
+     56
+    ],
+    "hit1": false,
+    "hit3": true,
+    "hit5": true,
+    "mrr": 0.3333333333333333
+   },
+   "rerank": {
+    "top5_pages": [
+     24,
+     56,
+     24,
+     41,
+     207
+    ],
+    "hit1": true,
+    "hit3": true,
+    "hit5": true,
+    "mrr": 1.0
+   },
+   "real": {
+    "pages": [
+     24,
+     56,
+     24,
+     41,
+     207,
+     189,
+     10,
+     57,
+     256,
+     12,
+     19,
+     58
+    ],
+    "scores": [
+     0.7248,
+     0.694,
+     0.6557,
+     0.3947,
+     0.3615,
+     0.3602,
+     0.319,
+     0.299,
+     0.2566,
+     0.2542,
+     0.2437,
+     0.2398
+    ],
+    "hit1": true,
+    "hit3": true,
+    "hit5": true,
+    "mrr": 1.0
+   }
+  },
+  "42:0": {
+   "question_id": 42,
+   "part": 0,
+   "chapter": 8,
+   "question_type": "quiz",
+   "question": "ចូរបង្កើតសំណួរសាកល្បងចំនួន 3 អំពីការផ្ទេរថាមពលក្នុងអេកូឡូស៊ី",
+   "query_used": "ចូរបង្កើតសំណួរសាកល្បងចំនួន 3 អំពីការផ្ទេរថាមពលក្នុងអេកូឡូស៊ី",
+   "expected_pages": [
+    246,
+    252,
+    256
+   ],
+   "expect_abstain": false,
+   "top_score": 0.1078,
+   "abstained": false,
+   "embed": {
+    "top5_pages": [
+     245,
+     100,
+     235,
+     146,
+     144
+    ],
+    "hit1": false,
+    "hit3": false,
+    "hit5": false,
+    "mrr": 0.1111111111111111
+   },
+   "rerank": {
+    "top5_pages": [
+     235,
+     256,
+     246,
+     246,
+     57
+    ],
+    "hit1": false,
+    "hit3": true,
+    "hit5": true,
+    "mrr": 0.5
+   },
+   "real": {
+    "pages": [
+     235,
+     256,
+     246,
+     246,
+     57,
+     23,
+     225,
+     57,
+     146,
+     58,
+     119,
+     245
+    ],
+    "scores": [
+     0.1078,
+     0.0432,
+     0.0274,
+     0.0192,
+     0.016,
+     0.0153,
+     0.0143,
+     0.0091,
+     0.0077,
+     0.0063,
+     0.0062,
+     0.0054
+    ],
+    "hit1": false,
+    "hit3": true,
+    "hit5": true,
+    "mrr": 0.5
+   }
+  },
+  "43:0": {
+   "question_id": 43,
+   "part": 0,
+   "chapter": 8,
+   "question_type": "summary",
+   "question": "សូមសង្ខេបពីសារៈសំខាន់របស់អ្នកផលិតក្នុងស្ថានប្រព័ន្ធអេកូឡូស៊ី",
+   "query_used": "សូមសង្ខេបពីសារៈសំខាន់របស់អ្នកផលិតក្នុងស្ថានប្រព័ន្ធអេកូឡូស៊ី",
+   "expected_pages": [
+    246,
+    247,
+    248
+   ],
+   "expect_abstain": false,
+   "top_score": 0.2805,
+   "abstained": false,
+   "embed": {
+    "top5_pages": [
+     245,
+     245,
+     256,
+     120,
+     207
+    ],
+    "hit1": false,
+    "hit3": false,
+    "hit5": false,
+    "mrr": 0.14285714285714285
+   },
+   "rerank": {
+    "top5_pages": [
+     246,
+     247,
+     253,
+     256,
+     245
+    ],
+    "hit1": true,
+    "hit3": true,
+    "hit5": true,
+    "mrr": 1.0
+   },
+   "real": {
+    "pages": [
+     246,
+     247,
+     253,
+     256,
+     245,
+     245,
+     254,
+     247,
+     256,
+     235,
+     254,
+     250
+    ],
+    "scores": [
+     0.2805,
+     0.2321,
+     0.0761,
+     0.0686,
+     0.0362,
+     0.0345,
+     0.0182,
+     0.014,
+     0.0072,
+     0.0064,
+     0.0064,
+     0.0058
+    ],
+    "hit1": true,
+    "hit3": true,
+    "hit5": true,
+    "mrr": 1.0
+   }
+  },
+  "44:0": {
+   "question_id": 44,
+   "part": 0,
+   "chapter": 2,
+   "question_type": "reasoning",
+   "question": "ពន្យល់ពីមូលហេតុដែលរុក្ខជាតិត្រូវការទឹកសម្រាប់ការលូតលាស់ និងរបៀបដឹកនាំទឹក",
+   "query_used": "ពន្យល់ពីមូលហេតុដែលរុក្ខជាតិត្រូវការទឹកសម្រាប់ការលូតលាស់ និងរបៀបដឹកនាំទឹក",
+   "expected_pages": [
+    26,
+    28,
+    29,
+    32
+   ],
+   "expect_abstain": false,
+   "top_score": 0.9585,
+   "abstained": false,
+   "embed": {
+    "top5_pages": [
+     26,
+     57,
+     41,
+     234,
+     58
+    ],
+    "hit1": true,
+    "hit3": true,
+    "hit5": true,
+    "mrr": 1.0
+   },
+   "rerank": {
+    "top5_pages": [
+     26,
+     57,
+     40,
+     41,
+     40
+    ],
+    "hit1": true,
+    "hit3": true,
+    "hit5": true,
+    "mrr": 1.0
+   },
+   "real": {
+    "pages": [
+     26,
+     57,
+     40,
+     41,
+     40,
+     234,
+     58,
+     25,
+     13,
+     31,
+     26,
+     28
+    ],
+    "scores": [
+     0.9585,
+     0.7812,
+     0.7456,
+     0.6733,
+     0.4104,
+     0.384,
+     0.3348,
+     0.2751,
+     0.2353,
+     0.1598,
+     0.1586,
+     0.1151
+    ],
+    "hit1": true,
+    "hit3": true,
+    "hit5": true,
+    "mrr": 1.0
+   }
+  },
+  "45:0": {
+   "question_id": 45,
+   "part": 0,
+   "chapter": 4,
+   "question_type": "reasoning",
+   "question": "ពន្យល់ពីទំនាក់ទំនងរវាងអាស៊ីតអាមីណេ និងប្រូតេអ៊ីន",
+   "query_used": "ពន្យល់ពីទំនាក់ទំនងរវាងអាស៊ីតអាមីណេ និងប្រូតេអ៊ីន",
+   "expected_pages": [
+    122
+   ],
+   "expect_abstain": false,
+   "top_score": 0.9102,
+   "abstained": false,
+   "embed": {
+    "top5_pages": [
+     127,
+     122,
+     128,
+     123,
+     127
+    ],
+    "hit1": false,
+    "hit3": true,
+    "hit5": true,
+    "mrr": 0.5
+   },
+   "rerank": {
+    "top5_pages": [
+     123,
+     122,
+     127,
+     127,
+     122
+    ],
+    "hit1": false,
+    "hit3": true,
+    "hit5": true,
+    "mrr": 0.5
+   },
+   "real": {
+    "pages": [
+     123,
+     122,
+     127,
+     127,
+     122,
+     212,
+     211,
+     128,
+     128,
+     133,
+     123,
+     123
+    ],
+    "scores": [
+     0.9102,
+     0.8987,
+     0.8821,
+     0.8744,
+     0.8668,
+     0.8479,
+     0.8297,
+     0.8046,
+     0.8008,
+     0.788,
+     0.7657,
+     0.7615
+    ],
+    "hit1": false,
+    "hit3": true,
+    "hit5": true,
+    "mrr": 0.5
+   }
+  },
+  "46:0": {
+   "question_id": 46,
+   "part": 0,
+   "chapter": 5,
+   "question_type": "summary",
+   "question": "សូមសង្ខេបអំពីរចនាសម្ព័ន្ធម៉ូលេគុល ADN",
+   "query_used": "សូមសង្ខេបអំពីរចនាសម្ព័ន្ធម៉ូលេគុល ADN",
+   "expected_pages": [
+    150,
+    155,
+    160,
+    165
+   ],
+   "expect_abstain": false,
+   "top_score": 0.7876,
+   "abstained": false,
+   "embed": {
+    "top5_pages": [
+     156,
+     155,
+     194,
+     161,
+     153
+    ],
+    "hit1": false,
+    "hit3": true,
+    "hit5": true,
+    "mrr": 0.5
+   },
+   "rerank": {
+    "top5_pages": [
+     153,
+     163,
+     159,
+     156,
+     194
+    ],
+    "hit1": false,
+    "hit3": true,
+    "hit5": true,
+    "mrr": 0.3333333333333333
+   },
+   "real": {
+    "pages": [
+     153,
+     163,
+     159,
+     156,
+     194,
+     155,
+     191,
+     163,
+     160,
+     157,
+     165,
+     153
+    ],
+    "scores": [
+     0.7876,
+     0.7438,
+     0.6993,
+     0.6913,
+     0.5631,
+     0.505,
+     0.4525,
+     0.4474,
+     0.4158,
+     0.3993,
+     0.3669,
+     0.3408
+    ],
+    "hit1": false,
+    "hit3": true,
+    "hit5": true,
+    "mrr": 0.3333333333333333
+   }
+  },
+  "47:0": {
+   "question_id": 47,
+   "part": 0,
+   "chapter": 8,
+   "question_type": "comparison",
+   "question": "អ្នកផលិត អ្នកស៊ីលំដាប់ទី១ និងអ្នកស៊ីលំដាប់ទី២ ខុសគ្នាដូចម្តេច?",
+   "query_used": "អ្នកផលិត អ្នកស៊ីលំដាប់ទី១ និងអ្នកស៊ីលំដាប់ទី២ ខុសគ្នាដូចម្តេច?",
+   "expected_pages": [
+    246,
+    247,
+    248
+   ],
+   "expect_abstain": false,
+   "top_score": 0.9498,
+   "abstained": false,
+   "embed": {
+    "top5_pages": [
+     246,
+     247,
+     247,
+     246,
+     249
+    ],
+    "hit1": true,
+    "hit3": true,
+    "hit5": true,
+    "mrr": 1.0
+   },
+   "rerank": {
+    "top5_pages": [
+     247,
+     246,
+     247,
+     249,
+     246
+    ],
+    "hit1": true,
+    "hit3": true,
+    "hit5": true,
+    "mrr": 1.0
+   },
+   "real": {
+    "pages": [
+     247,
+     246,
+     247,
+     249,
+     246,
+     249,
+     5,
+     177,
+     38,
+     185,
+     131,
+     103
+    ],
+    "scores": [
+     0.9498,
+     0.941,
+     0.918,
+     0.4596,
+     0.252,
+     0.0474,
+     0.0143,
+     0.008,
+     0.0049,
+     0.0047,
+     0.0033,
+     0.0025
+    ],
+    "hit1": true,
+    "hit3": true,
+    "hit5": true,
+    "mrr": 1.0
+   }
+  },
+  "48:0": {
+   "question_id": 48,
+   "part": 0,
+   "chapter": 1,
+   "question_type": "comparison",
+   "question": "តើរុក្ខជាតិម៉ូណូកូទីលេដូននិងឌីកូទីលេដូនប្រែប្រួលគ្នាដូចម្តេច?",
+   "query_used": "តើរុក្ខជាតិម៉ូណូកូទីលេដូននិងឌីកូទីលេដូនប្រែប្រួលគ្នាដូចម្តេច?",
+   "expected_pages": [
+    12
+   ],
+   "expect_abstain": false,
+   "top_score": 0.8641,
+   "abstained": false,
+   "embed": {
+    "top5_pages": [
+     19,
+     19,
+     19,
+     12,
+     12
+    ],
+    "hit1": false,
+    "hit3": false,
+    "hit5": true,
+    "mrr": 0.25
+   },
+   "rerank": {
+    "top5_pages": [
+     12,
+     19,
+     19,
+     12,
+     19
+    ],
+    "hit1": true,
+    "hit3": true,
+    "hit5": true,
+    "mrr": 1.0
+   },
+   "real": {
+    "pages": [
+     12,
+     19,
+     19,
+     12,
+     19,
+     40,
+     17,
+     211,
+     18,
+     40,
+     43,
+     213
+    ],
+    "scores": [
+     0.8641,
+     0.8555,
+     0.7901,
+     0.7685,
+     0.6123,
+     0.0651,
+     0.0084,
+     0.0033,
+     0.0027,
+     0.0019,
+     0.0013,
+     0.001
+    ],
+    "hit1": true,
+    "hit3": true,
+    "hit5": true,
+    "mrr": 1.0
+   }
+  },
+  "49:0": {
+   "question_id": 49,
+   "part": 0,
+   "chapter": 1,
+   "question_type": "explanation",
+   "question": "ចូរពន្យល់ពីលក្ខណៈពិសេសរបស់រុក្ខជាតិមានផ្កា",
+   "query_used": "ចូរពន្យល់ពីលក្ខណៈពិសេសរបស់រុក្ខជាតិមានផ្កា",
+   "expected_pages": [
+    12
+   ],
+   "expect_abstain": false,
+   "top_score": 0.9727,
+   "abstained": false,
+   "embed": {
+    "top5_pages": [
+     21,
+     12,
+     21,
+     22,
+     14
+    ],
+    "hit1": false,
+    "hit3": true,
+    "hit5": true,
+    "mrr": 0.5
+   },
+   "rerank": {
+    "top5_pages": [
+     12,
+     21,
+     21,
+     12,
+     18
+    ],
+    "hit1": true,
+    "hit3": true,
+    "hit5": true,
+    "mrr": 1.0
+   },
+   "real": {
+    "pages": [
+     12,
+     21,
+     21,
+     12,
+     18,
+     18,
+     24,
+     20,
+     19,
+     21,
+     22,
+     19
+    ],
+    "scores": [
+     0.9727,
+     0.9281,
+     0.7913,
+     0.7058,
+     0.6232,
+     0.5981,
+     0.5608,
+     0.5322,
+     0.5246,
+     0.5004,
+     0.4485,
+     0.2886
+    ],
+    "hit1": true,
+    "hit3": true,
+    "hit5": true,
+    "mrr": 1.0
+   }
+  },
+  "50:0": {
+   "question_id": 50,
+   "part": 0,
+   "chapter": 2,
+   "question_type": "summary",
+   "question": "សូមសង្ខេបអំពីមូលហេតុដែលការស្រូបទឹករបស់រុក្ខជាតិមានសារៈសំខាន់",
+   "query_used": "សូមសង្ខេបអំពីមូលហេតុដែលការស្រូបទឹករបស់រុក្ខជាតិមានសារៈសំខាន់",
+   "expected_pages": [
+    26,
+    28,
+    32
+   ],
+   "expect_abstain": false,
+   "top_score": 0.7246,
+   "abstained": false,
+   "embed": {
+    "top5_pages": [
+     57,
+     26,
+     40,
+     58,
+     31
+    ],
+    "hit1": false,
+    "hit3": true,
+    "hit5": true,
+    "mrr": 0.5
+   },
+   "rerank": {
+    "top5_pages": [
+     57,
+     40,
+     40,
+     29,
+     26
+    ],
+    "hit1": false,
+    "hit3": false,
+    "hit5": true,
+    "mrr": 0.2
+   },
+   "real": {
+    "pages": [
+     57,
+     40,
+     40,
+     29,
+     26,
+     31,
+     234,
+     58,
+     27,
+     41,
+     28,
+     26
+    ],
+    "scores": [
+     0.7246,
+     0.607,
+     0.3444,
+     0.2479,
+     0.2281,
+     0.2172,
+     0.1508,
+     0.134,
+     0.1022,
+     0.0978,
+     0.0892,
+     0.0885
+    ],
+    "hit1": false,
+    "hit3": false,
+    "hit5": true,
+    "mrr": 0.2
+   }
+  },
+  "51:0": {
+   "question_id": 51,
+   "part": 0,
+   "chapter": 7,
+   "question_type": "reasoning",
+   "question": "ពន្យល់ពីមូលហេតុដែលទំហំពពួកអាចផ្លាស់ប្តូរតាមពេលវេលា",
+   "query_used": "ពន្យល់ពីមូលហេតុដែលទំហំពពួកអាចផ្លាស់ប្តូរតាមពេលវេលា",
+   "expected_pages": [
+    228
+   ],
+   "expect_abstain": false,
+   "top_score": 0.9148,
+   "abstained": false,
+   "embed": {
+    "top5_pages": [
+     235,
+     235,
+     232,
+     229,
+     232
+    ],
+    "hit1": false,
+    "hit3": false,
+    "hit5": false,
+    "mrr": 0.16666666666666666
+   },
+   "rerank": {
+    "top5_pages": [
+     232,
+     235,
+     228,
+     229,
+     234
+    ],
+    "hit1": false,
+    "hit3": true,
+    "hit5": true,
+    "mrr": 0.3333333333333333
+   },
+   "real": {
+    "pages": [
+     232,
+     235,
+     228,
+     229,
+     234,
+     231,
+     232,
+     228,
+     235,
+     233,
+     204,
+     233
+    ],
+    "scores": [
+     0.9148,
+     0.902,
+     0.8056,
+     0.6187,
+     0.4154,
+     0.3736,
+     0.2916,
+     0.2887,
+     0.2101,
+     0.2075,
+     0.1225,
+     0.0823
+    ],
+    "hit1": false,
+    "hit3": true,
+    "hit5": true,
+    "mrr": 0.3333333333333333
+   }
+  },
+  "53:0": {
+   "question_id": 53,
+   "part": 0,
+   "chapter": 1,
+   "question_type": "comparison",
+   "question": "ពន្យល់ពីភាពខុសគ្នារវាងគ្រាប់របស់ស៊ីមណូស្ពែមនិងអង់ស្យូស្ពែម",
+   "query_used": "ពន្យល់ពីភាពខុសគ្នារវាងគ្រាប់របស់ស៊ីមណូស្ពែមនិងអង់ស្យូស្ពែម",
+   "expected_pages": [
+    6,
+    12
+   ],
+   "expect_abstain": false,
+   "top_score": 0.9803,
+   "abstained": false,
+   "embed": {
+    "top5_pages": [
+     6,
+     6,
+     24,
+     12,
+     10
+    ],
+    "hit1": true,
+    "hit3": true,
+    "hit5": true,
+    "mrr": 1.0
+   },
+   "rerank": {
+    "top5_pages": [
+     6,
+     5,
+     6,
+     10,
+     24
+    ],
+    "hit1": true,
+    "hit3": true,
+    "hit5": true,
+    "mrr": 1.0
+   },
+   "real": {
+    "pages": [
+     6,
+     5,
+     6,
+     10,
+     24,
+     10,
+     12,
+     24,
+     9,
+     4,
+     9,
+     19
+    ],
+    "scores": [
+     0.9803,
+     0.86,
+     0.8394,
+     0.7789,
+     0.7179,
+     0.5775,
+     0.4749,
+     0.2735,
+     0.2307,
+     0.2291,
+     0.1803,
+     0.0445
+    ],
+    "hit1": true,
+    "hit3": true,
+    "hit5": true,
+    "mrr": 1.0
+   }
+  },
+  "54:0": {
+   "question_id": 54,
+   "part": 0,
+   "chapter": 1,
+   "question_type": "definition",
+   "question": "តើកោនជាអ្វីក្នុងរុក្ខជាតិស៊ីមណូស្ពែម?",
+   "query_used": "តើកោនជាអ្វីក្នុងរុក្ខជាតិស៊ីមណូស្ពែម?",
+   "expected_pages": [
+    7,
+    9
+   ],
+   "expect_abstain": false,
+   "top_score": 0.9908,
+   "abstained": false,
+   "embed": {
+    "top5_pages": [
+     10,
+     10,
+     9,
+     24,
+     6
+    ],
+    "hit1": false,
+    "hit3": true,
+    "hit5": true,
+    "mrr": 0.3333333333333333
+   },
+   "rerank": {
+    "top5_pages": [
+     10,
+     10,
+     9,
+     6,
+     7
+    ],
+    "hit1": false,
+    "hit3": true,
+    "hit5": true,
+    "mrr": 0.3333333333333333
+   },
+   "real": {
+    "pages": [
+     10,
+     10,
+     9,
+     6,
+     7,
+     9,
+     6,
+     8,
+     24,
+     5,
+     19,
+     23
+    ],
+    "scores": [
+     0.9908,
+     0.9894,
+     0.9808,
+     0.9247,
+     0.8354,
+     0.4629,
+     0.4408,
+     0.2812,
+     0.2708,
+     0.1336,
+     0.0358,
+     0.0232
+    ],
+    "hit1": false,
+    "hit3": true,
+    "hit5": true,
+    "mrr": 0.3333333333333333
+   }
+  },
+  "57:0": {
+   "question_id": 57,
+   "part": 0,
+   "chapter": 1,
+   "question_type": "explanation",
+   "question": "ពន្យល់ពីរូបផ្គុំ និងនាទីរបស់ផ្កា",
+   "query_used": "ពន្យល់ពីរូបផ្គុំ និងនាទីរបស់ផ្កា",
+   "expected_pages": [
+    14
+   ],
+   "expect_abstain": false,
+   "top_score": 0.5012,
+   "abstained": false,
+   "embed": {
+    "top5_pages": [
+     22,
+     21,
+     14,
+     22,
+     13
+    ],
+    "hit1": false,
+    "hit3": true,
+    "hit5": true,
+    "mrr": 0.3333333333333333
+   },
+   "rerank": {
+    "top5_pages": [
+     21,
+     14,
+     21,
+     12,
+     22
+    ],
+    "hit1": false,
+    "hit3": true,
+    "hit5": true,
+    "mrr": 0.5
+   },
+   "real": {
+    "pages": [
+     21,
+     14,
+     21,
+     12,
+     22,
+     18,
+     14,
+     12,
+     22,
+     21,
+     13,
+     200
+    ],
+    "scores": [
+     0.5012,
+     0.0575,
+     0.0443,
+     0.0405,
+     0.0327,
+     0.0312,
+     0.0185,
+     0.0156,
+     0.0142,
+     0.014,
+     0.0138,
+     0.0128
+    ],
+    "hit1": false,
+    "hit3": true,
+    "hit5": true,
+    "mrr": 0.5
+   }
+  },
+  "58:0": {
+   "question_id": 58,
+   "part": 0,
+   "chapter": 2,
+   "question_type": "comparison",
+   "question": "តើស៊ីឡែមនិងដូអែមខុសគ្នាដូចម្តេច?",
+   "query_used": "តើស៊ីឡែមនិងដូអែមខុសគ្នាដូចម្តេច?",
+   "expected_pages": [
+    13,
+    23,
+    28,
+    29,
+    32,
+    40
+   ],
+   "expect_abstain": false,
+   "top_score": 0.0941,
+   "abstained": false,
+   "embed": {
+    "top5_pages": [
+     13,
+     40,
+     13,
+     40,
+     32
+    ],
+    "hit1": true,
+    "hit3": true,
+    "hit5": true,
+    "mrr": 1.0
+   },
+   "rerank": {
+    "top5_pages": [
+     13,
+     13,
+     40,
+     39,
+     32
+    ],
+    "hit1": true,
+    "hit3": true,
+    "hit5": true,
+    "mrr": 1.0
+   },
+   "real": {
+    "pages": [
+     13,
+     13,
+     40,
+     39,
+     32,
+     40,
+     93,
+     27,
+     29,
+     6,
+     41,
+     11
+    ],
+    "scores": [
+     0.0941,
+     0.0682,
+     0.0536,
+     0.0323,
+     0.0298,
+     0.0139,
+     0.008,
+     0.0062,
+     0.0036,
+     0.0031,
+     0.0018,
+     0.0013
+    ],
+    "hit1": true,
+    "hit3": true,
+    "hit5": true,
+    "mrr": 1.0
+   }
+  },
+  "59:0": {
+   "question_id": 59,
+   "part": 0,
+   "chapter": 2,
+   "question_type": "definition",
+   "question": "តើរន្ធខ្យល់នៅលើស្លឹកមាននាទីអ្វី?",
+   "query_used": "តើរន្ធខ្យល់នៅលើស្លឹកមាននាទីអ្វី?",
+   "expected_pages": [
+    14,
+    28,
+    29,
+    31,
+    32
+   ],
+   "expect_abstain": false,
+   "top_score": 0.3495,
+   "abstained": false,
+   "embed": {
+    "top5_pages": [
+     13,
+     88,
+     13,
+     32,
+     87
+    ],
+    "hit1": false,
+    "hit3": false,
+    "hit5": true,
+    "mrr": 0.25
+   },
+   "rerank": {
+    "top5_pages": [
+     13,
+     32,
+     87,
+     32,
+     29
+    ],
+    "hit1": false,
+    "hit3": true,
+    "hit5": true,
+    "mrr": 0.5
+   },
+   "real": {
+    "pages": [
+     13,
+     32,
+     87,
+     32,
+     29,
+     31,
+     13,
+     33,
+     57,
+     88,
+     40,
+     33
+    ],
+    "scores": [
+     0.3495,
+     0.2075,
+     0.1147,
+     0.0448,
+     0.0445,
+     0.0285,
+     0.0093,
+     0.0058,
+     0.0049,
+     0.0034,
+     0.0027,
+     0.0013
+    ],
+    "hit1": false,
+    "hit3": true,
+    "hit5": true,
+    "mrr": 0.5
+   }
+  },
+  "60:0": {
+   "question_id": 60,
+   "part": 0,
+   "chapter": 2,
+   "question_type": "process",
+   "question": "ពន្យល់ពីរបៀបដែលសារធាតុរ៉ែត្រូវបានដឹកនាំក្នុងរុក្ខជាតិ",
+   "query_used": "ពន្យល់ពីរបៀបដែលសារធាតុរ៉ែត្រូវបានដឹកនាំក្នុងរុក្ខជាតិ",
+   "expected_pages": [
+    26
+   ],
+   "expect_abstain": false,
+   "top_score": 0.7376,
+   "abstained": false,
+   "embed": {
+    "top5_pages": [
+     26,
+     42,
+     41,
+     40,
+     54
+    ],
+    "hit1": true,
+    "hit3": true,
+    "hit5": true,
+    "mrr": 1.0
+   },
+   "rerank": {
+    "top5_pages": [
+     26,
+     40,
+     41,
+     25,
+     13
+    ],
+    "hit1": true,
+    "hit3": true,
+    "hit5": true,
+    "mrr": 1.0
+   },
+   "real": {
+    "pages": [
+     26,
+     40,
+     41,
+     25,
+     13,
+     40,
+     26,
+     55,
+     27,
+     31,
+     31,
+     40
+    ],
+    "scores": [
+     0.7376,
+     0.5385,
+     0.4782,
+     0.1725,
+     0.1691,
+     0.1425,
+     0.1112,
+     0.11,
+     0.0719,
+     0.0568,
+     0.0494,
+     0.047
+    ],
+    "hit1": true,
+    "hit3": true,
+    "hit5": true,
+    "mrr": 1.0
+   }
+  },
+  "61:0": {
+   "question_id": 61,
+   "part": 0,
+   "chapter": 3,
+   "question_type": "definition",
+   "question": "តើណឺរ៉ូនមាននាទីសំខាន់អ្វីខ្លះ?",
+   "query_used": "តើណឺរ៉ូនមាននាទីសំខាន់អ្វីខ្លះ?",
+   "expected_pages": [
+    60,
+    66,
+    68,
+    69,
+    70
+   ],
+   "expect_abstain": false,
+   "top_score": 0.9958,
+   "abstained": false,
+   "embed": {
+    "top5_pages": [
+     66,
+     68,
+     66,
+     67,
+     69
+    ],
+    "hit1": true,
+    "hit3": true,
+    "hit5": true,
+    "mrr": 1.0
+   },
+   "rerank": {
+    "top5_pages": [
+     66,
+     66,
+     68,
+     67,
+     69
+    ],
+    "hit1": true,
+    "hit3": true,
+    "hit5": true,
+    "mrr": 1.0
+   },
+   "real": {
+    "pages": [
+     66,
+     66,
+     68,
+     67,
+     69,
+     60,
+     60,
+     119,
+     68,
+     70,
+     75,
+     74
+    ],
+    "scores": [
+     0.9958,
+     0.9586,
+     0.936,
+     0.4433,
+     0.1417,
+     0.1131,
+     0.1051,
+     0.0821,
+     0.0567,
+     0.0554,
+     0.0502,
+     0.0302
+    ],
+    "hit1": true,
+    "hit3": true,
+    "hit5": true,
+    "mrr": 1.0
+   }
+  },
+  "62:0": {
+   "question_id": 62,
+   "part": 0,
+   "chapter": 3,
+   "question_type": "process",
+   "question": "ពន្យល់ពីរបៀបដែលសារប្រសាទត្រូវបានបញ្ជូន",
+   "query_used": "ពន្យល់ពីរបៀបដែលសារប្រសាទត្រូវបានបញ្ជូន",
+   "expected_pages": [
+    65,
+    70
+   ],
+   "expect_abstain": false,
+   "top_score": 0.7414,
+   "abstained": false,
+   "embed": {
+    "top5_pages": [
+     149,
+     65,
+     59,
+     66,
+     65
+    ],
+    "hit1": false,
+    "hit3": true,
+    "hit5": true,
+    "mrr": 0.5
+   },
+   "rerank": {
+    "top5_pages": [
+     65,
+     63,
+     65,
+     69,
+     77
+    ],
+    "hit1": true,
+    "hit3": true,
+    "hit5": true,
+    "mrr": 1.0
+   },
+   "real": {
+    "pages": [
+     65,
+     63,
+     65,
+     69,
+     77,
+     66,
+     60,
+     69,
+     59,
+     70,
+     68,
+     59
+    ],
+    "scores": [
+     0.7414,
+     0.477,
+     0.4706,
+     0.2705,
+     0.2485,
+     0.222,
+     0.1972,
+     0.1634,
+     0.1396,
+     0.1146,
+     0.1126,
+     0.1021
+    ],
+    "hit1": true,
+    "hit3": true,
+    "hit5": true,
+    "mrr": 1.0
+   }
+  },
+  "63:0": {
+   "question_id": 63,
+   "part": 0,
+   "chapter": 3,
+   "question_type": "comparison",
+   "question": "សូមប្រៀបធៀបប្រព័ន្ធប្រសាទរបស់សត្វឆ្អឹងកងផ្សេងៗ",
+   "query_used": "សូមប្រៀបធៀបប្រព័ន្ធប្រសាទរបស់សត្វឆ្អឹងកងផ្សេងៗ",
+   "expected_pages": [
+    60
+   ],
+   "expect_abstain": false,
+   "top_score": 0.9617,
+   "abstained": false,
+   "embed": {
+    "top5_pages": [
+     60,
+     64,
+     210,
+     210,
+     60
+    ],
+    "hit1": true,
+    "hit3": true,
+    "hit5": true,
+    "mrr": 1.0
+   },
+   "rerank": {
+    "top5_pages": [
+     210,
+     60,
+     64,
+     62,
+     77
+    ],
+    "hit1": false,
+    "hit3": true,
+    "hit5": true,
+    "mrr": 0.5
+   },
+   "real": {
+    "pages": [
+     210,
+     60,
+     64,
+     62,
+     77,
+     60,
+     215,
+     209,
+     214,
+     63,
+     210,
+     65
+    ],
+    "scores": [
+     0.9617,
+     0.9538,
+     0.9325,
+     0.8774,
+     0.7672,
+     0.6496,
+     0.6002,
+     0.5266,
+     0.4376,
+     0.3984,
+     0.3782,
+     0.2536
+    ],
+    "hit1": false,
+    "hit3": true,
+    "hit5": true,
+    "mrr": 0.5
+   }
+  },
+  "64:0": {
+   "question_id": 64,
+   "part": 0,
+   "chapter": 4,
+   "question_type": "reasoning",
+   "question": "តើអ្នកណាកំណត់ទម្រង់រូបផ្គុំរបស់ប្រូតេអ៊ីន?",
+   "query_used": "តើអ្នកណាកំណត់ទម្រង់រូបផ្គុំរបស់ប្រូតេអ៊ីន?",
+   "expected_pages": [
+    122
+   ],
+   "expect_abstain": false,
+   "top_score": 0.8982,
+   "abstained": false,
+   "embed": {
+    "top5_pages": [
+     128,
+     128,
+     122,
+     133,
+     131
+    ],
+    "hit1": false,
+    "hit3": true,
+    "hit5": true,
+    "mrr": 0.3333333333333333
+   },
+   "rerank": {
+    "top5_pages": [
+     127,
+     128,
+     122,
+     133,
+     173
+    ],
+    "hit1": false,
+    "hit3": true,
+    "hit5": true,
+    "mrr": 0.3333333333333333
+   },
+   "real": {
+    "pages": [
+     127,
+     128,
+     122,
+     133,
+     173,
+     128,
+     169,
+     163,
+     131,
+     131,
+     127,
+     129
+    ],
+    "scores": [
+     0.8982,
+     0.8106,
+     0.7873,
+     0.6736,
+     0.6442,
+     0.6206,
+     0.4433,
+     0.3971,
+     0.3912,
+     0.3789,
+     0.2946,
+     0.2909
+    ],
+    "hit1": false,
+    "hit3": true,
+    "hit5": true,
+    "mrr": 0.3333333333333333
+   }
+  },
+  "65:0": {
+   "question_id": 65,
+   "part": 0,
+   "chapter": 4,
+   "question_type": "explanation",
+   "question": "ពន្យល់ពីតួនាទីរបស់ប្រូតេអ៊ីនក្នុងសារពាង្គកាយ",
+   "query_used": "ពន្យល់ពីតួនាទីរបស់ប្រូតេអ៊ីនក្នុងសារពាង្គកាយ",
+   "expected_pages": [
+    122,
+    127,
+    128,
+    130,
+    134
+   ],
+   "expect_abstain": false,
+   "top_score": 0.9845,
+   "abstained": false,
+   "embed": {
+    "top5_pages": [
+     128,
+     130,
+     130,
+     148,
+     123
+    ],
+    "hit1": true,
+    "hit3": true,
+    "hit5": true,
+    "mrr": 1.0
+   },
+   "rerank": {
+    "top5_pages": [
+     128,
+     130,
+     127,
+     122,
+     130
+    ],
+    "hit1": true,
+    "hit3": true,
+    "hit5": true,
+    "mrr": 1.0
+   },
+   "real": {
+    "pages": [
+     128,
+     130,
+     127,
+     122,
+     130,
+     133,
+     131,
+     134,
+     131,
+     131,
+     123,
+     127
+    ],
+    "scores": [
+     0.9845,
+     0.9605,
+     0.9577,
+     0.9373,
+     0.9288,
+     0.9182,
+     0.9007,
+     0.8685,
+     0.6989,
+     0.6957,
+     0.61,
+     0.6091
+    ],
+    "hit1": true,
+    "hit3": true,
+    "hit5": true,
+    "mrr": 1.0
+   }
+  },
+  "66:0": {
+   "question_id": 66,
+   "part": 0,
+   "chapter": 4,
+   "question_type": "summary",
+   "question": "សរុបសង្ខេបពីរបៀបដែលប្រូតេអ៊ីនត្រូវបានផ្គុំពីអាស៊ីតអាមីណេ",
+   "query_used": "សរុបសង្ខេបពីរបៀបដែលប្រូតេអ៊ីនត្រូវបានផ្គុំពីអាស៊ីតអាមីណេ",
+   "expected_pages": [
+    122
+   ],
+   "expect_abstain": false,
+   "top_score": 0.9023,
+   "abstained": false,
+   "embed": {
+    "top5_pages": [
+     122,
+     128,
+     122,
+     147,
+     127
+    ],
+    "hit1": true,
+    "hit3": true,
+    "hit5": true,
+    "mrr": 1.0
+   },
+   "rerank": {
+    "top5_pages": [
+     122,
+     128,
+     128,
+     133,
+     122
+    ],
+    "hit1": true,
+    "hit3": true,
+    "hit5": true,
+    "mrr": 1.0
+   },
+   "real": {
+    "pages": [
+     122,
+     128,
+     128,
+     133,
+     122,
+     127,
+     123,
+     129,
+     131,
+     211,
+     211,
+     171
+    ],
+    "scores": [
+     0.9023,
+     0.8699,
+     0.8412,
+     0.8332,
+     0.7917,
+     0.7852,
+     0.7096,
+     0.6912,
+     0.6818,
+     0.6061,
+     0.5596,
+     0.5538
+    ],
+    "hit1": true,
+    "hit3": true,
+    "hit5": true,
+    "mrr": 1.0
+   }
+  },
+  "67:0": {
+   "question_id": 67,
+   "part": 0,
+   "chapter": 5,
+   "question_type": "reasoning",
+   "question": "តើការពិសោធន៍របស់ហឺស៊ីនិងឆាសបានបង្ហាញអ្វីខ្លះ?",
+   "query_used": "តើការពិសោធន៍របស់ហឺស៊ីនិងឆាសបានបង្ហាញអ្វីខ្លះ?",
+   "expected_pages": [
+    152
+   ],
+   "expect_abstain": false,
+   "top_score": 0.9676,
+   "abstained": false,
+   "embed": {
+    "top5_pages": [
+     152,
+     152,
+     237,
+     153,
+     218
+    ],
+    "hit1": true,
+    "hit3": true,
+    "hit5": true,
+    "mrr": 1.0
+   },
+   "rerank": {
+    "top5_pages": [
+     152,
+     153,
+     152,
+     237,
+     218
+    ],
+    "hit1": true,
+    "hit3": true,
+    "hit5": true,
+    "mrr": 1.0
+   },
+   "real": {
+    "pages": [
+     152,
+     153,
+     152,
+     237,
+     218,
+     224,
+     154,
+     146,
+     161,
+     210,
+     220,
+     213
+    ],
+    "scores": [
+     0.9676,
+     0.9323,
+     0.8921,
+     0.0185,
+     0.0025,
+     0.0024,
+     0.0022,
+     0.0021,
+     0.0013,
+     0.0009,
+     0.0007,
+     0.0006
+    ],
+    "hit1": true,
+    "hit3": true,
+    "hit5": true,
+    "mrr": 1.0
+   }
+  },
+  "69:0": {
+   "question_id": 69,
+   "part": 0,
+   "chapter": 5,
+   "question_type": "definition",
+   "question": "តើនុយក្លេអូទីតជាអ្វី ហើយស្ថិតនៅក្នុងរចនាសម្ព័ន្ធ ADN យ៉ាងដូចម្តេច?",
+   "query_used": "តើនុយក្លេអូទីតជាអ្វី ហើយស្ថិតនៅក្នុងរចនាសម្ព័ន្ធ ADN យ៉ាងដូចម្តេច?",
+   "expected_pages": [
+    153,
+    154,
+    156
+   ],
+   "expect_abstain": false,
+   "top_score": 0.8302,
+   "abstained": false,
+   "embed": {
+    "top5_pages": [
+     156,
+     153,
+     160,
+     155,
+     159
+    ],
+    "hit1": true,
+    "hit3": true,
+    "hit5": true,
+    "mrr": 1.0
+   },
+   "rerank": {
+    "top5_pages": [
+     153,
+     163,
+     155,
+     157,
+     156
+    ],
+    "hit1": true,
+    "hit3": true,
+    "hit5": true,
+    "mrr": 1.0
+   },
+   "real": {
+    "pages": [
+     153,
+     163,
+     155,
+     157,
+     156,
+     163,
+     156,
+     166,
+     157,
+     160,
+     165,
+     164
+    ],
+    "scores": [
+     0.8302,
+     0.7559,
+     0.7351,
+     0.7066,
+     0.6405,
+     0.5925,
+     0.5735,
+     0.5658,
+     0.469,
+     0.4639,
+     0.4589,
+     0.4413
+    ],
+    "hit1": true,
+    "hit3": true,
+    "hit5": true,
+    "mrr": 1.0
+   }
+  },
+  "70:0": {
+   "question_id": 70,
+   "part": 0,
+   "chapter": 5,
+   "question_type": "summary",
+   "question": "សូមសង្ខេបពីតួនាទីរបស់ ARN បីប្រភេទ",
+   "query_used": "សូមសង្ខេបពីតួនាទីរបស់ ARN បីប្រភេទ",
+   "expected_pages": [
+    165
+   ],
+   "expect_abstain": false,
+   "top_score": 0.9675,
+   "abstained": false,
+   "embed": {
+    "top5_pages": [
+     164,
+     164,
+     170,
+     174,
+     170
+    ],
+    "hit1": true,
+    "hit3": true,
+    "hit5": true,
+    "mrr": 1.0
+   },
+   "rerank": {
+    "top5_pages": [
+     164,
+     170,
+     174,
+     174,
+     174
+    ],
+    "hit1": true,
+    "hit3": true,
+    "hit5": true,
+    "mrr": 1.0
+   },
+   "real": {
+    "pages": [
+     164,
+     170,
+     174,
+     174,
+     174,
+     169,
+     164,
+     165,
+     170,
+     69,
+     192,
+     172
+    ],
+    "scores": [
+     0.9675,
+     0.7158,
+     0.6726,
+     0.6527,
+     0.4812,
+     0.4012,
+     0.3907,
+     0.3407,
+     0.2572,
+     0.167,
+     0.1324,
+     0.0897
+    ],
+    "hit1": true,
+    "hit3": true,
+    "hit5": true,
+    "mrr": 1.0
+   }
+  },
+  "71:0": {
+   "question_id": 71,
+   "part": 0,
+   "chapter": 6,
+   "question_type": "reasoning",
+   "question": "តើសំណល់ (fossil) បានជួយឱ្យយើងយល់ពីការវិវត្តន៍យ៉ាងដូចម្តេច?",
+   "query_used": "តើសំណល់ (fossil) បានជួយឱ្យយើងយល់ពីការវិវត្តន៍យ៉ាងដូចម្តេច?",
+   "expected_pages": [
+    195,
+    196,
+    198
+   ],
+   "expect_abstain": false,
+   "top_score": 0.6336,
+   "abstained": false,
+   "embed": {
+    "top5_pages": [
+     218,
+     198,
+     220,
+     212,
+     221
+    ],
+    "hit1": false,
+    "hit3": true,
+    "hit5": true,
+    "mrr": 0.5
+   },
+   "rerank": {
+    "top5_pages": [
+     222,
+     218,
+     220,
+     220,
+     198
+    ],
+    "hit1": false,
+    "hit3": false,
+    "hit5": true,
+    "mrr": 0.2
+   },
+   "real": {
+    "pages": [
+     222,
+     218,
+     220,
+     220,
+     198,
+     225,
+     197,
+     224,
+     221,
+     208,
+     196,
+     201
+    ],
+    "scores": [
+     0.6336,
+     0.376,
+     0.1953,
+     0.1878,
+     0.1464,
+     0.0892,
+     0.027,
+     0.0253,
+     0.0215,
+     0.0155,
+     0.0089,
+     0.0058
+    ],
+    "hit1": false,
+    "hit3": false,
+    "hit5": true,
+    "mrr": 0.2
+   }
+  },
+  "72:0": {
+   "question_id": 72,
+   "part": 0,
+   "chapter": 6,
+   "question_type": "explanation",
+   "question": "ពន្យល់ពីភស្តុតាងដែលគាំទ្រទ្រឹស្តីវិវត្តន៍",
+   "query_used": "ពន្យល់ពីភស្តុតាងដែលគាំទ្រទ្រឹស្តីវិវត្តន៍",
+   "expected_pages": [
+    196
+   ],
+   "expect_abstain": false,
+   "top_score": 0.8648,
+   "abstained": false,
+   "embed": {
+    "top5_pages": [
+     196,
+     195,
+     225,
+     212,
+     201
+    ],
+    "hit1": true,
+    "hit3": true,
+    "hit5": true,
+    "mrr": 1.0
+   },
+   "rerank": {
+    "top5_pages": [
+     208,
+     225,
+     210,
+     209,
+     196
+    ],
+    "hit1": false,
+    "hit3": false,
+    "hit5": true,
+    "mrr": 0.2
+   },
+   "real": {
+    "pages": [
+     208,
+     225,
+     210,
+     209,
+     196,
+     195,
+     208,
+     224,
+     195,
+     218,
+     212,
+     206
+    ],
+    "scores": [
+     0.8648,
+     0.444,
+     0.3559,
+     0.2415,
+     0.2178,
+     0.1623,
+     0.1453,
+     0.1178,
+     0.0747,
+     0.0601,
+     0.0581,
+     0.051
+    ],
+    "hit1": false,
+    "hit3": false,
+    "hit5": true,
+    "mrr": 0.2
+   }
+  },
+  "73:0": {
+   "question_id": 73,
+   "part": 0,
+   "chapter": 7,
+   "question_type": "reasoning",
+   "question": "តើកត្តាអ្វីខ្លះដែលកំណត់ទំហំពពួក?",
+   "query_used": "តើកត្តាអ្វីខ្លះដែលកំណត់ទំហំពពួក?",
+   "expected_pages": [
+    228
+   ],
+   "expect_abstain": false,
+   "top_score": 0.9977,
+   "abstained": false,
+   "embed": {
+    "top5_pages": [
+     229,
+     235,
+     235,
+     234,
+     228
+    ],
+    "hit1": false,
+    "hit3": false,
+    "hit5": true,
+    "mrr": 0.2
+   },
+   "rerank": {
+    "top5_pages": [
+     229,
+     235,
+     234,
+     233,
+     228
+    ],
+    "hit1": false,
+    "hit3": false,
+    "hit5": true,
+    "mrr": 0.2
+   },
+   "real": {
+    "pages": [
+     229,
+     235,
+     234,
+     233,
+     228,
+     228,
+     232,
+     231,
+     234,
+     244,
+     233,
+     231
+    ],
+    "scores": [
+     0.9977,
+     0.994,
+     0.9858,
+     0.9632,
+     0.9551,
+     0.9204,
+     0.8973,
+     0.8831,
+     0.7183,
+     0.6032,
+     0.4668,
+     0.2263
+    ],
+    "hit1": false,
+    "hit3": false,
+    "hit5": true,
+    "mrr": 0.2
+   }
+  },
+  "74:0": {
+   "question_id": 74,
+   "part": 0,
+   "chapter": 7,
+   "question_type": "summary",
+   "question": "ចូរសង្ខេបពីទំនាក់ទំនងរវាងពពួកនិងសហគមន៍",
+   "query_used": "ចូរសង្ខេបពីទំនាក់ទំនងរវាងពពួកនិងសហគមន៍",
+   "expected_pages": [
+    228
+   ],
+   "expect_abstain": false,
+   "top_score": 0.8335,
+   "abstained": false,
+   "embed": {
+    "top5_pages": [
+     244,
+     227,
+     228,
+     245,
+     227
+    ],
+    "hit1": false,
+    "hit3": true,
+    "hit5": true,
+    "mrr": 0.3333333333333333
+   },
+   "rerank": {
+    "top5_pages": [
+     244,
+     227,
+     228,
+     234,
+     237
+    ],
+    "hit1": false,
+    "hit3": true,
+    "hit5": true,
+    "mrr": 0.3333333333333333
+   },
+   "real": {
+    "pages": [
+     244,
+     227,
+     228,
+     234,
+     237,
+     228,
+     243,
+     235,
+     242,
+     242,
+     252,
+     245
+    ],
+    "scores": [
+     0.8335,
+     0.7534,
+     0.7329,
+     0.6427,
+     0.6115,
+     0.5055,
+     0.3235,
+     0.1674,
+     0.1477,
+     0.0462,
+     0.0257,
+     0.0129
+    ],
+    "hit1": false,
+    "hit3": true,
+    "hit5": true,
+    "mrr": 0.3333333333333333
+   }
+  },
+  "75:0": {
+   "question_id": 75,
+   "part": 0,
+   "chapter": 8,
+   "question_type": "process",
+   "question": "ពន្យល់ពីរបៀបដែលថាមពលហូរកាត់ខ្សែអាហារ",
+   "query_used": "ពន្យល់ពីរបៀបដែលថាមពលហូរកាត់ខ្សែអាហារ",
+   "expected_pages": [
+    246,
+    248
+   ],
+   "expect_abstain": false,
+   "top_score": 0.8072,
+   "abstained": false,
+   "embed": {
+    "top5_pages": [
+     249,
+     249,
+     246,
+     247,
+     250
+    ],
+    "hit1": false,
+    "hit3": true,
+    "hit5": true,
+    "mrr": 0.3333333333333333
+   },
+   "rerank": {
+    "top5_pages": [
+     249,
+     246,
+     249,
+     247,
+     247
+    ],
+    "hit1": false,
+    "hit3": true,
+    "hit5": true,
+    "mrr": 0.5
+   },
+   "real": {
+    "pages": [
+     249,
+     246,
+     249,
+     247,
+     247,
+     250,
+     251,
+     255,
+     31,
+     246,
+     105,
+     32
+    ],
+    "scores": [
+     0.8072,
+     0.6981,
+     0.5892,
+     0.3826,
+     0.3246,
+     0.1273,
+     0.0259,
+     0.0149,
+     0.0145,
+     0.0123,
+     0.0085,
+     0.0025
+    ],
+    "hit1": false,
+    "hit3": true,
+    "hit5": true,
+    "mrr": 0.5
+   }
+  },
+  "76:0": {
+   "question_id": 76,
+   "part": 0,
+   "chapter": 8,
+   "question_type": "comparison",
+   "question": "តើអ្វីជាភាពខុសគ្នារវាងខ្សែអាហារនិងបណ្តាញអាហារ?",
+   "query_used": "តើអ្វីជាភាពខុសគ្នារវាងខ្សែអាហារនិងបណ្តាញអាហារ?",
+   "expected_pages": [
+    246,
+    247
+   ],
+   "expect_abstain": false,
+   "top_score": 0.9805,
+   "abstained": false,
+   "embed": {
+    "top5_pages": [
+     249,
+     247,
+     247,
+     249,
+     246
+    ],
+    "hit1": false,
+    "hit3": true,
+    "hit5": true,
+    "mrr": 0.5
+   },
+   "rerank": {
+    "top5_pages": [
+     249,
+     247,
+     249,
+     247,
+     255
+    ],
+    "hit1": false,
+    "hit3": true,
+    "hit5": true,
+    "mrr": 0.5
+   },
+   "real": {
+    "pages": [
+     249,
+     247,
+     249,
+     247,
+     255,
+     246,
+     60,
+     250,
+     61,
+     60,
+     77,
+     202
+    ],
+    "scores": [
+     0.9805,
+     0.9086,
+     0.631,
+     0.5042,
+     0.2479,
+     0.1956,
+     0.024,
+     0.0084,
+     0.0018,
+     0.0014,
+     0.0013,
+     0.0011
+    ],
+    "hit1": false,
+    "hit3": true,
+    "hit5": true,
+    "mrr": 0.5
+   }
+  },
+  "77:0": {
+   "question_id": 77,
+   "part": 0,
+   "chapter": 8,
+   "question_type": "explanation",
+   "question": "សូមពន្យល់ពីតួនាទីរបស់អ្នកបំភែកក្នុងខ្សែអាហារ",
+   "query_used": "សូមពន្យល់ពីតួនាទីរបស់អ្នកបំភែកក្នុងខ្សែអាហារ",
+   "expected_pages": [
+    247
+   ],
+   "expect_abstain": false,
+   "top_score": 0.887,
+   "abstained": false,
+   "embed": {
+    "top5_pages": [
+     247,
+     249,
+     247,
+     246,
+     249
+    ],
+    "hit1": true,
+    "hit3": true,
+    "hit5": true,
+    "mrr": 1.0
+   },
+   "rerank": {
+    "top5_pages": [
+     247,
+     249,
+     246,
+     247,
+     249
+    ],
+    "hit1": true,
+    "hit3": true,
+    "hit5": true,
+    "mrr": 1.0
+   },
+   "real": {
+    "pages": [
+     247,
+     249,
+     246,
+     247,
+     249,
+     256,
+     255,
+     250,
+     246,
+     31,
+     105,
+     13
+    ],
+    "scores": [
+     0.887,
+     0.2593,
+     0.1747,
+     0.1547,
+     0.0849,
+     0.0579,
+     0.0343,
+     0.0253,
+     0.0087,
+     0.0048,
+     0.0013,
+     0.0013
+    ],
+    "hit1": true,
+    "hit3": true,
+    "hit5": true,
+    "mrr": 1.0
+   }
+  },
+  "79:0": {
+   "question_id": 79,
+   "part": 0,
+   "chapter": 1,
+   "question_type": "exam",
+   "question": "ក្នុងប្រឡង៖ តើអ្វីជាលក្ខណៈពិសេសរបស់ស៊ីមណូស្ពែម?",
+   "query_used": "ក្នុងប្រឡង៖ តើអ្វីជាលក្ខណៈពិសេសរបស់ស៊ីមណូស្ពែម?",
+   "expected_pages": [
+    6
+   ],
+   "expect_abstain": false,
+   "top_score": 0.7923,
+   "abstained": false,
+   "embed": {
+    "top5_pages": [
+     6,
+     6,
+     24,
+     8,
+     10
+    ],
+    "hit1": true,
+    "hit3": true,
+    "hit5": true,
+    "mrr": 1.0
+   },
+   "rerank": {
+    "top5_pages": [
+     6,
+     6,
+     10,
+     24,
+     24
+    ],
+    "hit1": true,
+    "hit3": true,
+    "hit5": true,
+    "mrr": 1.0
+   },
+   "real": {
+    "pages": [
+     6,
+     6,
+     10,
+     24,
+     24,
+     8,
+     10,
+     4,
+     9,
+     12,
+     5,
+     19
+    ],
+    "scores": [
+     0.7923,
+     0.7282,
+     0.6517,
+     0.4206,
+     0.3112,
+     0.2987,
+     0.1732,
+     0.1661,
+     0.1381,
+     0.0541,
+     0.0283,
+     0.0196
+    ],
+    "hit1": true,
+    "hit3": true,
+    "hit5": true,
+    "mrr": 1.0
+   }
+  },
+  "80:0": {
+   "question_id": 80,
+   "part": 0,
+   "chapter": 1,
+   "question_type": "exam",
+   "question": "ក្នុងប្រឡង៖ តើអ្វីជាលក្ខណៈពិសេសរបស់អង់ស្យូស្ពែម?",
+   "query_used": "ក្នុងប្រឡង៖ តើអ្វីជាលក្ខណៈពិសេសរបស់អង់ស្យូស្ពែម?",
+   "expected_pages": [
+    12
+   ],
+   "expect_abstain": false,
+   "top_score": 0.9853,
+   "abstained": false,
+   "embed": {
+    "top5_pages": [
+     12,
+     24,
+     12,
+     14,
+     20
+    ],
+    "hit1": true,
+    "hit3": true,
+    "hit5": true,
+    "mrr": 1.0
+   },
+   "rerank": {
+    "top5_pages": [
+     12,
+     12,
+     17,
+     20,
+     24
+    ],
+    "hit1": true,
+    "hit3": true,
+    "hit5": true,
+    "mrr": 1.0
+   },
+   "real": {
+    "pages": [
+     12,
+     12,
+     17,
+     20,
+     24,
+     14,
+     4,
+     24,
+     6,
+     13,
+     5,
+     19
+    ],
+    "scores": [
+     0.9853,
+     0.8704,
+     0.6564,
+     0.6092,
+     0.4578,
+     0.2763,
+     0.1664,
+     0.1644,
+     0.1344,
+     0.1005,
+     0.031,
+     0.025
+    ],
+    "hit1": true,
+    "hit3": true,
+    "hit5": true,
+    "mrr": 1.0
+   }
+  },
+  "81:0": {
+   "question_id": 81,
+   "part": 0,
+   "chapter": 5,
+   "question_type": "exam",
+   "question": "ក្នុងប្រឡង៖ តើធាតុសំខាន់ៗអ្វីខ្លះដែលបង្កើត ADN?",
+   "query_used": "ក្នុងប្រឡង៖ តើធាតុសំខាន់ៗអ្វីខ្លះដែលបង្កើត ADN?",
+   "expected_pages": [
+    150,
+    165
+   ],
+   "expect_abstain": false,
+   "top_score": 0.2584,
+   "abstained": false,
+   "embed": {
+    "top5_pages": [
+     153,
+     163,
+     150,
+     156,
+     174
+    ],
+    "hit1": false,
+    "hit3": true,
+    "hit5": true,
+    "mrr": 0.3333333333333333
+   },
+   "rerank": {
+    "top5_pages": [
+     157,
+     150,
+     153,
+     160,
+     156
+    ],
+    "hit1": false,
+    "hit3": true,
+    "hit5": true,
+    "mrr": 0.5
+   },
+   "real": {
+    "pages": [
+     157,
+     150,
+     153,
+     160,
+     156,
+     191,
+     153,
+     160,
+     156,
+     174,
+     174,
+     174
+    ],
+    "scores": [
+     0.2584,
+     0.237,
+     0.2352,
+     0.1789,
+     0.1756,
+     0.1362,
+     0.1211,
+     0.0627,
+     0.0567,
+     0.0477,
+     0.0447,
+     0.038
+    ],
+    "hit1": false,
+    "hit3": true,
+    "hit5": true,
+    "mrr": 0.5
+   }
+  },
+  "82:0": {
+   "question_id": 82,
+   "part": 0,
+   "chapter": 4,
+   "question_type": "exam",
+   "question": "ក្នុងប្រឡង៖ តើអាស៊ីតអាមីណេមានប៉ុន្មានប្រភេទ?",
+   "query_used": "ក្នុងប្រឡង៖ តើអាស៊ីតអាមីណេមានប៉ុន្មានប្រភេទ?",
+   "expected_pages": [
+    122,
+    123,
+    127,
+    134
+   ],
+   "expect_abstain": false,
+   "top_score": 0.9721,
+   "abstained": false,
+   "embed": {
+    "top5_pages": [
+     127,
+     123,
+     166,
+     125,
+     123
+    ],
+    "hit1": true,
+    "hit3": true,
+    "hit5": true,
+    "mrr": 1.0
+   },
+   "rerank": {
+    "top5_pages": [
+     127,
+     123,
+     166,
+     127,
+     123
+    ],
+    "hit1": true,
+    "hit3": true,
+    "hit5": true,
+    "mrr": 1.0
+   },
+   "real": {
+    "pages": [
+     127,
+     123,
+     166,
+     127,
+     123,
+     166,
+     122,
+     125,
+     122,
+     147,
+     167,
+     212
+    ],
+    "scores": [
+     0.9721,
+     0.964,
+     0.8754,
+     0.8162,
+     0.7606,
+     0.7165,
+     0.7042,
+     0.6765,
+     0.6419,
+     0.5838,
+     0.5517,
+     0.5486
+    ],
+    "hit1": true,
+    "hit3": true,
+    "hit5": true,
+    "mrr": 1.0
+   }
+  },
+  "83:0": {
+   "question_id": 83,
+   "part": 0,
+   "chapter": 8,
+   "question_type": "exam",
+   "question": "ក្នុងប្រឡង៖ តើអ្វីជាខ្សែអាហារ?",
+   "query_used": "ក្នុងប្រឡង៖ តើអ្វីជាខ្សែអាហារ?",
+   "expected_pages": [
+    247
+   ],
+   "expect_abstain": false,
+   "top_score": 0.8377,
+   "abstained": false,
+   "embed": {
+    "top5_pages": [
+     249,
+     247,
+     247,
+     249,
+     246
+    ],
+    "hit1": false,
+    "hit3": true,
+    "hit5": true,
+    "mrr": 0.5
+   },
+   "rerank": {
+    "top5_pages": [
+     249,
+     249,
+     247,
+     247,
+     256
+    ],
+    "hit1": false,
+    "hit3": true,
+    "hit5": true,
+    "mrr": 0.3333333333333333
+   },
+   "real": {
+    "pages": [
+     249,
+     249,
+     247,
+     247,
+     256,
+     246,
+     255,
+     250,
+     13,
+     238,
+     137,
+     26
+    ],
+    "scores": [
+     0.8377,
+     0.2766,
+     0.2476,
+     0.2266,
+     0.1709,
+     0.0288,
+     0.0203,
+     0.0188,
+     0.0006,
+     0.0005,
+     0.0005,
+     0.0004
+    ],
+    "hit1": false,
+    "hit3": true,
+    "hit5": true,
+    "mrr": 0.3333333333333333
+   }
+  },
+  "85:0": {
+   "question_id": 85,
+   "part": 0,
+   "chapter": 4,
+   "question_type": "quiz",
+   "question": "ចូរបង្កើតសំណួរសាកល្បង 3 អំពីប្រូតេអ៊ីន",
+   "query_used": "ចូរបង្កើតសំណួរសាកល្បង 3 អំពីប្រូតេអ៊ីន",
+   "expected_pages": [
+    122,
+    128,
+    129,
+    134
+   ],
+   "expect_abstain": false,
+   "top_score": 0.9422,
+   "abstained": false,
+   "embed": {
+    "top5_pages": [
+     133,
+     134,
+     148,
+     148,
+     174
+    ],
+    "hit1": true,
+    "hit3": true,
+    "hit5": true,
+    "mrr": 1.0
+   },
+   "rerank": {
+    "top5_pages": [
+     133,
+     147,
+     193,
+     134,
+     174
+    ],
+    "hit1": true,
+    "hit3": true,
+    "hit5": true,
+    "mrr": 1.0
+   },
+   "real": {
+    "pages": [
+     133,
+     147,
+     193,
+     134,
+     174,
+     147,
+     148,
+     122,
+     128,
+     133,
+     127,
+     122
+    ],
+    "scores": [
+     0.9422,
+     0.934,
+     0.7857,
+     0.7717,
+     0.7487,
+     0.6397,
+     0.5308,
+     0.3616,
+     0.3052,
+     0.2423,
+     0.2036,
+     0.1418
+    ],
+    "hit1": true,
+    "hit3": true,
+    "hit5": true,
+    "mrr": 1.0
+   }
+  },
+  "87:0": {
+   "question_id": 87,
+   "part": 0,
+   "chapter": 7,
+   "question_type": "quiz",
+   "question": "ចូរបង្កើតសំណួរសាកល្បង 3 អំពីពពួក និងសហគមន៍",
+   "query_used": "ចូរបង្កើតសំណួរសាកល្បង 3 អំពីពពួក និងសហគមន៍",
+   "expected_pages": [
+    227,
+    228,
+    229,
+    235,
+    243
+   ],
+   "expect_abstain": false,
+   "top_score": 0.8212,
+   "abstained": false,
+   "embed": {
+    "top5_pages": [
+     235,
+     242,
+     228,
+     244,
+     224
+    ],
+    "hit1": true,
+    "hit3": true,
+    "hit5": true,
+    "mrr": 1.0
+   },
+   "rerank": {
+    "top5_pages": [
+     235,
+     244,
+     228,
+     242,
+     227
+    ],
+    "hit1": true,
+    "hit3": true,
+    "hit5": true,
+    "mrr": 1.0
+   },
+   "real": {
+    "pages": [
+     235,
+     244,
+     228,
+     242,
+     227,
+     225,
+     228,
+     243,
+     237,
+     193,
+     235,
+     226
+    ],
+    "scores": [
+     0.8212,
+     0.7981,
+     0.5321,
+     0.4575,
+     0.4085,
+     0.3902,
+     0.3635,
+     0.1475,
+     0.0947,
+     0.044,
+     0.0433,
+     0.0338
+    ],
+    "hit1": true,
+    "hit3": true,
+    "hit5": true,
+    "mrr": 1.0
+   }
+  },
+  "88:0": {
+   "question_id": 88,
+   "part": 0,
+   "chapter": 1,
+   "question_type": "summary",
+   "question": "សូមសង្ខេបពីភាពខុសគ្នាសំខាន់ៗរវាងកោសិកាស៊ីមណូស្ពែមនិងអង់ស្យូស្ពែម",
+   "query_used": "សូមសង្ខេបពីភាពខុសគ្នាសំខាន់ៗរវាងកោសិកាស៊ីមណូស្ពែមនិងអង់ស្យូស្ពែម",
+   "expected_pages": [
+    6,
+    12
+   ],
+   "expect_abstain": false,
+   "top_score": 0.8144,
+   "abstained": false,
+   "embed": {
+    "top5_pages": [
+     6,
+     12,
+     6,
+     12,
+     4
+    ],
+    "hit1": true,
+    "hit3": true,
+    "hit5": true,
+    "mrr": 1.0
+   },
+   "rerank": {
+    "top5_pages": [
+     6,
+     4,
+     6,
+     24,
+     5
+    ],
+    "hit1": true,
+    "hit3": true,
+    "hit5": true,
+    "mrr": 1.0
+   },
+   "real": {
+    "pages": [
+     6,
+     4,
+     6,
+     24,
+     5,
+     10,
+     13,
+     12,
+     24,
+     9,
+     102,
+     19
+    ],
+    "scores": [
+     0.8144,
+     0.7199,
+     0.7165,
+     0.67,
+     0.572,
+     0.2281,
+     0.2087,
+     0.2049,
+     0.1744,
+     0.1265,
+     0.1192,
+     0.0588
+    ],
+    "hit1": true,
+    "hit3": true,
+    "hit5": true,
+    "mrr": 1.0
+   }
+  },
+  "89:0": {
+   "question_id": 89,
+   "part": 0,
+   "chapter": 3,
+   "question_type": "summary",
+   "question": "សូមសង្ខេបពីរបៀបដែលប្រព័ន្ធប្រសាទជួយសារពាង្គកាយឆ្លើយតប",
+   "query_used": "សូមសង្ខេបពីរបៀបដែលប្រព័ន្ធប្រសាទជួយសារពាង្គកាយឆ្លើយតប",
+   "expected_pages": [
+    77
+   ],
+   "expect_abstain": false,
+   "top_score": 0.9759,
+   "abstained": false,
+   "embed": {
+    "top5_pages": [
+     66,
+     65,
+     77,
+     60,
+     65
+    ],
+    "hit1": false,
+    "hit3": true,
+    "hit5": true,
+    "mrr": 0.3333333333333333
+   },
+   "rerank": {
+    "top5_pages": [
+     66,
+     65,
+     77,
+     65,
+     62
+    ],
+    "hit1": false,
+    "hit3": true,
+    "hit5": true,
+    "mrr": 0.3333333333333333
+   },
+   "real": {
+    "pages": [
+     66,
+     65,
+     77,
+     65,
+     62,
+     60,
+     65,
+     77,
+     61,
+     60,
+     60,
+     63
+    ],
+    "scores": [
+     0.9759,
+     0.9595,
+     0.9536,
+     0.8369,
+     0.7556,
+     0.7237,
+     0.7022,
+     0.6896,
+     0.6703,
+     0.5583,
+     0.5399,
+     0.5212
+    ],
+    "hit1": false,
+    "hit3": true,
+    "hit5": true,
+    "mrr": 0.3333333333333333
+   }
+  },
+  "90:0": {
+   "question_id": 90,
+   "part": 0,
+   "chapter": 1,
+   "question_type": "definition",
+   "question": "ដូចម្តេចដែលហៅថាការបង្កកំណើតទ្វេ?",
+   "query_used": "ដូចម្តេចដែលហៅថាការបង្កកំណើតទ្វេ?",
+   "expected_pages": [
+    17
+   ],
+   "expect_abstain": false,
+   "top_score": 0.892,
+   "abstained": false,
+   "embed": {
+    "top5_pages": [
+     17,
+     121,
+     17,
+     177,
+     190
+    ],
+    "hit1": true,
+    "hit3": true,
+    "hit5": true,
+    "mrr": 1.0
+   },
+   "rerank": {
+    "top5_pages": [
+     17,
+     177,
+     17,
+     177,
+     178
+    ],
+    "hit1": true,
+    "hit3": true,
+    "hit5": true,
+    "mrr": 1.0
+   },
+   "real": {
+    "pages": [
+     17,
+     177,
+     17,
+     177,
+     178,
+     46,
+     15,
+     157,
+     177,
+     190,
+     214,
+     214
+    ],
+    "scores": [
+     0.892,
+     0.3499,
+     0.262,
+     0.1666,
+     0.1302,
+     0.0866,
+     0.0849,
+     0.0842,
+     0.0791,
+     0.0714,
+     0.0379,
+     0.0218
+    ],
+    "hit1": true,
+    "hit3": true,
+    "hit5": true,
+    "mrr": 1.0
+   }
+  },
+  "91:0": {
+   "question_id": 91,
+   "part": 0,
+   "chapter": 1,
+   "question_type": "process",
+   "question": "តើការបង្កកំណើតរបស់រុក្ខជាតិអង់ស្យូស្ពែមប្រព្រឹត្តទៅដូចម្តេច?",
+   "query_used": "តើការបង្កកំណើតរបស់រុក្ខជាតិអង់ស្យូស្ពែមប្រព្រឹត្តទៅដូចម្តេច?",
+   "expected_pages": [
+    17
+   ],
+   "expect_abstain": false,
+   "top_score": 0.9643,
+   "abstained": false,
+   "embed": {
+    "top5_pages": [
+     17,
+     15,
+     17,
+     24,
+     18
+    ],
+    "hit1": true,
+    "hit3": true,
+    "hit5": true,
+    "mrr": 1.0
+   },
+   "rerank": {
+    "top5_pages": [
+     17,
+     15,
+     13,
+     17,
+     18
+    ],
+    "hit1": true,
+    "hit3": true,
+    "hit5": true,
+    "mrr": 1.0
+   },
+   "real": {
+    "pages": [
+     17,
+     15,
+     13,
+     17,
+     18,
+     6,
+     14,
+     19,
+     18,
+     24,
+     12,
+     10
+    ],
+    "scores": [
+     0.9643,
+     0.9131,
+     0.8533,
+     0.8179,
+     0.8086,
+     0.7192,
+     0.6432,
+     0.5691,
+     0.5351,
+     0.3592,
+     0.3462,
+     0.2019
+    ],
+    "hit1": true,
+    "hit3": true,
+    "hit5": true,
+    "mrr": 1.0
+   }
+  },
+  "92:0": {
+   "question_id": 92,
+   "part": 0,
+   "chapter": 3,
+   "question_type": "definition",
+   "question": "តើខួរឆ្អឹងខ្នងបង្កឡើងពីសារធាតុអ្វីខ្លះ?",
+   "query_used": "តើខួរឆ្អឹងខ្នងបង្កឡើងពីសារធាតុអ្វីខ្លះ?",
+   "expected_pages": [
+    74
+   ],
+   "expect_abstain": false,
+   "top_score": 0.9328,
+   "abstained": false,
+   "embed": {
+    "top5_pages": [
+     74,
+     74,
+     73,
+     75,
+     78
+    ],
+    "hit1": true,
+    "hit3": true,
+    "hit5": true,
+    "mrr": 1.0
+   },
+   "rerank": {
+    "top5_pages": [
+     74,
+     78,
+     74,
+     75,
+     75
+    ],
+    "hit1": true,
+    "hit3": true,
+    "hit5": true,
+    "mrr": 1.0
+   },
+   "real": {
+    "pages": [
+     74,
+     78,
+     74,
+     75,
+     75,
+     209,
+     71,
+     77,
+     78,
+     70,
+     110,
+     73
+    ],
+    "scores": [
+     0.9328,
+     0.8142,
+     0.785,
+     0.3436,
+     0.2505,
+     0.2228,
+     0.2219,
+     0.2215,
+     0.1344,
+     0.0792,
+     0.0412,
+     0.0352
+    ],
+    "hit1": true,
+    "hit3": true,
+    "hit5": true,
+    "mrr": 1.0
+   }
+  },
+  "93:0": {
+   "question_id": 93,
+   "part": 0,
+   "chapter": 3,
+   "question_type": "cause_effect",
+   "question": "តើការបរិភោគអាហារដែលខ្វះជាតិអ៊ីយ៉ូត បណ្តាលឱ្យមានផលវិបាកអ្វី?",
+   "query_used": "តើការបរិភោគអាហារដែលខ្វះជាតិអ៊ីយ៉ូត បណ្តាលឱ្យមានផលវិបាកអ្វី?",
+   "expected_pages": [
+    109
+   ],
+   "expect_abstain": false,
+   "top_score": 0.9581,
+   "abstained": false,
+   "embed": {
+    "top5_pages": [
+     109,
+     132,
+     134,
+     31,
+     50
+    ],
+    "hit1": true,
+    "hit3": true,
+    "hit5": true,
+    "mrr": 1.0
+   },
+   "rerank": {
+    "top5_pages": [
+     109,
+     31,
+     137,
+     105,
+     252
+    ],
+    "hit1": true,
+    "hit3": true,
+    "hit5": true,
+    "mrr": 1.0
+   },
+   "real": {
+    "pages": [
+     109,
+     31,
+     137,
+     105,
+     252,
+     50,
+     31,
+     115,
+     110,
+     189,
+     30,
+     77
+    ],
+    "scores": [
+     0.9581,
+     0.0037,
+     0.0024,
+     0.0016,
+     0.0012,
+     0.0008,
+     0.0007,
+     0.0006,
+     0.0005,
+     0.0004,
+     0.0004,
+     0.0003
+    ],
+    "hit1": true,
+    "hit3": true,
+    "hit5": true,
+    "mrr": 1.0
+   }
+  },
+  "94:0": {
+   "question_id": 94,
+   "part": 0,
+   "chapter": 3,
+   "question_type": "prevention",
+   "question": "តើគេអាចបង្ការជំងឺពកកបានដោយរបៀបណា?",
+   "query_used": "តើគេអាចបង្ការជំងឺពកកបានដោយរបៀបណា?",
+   "expected_pages": [
+    109
+   ],
+   "expect_abstain": false,
+   "top_score": 0.5402,
+   "abstained": false,
+   "embed": {
+    "top5_pages": [
+     109,
+     96,
+     185,
+     178,
+     177
+    ],
+    "hit1": true,
+    "hit3": true,
+    "hit5": true,
+    "mrr": 1.0
+   },
+   "rerank": {
+    "top5_pages": [
+     109,
+     152,
+     178,
+     185,
+     150
+    ],
+    "hit1": true,
+    "hit3": true,
+    "hit5": true,
+    "mrr": 1.0
+   },
+   "real": {
+    "pages": [
+     109,
+     152,
+     178,
+     185,
+     150,
+     211,
+     178,
+     177,
+     88,
+     151,
+     152,
+     177
+    ],
+    "scores": [
+     0.5402,
+     0.0139,
+     0.0129,
+     0.0117,
+     0.0105,
+     0.0067,
+     0.0062,
+     0.0053,
+     0.0042,
+     0.0034,
+     0.0023,
+     0.0014
+    ],
+    "hit1": true,
+    "hit3": true,
+    "hit5": true,
+    "mrr": 1.0
+   }
+  },
+  "95:0": {
+   "question_id": 95,
+   "part": 0,
+   "chapter": 1,
+   "question_type": "definition",
+   "question": "ដូចម្តេចដែលហៅថារុក្ខជាតិឌីកូទីលេដូន?",
+   "query_used": "ដូចម្តេចដែលហៅថារុក្ខជាតិឌីកូទីលេដូន?",
+   "expected_pages": [
+    12,
+    19
+   ],
+   "expect_abstain": false,
+   "top_score": 0.5695,
+   "abstained": false,
+   "embed": {
+    "top5_pages": [
+     19,
+     12,
+     19,
+     12,
+     19
+    ],
+    "hit1": true,
+    "hit3": true,
+    "hit5": true,
+    "mrr": 1.0
+   },
+   "rerank": {
+    "top5_pages": [
+     19,
+     12,
+     19,
+     19,
+     12
+    ],
+    "hit1": true,
+    "hit3": true,
+    "hit5": true,
+    "mrr": 1.0
+   },
+   "real": {
+    "pages": [
+     19,
+     12,
+     19,
+     19,
+     12,
+     13,
+     40,
+     13,
+     21,
+     23,
+     18,
+     7
+    ],
+    "scores": [
+     0.5695,
+     0.5615,
+     0.5454,
+     0.3535,
+     0.2983,
+     0.2835,
+     0.1204,
+     0.112,
+     0.0443,
+     0.0048,
+     0.002,
+     0.0019
+    ],
+    "hit1": true,
+    "hit3": true,
+    "hit5": true,
+    "mrr": 1.0
+   }
+  },
+  "96:0": {
+   "question_id": 96,
+   "part": 0,
+   "chapter": 1,
+   "question_type": "application",
+   "question": "តើស្វាយជារុក្ខជាតិឌីកូទីលេដូន ឬ រុក្ខជាតិម៉ូណូកូទីលេដូន?",
+   "query_used": "តើស្វាយជារុក្ខជាតិឌីកូទីលេដូន ឬ រុក្ខជាតិម៉ូណូកូទីលេដូន?",
+   "expected_pages": [
+    12,
+    19
+   ],
+   "expect_abstain": false,
+   "top_score": 0.8432,
+   "abstained": false,
+   "embed": {
+    "top5_pages": [
+     12,
+     19,
+     6,
+     12,
+     19
+    ],
+    "hit1": true,
+    "hit3": true,
+    "hit5": true,
+    "mrr": 1.0
+   },
+   "rerank": {
+    "top5_pages": [
+     19,
+     19,
+     12,
+     12,
+     19
+    ],
+    "hit1": true,
+    "hit3": true,
+    "hit5": true,
+    "mrr": 1.0
+   },
+   "real": {
+    "pages": [
+     19,
+     19,
+     12,
+     12,
+     19,
+     6,
+     13,
+     13,
+     40,
+     5,
+     21,
+     7
+    ],
+    "scores": [
+     0.8432,
+     0.7038,
+     0.689,
+     0.4167,
+     0.3393,
+     0.0416,
+     0.0362,
+     0.027,
+     0.0254,
+     0.0174,
+     0.0146,
+     0.0029
+    ],
+    "hit1": true,
+    "hit3": true,
+    "hit5": true,
+    "mrr": 1.0
+   }
+  },
+  "97:0": {
+   "question_id": 97,
+   "part": 0,
+   "chapter": 5,
+   "question_type": "process",
+   "question": "ចូរពណ៌នាពីការពិសោធរបស់លោកគ្រីហ្វីត",
+   "query_used": "ចូរពណ៌នាពីការពិសោធរបស់លោកគ្រីហ្វីត",
+   "expected_pages": [
+    150,
+    151
+   ],
+   "expect_abstain": false,
+   "top_score": 0.9594,
+   "abstained": false,
+   "embed": {
+    "top5_pages": [
+     150,
+     151,
+     120,
+     227,
+     160
+    ],
+    "hit1": true,
+    "hit3": true,
+    "hit5": true,
+    "mrr": 1.0
+   },
+   "rerank": {
+    "top5_pages": [
+     150,
+     160,
+     151,
+     151,
+     44
+    ],
+    "hit1": true,
+    "hit3": true,
+    "hit5": true,
+    "mrr": 1.0
+   },
+   "real": {
+    "pages": [
+     150,
+     160,
+     151,
+     151,
+     44,
+     30,
+     244,
+     206,
+     244,
+     200,
+     198,
+     196
+    ],
+    "scores": [
+     0.9594,
+     0.3532,
+     0.3086,
+     0.1566,
+     0.002,
+     0.0012,
+     0.0009,
+     0.0007,
+     0.0006,
+     0.0006,
+     0.0006,
+     0.0006
+    ],
+    "hit1": true,
+    "hit3": true,
+    "hit5": true,
+    "mrr": 1.0
+   }
+  },
+  "98:0": {
+   "question_id": 98,
+   "part": 0,
+   "chapter": 0,
+   "question_type": "out_of_scope",
+   "question": "តើព្រះអាទិត្យមានអាយុប៉ុន្មានឆ្នាំ?",
+   "query_used": "តើព្រះអាទិត្យមានអាយុប៉ុន្មានឆ្នាំ?",
+   "expected_pages": [],
+   "expect_abstain": true,
+   "top_score": 0.0075,
+   "abstained": true,
+   "embed": {
+    "top5_pages": [
+     220,
+     219,
+     221,
+     91,
+     7
+    ],
+    "hit1": false,
+    "hit3": false,
+    "hit5": false,
+    "mrr": 0.0
+   },
+   "rerank": {
+    "top5_pages": [
+     220,
+     219,
+     219,
+     221,
+     196
+    ],
+    "hit1": false,
+    "hit3": false,
+    "hit5": false,
+    "mrr": 0.0
+   },
+   "real": {
+    "pages": [
+     220,
+     219,
+     219,
+     221,
+     196,
+     7,
+     218,
+     220,
+     7,
+     218,
+     196,
+     121
+    ],
+    "scores": [
+     0.0075,
+     0.0045,
+     0.0019,
+     0.0015,
+     0.0015,
+     0.0013,
+     0.0005,
+     0.0004,
+     0.0003,
+     0.0002,
+     0.0002,
+     0.0001
+    ],
+    "hit1": false,
+    "hit3": false,
+    "hit5": false,
+    "mrr": 0.0
+   }
+  },
+  "99:0": {
+   "question_id": 99,
+   "part": 0,
+   "chapter": 0,
+   "question_type": "out_of_scope",
+   "question": "តើរដ្ឋធានីនៃប្រទេសជប៉ុនមានឈ្មោះអ្វី?",
+   "query_used": "តើរដ្ឋធានីនៃប្រទេសជប៉ុនមានឈ្មោះអ្វី?",
+   "expected_pages": [],
+   "expect_abstain": true,
+   "top_score": 0.0,
+   "abstained": true,
+   "embed": {
+    "top5_pages": [
+     70,
+     149,
+     120,
+     149,
+     25
+    ],
+    "hit1": false,
+    "hit3": false,
+    "hit5": false,
+    "mrr": 0.0
+   },
+   "rerank": {
+    "top5_pages": [
+     168,
+     127,
+     70,
+     82,
+     212
+    ],
+    "hit1": false,
+    "hit3": false,
+    "hit5": false,
+    "mrr": 0.0
+   },
+   "real": {
+    "pages": [
+     168,
+     127,
+     70,
+     82,
+     212,
+     125,
+     64,
+     149,
+     74,
+     149,
+     253,
+     101
+    ],
+    "scores": [
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0
+    ],
+    "hit1": false,
+    "hit3": false,
+    "hit5": false,
+    "mrr": 0.0
+   }
+  },
+  "100:0": {
+   "question_id": 100,
+   "part": 0,
+   "chapter": 0,
+   "question_type": "out_of_scope",
+   "question": "តើរូបមន្តគីមីនៃទឹកគឺជាអ្វី?",
+   "query_used": "តើរូបមន្តគីមីនៃទឹកគឺជាអ្វី?",
+   "expected_pages": [],
+   "expect_abstain": true,
+   "top_score": 0.036,
+   "abstained": true,
+   "embed": {
+    "top5_pages": [
+     125,
+     31,
+     126,
+     138,
+     83
+    ],
+    "hit1": false,
+    "hit3": false,
+    "hit5": false,
+    "mrr": 0.0
+   },
+   "rerank": {
+    "top5_pages": [
+     126,
+     31,
+     255,
+     125,
+     146
+    ],
+    "hit1": false,
+    "hit3": false,
+    "hit5": false,
+    "mrr": 0.0
+   },
+   "real": {
+    "pages": [
+     126,
+     31,
+     255,
+     125,
+     146,
+     83,
+     27,
+     122,
+     137,
+     145,
+     29,
+     127
+    ],
+    "scores": [
+     0.036,
+     0.0297,
+     0.0176,
+     0.013,
+     0.0117,
+     0.0097,
+     0.0081,
+     0.008,
+     0.008,
+     0.0073,
+     0.0062,
+     0.004
+    ],
+    "hit1": false,
+    "hit3": false,
+    "hit5": false,
+    "mrr": 0.0
+   }
+  },
+  "101:0": {
+   "question_id": 101,
+   "part": 0,
+   "chapter": 0,
+   "question_type": "out_of_scope",
+   "question": "តើភាសាផ្លូវការរបស់ប្រទេសបារាំងគឺជាអ្វី?",
+   "query_used": "តើភាសាផ្លូវការរបស់ប្រទេសបារាំងគឺជាអ្វី?",
+   "expected_pages": [],
+   "expect_abstain": true,
+   "top_score": 0.0,
+   "abstained": true,
+   "embed": {
+    "top5_pages": [
+     125,
+     149,
+     205,
+     149,
+     69
+    ],
+    "hit1": false,
+    "hit3": false,
+    "hit5": false,
+    "mrr": 0.0
+   },
+   "rerank": {
+    "top5_pages": [
+     226,
+     168,
+     166,
+     23,
+     99
+    ],
+    "hit1": false,
+    "hit3": false,
+    "hit5": false,
+    "mrr": 0.0
+   },
+   "real": {
+    "pages": [
+     226,
+     168,
+     166,
+     23,
+     99,
+     13,
+     190,
+     195,
+     83,
+     125,
+     138,
+     6
+    ],
+    "scores": [
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0
+    ],
+    "hit1": false,
+    "hit3": false,
+    "hit5": false,
+    "mrr": 0.0
+   }
+  },
+  "102:0": {
+   "question_id": 102,
+   "part": 0,
+   "chapter": 0,
+   "question_type": "out_of_scope",
+   "question": "តើធ្វើដូចម្តេចដើម្បីដំឡើងកម្មវិធីកុំព្យូទ័រ Windows?",
+   "query_used": "តើធ្វើដូចម្តេចដើម្បីដំឡើងកម្មវិធីកុំព្យូទ័រ Windows?",
+   "expected_pages": [],
+   "expect_abstain": true,
+   "top_score": 0.0001,
+   "abstained": true,
+   "embed": {
+    "top5_pages": [
+     157,
+     158,
+     149,
+     157,
+     41
+    ],
+    "hit1": false,
+    "hit3": false,
+    "hit5": false,
+    "mrr": 0.0
+   },
+   "rerank": {
+    "top5_pages": [
+     149,
+     193,
+     193,
+     177,
+     56
+    ],
+    "hit1": false,
+    "hit3": false,
+    "hit5": false,
+    "mrr": 0.0
+   },
+   "real": {
+    "pages": [
+     149,
+     193,
+     193,
+     177,
+     56,
+     25,
+     157,
+     207,
+     134,
+     177,
+     157,
+     152
+    ],
+    "scores": [
+     0.0001,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0
+    ],
+    "hit1": false,
+    "hit3": false,
+    "hit5": false,
+    "mrr": 0.0
+   }
+  },
+  "103:0": {
+   "question_id": 103,
+   "part": 0,
+   "chapter": 0,
+   "question_type": "out_of_scope",
+   "question": "តើអ្នកណាឈ្នះពានរង្វាន់បាល់ទាត់ពិភពលោកឆ្នាំ ២០២២?",
+   "query_used": "តើអ្នកណាឈ្នះពានរង្វាន់បាល់ទាត់ពិភពលោកឆ្នាំ ២០២២?",
+   "expected_pages": [],
+   "expect_abstain": true,
+   "top_score": 0.0,
+   "abstained": true,
+   "embed": {
+    "top5_pages": [
+     24,
+     227,
+     25,
+     226,
+     227
+    ],
+    "hit1": false,
+    "hit3": false,
+    "hit5": false,
+    "mrr": 0.0
+   },
+   "rerank": {
+    "top5_pages": [
+     244,
+     66,
+     103,
+     12,
+     70
+    ],
+    "hit1": false,
+    "hit3": false,
+    "hit5": false,
+    "mrr": 0.0
+   },
+   "real": {
+    "pages": [
+     244,
+     66,
+     103,
+     12,
+     70,
+     246,
+     19,
+     61,
+     243,
+     69,
+     152,
+     69
+    ],
+    "scores": [
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0
+    ],
+    "hit1": false,
+    "hit3": false,
+    "hit5": false,
+    "mrr": 0.0
+   }
+  },
+  "104:0": {
+   "question_id": 104,
+   "part": 0,
+   "chapter": 0,
+   "question_type": "out_of_scope",
+   "question": "តើប្រទេសកម្ពុជាមានខេត្តប៉ុន្មាន?",
+   "query_used": "តើប្រទេសកម្ពុជាមានខេត្តប៉ុន្មាន?",
+   "expected_pages": [],
+   "expect_abstain": true,
+   "top_score": 0.0003,
+   "abstained": true,
+   "embed": {
+    "top5_pages": [
+     63,
+     95,
+     71,
+     36,
+     94
+    ],
+    "hit1": false,
+    "hit3": false,
+    "hit5": false,
+    "mrr": 0.0
+   },
+   "rerank": {
+    "top5_pages": [
+     242,
+     71,
+     194,
+     64,
+     95
+    ],
+    "hit1": false,
+    "hit3": false,
+    "hit5": false,
+    "mrr": 0.0
+   },
+   "real": {
+    "pages": [
+     242,
+     71,
+     194,
+     64,
+     95,
+     22,
+     7,
+     227,
+     36,
+     63,
+     127,
+     64
+    ],
+    "scores": [
+     0.0003,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0
+    ],
+    "hit1": false,
+    "hit3": false,
+    "hit5": false,
+    "mrr": 0.0
+   }
+  },
+  "105:0": {
+   "question_id": 105,
+   "part": 0,
+   "chapter": 5,
+   "question_type": "explanation",
+   "question": "តើថ្នាំអ្វីប្រើសម្រាប់ព្យាបាលជំងឺមហារីក?",
+   "query_used": "តើថ្នាំអ្វីប្រើសម្រាប់ព្យាបាលជំងឺមហារីក?",
+   "expected_pages": [
+    186
+   ],
+   "expect_abstain": false,
+   "top_score": 0.8565,
+   "abstained": false,
+   "embed": {
+    "top5_pages": [
+     186,
+     186,
+     47,
+     211,
+     135
+    ],
+    "hit1": true,
+    "hit3": true,
+    "hit5": true,
+    "mrr": 1.0
+   },
+   "rerank": {
+    "top5_pages": [
+     186,
+     186,
+     185,
+     211,
+     135
+    ],
+    "hit1": true,
+    "hit3": true,
+    "hit5": true,
+    "mrr": 1.0
+   },
+   "real": {
+    "pages": [
+     186,
+     186,
+     185,
+     211,
+     135,
+     49,
+     211,
+     187,
+     21,
+     47,
+     184,
+     95
+    ],
+    "scores": [
+     0.8565,
+     0.3271,
+     0.002,
+     0.0016,
+     0.0008,
+     0.0006,
+     0.0006,
+     0.0006,
+     0.0003,
+     0.0003,
+     0.0003,
+     0.0003
+    ],
+    "hit1": true,
+    "hit3": true,
+    "hit5": true,
+    "mrr": 1.0
+   }
+  },
+  "106:0": {
+   "question_id": 106,
+   "part": 0,
+   "chapter": 0,
+   "question_type": "out_of_scope",
+   "question": "តើសហគមន៍អឺរ៉ុបបង្កើតឡើងនៅឆ្នាំណា?",
+   "query_used": "តើសហគមន៍អឺរ៉ុបបង្កើតឡើងនៅឆ្នាំណា?",
+   "expected_pages": [],
+   "expect_abstain": true,
+   "top_score": 0.0002,
+   "abstained": true,
+   "embed": {
+    "top5_pages": [
+     121,
+     198,
+     121,
+     196,
+     221
+    ],
+    "hit1": false,
+    "hit3": false,
+    "hit5": false,
+    "mrr": 0.0
+   },
+   "rerank": {
+    "top5_pages": [
+     221,
+     7,
+     195,
+     195,
+     193
+    ],
+    "hit1": false,
+    "hit3": false,
+    "hit5": false,
+    "mrr": 0.0
+   },
+   "real": {
+    "pages": [
+     221,
+     7,
+     195,
+     195,
+     193,
+     68,
+     226,
+     196,
+     196,
+     69,
+     220,
+     121
+    ],
+    "scores": [
+     0.0002,
+     0.0002,
+     0.0001,
+     0.0001,
+     0.0001,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0
+    ],
+    "hit1": false,
+    "hit3": false,
+    "hit5": false,
+    "mrr": 0.0
+   }
+  },
+  "107:0": {
+   "question_id": 107,
+   "part": 0,
+   "chapter": 0,
+   "question_type": "out_of_scope",
+   "question": "តើរថយន្តម៉ូដែលណាល្អបំផុតក្នុងឆ្នាំ ២០២៦?",
+   "query_used": "តើរថយន្តម៉ូដែលណាល្អបំផុតក្នុងឆ្នាំ ២០២៦?",
+   "expected_pages": [],
+   "expect_abstain": true,
+   "top_score": 0.0001,
+   "abstained": true,
+   "embed": {
+    "top5_pages": [
+     227,
+     239,
+     256,
+     168,
+     256
+    ],
+    "hit1": false,
+    "hit3": false,
+    "hit5": false,
+    "mrr": 0.0
+   },
+   "rerank": {
+    "top5_pages": [
+     166,
+     168,
+     215,
+     212,
+     244
+    ],
+    "hit1": false,
+    "hit3": false,
+    "hit5": false,
+    "mrr": 0.0
+   },
+   "real": {
+    "pages": [
+     166,
+     168,
+     215,
+     212,
+     244,
+     103,
+     20,
+     7,
+     211,
+     187,
+     194,
+     169
+    ],
+    "scores": [
+     0.0001,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0
+    ],
+    "hit1": false,
+    "hit3": false,
+    "hit5": false,
+    "mrr": 0.0
+   }
+  },
+  "108:0": {
+   "question_id": 108,
+   "part": 0,
+   "chapter": 1,
+   "question_type": "ocr_garbled",
+   "question": "តើស្ទីចម៉ាតជាអ្វី?",
+   "query_used": "តើស្ទិចម៉ាតជាអ្វី?",
+   "expected_pages": [
+    15,
+    17,
+    18
+   ],
+   "expect_abstain": false,
+   "top_score": 0.4172,
+   "abstained": false,
+   "embed": {
+    "top5_pages": [
+     29,
+     15,
+     29,
+     15,
+     14
+    ],
+    "hit1": false,
+    "hit3": true,
+    "hit5": true,
+    "mrr": 0.5
+   },
+   "rerank": {
+    "top5_pages": [
+     15,
+     15,
+     14,
+     15,
+     13
+    ],
+    "hit1": true,
+    "hit3": true,
+    "hit5": true,
+    "mrr": 1.0
+   },
+   "real": {
+    "pages": [
+     15,
+     15,
+     14,
+     15,
+     13,
+     17,
+     14,
+     29,
+     40,
+     29,
+     40,
+     22
+    ],
+    "scores": [
+     0.4172,
+     0.0965,
+     0.0646,
+     0.0458,
+     0.041,
+     0.0408,
+     0.0386,
+     0.0266,
+     0.0159,
+     0.0056,
+     0.0046,
+     0.0032
+    ],
+    "hit1": true,
+    "hit3": true,
+    "hit5": true,
+    "mrr": 1.0
+   }
+  },
+  "109:0": {
+   "question_id": 109,
+   "part": 0,
+   "chapter": 1,
+   "question_type": "ocr_garbled",
+   "question": "តើស្អិតម៉ាសមាននាទីអ្វី?",
+   "query_used": "តើស្ទិចម៉ាតមាននាទីអ្វី?",
+   "expected_pages": [
+    15,
+    16,
+    17
+   ],
+   "expect_abstain": false,
+   "top_score": 0.1192,
+   "abstained": false,
+   "embed": {
+    "top5_pages": [
+     13,
+     29,
+     29,
+     15,
+     87
+    ],
+    "hit1": false,
+    "hit3": false,
+    "hit5": true,
+    "mrr": 0.25
+   },
+   "rerank": {
+    "top5_pages": [
+     13,
+     15,
+     40,
+     15,
+     17
+    ],
+    "hit1": false,
+    "hit3": true,
+    "hit5": true,
+    "mrr": 0.5
+   },
+   "real": {
+    "pages": [
+     13,
+     15,
+     40,
+     15,
+     17,
+     15,
+     14,
+     40,
+     50,
+     29,
+     29,
+     64
+    ],
+    "scores": [
+     0.1192,
+     0.0815,
+     0.0658,
+     0.0421,
+     0.0161,
+     0.0149,
+     0.0119,
+     0.0095,
+     0.0043,
+     0.0039,
+     0.0038,
+     0.0027
+    ],
+    "hit1": false,
+    "hit3": true,
+    "hit5": true,
+    "mrr": 0.5
+   }
+  },
+  "110:0": {
+   "question_id": 110,
+   "part": 0,
+   "chapter": 3,
+   "question_type": "ocr_garbled",
+   "question": "តើរលកសូមាននាទីអ្វី?",
+   "query_used": "តើរលកសូរមាននាទីអ្វី?",
+   "expected_pages": [
+    87,
+    89
+   ],
+   "expect_abstain": false,
+   "top_score": 0.6279,
+   "abstained": false,
+   "embed": {
+    "top5_pages": [
+     68,
+     89,
+     87,
+     13,
+     67
+    ],
+    "hit1": false,
+    "hit3": true,
+    "hit5": true,
+    "mrr": 0.5
+   },
+   "rerank": {
+    "top5_pages": [
+     87,
+     89,
+     88,
+     32,
+     78
+    ],
+    "hit1": true,
+    "hit3": true,
+    "hit5": true,
+    "mrr": 1.0
+   },
+   "real": {
+    "pages": [
+     87,
+     89,
+     88,
+     32,
+     78,
+     83,
+     66,
+     13,
+     188,
+     13,
+     93,
+     36
+    ],
+    "scores": [
+     0.6279,
+     0.1387,
+     0.0223,
+     0.0081,
+     0.0063,
+     0.0061,
+     0.0053,
+     0.0036,
+     0.0031,
+     0.0027,
+     0.0024,
+     0.0021
+    ],
+    "hit1": true,
+    "hit3": true,
+    "hit5": true,
+    "mrr": 1.0
+   }
+  },
+  "111:0": {
+   "question_id": 111,
+   "part": 0,
+   "chapter": 6,
+   "question_type": "ocr_garbled",
+   "question": "តើលក្ខណៈបន្សំសំដៅលើអ្វី?",
+   "query_used": "តើលក្ខណៈបន្ស៊ាំសំដៅលើអ្វី?",
+   "expected_pages": [
+    202,
+    203
+   ],
+   "expect_abstain": false,
+   "top_score": 0.3127,
+   "abstained": false,
+   "embed": {
+    "top5_pages": [
+     239,
+     236,
+     237,
+     236,
+     227
+    ],
+    "hit1": false,
+    "hit3": false,
+    "hit5": false,
+    "mrr": 0.16666666666666666
+   },
+   "rerank": {
+    "top5_pages": [
+     237,
+     239,
+     236,
+     236,
+     203
+    ],
+    "hit1": false,
+    "hit3": false,
+    "hit5": true,
+    "mrr": 0.2
+   },
+   "real": {
+    "pages": [
+     237,
+     239,
+     236,
+     236,
+     203,
+     176,
+     93,
+     200,
+     240,
+     202,
+     139,
+     96
+    ],
+    "scores": [
+     0.3127,
+     0.256,
+     0.2125,
+     0.1488,
+     0.1364,
+     0.0238,
+     0.0158,
+     0.0086,
+     0.0042,
+     0.0017,
+     0.0016,
+     0.0015
+    ],
+    "hit1": false,
+    "hit3": false,
+    "hit5": true,
+    "mrr": 0.2
+   }
+  },
+  "112:0": {
+   "question_id": 112,
+   "part": 0,
+   "chapter": 6,
+   "question_type": "ocr_garbled",
+   "question": "តើសត្វរ៉ាពមានលក្ខណៈបន្សំអ្វី?",
+   "query_used": "តើសត្វរ៉ាពមានលក្ខណៈបន្ស៊ាំអ្វី?",
+   "expected_pages": [
+    239
+   ],
+   "expect_abstain": false,
+   "top_score": 0.9986,
+   "abstained": false,
+   "embed": {
+    "top5_pages": [
+     239,
+     239,
+     226,
+     60,
+     208
+    ],
+    "hit1": true,
+    "hit3": true,
+    "hit5": true,
+    "mrr": 1.0
+   },
+   "rerank": {
+    "top5_pages": [
+     239,
+     239,
+     236,
+     203,
+     199
+    ],
+    "hit1": true,
+    "hit3": true,
+    "hit5": true,
+    "mrr": 1.0
+   },
+   "real": {
+    "pages": [
+     239,
+     239,
+     236,
+     203,
+     199,
+     237,
+     241,
+     204,
+     200,
+     60,
+     208,
+     93
+    ],
+    "scores": [
+     0.9986,
+     0.9798,
+     0.1014,
+     0.029,
+     0.0261,
+     0.0124,
+     0.0025,
+     0.0024,
+     0.0019,
+     0.0018,
+     0.0018,
+     0.0017
+    ],
+    "hit1": true,
+    "hit3": true,
+    "hit5": true,
+    "mrr": 1.0
+   }
+  },
+  "113:0": {
+   "question_id": 113,
+   "part": 0,
+   "chapter": 3,
+   "question_type": "ocr_garbled",
+   "question": "តើណឺរ៉ូនពហុប្ដួលជាអ្វី?",
+   "query_used": "តើណឺរ៉ូនពហុបូឡាជាអ្វី?",
+   "expected_pages": [
+    67,
+    68
+   ],
+   "expect_abstain": false,
+   "top_score": 0.515,
+   "abstained": false,
+   "embed": {
+    "top5_pages": [
+     66,
+     67,
+     68,
+     69,
+     69
+    ],
+    "hit1": true,
+    "hit3": true,
+    "hit5": true,
+    "mrr": 1.0
+   },
+   "rerank": {
+    "top5_pages": [
+     67,
+     66,
+     66,
+     69,
+     61
+    ],
+    "hit1": true,
+    "hit3": true,
+    "hit5": true,
+    "mrr": 1.0
+   },
+   "real": {
+    "pages": [
+     67,
+     66,
+     66,
+     69,
+     61,
+     68,
+     68,
+     75,
+     62,
+     74,
+     60,
+     69
+    ],
+    "scores": [
+     0.515,
+     0.0465,
+     0.0318,
+     0.0182,
+     0.0172,
+     0.011,
+     0.0064,
+     0.0054,
+     0.0027,
+     0.0022,
+     0.0022,
+     0.0018
+    ],
+    "hit1": true,
+    "hit3": true,
+    "hit5": true,
+    "mrr": 1.0
+   }
+  },
+  "114:0": {
+   "question_id": 114,
+   "part": 0,
+   "chapter": 3,
+   "question_type": "multi_part",
+   "question": "I. តើណឺរ៉ូនមានប្រភេទអ្វីខ្លះ? II. តើអាំងភ្លុចប្រសាទធ្វើដំណើរយ៉ាងដូចម្តេច?",
+   "query_used": "តើណឺរ៉ូនមានប្រភេទអ្វីខ្លះ?",
+   "expected_pages": [
+    68,
+    69,
+    70
+   ],
+   "expect_abstain": false,
+   "top_score": 0.9912,
+   "abstained": false,
+   "embed": {
+    "top5_pages": [
+     66,
+     69,
+     67,
+     68,
+     68
+    ],
+    "hit1": false,
+    "hit3": true,
+    "hit5": true,
+    "mrr": 0.5
+   },
+   "rerank": {
+    "top5_pages": [
+     69,
+     67,
+     66,
+     68,
+     68
+    ],
+    "hit1": true,
+    "hit3": true,
+    "hit5": true,
+    "mrr": 1.0
+   },
+   "real": {
+    "pages": [
+     69,
+     67,
+     66,
+     68,
+     68,
+     75,
+     60,
+     78,
+     69,
+     70,
+     66,
+     62
+    ],
+    "scores": [
+     0.9912,
+     0.8899,
+     0.8777,
+     0.7654,
+     0.7466,
+     0.2994,
+     0.1146,
+     0.1136,
+     0.0466,
+     0.0456,
+     0.0366,
+     0.0251
+    ],
+    "hit1": true,
+    "hit3": true,
+    "hit5": true,
+    "mrr": 1.0
+   }
+  },
+  "114:1": {
+   "question_id": 114,
+   "part": 1,
+   "chapter": 3,
+   "question_type": "multi_part",
+   "question": "I. តើណឺរ៉ូនមានប្រភេទអ្វីខ្លះ? II. តើអាំងភ្លុចប្រសាទធ្វើដំណើរយ៉ាងដូចម្តេច?",
+   "query_used": "តើអាំងភ្លុចប្រសាទធ្វើដំណើរយ៉ាងដូចម្តេច?",
+   "expected_pages": [
+    68,
+    69,
+    70
+   ],
+   "expect_abstain": false,
+   "top_score": 0.9978,
+   "abstained": false,
+   "embed": {
+    "top5_pages": [
+     68,
+     61,
+     70,
+     62,
+     69
+    ],
+    "hit1": true,
+    "hit3": true,
+    "hit5": true,
+    "mrr": 1.0
+   },
+   "rerank": {
+    "top5_pages": [
+     68,
+     69,
+     69,
+     70,
+     61
+    ],
+    "hit1": true,
+    "hit3": true,
+    "hit5": true,
+    "mrr": 1.0
+   },
+   "real": {
+    "pages": [
+     68,
+     69,
+     69,
+     70,
+     61,
+     75,
+     62,
+     90,
+     89,
+     61,
+     97,
+     66
+    ],
+    "scores": [
+     0.9978,
+     0.988,
+     0.984,
+     0.9656,
+     0.9633,
+     0.9348,
+     0.775,
+     0.7516,
+     0.5764,
+     0.5133,
+     0.5083,
+     0.3529
+    ],
+    "hit1": true,
+    "hit3": true,
+    "hit5": true,
+    "mrr": 1.0
+   }
+  },
+  "116:0": {
+   "question_id": 116,
+   "part": 0,
+   "chapter": 2,
+   "question_type": "multi_part",
+   "question": "I. តើរុក្ខជាតិស្រូបទឹកដោយរបៀបណា? II. តើទឹកឡើងដល់ស្លឹកដោយរបៀបណា?",
+   "query_used": "តើរុក្ខជាតិស្រូបទឹកដោយរបៀបណា?",
+   "expected_pages": [
+    26,
+    28,
+    40
+   ],
+   "expect_abstain": false,
+   "top_score": 0.9678,
+   "abstained": false,
+   "embed": {
+    "top5_pages": [
+     26,
+     40,
+     26,
+     31,
+     57
+    ],
+    "hit1": true,
+    "hit3": true,
+    "hit5": true,
+    "mrr": 1.0
+   },
+   "rerank": {
+    "top5_pages": [
+     40,
+     26,
+     26,
+     31,
+     40
+    ],
+    "hit1": true,
+    "hit3": true,
+    "hit5": true,
+    "mrr": 1.0
+   },
+   "real": {
+    "pages": [
+     40,
+     26,
+     26,
+     31,
+     40,
+     40,
+     41,
+     27,
+     240,
+     29,
+     57,
+     27
+    ],
+    "scores": [
+     0.9678,
+     0.957,
+     0.8774,
+     0.8433,
+     0.7917,
+     0.7819,
+     0.5887,
+     0.5408,
+     0.4409,
+     0.3908,
+     0.3517,
+     0.342
+    ],
+    "hit1": true,
+    "hit3": true,
+    "hit5": true,
+    "mrr": 1.0
+   }
+  },
+  "116:1": {
+   "question_id": 116,
+   "part": 1,
+   "chapter": 2,
+   "question_type": "multi_part",
+   "question": "I. តើរុក្ខជាតិស្រូបទឹកដោយរបៀបណា? II. តើទឹកឡើងដល់ស្លឹកដោយរបៀបណា?",
+   "query_used": "តើទឹកឡើងដល់ស្លឹកដោយរបៀបណា?",
+   "expected_pages": [
+    26,
+    28,
+    40
+   ],
+   "expect_abstain": false,
+   "top_score": 0.9371,
+   "abstained": false,
+   "embed": {
+    "top5_pages": [
+     40,
+     28,
+     28,
+     27,
+     29
+    ],
+    "hit1": true,
+    "hit3": true,
+    "hit5": true,
+    "mrr": 1.0
+   },
+   "rerank": {
+    "top5_pages": [
+     28,
+     40,
+     29,
+     28,
+     58
+    ],
+    "hit1": true,
+    "hit3": true,
+    "hit5": true,
+    "mrr": 1.0
+   },
+   "real": {
+    "pages": [
+     28,
+     40,
+     29,
+     28,
+     58,
+     25,
+     54,
+     26,
+     41,
+     13,
+     57,
+     27
+    ],
+    "scores": [
+     0.9371,
+     0.8983,
+     0.8687,
+     0.7315,
+     0.4785,
+     0.3916,
+     0.3421,
+     0.1966,
+     0.1221,
+     0.1112,
+     0.0943,
+     0.0893
+    ],
+    "hit1": true,
+    "hit3": true,
+    "hit5": true,
+    "mrr": 1.0
+   }
+  },
+  "117:0": {
+   "question_id": 117,
+   "part": 0,
+   "chapter": 8,
+   "question_type": "multi_part",
+   "question": "I. តើខ្សែអាហារជាអ្វី? II. តើថាមពលហូរកាត់ខ្សែអាហារយ៉ាងដូចម្តេច?",
+   "query_used": "តើខ្សែអាហារជាអ្វី?",
+   "expected_pages": [
+    246,
+    248,
+    249
+   ],
+   "expect_abstain": false,
+   "top_score": 0.9828,
+   "abstained": false,
+   "embed": {
+    "top5_pages": [
+     249,
+     247,
+     247,
+     249,
+     255
+    ],
+    "hit1": true,
+    "hit3": true,
+    "hit5": true,
+    "mrr": 1.0
+   },
+   "rerank": {
+    "top5_pages": [
+     249,
+     247,
+     249,
+     247,
+     246
+    ],
+    "hit1": true,
+    "hit3": true,
+    "hit5": true,
+    "mrr": 1.0
+   },
+   "real": {
+    "pages": [
+     249,
+     247,
+     249,
+     247,
+     246,
+     255,
+     250,
+     60,
+     26,
+     61,
+     13,
+     31
+    ],
+    "scores": [
+     0.9828,
+     0.9181,
+     0.7472,
+     0.7283,
+     0.1065,
+     0.0987,
+     0.0344,
+     0.0022,
+     0.0017,
+     0.0014,
+     0.001,
+     0.0007
+    ],
+    "hit1": true,
+    "hit3": true,
+    "hit5": true,
+    "mrr": 1.0
+   }
+  },
+  "117:1": {
+   "question_id": 117,
+   "part": 1,
+   "chapter": 8,
+   "question_type": "multi_part",
+   "question": "I. តើខ្សែអាហារជាអ្វី? II. តើថាមពលហូរកាត់ខ្សែអាហារយ៉ាងដូចម្តេច?",
+   "query_used": "តើថាមពលហូរកាត់ខ្សែអាហារយ៉ាងដូចម្តេច?",
+   "expected_pages": [
+    246,
+    248,
+    249
+   ],
+   "expect_abstain": false,
+   "top_score": 0.8773,
+   "abstained": false,
+   "embed": {
+    "top5_pages": [
+     249,
+     249,
+     246,
+     247,
+     246
+    ],
+    "hit1": true,
+    "hit3": true,
+    "hit5": true,
+    "mrr": 1.0
+   },
+   "rerank": {
+    "top5_pages": [
+     249,
+     249,
+     247,
+     246,
+     247
+    ],
+    "hit1": true,
+    "hit3": true,
+    "hit5": true,
+    "mrr": 1.0
+   },
+   "real": {
+    "pages": [
+     249,
+     249,
+     247,
+     246,
+     247,
+     250,
+     251,
+     246,
+     255,
+     31,
+     252,
+     105
+    ],
+    "scores": [
+     0.8773,
+     0.5994,
+     0.4648,
+     0.3676,
+     0.3283,
+     0.0432,
+     0.0315,
+     0.0102,
+     0.0053,
+     0.0042,
+     0.0029,
+     0.0021
+    ],
+    "hit1": true,
+    "hit3": true,
+    "hit5": true,
+    "mrr": 1.0
+   }
+  },
+  "118:0": {
+   "question_id": 118,
+   "part": 0,
+   "chapter": 1,
+   "question_type": "multi_part",
+   "question": "I. តើស៊ីមណូស្ពែមជាអ្វី? II. តើអង់ស្យូស្ពែមជាអ្វី?",
+   "query_used": "តើស៊ីមណូស្ពែមជាអ្វី?",
+   "expected_pages": [
+    6,
+    12
+   ],
+   "expect_abstain": false,
+   "top_score": 0.9987,
+   "abstained": false,
+   "embed": {
+    "top5_pages": [
+     6,
+     6,
+     8,
+     10,
+     24
+    ],
+    "hit1": true,
+    "hit3": true,
+    "hit5": true,
+    "mrr": 1.0
+   },
+   "rerank": {
+    "top5_pages": [
+     6,
+     10,
+     6,
+     10,
+     8
+    ],
+    "hit1": true,
+    "hit3": true,
+    "hit5": true,
+    "mrr": 1.0
+   },
+   "real": {
+    "pages": [
+     6,
+     10,
+     6,
+     10,
+     8,
+     9,
+     7,
+     5,
+     4,
+     24,
+     24,
+     9
+    ],
+    "scores": [
+     0.9987,
+     0.9494,
+     0.9336,
+     0.8648,
+     0.6279,
+     0.3218,
+     0.295,
+     0.2526,
+     0.2079,
+     0.1118,
+     0.0689,
+     0.0597
+    ],
+    "hit1": true,
+    "hit3": true,
+    "hit5": true,
+    "mrr": 1.0
+   }
+  },
+  "118:1": {
+   "question_id": 118,
+   "part": 1,
+   "chapter": 1,
+   "question_type": "multi_part",
+   "question": "I. តើស៊ីមណូស្ពែមជាអ្វី? II. តើអង់ស្យូស្ពែមជាអ្វី?",
+   "query_used": "តើអង់ស្យូស្ពែមជាអ្វី?",
+   "expected_pages": [
+    6,
+    12
+   ],
+   "expect_abstain": false,
+   "top_score": 0.9911,
+   "abstained": false,
+   "embed": {
+    "top5_pages": [
+     24,
+     12,
+     20,
+     14,
+     12
+    ],
+    "hit1": false,
+    "hit3": true,
+    "hit5": true,
+    "mrr": 0.5
+   },
+   "rerank": {
+    "top5_pages": [
+     12,
+     18,
+     20,
+     6,
+     14
+    ],
+    "hit1": true,
+    "hit3": true,
+    "hit5": true,
+    "mrr": 1.0
+   },
+   "real": {
+    "pages": [
+     12,
+     18,
+     20,
+     6,
+     14,
+     5,
+     17,
+     4,
+     19,
+     13,
+     24,
+     12
+    ],
+    "scores": [
+     0.9911,
+     0.5969,
+     0.5293,
+     0.4512,
+     0.4142,
+     0.3254,
+     0.2917,
+     0.2472,
+     0.2234,
+     0.1862,
+     0.1741,
+     0.1653
+    ],
+    "hit1": true,
+    "hit3": true,
+    "hit5": true,
+    "mrr": 1.0
+   }
+  },
+  "119:0": {
+   "question_id": 119,
+   "part": 0,
+   "chapter": 4,
+   "question_type": "multi_part",
+   "question": "I. តើប្រូតេអ៊ីនបង្កើតពីអ្វី? II. តើចំណងប៉ុបទីតជាអ្វី?",
+   "query_used": "តើប្រូតេអ៊ីនបង្កើតពីអ្វី?",
+   "expected_pages": [
+    122,
+    126,
+    127
+   ],
+   "expect_abstain": false,
+   "top_score": 0.9918,
+   "abstained": false,
+   "embed": {
+    "top5_pages": [
+     122,
+     131,
+     128,
+     134,
+     128
+    ],
+    "hit1": true,
+    "hit3": true,
+    "hit5": true,
+    "mrr": 1.0
+   },
+   "rerank": {
+    "top5_pages": [
+     122,
+     134,
+     128,
+     133,
+     128
+    ],
+    "hit1": true,
+    "hit3": true,
+    "hit5": true,
+    "mrr": 1.0
+   },
+   "real": {
+    "pages": [
+     122,
+     134,
+     128,
+     133,
+     128,
+     131,
+     127,
+     122,
+     163,
+     129,
+     130,
+     163
+    ],
+    "scores": [
+     0.9918,
+     0.955,
+     0.9431,
+     0.9417,
+     0.9193,
+     0.9026,
+     0.8786,
+     0.8705,
+     0.8639,
+     0.8093,
+     0.8054,
+     0.7999
+    ],
+    "hit1": true,
+    "hit3": true,
+    "hit5": true,
+    "mrr": 1.0
+   }
+  },
+  "119:1": {
+   "question_id": 119,
+   "part": 1,
+   "chapter": 4,
+   "question_type": "multi_part",
+   "question": "I. តើប្រូតេអ៊ីនបង្កើតពីអ្វី? II. តើចំណងប៉ុបទីតជាអ្វី?",
+   "query_used": "តើចំណងប៉ុបទីតជាអ្វី?",
+   "expected_pages": [
+    122,
+    126,
+    127
+   ],
+   "expect_abstain": false,
+   "top_score": 0.9165,
+   "abstained": false,
+   "embed": {
+    "top5_pages": [
+     125,
+     170,
+     128,
+     170,
+     129
+    ],
+    "hit1": true,
+    "hit3": true,
+    "hit5": true,
+    "mrr": 1.0
+   },
+   "rerank": {
+    "top5_pages": [
+     125,
+     169,
+     126,
+     171,
+     128
+    ],
+    "hit1": true,
+    "hit3": true,
+    "hit5": true,
+    "mrr": 1.0
+   },
+   "real": {
+    "pages": [
+     125,
+     169,
+     126,
+     171,
+     128,
+     171,
+     170,
+     127,
+     129,
+     133,
+     170,
+     163
+    ],
+    "scores": [
+     0.9165,
+     0.5621,
+     0.3361,
+     0.2518,
+     0.2477,
+     0.1322,
+     0.065,
+     0.0213,
+     0.0112,
+     0.0107,
+     0.0085,
+     0.0052
+    ],
+    "hit1": true,
+    "hit3": true,
+    "hit5": true,
+    "mrr": 1.0
+   }
+  },
+  "55:0": {
+   "question_id": 55,
+   "part": 0,
+   "chapter": 1,
+   "question_type": "process",
+   "question": "ចូរពន្យល់ពីដំណើរការលំអងរបស់ស្រល់",
+   "query_used": "ចូរពន្យល់ពីដំណើរការលំអងរបស់ស្រល់ ស៊ីមណូស្ពែម កោន",
+   "expected_pages": [
+    9
+   ],
+   "expect_abstain": false,
+   "top_score": 0.93,
+   "abstained": false,
+   "embed": {
+    "top5_pages": [
+     9,
+     10,
+     10,
+     24,
+     8
+    ],
+    "hit1": true,
+    "hit3": true,
+    "hit5": true,
+    "mrr": 1.0
+   },
+   "rerank": {
+    "top5_pages": [
+     10,
+     10,
+     24,
+     9,
+     9
+    ],
+    "hit1": false,
+    "hit3": false,
+    "hit5": true,
+    "mrr": 0.25
+   },
+   "real": {
+    "pages": [
+     10,
+     10,
+     24,
+     9,
+     9,
+     6,
+     8,
+     23,
+     17,
+     15,
+     16,
+     57
+    ],
+    "scores": [
+     0.93,
+     0.9236,
+     0.9234,
+     0.9146,
+     0.8895,
+     0.5505,
+     0.3643,
+     0.0751,
+     0.0321,
+     0.0087,
+     0.0027,
+     0.0007
+    ],
+    "hit1": false,
+    "hit3": false,
+    "hit5": true,
+    "mrr": 0.25
+   }
+  },
+  "68:0": {
+   "question_id": 68,
+   "part": 0,
+   "chapter": 5,
+   "question_type": "process",
+   "question": "ពន្យល់ពីរបៀបដែលព័ត៌មានសេនេទិចត្រូវបានបញ្ជូនពីមេទៅកូន",
+   "query_used": "ពន្យល់ពីរបៀបដែលព័ត៌មានសេនេទិចត្រូវបានបញ្ជូនពីមេទៅកូន",
+   "expected_pages": [
+    149,
+    150
+   ],
+   "expect_abstain": false,
+   "top_score": 0.7929,
+   "abstained": false,
+   "embed": {
+    "top5_pages": [
+     149,
+     149,
+     149,
+     180,
+     150
+    ],
+    "hit1": true,
+    "hit3": true,
+    "hit5": true,
+    "mrr": 1.0
+   },
+   "rerank": {
+    "top5_pages": [
+     149,
+     160,
+     180,
+     160,
+     162
+    ],
+    "hit1": true,
+    "hit3": true,
+    "hit5": true,
+    "mrr": 1.0
+   },
+   "real": {
+    "pages": [
+     149,
+     160,
+     180,
+     160,
+     162,
+     193,
+     190,
+     164,
+     174,
+     150,
+     164,
+     159
+    ],
+    "scores": [
+     0.7929,
+     0.6936,
+     0.6337,
+     0.6025,
+     0.3914,
+     0.2697,
+     0.1703,
+     0.1522,
+     0.1018,
+     0.076,
+     0.0619,
+     0.0285
+    ],
+    "hit1": true,
+    "hit3": true,
+    "hit5": true,
+    "mrr": 1.0
+   }
+  },
+  "78:0": {
+   "question_id": 78,
+   "part": 0,
+   "chapter": 5,
+   "question_type": "exam",
+   "question": "ក្នុងប្រឡង៖ តើអ្វីជានិយមន័យរបស់ហ្សែន (gene)?",
+   "query_used": "ក្នុងប្រឡង៖ តើអ្វីជានិយមន័យរបស់សែន (gene)?",
+   "expected_pages": [
+    174
+   ],
+   "expect_abstain": false,
+   "top_score": 0.1585,
+   "abstained": false,
+   "embed": {
+    "top5_pages": [
+     174,
+     174,
+     162,
+     162,
+     163
+    ],
+    "hit1": true,
+    "hit3": true,
+    "hit5": true,
+    "mrr": 1.0
+   },
+   "rerank": {
+    "top5_pages": [
+     162,
+     174,
+     174,
+     193,
+     192
+    ],
+    "hit1": false,
+    "hit3": true,
+    "hit5": true,
+    "mrr": 0.5
+   },
+   "real": {
+    "pages": [
+     162,
+     174,
+     174,
+     193,
+     192,
+     193,
+     163,
+     189,
+     162,
+     173,
+     190,
+     205
+    ],
+    "scores": [
+     0.1585,
+     0.0975,
+     0.047,
+     0.0393,
+     0.0116,
+     0.0085,
+     0.0083,
+     0.0079,
+     0.0072,
+     0.0061,
+     0.0041,
+     0.0026
+    ],
+    "hit1": false,
+    "hit3": true,
+    "hit5": true,
+    "mrr": 0.5
+   }
+  },
+  "84:0": {
+   "question_id": 84,
+   "part": 0,
+   "chapter": 5,
+   "question_type": "quiz",
+   "question": "ចូរបង្កើតសំណួរសាកល្បង 3 អំពី ADN និង ARN",
+   "query_used": "ចូរបង្កើតសំណួរសាកល្បង 3 អំពី ADN និង ARN",
+   "expected_pages": [
+    150,
+    160,
+    165
+   ],
+   "expect_abstain": false,
+   "top_score": 0.8925,
+   "abstained": false,
+   "embed": {
+    "top5_pages": [
+     161,
+     164,
+     191,
+     164,
+     194
+    ],
+    "hit1": false,
+    "hit3": true,
+    "hit5": true,
+    "mrr": 0.5
+   },
+   "rerank": {
+    "top5_pages": [
+     174,
+     174,
+     190,
+     161,
+     160
+    ],
+    "hit1": false,
+    "hit3": false,
+    "hit5": true,
+    "mrr": 0.2
+   },
+   "real": {
+    "pages": [
+     174,
+     174,
+     190,
+     161,
+     160,
+     191,
+     193,
+     164,
+     164,
+     194,
+     192,
+     160
+    ],
+    "scores": [
+     0.8925,
+     0.702,
+     0.6129,
+     0.5613,
+     0.4607,
+     0.4389,
+     0.3749,
+     0.3698,
+     0.2824,
+     0.2684,
+     0.2458,
+     0.155
+    ],
+    "hit1": false,
+    "hit3": false,
+    "hit5": true,
+    "mrr": 0.2
+   }
+  },
+  "86:0": {
+   "question_id": 86,
+   "part": 0,
+   "chapter": 2,
+   "question_type": "quiz",
+   "question": "ចូរបង្កើតសំណួរសាកល្បង 3 អំពីការស្រូបទឹករបស់រុក្ខជាតិ",
+   "query_used": "ចូរបង្កើតសំណួរសាកល្បង 3 អំពីការស្រូបទឹករបស់រុក្ខជាតិ",
+   "expected_pages": [
+    26,
+    27,
+    40
+   ],
+   "expect_abstain": false,
+   "top_score": 0.9499,
+   "abstained": false,
+   "embed": {
+    "top5_pages": [
+     57,
+     26,
+     57,
+     58,
+     41
+    ],
+    "hit1": false,
+    "hit3": true,
+    "hit5": true,
+    "mrr": 0.5
+   },
+   "rerank": {
+    "top5_pages": [
+     57,
+     41,
+     57,
+     40,
+     40
+    ],
+    "hit1": false,
+    "hit3": false,
+    "hit5": true,
+    "mrr": 0.25
+   },
+   "real": {
+    "pages": [
+     57,
+     41,
+     57,
+     40,
+     40,
+     58,
+     26,
+     27,
+     31,
+     26,
+     256,
+     28
+    ],
+    "scores": [
+     0.9499,
+     0.8575,
+     0.6651,
+     0.6083,
+     0.6058,
+     0.5469,
+     0.3651,
+     0.255,
+     0.1989,
+     0.1863,
+     0.1722,
+     0.1706
+    ],
+    "hit1": false,
+    "hit3": false,
+    "hit5": true,
+    "mrr": 0.25
+   }
+  },
+  "115:0": {
+   "question_id": 115,
+   "part": 0,
+   "chapter": 5,
+   "question_type": "multi_part",
+   "question": "ក. តើ ADN ជាអ្វី? ខ. តើ ARN មានប៉ុន្មានប្រភេទ?",
+   "query_used": "តើ ADN ជាអ្វី?",
+   "expected_pages": [
+    150,
+    160
+   ],
+   "expect_abstain": false,
+   "top_score": 0.8054,
+   "abstained": false,
+   "embed": {
+    "top5_pages": [
+     163,
+     150,
+     159,
+     194,
+     160
+    ],
+    "hit1": false,
+    "hit3": true,
+    "hit5": true,
+    "mrr": 0.5
+   },
+   "rerank": {
+    "top5_pages": [
+     163,
+     159,
+     160,
+     152,
+     156
+    ],
+    "hit1": false,
+    "hit3": true,
+    "hit5": true,
+    "mrr": 0.5
+   },
+   "real": {
+    "pages": [
+     163,
+     159,
+     160,
+     152,
+     156,
+     150,
+     162,
+     162,
+     157,
+     153,
+     154,
+     153
+    ],
+    "scores": [
+     0.8054,
+     0.668,
+     0.6412,
+     0.6255,
+     0.563,
+     0.5587,
+     0.5072,
+     0.4742,
+     0.471,
+     0.3315,
+     0.2817,
+     0.2291
+    ],
+    "hit1": false,
+    "hit3": true,
+    "hit5": true,
+    "mrr": 0.5
+   }
+  },
+  "115:1": {
+   "question_id": 115,
+   "part": 1,
+   "chapter": 5,
+   "question_type": "multi_part",
+   "question": "ក. តើ ADN ជាអ្វី? ខ. តើ ARN មានប៉ុន្មានប្រភេទ?",
+   "query_used": "តើ ARN មានប៉ុន្មានប្រភេទ?",
+   "expected_pages": [
+    164,
+    165
+   ],
+   "expect_abstain": false,
+   "top_score": 0.9959,
+   "abstained": false,
+   "embed": {
+    "top5_pages": [
+     164,
+     164,
+     170,
+     174,
+     167
+    ],
+    "hit1": true,
+    "hit3": true,
+    "hit5": true,
+    "mrr": 1.0
+   },
+   "rerank": {
+    "top5_pages": [
+     164,
+     164,
+     170,
+     167,
+     192
+    ],
+    "hit1": true,
+    "hit3": true,
+    "hit5": true,
+    "mrr": 1.0
+   },
+   "real": {
+    "pages": [
+     164,
+     164,
+     170,
+     167,
+     192,
+     160,
+     159,
+     174,
+     211,
+     191,
+     174,
+     169
+    ],
+    "scores": [
+     0.9959,
+     0.9871,
+     0.9671,
+     0.8782,
+     0.608,
+     0.4815,
+     0.3601,
+     0.2989,
+     0.2724,
+     0.233,
+     0.2315,
+     0.1992
+    ],
+    "hit1": true,
+    "hit3": true,
+    "hit5": true,
+    "mrr": 1.0
+   }
+  },
+  "3:0": {
+   "question_id": 3,
+   "part": 0,
+   "chapter": 1,
+   "question_type": "process",
+   "question": "ពន្យល់ពីវដ្តជីវិតរបស់ស្រល់",
+   "query_used": "ពន្យល់ពីវដ្តជីវិតរបស់ស្រល់ ស៊ីមណូស្ពែម កោន",
+   "expected_pages": [
+    9
+   ],
+   "expect_abstain": false,
+   "top_score": 0.9899,
+   "abstained": false,
+   "embed": {
+    "top5_pages": [
+     9,
+     10,
+     10,
+     6,
+     8
+    ],
+    "hit1": true,
+    "hit3": true,
+    "hit5": true,
+    "mrr": 1.0
+   },
+   "rerank": {
+    "top5_pages": [
+     9,
+     6,
+     10,
+     8,
+     10
+    ],
+    "hit1": true,
+    "hit3": true,
+    "hit5": true,
+    "mrr": 1.0
+   },
+   "real": {
+    "pages": [
+     9,
+     6,
+     10,
+     8,
+     10,
+     7,
+     6,
+     9,
+     24,
+     4,
+     19,
+     10
+    ],
+    "scores": [
+     0.9899,
+     0.9529,
+     0.6811,
+     0.4149,
+     0.3905,
+     0.2863,
+     0.1664,
+     0.0533,
+     0.0311,
+     0.0189,
+     0.0094,
+     0.0072
+    ],
+    "hit1": true,
+    "hit3": true,
+    "hit5": true,
+    "mrr": 1.0
+   }
+  },
+  "52:0": {
+   "question_id": 52,
+   "part": 0,
+   "chapter": 1,
+   "question_type": "reasoning",
+   "question": "តើស្រល់ជារុក្ខជាតិស៊ីមណូស្ពែមឬអង់ស្យូស្ពែម? ហេតុអ្វី?",
+   "query_used": "តើស្រល់ជារុក្ខជាតិស៊ីមណូស្ពែមឬអង់ស្យូស្ពែម? ហេតុអ្វី? ស៊ីមណូស្ពែម កោន",
+   "expected_pages": [
+    6
+   ],
+   "expect_abstain": false,
+   "top_score": 0.9872,
+   "abstained": false,
+   "embed": {
+    "top5_pages": [
+     6,
+     10,
+     9,
+     10,
+     20
+    ],
+    "hit1": true,
+    "hit3": true,
+    "hit5": true,
+    "mrr": 1.0
+   },
+   "rerank": {
+    "top5_pages": [
+     6,
+     6,
+     10,
+     10,
+     9
+    ],
+    "hit1": true,
+    "hit3": true,
+    "hit5": true,
+    "mrr": 1.0
+   },
+   "real": {
+    "pages": [
+     6,
+     6,
+     10,
+     10,
+     9,
+     20,
+     7,
+     5,
+     8,
+     12,
+     19,
+     4
+    ],
+    "scores": [
+     0.9872,
+     0.9545,
+     0.8898,
+     0.8721,
+     0.8402,
+     0.7725,
+     0.7583,
+     0.6704,
+     0.5753,
+     0.2328,
+     0.2161,
+     0.2009
+    ],
+    "hit1": true,
+    "hit3": true,
+    "hit5": true,
+    "mrr": 1.0
+   }
+  },
+  "56:0": {
+   "question_id": 56,
+   "part": 0,
+   "chapter": 1,
+   "question_type": "reasoning",
+   "question": "តើអង្ករសំរូបដែលយើងបរិភោគជាផ្នែកណារបស់រុក្ខជាតិ?",
+   "query_used": "តើអង្ករសំរូបដែលយើងបរិភោគជាផ្នែកណារបស់រុក្ខជាតិ? គ្រាប់ស្រូវ អាល់ប៊ុយមែន អង់ដូស្ពែម",
+   "expected_pages": [
+    12,
+    18
+   ],
+   "expect_abstain": false,
+   "top_score": 0.1551,
+   "abstained": false,
+   "embed": {
+    "top5_pages": [
+     5,
+     19,
+     20,
+     18,
+     17
+    ],
+    "hit1": false,
+    "hit3": false,
+    "hit5": true,
+    "mrr": 0.25
+   },
+   "rerank": {
+    "top5_pages": [
+     5,
+     17,
+     19,
+     20,
+     18
+    ],
+    "hit1": false,
+    "hit3": true,
+    "hit5": true,
+    "mrr": 0.5
+   },
+   "real": {
+    "pages": [
+     5,
+     17,
+     19,
+     20,
+     18,
+     12,
+     12,
+     24,
+     24,
+     21,
+     6,
+     131
+    ],
+    "scores": [
+     0.1551,
+     0.0611,
+     0.0332,
+     0.0311,
+     0.0133,
+     0.0089,
+     0.0065,
+     0.0046,
+     0.0028,
+     0.0026,
+     0.0021,
+     0.002
+    ],
+    "hit1": false,
+    "hit3": true,
+    "hit5": true,
+    "mrr": 0.5
+   }
+  }
+ },
+ "aggregate": {
+  "variants": {
+   "embed": {
+    "n": 116,
+    "recall@1": 0.586,
+    "recall@3": 0.871,
+    "recall@5": 0.94,
+    "mrr": 0.737
+   },
+   "rerank": {
+    "n": 116,
+    "recall@1": 0.655,
+    "recall@3": 0.888,
+    "recall@5": 1.0,
+    "mrr": 0.785
+   },
+   "real": {
+    "n": 116,
+    "recall@1": 0.655,
+    "recall@3": 0.888,
+    "recall@5": 1.0,
+    "mrr": 0.785
+   }
+  },
+  "abstention": {
+   "out_of_scope_n": 9,
+   "out_of_scope_abstained": 1.0,
+   "in_scope_n": 116,
+   "in_scope_false_abstain": 0.0
+  },
+  "by_chapter": {
+   "1": {
+    "n": 28,
+    "recall@5_real": 1.0,
+    "mrr_real": 0.84,
+    "false_abstain": 0.0
+   },
+   "2": {
+    "n": 12,
+    "recall@5_real": 1.0,
+    "mrr_real": 0.725,
+    "false_abstain": 0.0
+   },
+   "3": {
+    "n": 15,
+    "recall@5_real": 1.0,
+    "mrr_real": 0.922,
+    "false_abstain": 0.0
+   },
+   "4": {
+    "n": 12,
+    "recall@5_real": 1.0,
+    "mrr_real": 0.799,
+    "false_abstain": 0.0
+   },
+   "5": {
+    "n": 19,
+    "recall@5_real": 1.0,
+    "mrr_real": 0.717,
+    "false_abstain": 0.0
+   },
+   "6": {
+    "n": 9,
+    "recall@5_real": 1.0,
+    "mrr_real": 0.678,
+    "false_abstain": 0.0
+   },
+   "7": {
+    "n": 8,
+    "recall@5_real": 1.0,
+    "mrr_real": 0.733,
+    "false_abstain": 0.0
+   },
+   "8": {
+    "n": 13,
+    "recall@5_real": 1.0,
+    "mrr_real": 0.756,
+    "false_abstain": 0.0
+   }
+  },
+  "by_type": {
+   "application": {
+    "n": 1,
+    "recall@5_real": 1.0,
+    "mrr_real": 1.0
+   },
+   "cause_effect": {
+    "n": 1,
+    "recall@5_real": 1.0,
+    "mrr_real": 1.0
+   },
+   "comparison": {
+    "n": 9,
+    "recall@5_real": 1.0,
+    "mrr_real": 0.815
+   },
+   "definition": {
+    "n": 21,
+    "recall@5_real": 1.0,
+    "mrr_real": 0.811
+   },
+   "exam": {
+    "n": 7,
+    "recall@5_real": 1.0,
+    "mrr_real": 0.655
+   },
+   "explanation": {
+    "n": 15,
+    "recall@5_real": 1.0,
+    "mrr_real": 0.747
+   },
+   "multi_part": {
+    "n": 12,
+    "recall@5_real": 1.0,
+    "mrr_real": 0.958
+   },
+   "ocr_garbled": {
+    "n": 6,
+    "recall@5_real": 1.0,
+    "mrr_real": 0.783
+   },
+   "prevention": {
+    "n": 1,
+    "recall@5_real": 1.0,
+    "mrr_real": 1.0
+   },
+   "process": {
+    "n": 15,
+    "recall@5_real": 1.0,
+    "mrr_real": 0.883
+   },
+   "quiz": {
+    "n": 6,
+    "recall@5_real": 1.0,
+    "mrr_real": 0.658
+   },
+   "reasoning": {
+    "n": 12,
+    "recall@5_real": 1.0,
+    "mrr_real": 0.672
+   },
+   "summary": {
+    "n": 10,
+    "recall@5_real": 1.0,
+    "mrr_real": 0.645
+   }
+  },
+  "per_question_counts": {
+   "n_questions": 110,
+   "strict_hit5": 1.0,
+   "any_part_hit5": 1.0
+  }
+ }
+}

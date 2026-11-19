@@ -1,0 +1,45 @@
+RETRIEVAL EVALUATION v3_1
+generated: 2026-10-25 12:32
+rows: 125 | in-scope questions: 116 | threshold: 0.08 | TOP_K: 30 | RERANKER_TOP_K: 12
+
+Overall (in-scope rows)
+metric          embed   rerank     real
+recall@1        0.586    0.655    0.655
+recall@3        0.871    0.888    0.888
+recall@5        0.940    1.000    1.000
+mrr             0.737    0.785    0.785
+
+Per-question (multi-part strict): n=110 strict_hit5=1.0 any_part_hit5=1.0
+
+Abstention (threshold < 0.08)
+  out-of-scope abstained: 1.0 (n=9)
+  in-scope false abstain: 0.0 (n=116)
+
+By chapter (real pipeline)
+ch      n  recall@5     mrr  false_abst
+1      28     1.000   0.840       0.000
+2      12     1.000   0.725       0.000
+3      15     1.000   0.922       0.000
+4      12     1.000   0.799       0.000
+5      19     1.000   0.717       0.000
+6       9     1.000   0.678       0.000
+7       8     1.000   0.733       0.000
+8      13     1.000   0.756       0.000
+
+By question type (real pipeline)
+type                  n  recall@5     mrr
+application           1     1.000   1.000
+cause_effect          1     1.000   1.000
+comparison            9     1.000   0.815
+definition           21     1.000   0.811
+exam                  7     1.000   0.655
+explanation          15     1.000   0.747
+multi_part           12     1.000   0.958
+ocr_garbled           6     1.000   0.783
+prevention            1     1.000   1.000
+process              15     1.000   0.883
+quiz                  6     1.000   0.658
+reasoning            12     1.000   0.672
+summary              10     1.000   0.645
+
+Retrieval failures (real Recall@5 miss): 0 rows

@@ -1,0 +1,125 @@
+{
+ "status": "PASS",
+ "errors": [],
+ "cleaned_pages": 257,
+ "structured_pages": 257,
+ "chapters": [
+  1,
+  2,
+  3,
+  4,
+  5,
+  6,
+  7,
+  8
+ ],
+ "chunks": 567,
+ "chunks_per_chapter": {
+  "1": 49,
+  "2": 75,
+  "3": 135,
+  "4": 56,
+  "5": 106,
+  "6": 76,
+  "7": 40,
+  "8": 30
+ },
+ "chunk_ids_unique": true,
+ "duplicate_chunk_ids": [],
+ "duplicate_chunk_texts": [],
+ "pages_covered": 257,
+ "missing_pages": [],
+ "chunks_without_lesson": [
+  "p000_001",
+  "p002_002",
+  "p003_003",
+  "p004_004",
+  "p005_005",
+  "p005_006",
+  "p025_001",
+  "p025_002",
+  "p025_003",
+  "p059_001",
+  "p059_002",
+  "p121_001",
+  "p121_002",
+  "p149_001",
+  "p149_002",
+  "p149_003",
+  "p149_004",
+  "p195_001",
+  "p195_002",
+  "p195_003",
+  "p227_001",
+  "p227_002",
+  "p227_003",
+  "p245_001",
+  "p245_002"
+ ],
+ "stale_form_counts": {
+  "ស្ទីចម៉ាត": {
+   "pages": 0,
+   "chunks": 0
+  },
+  "ស្អិតម៉ាស": {
+   "pages": 0,
+   "chunks": 0
+  },
+  "បន្សុំ": {
+   "pages": 0,
+   "chunks": 0
+  },
+  "ជំងឺហមារីក": {
+   "pages": 0,
+   "chunks": 0
+  },
+  "លក្ខណៈ បន្សំ": {
+   "pages": 0,
+   "chunks": 0
+  }
+ },
+ "legitimate_combination_preserved": {
+  "បន្សំនុយក្លេអូទីត": true,
+  "ADN បន្សំថ្មី": true
+ },
+ "canonical_counts_in_cleaned": {
+  "ស្ទិចម៉ាត": 14,
+  "បន្ស៊ាំ": 9,
+  "មហារីក": 4
+ },
+ "chunk_size": {
+  "min": 26,
+  "max": 3274,
+  "avg": 670.5
+ },
+ "page_165_chunks": [
+  {
+   "chunk_id": "p164_007",
+   "page_start": 164,
+   "page_end": 165,
+   "chapter_id": 5,
+   "lesson_id": 2
+  },
+  {
+   "chunk_id": "p164_008",
+   "page_start": 164,
+   "page_end": 165,
+   "chapter_id": 5,
+   "lesson_id": 2
+  },
+  {
+   "chunk_id": "p165_009",
+   "page_start": 165,
+   "page_end": 165,
+   "chapter_id": 5,
+   "lesson_id": 2
+  },
+  {
+   "chunk_id": "p165_010",
+   "page_start": 165,
+   "page_end": 166,
+   "chapter_id": 5,
+   "lesson_id": 2
+  }
+ ]
+}
